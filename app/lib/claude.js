@@ -33,7 +33,7 @@ Format as JSON array with objects containing: { idea: string, type: string, desc
 
 export async function generateCaption(idea, brandVoice) {
   const response = await claude.messages.create({
-    model: "claude-opus-4-1",
+    model: "claude-opus-4-8",
     max_tokens: 500,
     messages: [
       {
