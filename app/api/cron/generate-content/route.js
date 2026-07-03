@@ -1,5 +1,5 @@
-import { supabase } from "../../lib/supabase.js";
-import { generateContentIdeas, generateCaption } from "../../lib/claude.js";
+import { supabase } from "../../../lib/supabase.js";
+import { generateContentIdeas, generateCaption } from "../../../lib/claude.js";
 
 export async function GET(req) {
   try {
