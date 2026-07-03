@@ -6,7 +6,7 @@ export const claude = new Anthropic({
 
 export async function generateContentIdeas(agencyId, brandVoice) {
   const response = await claude.messages.create({
-    model: "claude-opus-4-1",
+    model: "claude-opus-4-8",
     max_tokens: 1024,
     messages: [
       {
