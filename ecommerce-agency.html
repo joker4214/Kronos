@@ -524,7 +524,8 @@
         }
 
         .faq-item.open .faq-answer {
-            max-height: 500px;
+            max-height: none;
+            overflow: visible;
             margin-top: 1rem;
         }
 
@@ -761,8 +762,8 @@
             <h1>Your E-Commerce Store is Leaving Money on the Table</h1>
             <p class="hero-subheading">We help underperforming stores and new businesses turn visitors into loyal customers with design, strategy, and conversions that actually work.</p>
             <div>
-                <button class="cta-button" onclick="scrollToElement('final-cta')">Book Your Free Consultation</button>
-                <button class="cta-button-secondary" onclick="alert('Watch a 2-minute breakdown of our process...')">Watch How We Work</button>
+                <a href="#final-cta" class="cta-button">Book Your Free Consultation</a>
+                <a href="https://yourdomain.com/demo" class="cta-button-secondary">Watch How We Work</a>
             </div>
         </div>
     </section>
@@ -969,7 +970,7 @@
                         <li>Hosting & SSL setup</li>
                         <li>30 days of post-launch support</li>
                     </ul>
-                    <button class="cta-button" onclick="scrollToElement('final-cta')">Get Started</button>
+                    <a href="#final-cta" class="cta-button">Get Started</a>
                 </div>
                 <div class="pricing-card featured">
                     <div class="pricing-badge">Most Popular</div>
@@ -984,7 +985,7 @@
                         <li>90 days of optimization & support</li>
                         <li>Analytics dashboard setup</li>
                     </ul>
-                    <button class="cta-button" onclick="scrollToElement('final-cta')">Book Consultation</button>
+                    <a href="#final-cta" class="cta-button">Book Consultation</a>
                 </div>
                 <div class="pricing-card">
                     <div class="pricing-name">Enterprise</div>
@@ -998,7 +999,7 @@
                         <li>Quarterly strategy sessions</li>
                         <li>Priority support</li>
                     </ul>
-                    <button class="cta-button" onclick="scrollToElement('final-cta')">Schedule Call</button>
+                    <a href="#final-cta" class="cta-button">Schedule Call</a>
                 </div>
             </div>
         </div>
@@ -1058,7 +1059,7 @@
         <div class="container">
             <h2>Your E-Commerce Store Deserves Better</h2>
             <p>Stop leaving money on the table. Let's talk about how we can fix your site and get your business growing again.</p>
-            <button class="cta-button" onclick="alert('Schedule a free 20-minute consultation: calendly.com/yourdomain')">Book Your Free Consultation</button>
+            <a href="https://calendly.com/yourdomain" class="cta-button">Book Your Free Consultation</a>
         </div>
     </section>
 
@@ -1082,32 +1083,14 @@
             }
         }
 
-        // Fade in elements on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.problem-card, .study-card, .testimonial, .pillar, .step').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Animated counter for metrics
-        function animateValue(element, start, end, duration) {
+        // Fade in and animate elements on scroll
+        function animateValue(element, start, end, suffix, duration) {
             let startTimestamp = null;
             const step = (timestamp) => {
                 if (!startTimestamp) startTimestamp = timestamp;
                 const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                element.textContent = Math.floor(progress * (end - start) + start);
+                const current = Math.floor(progress * (end - start) + start);
+                element.textContent = current + suffix;
                 if (progress < 1) {
                     window.requestAnimationFrame(step);
                 }
@@ -1115,23 +1098,32 @@
             window.requestAnimationFrame(step);
         }
 
-        // Trigger counters on scroll
-        const counterObserver = new IntersectionObserver(function(entries) {
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -80px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    const metricValue = entry.target.querySelector('.metric-value');
-                    if (metricValue && !metricValue.dataset.animated) {
-                        metricValue.dataset.animated = 'true';
-                        const text = metricValue.textContent;
-                        const number = parseInt(text.replace(/\D/g, ''));
-                        animateValue(metricValue, 0, number, 800);
+                    entry.target.classList.add('fade-in');
+                    if (entry.target.classList.contains('study-card')) {
+                        const metricValue = entry.target.querySelector('.metric-value');
+                        if (metricValue && !metricValue.dataset.animated) {
+                            metricValue.dataset.animated = 'true';
+                            const text = metricValue.textContent.trim();
+                            const number = parseInt(text.replace(/\D/g, ''));
+                            const suffix = text.replace(/\d+/g, '').trim();
+                            animateValue(metricValue, 0, number, suffix, 800);
+                        }
                     }
+                    observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.5 });
+        }, observerOptions);
 
-        document.querySelectorAll('.study-card').forEach(el => {
-            counterObserver.observe(el);
+        document.querySelectorAll('.problem-card, .study-card, .testimonial, .pillar, .step').forEach(el => {
+            observer.observe(el);
         });
 
         // Theme toggle (optional - if user prefers)
