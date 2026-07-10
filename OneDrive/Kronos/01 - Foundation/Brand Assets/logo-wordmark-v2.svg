@@ -1,0 +1,33 @@
+<svg viewBox="0 0 340 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dharma's Esthetic Design Center wordmark with circle badge">
+  <!-- Circle badge mark -->
+  <circle cx="40" cy="40" r="38" fill="#1B2A3D"/>
+  <circle cx="40" cy="40" r="36" fill="none" stroke="#CC6B49" stroke-width="1.2"/>
+  <circle cx="40" cy="40" r="33" fill="none" stroke="#CC6B49" stroke-width="0.4" opacity="0.4"/>
+
+  <!-- Accent lines inside badge -->
+  <line x1="10" y1="30" x2="70" y2="30" stroke="#CC6B49" stroke-width="0.5" opacity="0.4"/>
+  <line x1="10" y1="52" x2="70" y2="52" stroke="#CC6B49" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- DHARMA'S inside badge -->
+  <text x="40" y="27" font-family="Georgia, 'Times New Roman', serif" font-size="5" fill="#CC6B49" text-anchor="middle" letter-spacing="2.5">DHARMA'S</text>
+
+  <!-- D inside badge -->
+  <text x="40" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="700" fill="#FBF1E6" text-anchor="middle">D</text>
+
+  <!-- Curved bottom text in badge -->
+  <defs>
+    <path id="wm-curve" d="M 10,54 A 32,32 0 0,0 70,54"/>
+  </defs>
+  <text font-family="Georgia, 'Times New Roman', serif" font-size="3.8" fill="#FBF1E6" letter-spacing="1.5" opacity="0.75">
+    <textPath href="#wm-curve" startOffset="50%" text-anchor="middle">· ESTHETIC DESIGN CENTER ·</textPath>
+  </text>
+
+  <!-- Divider -->
+  <line x1="90" y1="12" x2="90" y2="68" stroke="#d8d0c8" stroke-width="1"/>
+
+  <!-- Wordmark text -->
+  <text x="104" y="35" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="700" fill="#1B2A3D" letter-spacing="0.5">Dharma's</text>
+  <text x="105" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="12" fill="#CC6B49" letter-spacing="4">ESTHETIC</text>
+  <line x1="105" y1="58" x2="338" y2="58" stroke="#CC6B49" stroke-width="0.6"/>
+  <text x="105" y="70" font-family="Georgia, 'Times New Roman', serif" font-size="8.5" fill="#8a7f78" letter-spacing="5">DESIGN CENTER</text>
+</svg>
