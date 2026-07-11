@@ -1,0 +1,12 @@
+<svg viewBox="0 0 320 90" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dharma's Esthetic Design Center logo wordmark">
+  <!-- Icon mark -->
+  <rect x="0" y="0" width="80" height="80" rx="16" fill="#1B2A3D"/>
+  <text x="40" y="64" font-family="Georgia, 'Times New Roman', serif" font-size="62" font-weight="700" fill="#FBF1E6" text-anchor="middle">D</text>
+  <rect x="0" y="71" width="80" height="5" rx="2.5" fill="#CC6B49"/>
+
+  <!-- Wordmark text -->
+  <text x="96" y="30" font-family="Georgia, 'Times New Roman', serif" font-size="24" font-weight="700" fill="#1B2A3D" letter-spacing="0.5">Dharma's</text>
+  <text x="96" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="13.5" fill="#CC6B49" letter-spacing="3.5">ESTHETIC DESIGN</text>
+  <text x="96" y="68" font-family="Georgia, 'Times New Roman', serif" font-size="10" fill="#8a7f78" letter-spacing="5">CENTER</text>
+  <line x1="96" y1="76" x2="318" y2="76" stroke="#d8d0c8" stroke-width="1"/>
+</svg>

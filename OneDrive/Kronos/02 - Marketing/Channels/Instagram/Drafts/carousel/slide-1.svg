@@ -1,0 +1,33 @@
+<svg viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1080" height="1080" fill="#1B2A3D"/>
+  <!-- Top accent bar -->
+  <rect x="0" y="0" width="1080" height="8" fill="#CC6B49"/>
+  <!-- Bottom accent bar -->
+  <rect x="0" y="1072" width="1080" height="8" fill="#CC6B49"/>
+
+  <!-- Corner decorative diamonds -->
+  <polygon points="60,40 80,20 100,40 80,60" fill="#CC6B49" opacity="0.5"/>
+  <polygon points="980,40 1000,20 1020,40 1000,60" fill="#CC6B49" opacity="0.5"/>
+
+  <!-- Slide number -->
+  <text x="60" y="130" font-family="Georgia, serif" font-size="22" fill="#CC6B49" letter-spacing="4" opacity="0.7">01 / 05</text>
+
+  <!-- Thin rule -->
+  <line x1="60" y1="150" x2="340" y2="150" stroke="#CC6B49" stroke-width="1" opacity="0.4"/>
+
+  <!-- Main headline -->
+  <text x="60" y="320" font-family="Georgia, serif" font-size="78" font-weight="700" fill="#FBF1E6">3 signs</text>
+  <text x="60" y="410" font-family="Georgia, serif" font-size="78" font-weight="700" fill="#FBF1E6">your Shopify</text>
+  <text x="60" y="500" font-family="Georgia, serif" font-size="78" font-weight="700" fill="#FBF1E6">store needs</text>
+  <text x="60" y="590" font-family="Georgia, serif" font-size="78" font-weight="700" fill="#CC6B49">a content</text>
+  <text x="60" y="680" font-family="Georgia, serif" font-size="78" font-weight="700" fill="#CC6B49">strategy.</text>
+
+  <!-- Subtext -->
+  <text x="60" y="780" font-family="Georgia, serif" font-size="32" fill="#FBF1E6" opacity="0.6">Swipe to see if this is you →</text>
+
+  <!-- Logo mark bottom right -->
+  <circle cx="980" cy="980" r="72" fill="#CC6B49" opacity="0.15"/>
+  <circle cx="980" cy="980" r="68" fill="none" stroke="#CC6B49" stroke-width="1.2"/>
+  <text x="980" y="1002" font-family="Georgia, serif" font-size="56" font-weight="700" fill="#FBF1E6" text-anchor="middle">D</text>
+  <text x="980" y="952" font-family="Georgia, serif" font-size="10" fill="#CC6B49" text-anchor="middle" letter-spacing="3">DHARMA'S</text>
+</svg>

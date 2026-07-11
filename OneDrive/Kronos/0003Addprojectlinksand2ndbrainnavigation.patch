@@ -1,0 +1,220 @@
+From de8198c3bf5bbcdfe77e32cd689f519a2cf8ae5e Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 10 Jul 2026 21:39:55 +0000
+Subject: [PATCH 3/3] Add project links and 2nd brain navigation
+
+Features:
+- Add 2nd brain link button in dashboard header
+- Add project-specific URLs to each project card
+- Add 'View Project' button linking to each project
+- Add .env.example for configuration
+- Update mobile styling for new header layout
+- Link supports external URLs (GitHub, live sites, docs)
+
+Configuration:
+- Set NEXT_PUBLIC_BRAIN_URL in .env.local to add 2nd brain link
+- Add project_url field to each project in database
+
+Co-Authored-By: Claude Haiku 4.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01TKtmkHcK18nUqFd7AvWCfY
+---
+ .env.example                       |  7 ++++
+ app/components/ProjectCard.js      |  6 +++
+ app/components/ProjectDashboard.js |  7 +++-
+ app/page.js                        |  5 +++
+ app/styles/dashboard.css           | 62 +++++++++++++++++++++++++++++-
+ 5 files changed, 85 insertions(+), 2 deletions(-)
+ create mode 100644 .env.example
+
+diff --git a/.env.example b/.env.example
+new file mode 100644
+index 0000000..68a3819
+--- /dev/null
++++ b/.env.example
+@@ -0,0 +1,7 @@
++# Supabase Configuration
++SUPABASE_URL=your_supabase_url
++SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key
++
++# 2nd Brain Link
++# Add your 2nd brain Netlify URL here
++NEXT_PUBLIC_BRAIN_URL=https://your-2nd-brain.netlify.app
+diff --git a/app/components/ProjectCard.js b/app/components/ProjectCard.js
+index 5de62fe..43a59cb 100644
+--- a/app/components/ProjectCard.js
++++ b/app/components/ProjectCard.js
+@@ -62,6 +62,12 @@ export default function ProjectCard({ project, isExpanded, onToggleExpand }) {
+ 
+       <p className="project-description">{project.description}</p>
+ 
++      {project.project_url && (
++        <a href={project.project_url} target="_blank" rel="noopener noreferrer" className="project-link">
++          View Project →
++        </a>
++      )}
++
+       <div className="progress-section">
+         <div className="progress-header">
+           <span className="progress-label">Overall Progress</span>
+diff --git a/app/components/ProjectDashboard.js b/app/components/ProjectDashboard.js
+index 8e52375..0b74981 100644
+--- a/app/components/ProjectDashboard.js
++++ b/app/components/ProjectDashboard.js
+@@ -61,7 +61,12 @@ export default function ProjectDashboard({ projects, loading, error }) {
+     <div className="dashboard-container">
+       <header className="dashboard-header">
+         <div className="header-content">
+-          <h1>Project Dashboard</h1>
++          <div className="header-top">
++            <h1>Project Dashboard</h1>
++            <a href={process.env.NEXT_PUBLIC_BRAIN_URL || "#"} target="_blank" rel="noopener noreferrer" className="brain-link">
++              📚 2nd Brain
++            </a>
++          </div>
+           <p>Track your projects and stay on top of deadlines</p>
+         </div>
+       </header>
+diff --git a/app/page.js b/app/page.js
+index 65079b6..77150d1 100644
+--- a/app/page.js
++++ b/app/page.js
+@@ -49,6 +49,7 @@ function getMockProjects() {
+       expected_completion: "2024-08-15",
+       priority: "high",
+       team_members: 3,
++      project_url: "https://github.com/joker4214/Kronos",
+       tasks: [
+         { name: "Design UI", completed: true },
+         { name: "Backend API", completed: true },
+@@ -66,6 +67,7 @@ function getMockProjects() {
+       expected_completion: "2024-09-01",
+       priority: "high",
+       team_members: 4,
++      project_url: "https://github.com/joker4214/content-gen",
+       tasks: [
+         { name: "Model Training", completed: true },
+         { name: "API Development", completed: true },
+@@ -83,6 +85,7 @@ function getMockProjects() {
+       expected_completion: "2024-07-30",
+       priority: "medium",
+       team_members: 2,
++      project_url: "https://supabase.com/dashboard",
+       tasks: [
+         { name: "Schema Design", completed: true },
+         { name: "Data Export", completed: false },
+@@ -100,6 +103,7 @@ function getMockProjects() {
+       expected_completion: "2024-12-31",
+       priority: "medium",
+       team_members: 2,
++      project_url: "https://github.com/joker4214/mobile-app",
+       tasks: [
+         { name: "Requirements", completed: true },
+         { name: "Wireframes", completed: false },
+@@ -117,6 +121,7 @@ function getMockProjects() {
+       expected_completion: "2024-06-30",
+       priority: "high",
+       team_members: 5,
++      project_url: "https://analytics.example.com",
+       tasks: [
+         { name: "Data Collection", completed: true },
+         { name: "Processing Engine", completed: true },
+diff --git a/app/styles/dashboard.css b/app/styles/dashboard.css
+index 9f08a73..550a25c 100644
+--- a/app/styles/dashboard.css
++++ b/app/styles/dashboard.css
+@@ -32,13 +32,44 @@ body {
+   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+ }
+ 
++.header-top {
++  display: flex;
++  justify-content: center;
++  align-items: center;
++  gap: 30px;
++  margin-bottom: 10px;
++  flex-wrap: wrap;
++}
++
+ .header-content h1 {
+   font-size: 3.5rem;
+   font-weight: 700;
+-  margin-bottom: 10px;
++  margin: 0;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+ }
+ 
++.brain-link {
++  background: rgba(255, 255, 255, 0.2);
++  color: white;
++  padding: 12px 24px;
++  border-radius: 8px;
++  text-decoration: none;
++  font-weight: 600;
++  font-size: 1.1rem;
++  transition: all 0.3s ease;
++  border: 2px solid rgba(255, 255, 255, 0.4);
++  display: inline-flex;
++  align-items: center;
++  gap: 8px;
++}
++
++.brain-link:hover {
++  background: rgba(255, 255, 255, 0.3);
++  border-color: rgba(255, 255, 255, 0.8);
++  transform: translateY(-2px);
++  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
++}
++
+ .header-content p {
+   font-size: 1.2rem;
+   opacity: 0.95;
+@@ -257,6 +288,25 @@ body {
+   margin-bottom: 16px;
+ }
+ 
++/* Project Link */
++.project-link {
++  display: inline-block;
++  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
++  color: white;
++  padding: 8px 16px;
++  border-radius: 6px;
++  text-decoration: none;
++  font-weight: 600;
++  font-size: 0.9rem;
++  transition: all 0.3s ease;
++  margin-bottom: 12px;
++}
++
++.project-link:hover {
++  transform: translateX(4px);
++  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
++}
++
+ /* Progress Section */
+ .progress-section {
+   margin-bottom: 20px;
+@@ -494,10 +544,20 @@ body {
+     padding: 30px 15px;
+   }
+ 
++  .header-top {
++    flex-direction: column;
++    gap: 15px;
++  }
++
+   .header-content h1 {
+     font-size: 2rem;
+   }
+ 
++  .brain-link {
++    width: 100%;
++    justify-content: center;
++  }
++
+   .header-content p {
+     font-size: 1rem;
+   }
+-- 
+2.43.0
+
