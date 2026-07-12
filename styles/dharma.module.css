@@ -1,0 +1,436 @@
+/* Dharma's Esthetic Design Center Styles */
+
+.container {
+  --navy: #1a2332;
+  --gold: #CC6B49;
+  --cream: #FBF1E6;
+  --white: #FFFFFF;
+  --light-navy: #2d3e52;
+  --dark-gold: #b85a3d;
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--navy);
+  background: var(--cream);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navigation */
+.navbar {
+  background: var(--white);
+  box-shadow: 0 2px 8px rgba(26, 35, 50, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.navContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.logoText {
+  color: var(--navy);
+}
+
+.logoAccent {
+  color: var(--gold);
+}
+
+.navLinks {
+  display: flex;
+  gap: 2rem;
+}
+
+.navLink {
+  text-decoration: none;
+  color: var(--navy);
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.navLink:hover {
+  color: var(--gold);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--light-navy) 100%);
+  color: var(--white);
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  font-family: 'Georgia', serif;
+}
+
+.heroTitle em {
+  font-style: italic;
+  color: var(--gold);
+  display: block;
+  font-size: 1.1em;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+.heroCTA {
+  margin-top: 2rem;
+}
+
+/* Origin Section */
+.originSection {
+  background: var(--white);
+  padding: 4rem 2rem;
+}
+
+.originContent {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.originText h2 {
+  font-size: 2.5rem;
+  color: var(--navy);
+  margin-bottom: 2rem;
+  font-family: 'Georgia', serif;
+}
+
+.originText p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: var(--navy);
+}
+
+.originBold {
+  font-weight: 600;
+  color: var(--gold);
+}
+
+/* Packages Section */
+.packagesSection {
+  background: var(--cream);
+  padding: 5rem 2rem;
+}
+
+.sectionHead {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionHead h2 {
+  font-size: 2.5rem;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+  font-family: 'Georgia', serif;
+}
+
+.sectionHead p {
+  font-size: 1.1rem;
+  color: var(--navy);
+  opacity: 0.8;
+}
+
+.packagesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.packageCard {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 2rem;
+  text-decoration: none;
+  color: var(--navy);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.packageCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(26, 35, 50, 0.12);
+  border-color: var(--gold);
+}
+
+.packageCard.featured {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(204, 107, 73, 0.15);
+}
+
+.packageCard.featured:hover {
+  transform: scale(1.05) translateY(-8px);
+}
+
+.packageBadge {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--gold), var(--dark-gold));
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.packageIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.packageCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--navy);
+  font-family: 'Georgia', serif;
+}
+
+.packagePrice {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.packageDesc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--navy);
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+}
+
+.linkArrow {
+  display: inline-block;
+  color: var(--gold);
+  font-weight: 600;
+  transition: transform 0.2s ease;
+}
+
+.packageCard:hover .linkArrow {
+  transform: translateX(4px);
+}
+
+/* À La Carte Section */
+.alacarte {
+  background: var(--white);
+  padding: 5rem 2rem;
+}
+
+.alacarteContainer {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.alacarteBtn {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--gold), var(--dark-gold));
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.alacarteBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(204, 107, 73, 0.3);
+}
+
+/* CTA Section */
+.ctaSection {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--light-navy) 100%);
+  color: var(--white);
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.ctaContent {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ctaContent h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  font-family: 'Georgia', serif;
+}
+
+.ctaContent p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Button Styles */
+.btnGold {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--gold), var(--dark-gold));
+  color: var(--white);
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btnGold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(204, 107, 73, 0.3);
+}
+
+.btnOutline {
+  display: inline-block;
+  background: transparent;
+  color: var(--white);
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border: 2px solid var(--white);
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btnOutline:hover {
+  background: var(--white);
+  color: var(--navy);
+}
+
+/* Footer */
+.footer {
+  background: var(--navy);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+}
+
+.footer span {
+  color: var(--gold);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navLinks {
+    gap: 1rem;
+    font-size: 0.85rem;
+  }
+
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+
+  .sectionHead h2 {
+    font-size: 1.8rem;
+  }
+
+  .packagesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .packageCard.featured {
+    transform: scale(1);
+  }
+
+  .packageCard.featured:hover {
+    transform: translateY(-8px);
+  }
+
+  .ctaContent h2 {
+    font-size: 1.6rem;
+  }
+
+  .packagesSection {
+    padding: 3rem 1rem;
+  }
+
+  .originSection {
+    padding: 3rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navContent {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .navLinks {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .heroTitle {
+    font-size: 1.5rem;
+  }
+
+  .packagesGrid {
+    gap: 1rem;
+  }
+
+  .packageCard {
+    padding: 1.5rem;
+  }
+
+  .btnGold {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
