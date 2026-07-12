@@ -1,0 +1,78 @@
+/* Global Styles */
+
+/* Spotlight Background Component */
+.spotlight-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.spotlight-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.spotlight {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+}
+
+.spotlight-left {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(204, 107, 73, 0.3) 0%, rgba(204, 107, 73, 0) 70%);
+  left: -200px;
+  top: -150px;
+}
+
+.spotlight-mid {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(204, 107, 73, 0.25) 0%, rgba(204, 107, 73, 0) 70%);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.spotlight-right {
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(204, 107, 73, 0.3) 0%, rgba(204, 107, 73, 0) 70%);
+  right: -150px;
+  bottom: -100px;
+}
+
+.spotlight-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .spotlight-left {
+    width: 300px;
+    height: 300px;
+    left: -150px;
+    top: -100px;
+  }
+
+  .spotlight-mid {
+    width: 250px;
+    height: 250px;
+  }
+
+  .spotlight-right {
+    width: 300px;
+    height: 300px;
+    right: -100px;
+    bottom: -80px;
+  }
+}

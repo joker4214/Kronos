@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import SpotlightBackground from '@/components/SpotlightBackground';
 import styles from '@/styles/dharma.module.css';
 
 export default function DharmaHome() {
@@ -25,23 +26,17 @@ export default function DharmaHome() {
 
       {/* Hero Section */}
       <section className={styles.hero}>
-        <div className={styles.heroBackground}>
-          <div className={styles.heroGradient}></div>
-          <div className={styles.heroShapes}>
-            <div className={styles.shape} style={{animationDelay: '0s'}}></div>
-            <div className={styles.shape} style={{animationDelay: '2s'}}></div>
-            <div className={styles.shape} style={{animationDelay: '4s'}}></div>
+        <SpotlightBackground>
+          <div className={styles.heroContent}>
+            <div className={styles.heroBadge}>Trusted by e-commerce brands</div>
+            <h1 className={styles.heroTitle}>We turn Shopify stores into <em>recognizable brands.</em></h1>
+            <p className={styles.heroSubtitle}>AI-powered content creation, real human expertise. Professional results — fast, affordable, and built around your brand.</p>
+            <div className={styles.heroCTA}>
+              <Link href="#packages" className={styles.btnGold}>View Packages</Link>
+              <Link href="/dharma/alacarte" className={styles.btnOutline}>Customize</Link>
+            </div>
           </div>
-        </div>
-        <div className={styles.heroContent}>
-          <div className={styles.heroBadge}>Trusted by e-commerce brands</div>
-          <h1 className={styles.heroTitle}>We turn Shopify stores into <em>recognizable brands.</em></h1>
-          <p className={styles.heroSubtitle}>AI-powered content creation, real human expertise. Professional results — fast, affordable, and built around your brand.</p>
-          <div className={styles.heroCTA}>
-            <Link href="#packages" className={styles.btnGold}>View Packages</Link>
-            <Link href="#alacarte" className={styles.btnOutline}>Customize</Link>
-          </div>
-        </div>
+        </SpotlightBackground>
       </section>
 
       {/* Origin Story */}

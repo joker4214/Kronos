@@ -477,6 +477,7 @@
 }
 
 /* Responsive Design */
+
 @media (max-width: 768px) {
   .navLinks {
     gap: 1rem;
