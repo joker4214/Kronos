@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Atlas — talk to your employee</title>
+<style>
+  :root {
+    --charcoal:#16181C; --charcoal-soft:#22252B; --accent:#2F5FFF; --accent-light:#5C82FF;
+    --white:#fff; --gray-100:#F5F5F6; --gray-400:#8A8F98; --gray-700:#3F434B;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    background:var(--charcoal); color:var(--white); height:100vh; display:flex; flex-direction:column; }
+  header { padding:20px 24px; display:flex; align-items:center; justify-content:space-between;
+    border-bottom:1px solid var(--charcoal-soft); }
+  .brand { font-weight:700; letter-spacing:.02em; }
+  .brand small { color:var(--gray-400); font-weight:400; margin-left:8px; }
+  .status { font-size:13px; color:var(--gray-400); }
+  .status b { color:var(--accent-light); }
+  main { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:28px; padding:24px; }
+  #log { width:100%; max-width:640px; flex:1; overflow-y:auto; display:flex; flex-direction:column;
+    gap:10px; padding:8px 0; }
+  .bubble { max-width:80%; padding:12px 15px; border-radius:2px; line-height:1.45; font-size:15px; }
+  .me { align-self:flex-end; background:var(--accent); color:#fff; }
+  .atlas { align-self:flex-start; background:var(--charcoal-soft); color:var(--white); }
+  .hint { color:var(--gray-400); font-size:13px; text-align:center; max-width:520px; }
+  .mic-wrap { display:flex; flex-direction:column; align-items:center; gap:12px; }
+  #mic { width:96px; height:96px; border-radius:50%; border:none; cursor:pointer; background:var(--accent);
+    color:#fff; font-size:34px; display:flex; align-items:center; justify-content:center;
+    transition:transform .1s, background .2s, box-shadow .2s; }
+  #mic:hover { background:var(--accent-light); }
+  #mic.listening { background:#e5484d; box-shadow:0 0 0 0 rgba(229,72,77,.6); animation:pulse 1.4s infinite; }
+  #mic.speaking { background:var(--accent-light); }
+  @keyframes pulse { 0%{box-shadow:0 0 0 0 rgba(229,72,77,.5);} 70%{box-shadow:0 0 0 22px rgba(229,72,77,0);} 100%{box-shadow:0 0 0 0 rgba(229,72,77,0);} }
+  #label { font-size:14px; color:var(--gray-400); min-height:20px; }
+  .row { display:flex; gap:8px; width:100%; max-width:640px; }
+  #text { flex:1; padding:11px 13px; border-radius:2px; border:1px solid var(--charcoal-soft);
+    background:var(--charcoal-soft); color:#fff; font-size:15px; }
+  #send { padding:0 18px; border:none; border-radius:2px; background:var(--accent); color:#fff; cursor:pointer; font-weight:600; }
+  footer { text-align:center; padding:10px; color:var(--gray-700); font-size:12px; }
+</style>
+</head>
+<body>
+  <header>
+    <div class="brand">Atlas <small>your lead-gen employee</small></div>
+    <div class="status" id="status">connecting…</div>
+  </header>
+  <main>
+    <div id="log"></div>
+    <div class="mic-wrap">
+      <button id="mic" title="Hold to talk, or click to toggle">🎙️</button>
+      <div id="label">Tap the mic and talk</div>
+    </div>
+    <div class="row">
+      <input id="text" placeholder="…or type to it (fallback)" autocomplete="off" />
+      <button id="send">Send</button>
+    </div>
+    <p class="hint" id="hint"></p>
+  </main>
+  <footer>Every action that leaves the system waits for your spoken yes. The team drafts. You ship.</footer>
+
+<script>
+(() => {
+  const $ = (id) => document.getElementById(id);
+  const log = $('log'), micBtn = $('mic'), label = $('label'), statusEl = $('status'), hint = $('hint');
+  let ws, clientSpeech = true, listening = false, recog = null, speaking = false;
+
+  function add(text, who) {
+    const b = document.createElement('div');
+    b.className = 'bubble ' + (who === 'me' ? 'me' : 'atlas');
+    b.textContent = text;
+    log.appendChild(b); log.scrollTop = log.scrollHeight;
+  }
+
+  // ---- WebSocket to the gateway --------------------------------------------
+  function connect() {
+    ws = new WebSocket(`ws://${location.host}/ws`);
+    ws.onopen = () => statusEl.innerHTML = 'connected';
+    ws.onclose = () => { statusEl.textContent = 'disconnected — retrying…'; setTimeout(connect, 1500); };
+    ws.onmessage = (ev) => {
+      const m = JSON.parse(ev.data);
+      if (m.type === 'ready') {
+        clientSpeech = m.clientSpeech;
+        statusEl.innerHTML = `orchestrator: <b>${m.mode}</b>`;
+        hint.textContent = m.mode === 'mock'
+          ? 'Fleet not running — replies are a stand-in so you can feel the loop. Start it with `npm run fleet:start`.'
+          : 'Connected to your live fleet.';
+      }
+      if (m.type === 'transcript') add(m.text, 'me');
+      if (m.type === 'thinking') { label.textContent = 'Atlas is thinking…'; }
+      if (m.type === 'say') { add(m.text, 'atlas'); speak(m.text); }
+      if (m.type === 'audio-reply') { add(m.text, 'atlas'); playAudio(m.dataBase64, m.mime); }
+      if (m.type === 'error') { add('⚠️ ' + m.message, 'atlas'); label.textContent = ''; }
+    };
+  }
+
+  // ---- Client-side speech synthesis (default, zero-key) --------------------
+  function speak(text) {
+    if (!clientSpeech || !window.speechSynthesis) { label.textContent = ''; return; }
+    window.speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.rate = 1.05; u.pitch = 1.0;
+    u.onstart = () => { speaking = true; micBtn.classList.add('speaking'); label.textContent = 'Atlas is speaking… (tap mic to interrupt)'; };
+    u.onend = () => { speaking = false; micBtn.classList.remove('speaking'); label.textContent = 'Tap the mic and talk'; };
+    window.speechSynthesis.speak(u);
+  }
+  function playAudio(b64, mime) {
+    const blob = new Blob([Uint8Array.from(atob(b64), c => c.charCodeAt(0))], { type: mime });
+    const a = new Audio(URL.createObjectURL(blob));
+    speaking = true; micBtn.classList.add('speaking'); label.textContent = 'Atlas is speaking…';
+    a.onended = () => { speaking = false; micBtn.classList.remove('speaking'); label.textContent = 'Tap the mic and talk'; };
+    a.play();
+  }
+
+  // ---- Client-side speech recognition (default, zero-key) ------------------
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  function startListening() {
+    if (speaking) { window.speechSynthesis?.cancel(); speaking = false; micBtn.classList.remove('speaking'); } // barge-in
+    if (!SR) { label.textContent = 'This browser has no speech recognition — type instead.'; return; }
+    recog = new SR();
+    recog.lang = 'en-US'; recog.interimResults = true; recog.continuous = false;
+    listening = true; micBtn.classList.add('listening'); label.textContent = 'Listening…';
+    let finalText = '';
+    recog.onresult = (e) => {
+      let interim = '';
+      for (let i = e.resultIndex; i < e.results.length; i++) {
+        const t = e.results[i][0].transcript;
+        if (e.results[i].isFinal) finalText += t; else interim += t;
+      }
+      label.textContent = (finalText + interim) || 'Listening…';
+    };
+    recog.onerror = () => stopListening();
+    recog.onend = () => {
+      micBtn.classList.remove('listening'); listening = false;
+      const said = finalText.trim();
+      if (said) { add(said, 'me'); ws?.send(JSON.stringify({ type: 'transcript', text: said })); }
+      else label.textContent = 'Tap the mic and talk';
+    };
+    recog.start();
+  }
+  function stopListening() { try { recog && recog.stop(); } catch {} }
+
+  micBtn.addEventListener('click', () => listening ? stopListening() : startListening());
+
+  // ---- Text fallback -------------------------------------------------------
+  $('send').addEventListener('click', sendText);
+  $('text').addEventListener('keydown', (e) => { if (e.key === 'Enter') sendText(); });
+  function sendText() {
+    const t = $('text').value.trim(); if (!t) return;
+    add(t, 'me'); ws?.send(JSON.stringify({ type: 'transcript', text: t })); $('text').value = '';
+  }
+
+  connect();
+})();
+</script>
+</body>
+</html>
