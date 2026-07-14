@@ -16,8 +16,8 @@ switch (cmd) {
   case 'start':
     step('Starting the Atlas fleet');
     if (!has('pm2')) warn('pm2 not found — install with `npm i -g pm2` for 24/7 running.');
-    // PM2 keeps every agent alive and restarts on crash/reboot.
-    run('pm2 start ecosystem.config.js', { soft: true });
+    // PM2 keeps every agent alive and restarts on crash/reboot. Use .cjs so it's treated as CommonJS.
+    run('pm2 start ecosystem.config.cjs', { soft: true });
     run('pm2 save', { soft: true });
     cortextos('start boss');
     console.log('\nFleet up. `npm run fleet:status` for the health table. `npm run voice` to talk to it.');
@@ -29,7 +29,7 @@ switch (cmd) {
     break;
   case 'stop':
     step('Stopping the fleet');
-    run('pm2 stop ecosystem.config.js', { soft: true });
+    run('pm2 stop ecosystem.config.cjs', { soft: true });
     break;
   default:
     console.log('usage: node scripts/fleet.mjs start|status|stop');

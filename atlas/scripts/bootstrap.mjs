@@ -4,7 +4,7 @@
 //
 // Safe to re-run: every step checks for existing state before acting.
 import 'dotenv/config';
-import { existsSync } from 'node:fs';
+import { existsSync, renameSync } from 'node:fs';
 import { run, has, step, log, warn, die, paths, FLEET } from './lib/util.mjs';
 import { deploy } from './deploy.mjs';
 
@@ -62,6 +62,8 @@ async function main() {
 
   step('Generate the PM2 ecosystem config');
   cortextos('ecosystem');
+  // Rename to .cjs so PM2 treats it as CommonJS (package.json has "type": "module")
+  try { renameSync('ecosystem.config.js', 'ecosystem.config.cjs'); } catch {}
 
   console.log(`
 \x1b[1m╰─ Done ────────────────────────────────────────────╯\x1b[0m
