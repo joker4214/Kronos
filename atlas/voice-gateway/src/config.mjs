@@ -5,6 +5,10 @@ export const config = {
   transport: process.env.VOICE_TRANSPORT || 'browser',   // browser | twilio
   port: Number(process.env.VOICE_PORT || 5111),
 
+  // Hands-free wake word. Say it to start a turn without touching the mic.
+  // Empty string disables hands-free (push-to-talk only).
+  wakeWord: (process.env.WAKE_WORD ?? 'Atlas').trim(),
+
   stt: {
     provider: process.env.STT_PROVIDER || 'browser',      // browser | deepgram | whisper-local | openai
     deepgramKey: process.env.DEEPGRAM_API_KEY || '',

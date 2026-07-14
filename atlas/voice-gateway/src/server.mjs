@@ -34,6 +34,7 @@ const server = http.createServer((req, res) => {
       sttProvider: config.stt.provider,
       ttsProvider: config.tts.provider,
       transport: config.transport,
+      wakeWord: config.wakeWord,
     });
   }
 
