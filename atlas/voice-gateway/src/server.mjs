@@ -53,7 +53,25 @@ const server = http.createServer((req, res) => {
 });
 
 // WebSocket: the live voice channel with the browser.
-const wss = new WebSocketServer({ server, path: '/ws' });
+const wss = new WebSocketServer({
+  server,
+  path: '/ws',
+  verifyClient(info) {
+    const origin = info.req.headers.origin || info.req.headers.referer;
+    const host = info.req.headers.host;
+    // Allow same-origin connections. For localhost/127.0.0.1, allow any origin
+    // since it's a dev machine. For production, require matching origin.
+    if (origin && host) {
+      const originUrl = new URL(origin);
+      const isLocalhost = host.includes('localhost') || host.includes('127.0.0.1') || host.includes('::1');
+      if (!isLocalhost && !origin.includes(host)) {
+        console.warn(`[ws] rejected connection from untrusted origin: ${origin}`);
+        return false;
+      }
+    }
+    return true;
+  }
+});
 wss.on('connection', (ws) => {
   send(ws, { type: 'ready', mode: bridge.mode, clientSpeech: isClientSpeech() });
 

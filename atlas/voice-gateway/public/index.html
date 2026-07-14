@@ -88,16 +88,24 @@
 
   const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
 
+  // HTML escape helper to prevent XSS.
+  function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+  }
+
   // ---- WebSocket to the gateway ----
   function connect() {
     ws = new WebSocket(`ws://${location.host}/ws`);
-    ws.onopen = () => statusEl.innerHTML = 'connected';
+    ws.onopen = () => statusEl.textContent = 'connected';
     ws.onclose = () => { statusEl.textContent = 'disconnected — retrying…'; setTimeout(connect, 1500); };
     ws.onmessage = (ev) => {
       const m = JSON.parse(ev.data);
       if (m.type === 'ready') {
         clientSpeech = m.clientSpeech;
-        statusEl.innerHTML = `orchestrator: <b>${m.mode}</b>`;
+        const mode = ['mock', 'live', 'live-timeout'].includes(m.mode) ? m.mode : 'unknown';
+        statusEl.innerHTML = `orchestrator: <b>${escapeHtml(mode)}</b>`;
         hint.textContent = m.mode === 'mock'
           ? 'Fleet not running — replies are a stand-in so you can feel the loop. Start it with `npm run fleet:start`.'
           : 'Connected to your live fleet.';
@@ -121,7 +129,11 @@
     add(text, 'me'); ws?.send(JSON.stringify({ type: 'transcript', text }));
   }
   function resetLabel() {
-    label.innerHTML = handsfree ? `Say <span class="wake">“${wakeWord}”</span> to talk` : 'Tap the mic and talk';
+    if (handsfree) {
+      label.innerHTML = `Say <span class=”wake”>”${escapeHtml(wakeWord)}”</span> to talk`;
+    } else {
+      label.textContent = 'Tap the mic and talk';
+    }
     micBtn.className = handsfree ? 'armed' : '';
     mode = handsfree ? 'armed' : 'idle';
   }
