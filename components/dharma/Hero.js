@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import GradientDots from './GradientDots';
+import BlobBackground from './BlobBackground';
 import styles from '@/styles/dharma.module.css';
 
 const container = {
@@ -19,6 +20,7 @@ const item = {
 export default function Hero() {
   return (
     <section id="top" className={styles.hero}>
+      <BlobBackground />
       <GradientDots backgroundColor="transparent" />
       <motion.div
         className={styles.heroInner}
