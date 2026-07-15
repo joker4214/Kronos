@@ -1,12 +1,13 @@
-import SpotlightBackground from '@/components/SpotlightBackground';
 import styles from '@/styles/dharma.module.css';
 import { WEB_DESIGN_TIERS, MAINTENANCE_PLANS } from './data';
 import Reveal from './Reveal';
+import GradientDots from './GradientDots';
 
 export default function WebDesign() {
   return (
     <section id="webdesign" className={`${styles.section} ${styles.webdesign}`}>
-      <SpotlightBackground>
+      <GradientDots />
+      <div className={styles.webdesignContent}>
         <Reveal className={styles.sectionHead}>
           <div className={styles.sectionEyebrow}>Web Design</div>
           <h2>A site built to match where your business is today.</h2>
@@ -53,7 +54,7 @@ export default function WebDesign() {
             ))}
           </div>
         </Reveal>
-      </SpotlightBackground>
+      </div>
     </section>
   );
 }

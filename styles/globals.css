@@ -95,21 +95,6 @@ img {
   transition: opacity 0.3s ease;
 }
 
-/* The Web Design section sits on a white background — the hero-tuned glow
-   intensity reads as harsh streaks there, so it's dialed back and confined
-   to the section instead of bleeding into neighboring white space. */
-#webdesign {
-  isolation: isolate;
-}
-
-#webdesign .spotlight-left,
-#webdesign .spotlight-mid,
-#webdesign .spotlight-right,
-#webdesign .spotlight-cursor {
-  opacity: 0.45;
-  filter: blur(70px);
-}
-
 @media (max-width: 768px) {
   .spotlight-left {
     width: 320px;

@@ -310,7 +310,35 @@
 
 /* PACKAGES */
 .packages {
-  background: var(--gray-100);
+  background: var(--charcoal);
+  position: relative;
+  overflow: hidden;
+}
+
+.packagesGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 900px;
+  height: 900px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(47, 95, 255, 0.35) 0%, rgba(47, 95, 255, 0.1) 45%, transparent 70%);
+  filter: blur(10px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.packagesContent {
+  position: relative;
+  z-index: 1;
+}
+
+.packages .sectionHead h2 {
+  color: var(--white);
+}
+
+.packages .sectionHead p {
+  color: var(--gray-400);
 }
 
 .pkgLink {
@@ -326,26 +354,33 @@
   max-width: 1140px;
   margin: 0 auto;
   align-items: start;
-  background: var(--gray-100);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .pkgCard {
-  background: var(--white);
+  background: var(--charcoal-soft);
+  color: var(--white);
   padding: 36px 30px;
   position: relative;
   display: flex;
   flex-direction: column;
   height: 100%;
-  transition: transform 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .pkgCard:hover {
   transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
 }
 
 .pkgFeatured {
-  background: var(--charcoal);
-  color: var(--white);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent), 0 20px 60px rgba(47, 95, 255, 0.3);
+}
+
+.pkgFeatured:hover {
+  box-shadow: 0 0 0 1px var(--accent), 0 24px 70px rgba(47, 95, 255, 0.4);
 }
 
 .pkgBadge {
@@ -366,23 +401,21 @@
   font-size: 1.35rem;
   font-weight: 600;
   margin-bottom: 4px;
+  color: var(--white);
 }
 
 .pkgTag {
-  color: var(--accent);
+  color: var(--accent-light);
   font-size: 0.85rem;
   font-weight: 600;
   margin-bottom: 18px;
-}
-
-.pkgFeatured .pkgTag {
-  color: var(--accent-light);
 }
 
 .pkgPrice {
   font-family: var(--font-display);
   font-size: 2.2rem;
   font-weight: 700;
+  color: var(--white);
 }
 
 .pkgPrice span {
@@ -395,21 +428,13 @@
 .pkgWhy {
   margin-top: 18px;
   font-size: 0.88rem;
-  color: var(--gray-700);
-  font-style: italic;
-}
-
-.pkgFeatured .pkgWhy {
   color: var(--gray-400);
+  font-style: italic;
 }
 
 .pkgDesc {
   margin: 10px 0 24px;
   font-size: 0.95rem;
-  color: var(--gray-700);
-}
-
-.pkgFeatured .pkgDesc {
   color: var(--gray-400);
 }
 
@@ -421,7 +446,9 @@
   border-radius: 2px;
   font-weight: 600;
   font-size: 0.92rem;
-  border: 1px solid var(--charcoal);
+  border: 1px solid var(--gray-400);
+  color: var(--white);
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 .pkgFeatured .pkgCta {
@@ -431,8 +458,8 @@
 }
 
 .pkgCard:not(.pkgFeatured) .pkgCta:hover {
-  background: var(--charcoal);
-  color: var(--white);
+  background: var(--white);
+  color: var(--charcoal);
 }
 
 @media (max-width: 860px) {
@@ -546,6 +573,11 @@
   background: var(--white);
   position: relative;
   overflow: hidden;
+}
+
+.webdesignContent {
+  position: relative;
+  z-index: 1;
 }
 
 .wdGrid {
