@@ -6,7 +6,7 @@ import GradientDots from './GradientDots';
 export default function WebDesign() {
   return (
     <section id="webdesign" className={`${styles.section} ${styles.webdesign}`}>
-      <GradientDots />
+      <GradientDots backgroundColor="transparent" />
       <div className={styles.webdesignContent}>
         <Reveal className={styles.sectionHead}>
           <div className={styles.sectionEyebrow}>Web Design</div>

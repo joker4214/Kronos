@@ -27,7 +27,14 @@ export default function Packages() {
               delay={index * 0.1}
               className={`${styles.pkgCard} ${pkg.featured ? styles.pkgFeatured : ''}`}
             >
-              {pkg.featured && <span className={styles.pkgBadge}>Most Popular</span>}
+              <div className={styles.pkgCardHeader}>
+                {pkg.featured && <span className={styles.pkgBadge}>Most Popular</span>}
+                <div className={styles.pkgIcon}>
+                  {index === 0 && '🚀'}
+                  {index === 1 && '⚡'}
+                  {index === 2 && '👑'}
+                </div>
+              </div>
               <h3>{pkg.name}</h3>
               <div className={styles.pkgTag}>{pkg.tag}</div>
               <div className={styles.pkgPrice}>
