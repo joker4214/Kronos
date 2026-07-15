@@ -1,50 +1,29 @@
-'use client';
-
-import { useState, useEffect } from 'react';
-import Dashboard from '@/components/Dashboard';
-import Styles from '@/styles/page.module.css';
+import Navbar from '@/components/dharma/Navbar';
+import Hero from '@/components/dharma/Hero';
+import StatsBar from '@/components/dharma/StatsBar';
+import About from '@/components/dharma/About';
+import Packages from '@/components/dharma/Packages';
+import PackageDetails from '@/components/dharma/PackageDetails';
+import WebDesign from '@/components/dharma/WebDesign';
+import AlaCarteCart from '@/components/dharma/AlaCarteCart';
+import Team from '@/components/dharma/Team';
+import FinalCTA from '@/components/dharma/FinalCTA';
+import Footer from '@/components/dharma/Footer';
 
 export default function Home() {
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    // Check if system is ready
-    const checkSystem = async () => {
-      try {
-        const response = await fetch('/api/system/status');
-        if (!response.ok) throw new Error('System not ready');
-        setLoading(false);
-      } catch (err) {
-        setError(err.message);
-        setLoading(false);
-      }
-    };
-
-    checkSystem();
-  }, []);
-
-  if (loading) {
-    return (
-      <div className={Styles.container}>
-        <div className={Styles.loadingSpinner}>
-          <h2>Loading Kronos...</h2>
-        </div>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className={Styles.container}>
-        <div className={Styles.errorBox}>
-          <h2>System Error</h2>
-          <p>{error}</p>
-          <p>Make sure your database is configured and running.</p>
-        </div>
-      </div>
-    );
-  }
-
-  return <Dashboard />;
+  return (
+    <>
+      <Navbar />
+      <Hero />
+      <StatsBar />
+      <About />
+      <Packages />
+      <PackageDetails />
+      <WebDesign />
+      <AlaCarteCart />
+      <Team />
+      <FinalCTA />
+      <Footer />
+    </>
+  );
 }
