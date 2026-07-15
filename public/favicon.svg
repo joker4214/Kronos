@@ -1,0 +1,6 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="96" fill="#16181C"/>
+  <circle cx="100" cy="100" r="92" fill="none" stroke="#2F5FFF" stroke-width="2"/>
+  <text x="100" y="132" font-family="Arial,sans-serif" font-size="100" font-weight="700" fill="#FFFFFF" text-anchor="middle">D</text>
+  <text x="115" y="132" font-family="Arial,sans-serif" font-size="60" font-weight="400" fill="#2F5FFF" text-anchor="middle" opacity="0.35">E</text>
+</svg>
