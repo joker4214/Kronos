@@ -1,17 +1,18 @@
 import styles from '@/styles/dharma.module.css';
 import { TEAM } from './data';
 import TeamAvatar from './TeamAvatar';
+import Reveal from './Reveal';
 
 export default function Team() {
   return (
     <section id="team" className={`${styles.section} ${styles.team}`}>
-      <div className={styles.sectionHead}>
+      <Reveal className={styles.sectionHead}>
         <div className={styles.sectionEyebrow}>Our Team</div>
         <h2>The people behind the work</h2>
-      </div>
+      </Reveal>
       <div className={styles.teamGrid}>
-        {TEAM.map((member) => (
-          <div key={member.name} className={styles.teamCard}>
+        {TEAM.map((member, index) => (
+          <Reveal key={member.name} delay={index * 0.08} className={styles.teamCard}>
             <div className={styles.avatar}>
               <TeamAvatar
                 photo={member.photo}
@@ -30,7 +31,7 @@ export default function Team() {
                 </a>
               </p>
             )}
-          </div>
+          </Reveal>
         ))}
       </div>
     </section>

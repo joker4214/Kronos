@@ -1,23 +1,24 @@
 import SpotlightBackground from '@/components/SpotlightBackground';
 import styles from '@/styles/dharma.module.css';
 import { WEB_DESIGN_TIERS, MAINTENANCE_PLANS } from './data';
+import Reveal from './Reveal';
 
 export default function WebDesign() {
   return (
     <section id="webdesign" className={`${styles.section} ${styles.webdesign}`}>
       <SpotlightBackground>
-        <div className={styles.sectionHead}>
+        <Reveal className={styles.sectionHead}>
           <div className={styles.sectionEyebrow}>Web Design</div>
           <h2>A site built to match where your business is today.</h2>
           <p>
             Pricing scales with your business size — pick the tier that fits, not one built
             for a company twice your size.
           </p>
-        </div>
+        </Reveal>
 
         <div className={styles.wdGrid}>
-          {WEB_DESIGN_TIERS.map((tier) => (
-            <div key={tier.name} className={styles.wdCard}>
+          {WEB_DESIGN_TIERS.map((tier, index) => (
+            <Reveal key={tier.name} delay={index * 0.1} className={styles.wdCard}>
               <div className={styles.pkgTag}>{tier.tag}</div>
               <h3>{tier.name}</h3>
               <p className={styles.wdWhy}>{tier.why}</p>
@@ -26,11 +27,11 @@ export default function WebDesign() {
                 <span> {tier.priceNote}</span>
               </div>
               <p className={styles.wdDesc}>{tier.desc}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
 
-        <div className={styles.maintWrap}>
+        <Reveal className={styles.maintWrap}>
           <div className={styles.maintHead}>
             <div className={styles.sectionEyebrow}>Keep it running</div>
             <h3>Maintenance plans</h3>
@@ -51,7 +52,7 @@ export default function WebDesign() {
               </div>
             ))}
           </div>
-        </div>
+        </Reveal>
       </SpotlightBackground>
     </section>
   );

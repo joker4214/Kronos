@@ -1,10 +1,11 @@
 import styles from '@/styles/dharma.module.css';
 import { PACKAGES } from './data';
+import Reveal from './Reveal';
 
 export default function Packages() {
   return (
     <section id="packages" className={`${styles.section} ${styles.packages}`}>
-      <div className={styles.sectionHead}>
+      <Reveal className={styles.sectionHead}>
         <div className={styles.sectionEyebrow}>Our Packages</div>
         <h2>
           <a
@@ -16,11 +17,12 @@ export default function Packages() {
             Three tiers. One goal — your store grows.
           </a>
         </h2>
-      </div>
+      </Reveal>
       <div className={styles.pkgGrid}>
-        {PACKAGES.map((pkg) => (
-          <div
+        {PACKAGES.map((pkg, index) => (
+          <Reveal
             key={pkg.id}
+            delay={index * 0.1}
             className={`${styles.pkgCard} ${pkg.featured ? styles.pkgFeatured : ''}`}
           >
             {pkg.featured && <span className={styles.pkgBadge}>Most Popular</span>}
@@ -40,7 +42,7 @@ export default function Packages() {
             >
               Get Started
             </a>
-          </div>
+          </Reveal>
         ))}
       </div>
     </section>

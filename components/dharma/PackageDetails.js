@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import styles from '@/styles/dharma.module.css';
 import { PACKAGE_DETAILS } from './data';
+import Reveal from './Reveal';
 
 const TABS = [
   { id: 'starter', label: 'Starter Launch' },
@@ -16,10 +17,10 @@ export default function PackageDetails() {
 
   return (
     <section className={`${styles.section} ${styles.pkgDetail}`}>
-      <div className={styles.sectionHead}>
+      <Reveal className={styles.sectionHead}>
         <div className={styles.sectionEyebrow}>Package Details</div>
         <h2>Exactly what&apos;s included</h2>
-      </div>
+      </Reveal>
 
       <div className={styles.detailTabs}>
         {TABS.map((tab) => (

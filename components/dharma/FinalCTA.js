@@ -1,9 +1,10 @@
 import styles from '@/styles/dharma.module.css';
+import Reveal from './Reveal';
 
 export default function FinalCTA() {
   return (
     <section id="contact" className={styles.ctaFinal}>
-      <div className={styles.ctaWrap}>
+      <Reveal className={styles.ctaWrap}>
         <div className={styles.sectionEyebrow}>Ready to Get Started?</div>
         <h2>Your store. Your brand. Done right.</h2>
         <p>
@@ -43,7 +44,7 @@ export default function FinalCTA() {
           first can be added for a small fee. Refunds aren&apos;t available once work has
           started, but our goal is always to get it right together.
         </p>
-      </div>
+      </Reveal>
     </section>
   );
 }

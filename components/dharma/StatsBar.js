@@ -1,4 +1,5 @@
 import styles from '@/styles/dharma.module.css';
+import Reveal from './Reveal';
 
 const STATS = [
   { num: '5+', label: 'Platforms Covered' },
@@ -11,11 +12,11 @@ export default function StatsBar() {
   return (
     <div className={styles.stats}>
       <div className={styles.statsGrid}>
-        {STATS.map((stat) => (
-          <div key={stat.label}>
+        {STATS.map((stat, index) => (
+          <Reveal key={stat.label} delay={index * 0.08}>
             <div className={styles.statNum}>{stat.num}</div>
             <div className={styles.statLabel}>{stat.label}</div>
-          </div>
+          </Reveal>
         ))}
       </div>
     </div>

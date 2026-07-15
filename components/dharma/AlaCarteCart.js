@@ -3,6 +3,7 @@
 import { useMemo, useState } from 'react';
 import styles from '@/styles/dharma.module.css';
 import { ALACARTE_GROUPS, ALACARTE_ITEM_MAP } from './data';
+import Reveal from './Reveal';
 
 export default function AlaCarteCart() {
   const [selected, setSelected] = useState({});
@@ -44,19 +45,19 @@ export default function AlaCarteCart() {
 
   return (
     <section id="alacarte" className={`${styles.section} ${styles.alacarte}`}>
-      <div className={styles.sectionHead}>
+      <Reveal className={styles.sectionHead}>
         <div className={styles.sectionEyebrow}>À La Carte</div>
         <h2>Pick only what you need.</h2>
         <p>
           Add services to your cart — we&apos;ll flag when something works better after another
           piece is already in place.
         </p>
-      </div>
+      </Reveal>
 
       <div className={styles.cartLayout}>
         <div>
-          {ALACARTE_GROUPS.map((group) => (
-            <div key={group.title} className={styles.alaGroup}>
+          {ALACARTE_GROUPS.map((group, index) => (
+            <Reveal key={group.title} delay={index * 0.1} className={styles.alaGroup}>
               <h3 className={styles.alaGroupTitle}>{group.title}</h3>
               {group.items.map((item) => {
                 const isSelected = Boolean(selected[item.id]);
@@ -81,7 +82,7 @@ export default function AlaCarteCart() {
                   </button>
                 );
               })}
-            </div>
+            </Reveal>
           ))}
         </div>
 
