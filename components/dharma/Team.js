@@ -24,13 +24,21 @@ export default function Team() {
             {member.role && (
               <p className={member.roleAccent ? styles.roleAccent : undefined}>{member.role}</p>
             )}
-            {member.contact && (
+            {member.contacts && member.contacts.length > 0 ? (
+              <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
+                {member.contacts.map((c, i) => (
+                  <a key={i} href={c.href} target="_blank" rel="noopener noreferrer" style={{ fontSize: '14px' }}>
+                    {c.label}
+                  </a>
+                ))}
+              </div>
+            ) : member.contact ? (
               <p>
                 <a href={member.contact.href} target="_blank" rel="noopener noreferrer">
                   {member.contact.label}
                 </a>
               </p>
-            )}
+            ) : null}
           </Reveal>
         ))}
       </div>

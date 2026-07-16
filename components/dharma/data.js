@@ -363,4 +363,14 @@ export const TEAM = [
     roleAccent: true,
     contact: { label: 'WhatsApp +234 805 083 5060', href: 'https://wa.me/2348050835060' },
   },
+  {
+    name: 'Salman',
+    initial: 'Sa',
+    role: 'Store Designer',
+    roleAccent: true,
+    contacts: [
+      { label: 'Instagram', href: 'https://www.instagram.com/shopifydevelopment_804?igsh=MW42YjB0bDV0YWh1dg==' },
+      { label: 'Facebook', href: 'https://www.facebook.com/share/1E4d1EopEV/' },
+    ],
+  },
 ];

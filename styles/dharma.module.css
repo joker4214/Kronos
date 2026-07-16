@@ -1080,7 +1080,7 @@
 
 .teamGrid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2px;
   max-width: 1080px;
   margin: 0 auto;
