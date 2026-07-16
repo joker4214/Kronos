@@ -8,7 +8,7 @@ import WebDesign from '@/components/dharma/WebDesign';
 import AlaCarteCart from '@/components/dharma/AlaCarteCart';
 import Team from '@/components/dharma/Team';
 import FinalCTA from '@/components/dharma/FinalCTA';
-import Footer from '@/components/dharma/Footer';
+import AnimatedFooter from '@/components/dharma/AnimatedFooter';
 
 export default function Home() {
   return (
@@ -23,7 +23,7 @@ export default function Home() {
       <AlaCarteCart />
       <Team />
       <FinalCTA />
-      <Footer />
+      <AnimatedFooter />
     </>
   );
 }
