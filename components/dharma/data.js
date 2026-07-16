@@ -348,18 +348,20 @@ export const TEAM = [
   {
     name: 'Shuaib',
     initial: 'S',
+    role: 'Store Designer',
+    roleAccent: true,
     contact: { label: 'EcomBuildsHub.com', href: 'https://ecombuildshub.com' },
   },
   {
     name: 'Yusuf',
     initial: 'Y',
-    role: 'Shopify, Wix & WordPress',
+    role: 'Store Designer',
     roleAccent: true,
   },
   {
     name: 'Mathew',
     initial: 'M',
-    role: 'Shopify',
+    role: 'Store Designer',
     roleAccent: true,
     contact: { label: 'WhatsApp +234 805 083 5060', href: 'https://wa.me/2348050835060' },
   },

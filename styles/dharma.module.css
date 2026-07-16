@@ -1082,7 +1082,7 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2px;
-  max-width: 1080px;
+  width: fit-content;
   margin: 0 auto;
   background: var(--gray-100);
 }
