@@ -44,7 +44,11 @@ export default function Packages() {
         </Reveal>
 
         <div className={styles.pkgGrid}>
-          {PACKAGES.map((pkg, index) => (
+          {PACKAGES.map((pkg, index) => {
+            const isAgency = index === 2;
+            const showYearly = isAgency && isYearly;
+
+            return (
             <Reveal
               key={pkg.id}
               delay={index * 0.1}
@@ -57,9 +61,9 @@ export default function Packages() {
 
               <div className={styles.pkgPrice}>
                 <span className={styles.priceValue}>
-                  ${isYearly ? Math.round(pkg.monthlyPrice * 12 * 0.8) : pkg.monthlyPrice}
+                  ${showYearly ? Math.round(pkg.monthlyPrice * 12 * 0.8) : pkg.monthlyPrice}
                 </span>
-                <span className={styles.pricePeriod}>/{isYearly ? 'year' : 'month'}</span>
+                <span className={styles.pricePeriod}>/{showYearly ? 'year' : 'month'}</span>
               </div>
 
               <p className={styles.pkgDesc}>{pkg.desc}</p>
@@ -86,7 +90,8 @@ export default function Packages() {
                 </ul>
               </div>
             </Reveal>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
