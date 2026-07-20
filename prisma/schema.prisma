@@ -1,0 +1,69 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model CalendarIdea {
+  id        String     @id @default(cuid())
+  title     String
+  description String?
+  googleEventId String @unique
+  scheduledDate DateTime
+  status    String    @default("pending") // pending, drafted, posted, archived
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  // Relations
+  contentDrafts ContentDraft[]
+  metrics       Metric[]
+}
+
+model ContentDraft {
+  id        String     @id @default(cuid())
+  ideaId    String
+  idea      CalendarIdea @relation(fields: [ideaId], references: [id], onDelete: Cascade)
+  platform  String     // instagram, tiktok, linkedin, twitter
+  content   String     // The generated draft content
+  imageUrl  String?    // Optional image/video URL
+  status    String     @default("draft") // draft, posted, archived
+  postUrl   String?    // URL after posting
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+
+  @@index([ideaId])
+}
+
+model Metric {
+  id        String     @id @default(cuid())
+  ideaId    String
+  idea      CalendarIdea @relation(fields: [ideaId], references: [id], onDelete: Cascade)
+  platform  String
+  conversions Int      @default(0)
+  clicks    Int        @default(0)
+  timeOnPage Int?      // in seconds
+  engagement Int       @default(0) // likes, comments, shares combined
+  collectedAt DateTime @default(now())
+  createdAt DateTime   @default(now())
+
+  @@index([ideaId])
+  @@index([collectedAt])
+}
+
+model ScheduledTask {
+  id        String     @id @default(cuid())
+  taskType  String     // "content_generation", "metrics_collection"
+  scheduledFor DateTime
+  status    String     @default("pending") // pending, completed, failed
+  lastRun   DateTime?
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+
+  @@index([scheduledFor])
+}

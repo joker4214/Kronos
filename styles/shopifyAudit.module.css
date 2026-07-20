@@ -1,0 +1,126 @@
+.module {
+  background: var(--white);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-left: 6px solid var(--accent);
+}
+
+.moduleHeader {
+  padding: 20px;
+  cursor: pointer;
+  background: var(--white);
+  transition: background 0.2s ease;
+  border: none;
+  width: 100%;
+  text-align: left;
+  display: block;
+}
+
+.moduleHeader:hover {
+  background: var(--gray-100);
+}
+
+.moduleTitle {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+  color: var(--accent);
+}
+
+.modulePrice {
+  font-size: 14px;
+  color: var(--gray-700);
+  margin-top: 5px;
+  opacity: 0.8;
+}
+
+.moduleContent {
+  padding: 0 20px 20px;
+  border-top: 1px solid var(--gray-100);
+  animation: fadeIn 0.3s ease;
+}
+
+.moduleContent ul {
+  padding-left: 20px;
+  margin: 16px 0 0;
+}
+
+.moduleContent li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  color: var(--gray-700);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Dark variant — used when embedded in the Packages section (dark charcoal background) */
+.moduleDark {
+  background: linear-gradient(to right, rgba(34, 37, 43, 0.8), rgba(31, 34, 40, 0.8), rgba(34, 37, 43, 0.8));
+  border-radius: 12px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 6px solid var(--accent);
+  transition: border-color 0.3s ease;
+}
+
+.moduleDark:hover {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.moduleHeaderDark {
+  padding: 20px;
+  cursor: pointer;
+  background: transparent;
+  transition: background 0.2s ease;
+  border: none;
+  width: 100%;
+  text-align: left;
+  display: block;
+}
+
+.moduleHeaderDark:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.moduleTitleDark {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+  color: var(--white);
+}
+
+.modulePriceDark {
+  font-size: 14px;
+  color: var(--accent-light);
+  margin-top: 5px;
+  font-weight: 600;
+}
+
+.moduleContentDark {
+  padding: 0 20px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  animation: fadeIn 0.3s ease;
+}
+
+.moduleContentDark ul {
+  padding-left: 20px;
+  margin: 16px 0 0;
+}
+
+.moduleContentDark li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  color: var(--gray-400);
+}
