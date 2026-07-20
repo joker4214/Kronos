@@ -31,6 +31,10 @@
   line-height: 1.25;
 }
 
+.eyebrowScale {
+  font-size: clamp(1.1rem, 2.5vw, 1.8rem);
+}
+
 .sectionHead p {
   color: var(--gray-700);
   margin-top: 16px;

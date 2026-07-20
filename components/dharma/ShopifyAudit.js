@@ -53,30 +53,39 @@ const AUDITS = [
   },
 ];
 
-export default function ShopifyAudit() {
+export default function ShopifyAudit({ variant = 'light' }) {
   const [openId, setOpenId] = useState(null);
+  const isDark = variant === 'dark';
+
+  const cls = {
+    module: isDark ? styles.moduleDark : styles.module,
+    header: isDark ? styles.moduleHeaderDark : styles.moduleHeader,
+    title: isDark ? styles.moduleTitleDark : styles.moduleTitle,
+    price: isDark ? styles.modulePriceDark : styles.modulePrice,
+    content: isDark ? styles.moduleContentDark : styles.moduleContent,
+  };
 
   return (
     <div>
       {AUDITS.map((audit) => {
         const isOpen = openId === audit.id;
         return (
-          <div key={audit.id} className={styles.module}>
+          <div key={audit.id} className={cls.module}>
             <button
               type="button"
-              className={styles.moduleHeader}
+              className={cls.header}
               onClick={() => setOpenId(isOpen ? null : audit.id)}
               aria-expanded={isOpen}
             >
-              <p className={styles.moduleTitle}>
+              <p className={cls.title}>
                 {audit.name} — {audit.price}
               </p>
-              <p className={styles.modulePrice}>
+              <p className={cls.price}>
                 {isOpen ? 'Click to hide deliverables' : 'Click to view deliverables'}
               </p>
             </button>
             {isOpen && (
-              <div className={styles.moduleContent}>
+              <div className={cls.content}>
                 <ul>
                   {audit.items.map((item, i) => (
                     <li key={i}>{item}</li>

@@ -1,19 +1,26 @@
 'use client';
 
-import { useState } from 'react';
 import styles from '@/styles/dharma.module.css';
 import { PACKAGES } from './data';
 import Reveal from './Reveal';
+import ShopifyAudit from './ShopifyAudit';
 
 export default function Packages() {
-  const [isYearly, setIsYearly] = useState(false);
-
   return (
     <section id="packages" className={`${styles.section} ${styles.packages}`}>
       <div className={styles.packagesGlow} />
       <div className={styles.packagesContent}>
+        <Reveal className={styles.sectionHead} style={{ marginBottom: '32px' }}>
+          <div className={`${styles.sectionEyebrow} ${styles.eyebrowScale}`}>Shopify Store Audits</div>
+          <h2>Not sure where to start? Get an audit first.</h2>
+        </Reveal>
+
+        <div style={{ maxWidth: '860px', margin: '0 auto 72px' }}>
+          <ShopifyAudit variant="dark" />
+        </div>
+
         <Reveal className={styles.sectionHead}>
-          <div className={styles.sectionEyebrow}>Our Packages</div>
+          <div className={`${styles.sectionEyebrow} ${styles.eyebrowScale}`}>Our Packages</div>
           <h2>
             <a
               href="https://www.ecombuildshub.com"
@@ -26,29 +33,8 @@ export default function Packages() {
           </h2>
         </Reveal>
 
-        <Reveal className={styles.pricingToggleWrap}>
-          <div className={styles.pricingToggle}>
-            <button
-              className={`${styles.toggleBtn} ${!isYearly ? styles.toggleActive : ''}`}
-              onClick={() => setIsYearly(false)}
-            >
-              <span>Monthly</span>
-            </button>
-            <button
-              className={`${styles.toggleBtn} ${isYearly ? styles.toggleActive : ''}`}
-              onClick={() => setIsYearly(true)}
-            >
-              <span>Yearly</span>
-            </button>
-          </div>
-        </Reveal>
-
         <div className={styles.pkgGrid}>
-          {PACKAGES.map((pkg, index) => {
-            const isAgency = index === 2;
-            const showYearly = isAgency && isYearly;
-
-            return (
+          {PACKAGES.map((pkg, index) => (
             <Reveal
               key={pkg.id}
               delay={index * 0.1}
@@ -60,10 +46,8 @@ export default function Packages() {
               <div className={styles.pkgTag}>{pkg.tag}</div>
 
               <div className={styles.pkgPrice}>
-                <span className={styles.priceValue}>
-                  ${showYearly ? Math.round(pkg.monthlyPrice * 12 * 0.8) : pkg.monthlyPrice}
-                </span>
-                <span className={styles.pricePeriod}>/{showYearly ? 'year' : 'month'}</span>
+                <span className={styles.priceValue}>${pkg.monthlyPrice}</span>
+                <span className={styles.pricePeriod}>/month</span>
               </div>
 
               <p className={styles.pkgDesc}>{pkg.desc}</p>
@@ -90,8 +74,7 @@ export default function Packages() {
                 </ul>
               </div>
             </Reveal>
-            );
-          })}
+          ))}
         </div>
       </div>
     </section>
