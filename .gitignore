@@ -1,3 +1,21 @@
-.env.local
-.env
-node_modules/
+# Deny-by-default: this repo is rooted at the home directory, so nothing
+# is trackable unless explicitly re-included below. Add a new project by
+# adding its own !/path/ (and, if nested, the /parent/* + !/parent/child/
+# pair) -- never remove the leading `/*` line.
+/*
+
+!/OneDrive/
+/OneDrive/*
+!/OneDrive/Kronos/
+
+!/app/
+!/atlas/
+!/package.json
+!/vercel.json
+!/vercel.json(config)
+!/.gitignore
+
+# defense in depth inside the trees above
+**/.env
+**/.env.local
+**/node_modules/
