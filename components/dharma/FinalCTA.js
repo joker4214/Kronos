@@ -35,14 +35,22 @@ export default function FinalCTA() {
           >
             TikTok
           </a>
-          <span>Facebook</span>
+          <a
+            href="https://www.facebook.com/dharmasestheticdesign"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Facebook
+          </a>
         </div>
         <p className={styles.policyNote}>
-          We want you to love the final result. Every package includes one round of revisions
-          at no extra cost — just let us know what you&apos;d like adjusted within 5 business
-          days of delivery, and we&apos;ll make it right. Additional revision rounds beyond the
-          first can be added for a small fee. Refunds aren&apos;t available once work has
-          started, but our goal is always to get it right together.
+          Our promise: you&apos;ll love the final result, or we&apos;ll make it right. Every
+          package includes one full round of revisions at no extra cost — just tell us what
+          to adjust within 5 business days of delivery. Need more than one round? Additional
+          revisions are available for a small fee. Refunds aren&apos;t available once work has
+          started, since real time goes in right away — but between the revisions and how
+          closely we work with you along the way, our goal is that a refund is never the
+          thing you need.
         </p>
       </Reveal>
     </section>

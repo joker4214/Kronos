@@ -24,6 +24,7 @@ export default function Team() {
             {member.role && (
               <p className={member.roleAccent ? styles.roleAccent : undefined}>{member.role}</p>
             )}
+            {member.bio && <p className={styles.teamBio}>{member.bio}</p>}
             {member.contacts && member.contacts.length > 0 ? (
               <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
                 {member.contacts.map((c, i) => (

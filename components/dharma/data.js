@@ -519,6 +519,7 @@ export const TEAM = [
     role: 'Founder/CEO',
     roleAccent: true,
     photo: 'founder.jpg',
+    bio: '',
     contact: { label: 'WhatsApp +1 248 210 4830', href: 'https://wa.me/12482104830' },
   },
   {
@@ -526,6 +527,7 @@ export const TEAM = [
     initial: 'S',
     role: 'Store Designer',
     roleAccent: true,
+    bio: '',
     contact: { label: 'EcomBuildsHub.com', href: 'https://ecombuildshub.com' },
   },
   {
@@ -533,12 +535,14 @@ export const TEAM = [
     initial: 'Y',
     role: 'Store Designer',
     roleAccent: true,
+    bio: '',
   },
   {
     name: 'Mathew',
     initial: 'M',
     role: 'Store Designer',
     roleAccent: true,
+    bio: '',
     contact: { label: 'WhatsApp +234 805 083 5060', href: 'https://wa.me/2348050835060' },
   },
   {
@@ -546,6 +550,7 @@ export const TEAM = [
     initial: 'Sa',
     role: 'Store Designer',
     roleAccent: true,
+    bio: '',
     contacts: [
       { label: 'Instagram', href: 'https://www.instagram.com/shopifydevelopment_804?igsh=MW42YjB0bDV0YWh1dg==' },
       { label: 'Facebook', href: 'https://www.facebook.com/share/1E4d1EopEV/' },

@@ -56,6 +56,7 @@ export default function PackageDetailPage({ params }) {
             >
               Get Started
             </a>
+            <div className={styles.secureNote}>🔒 Payments secured by PayPal</div>
           </div>
         </div>
       </main>
