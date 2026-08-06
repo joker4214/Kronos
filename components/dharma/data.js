@@ -3,10 +3,10 @@ export const PACKAGES = [
     id: 'starter',
     name: 'Starter Launch',
     tag: 'Get visible',
-    monthlyPrice: 650,
+    price: 650,
     why: 'Without a starting content push, your store stays invisible while competitors post daily.',
     desc: '7-day TikTok and Facebook ad copy, 7 branded still photo placements, and a hashtag strategy. Everything you need to show up consistently online from day one.',
-    stripeUrl: 'https://buy.stripe.com/00w5kDdqiezW0tKgMe2kw00',
+    stripeUrl: 'https://www.paypal.com/ncp/payment/4R7WTXJRREEC2',
     featured: false,
     features: [
       '7-day TikTok ad copy',
@@ -20,10 +20,10 @@ export const PACKAGES = [
     id: 'growth',
     name: 'Growth Bundle',
     tag: 'Most popular',
-    monthlyPrice: 1450,
+    price: 1450,
     why: "Content alone doesn't convert if your store isn't optimized to capture the traffic it drives.",
     desc: 'Everything in Starter Launch plus a 10-second AI video commercial, GA4 setup, product optimization for up to 10 listings, and on-page SEO.',
-    stripeUrl: 'https://buy.stripe.com/7sYeVd85Y4Zm7Wc1Rk2kw01',
+    stripeUrl: 'https://www.paypal.com/ncp/payment/4R7WTXJRREEC2',
     featured: true,
     features: [
       'Everything in Starter, plus:',
@@ -38,10 +38,10 @@ export const PACKAGES = [
     id: 'agency',
     name: 'Full Agency',
     tag: 'Complete solution',
-    monthlyPrice: 2200,
+    price: 2200,
     why: 'Piecing together content, store fixes, and branding separately costs more and takes longer than one coordinated build.',
     desc: 'Everything in Growth Bundle plus Facebook and Instagram page setup, store performance audit, brand enhancement, a blog post, and email marketing setup.',
-    stripeUrl: 'https://buy.stripe.com/4gM5kD71U4Zm3FW67A2kw02',
+    stripeUrl: 'https://www.paypal.com/ncp/payment/4R7WTXJRREEC2',
     featured: false,
     features: [
       'Everything in Growth, plus:',
@@ -158,6 +158,182 @@ export const PACKAGE_DETAILS = {
     delivery: null,
   },
 };
+
+// Shopify Store Audits. Each entry carries both the short card copy (name,
+// price, tag, desc) and the expansive detail-page copy (priceLine, intro,
+// features, delivery) so the card grid and the /shopify-audit/[slug] pages
+// share one source of truth.
+export const AUDITS = [
+  {
+    id: 'basic-audit',
+    name: 'Basic Audit',
+    price: 200,
+    tag: 'Fast & focused',
+    desc: "A quick, focused pass over your homepage, product pages, and mobile experience — the fixes that matter most, prioritized so you know exactly where to start.",
+    priceLine: '$200 · One-time audit',
+    intro:
+      "The Basic Audit is built for store owners who need clarity fast. It's a focused review of the parts of your store that shape a first impression — your homepage, product pages, and the fundamentals of SEO and mobile usability. You'll walk away with a prioritized list of fixes, so you know exactly where to spend your next hour of work instead of guessing.",
+    features: [
+      {
+        name: 'Homepage Review',
+        why: 'Most visitors decide whether to keep browsing within seconds of landing.',
+        desc: 'Evaluates layout clarity, hero banner effectiveness, navigation structure, and trust signals.',
+      },
+      {
+        name: 'Product Page Review',
+        why: 'A confusing or incomplete product page is where sales are lost, even after a visitor is already interested.',
+        desc: 'Checks product descriptions, image quality, pricing visibility, CTA placement, and mobile responsiveness.',
+      },
+      {
+        name: 'Basic SEO Check',
+        why: "If search engines can't read your store clearly, customers searching for you won't find you.",
+        desc: 'Scans meta titles, meta descriptions, H1 tags, alt text usage, and keyword presence.',
+      },
+      {
+        name: 'Banner & Logo Feedback',
+        why: 'Low-resolution or mismatched branding quietly signals "not a real business" to new visitors.',
+        desc: 'Assesses branding consistency, image resolution, color harmony, and professionalism.',
+      },
+      {
+        name: 'Mobile Optimization Check',
+        why: 'Most Shopify traffic is mobile — a store that only works on desktop is losing the majority of visitors.',
+        desc: 'Verifies usability and layout stability across mobile devices.',
+      },
+      {
+        name: 'Speed & Performance Snapshot',
+        why: 'A slow store loses shoppers before they ever see what you sell.',
+        desc: 'A quick review of load times and the major performance blockers slowing your store down.',
+      },
+      {
+        name: '10–15 Actionable Recommendations',
+        why: null,
+        desc: 'A prioritized list of improvements with clear next steps — no vague advice, just what to fix and why.',
+      },
+    ],
+    delivery: 'Delivery: 2–3 business days. Findings delivered as a written report.',
+  },
+  {
+    id: 'standard-audit',
+    name: 'Standard Audit',
+    price: 375,
+    tag: 'Most thorough',
+    desc: 'A full design, SEO, and conversion review with a professional report — everything you need to know what to fix and why it matters.',
+    priceLine: '$375 · One-time audit',
+    intro:
+      "The Standard Audit goes deeper than a surface-level review. It covers your store's design and user experience, your SEO foundation, your analytics setup, and the specific points where shoppers are dropping off instead of buying. You'll get a professional report organized by category, plus a look at how you stack up against your competitors.",
+    features: [
+      {
+        name: 'Full Design & UX Review',
+        why: 'Small friction points across your store add up to visitors who leave without buying.',
+        desc: 'Evaluates layout consistency, spacing, typography, color usage, navigation flow, and user journey friction points.',
+      },
+      {
+        name: 'Branding Consistency Check',
+        why: 'Inconsistent branding makes a store forgettable, even with great products.',
+        desc: 'Reviews logo quality, banner design, color palette alignment, tone of voice, and trust-building elements.',
+      },
+      {
+        name: 'SEO Audit',
+        why: "If your store isn't structured for search, you're invisible to anyone who isn't already looking for you by name.",
+        desc: 'Meta titles, descriptions, H1/H2 structure, alt tags, keyword alignment, site speed, and basic schema presence.',
+      },
+      {
+        name: 'GA4 Setup Review',
+        why: 'Broken or missing analytics means every decision you make is a guess.',
+        desc: 'Checks event tracking, enhanced ecommerce configuration, purchase funnel accuracy, and missing conversions.',
+      },
+      {
+        name: 'CRO Review',
+        why: 'Traffic that never converts is money spent for nothing.',
+        desc: 'Evaluates CTA placement, product page structure, social proof, reviews, cart visibility, and checkout flow.',
+      },
+      {
+        name: 'Technical Shopify Checks',
+        why: 'Broken links and app conflicts quietly cost sales without ever showing up as an obvious problem.',
+        desc: 'Scans apps, theme settings, broken links, duplicate content, and potential conflicts.',
+      },
+      {
+        name: 'Competitor Comparison',
+        why: 'Knowing where you stand against competitors tells you what actually needs to change.',
+        desc: 'Benchmarks your design, pricing, SEO strength, and branding against 1–2 competitors.',
+      },
+      {
+        name: '20–40 Actionable Recommendations',
+        why: null,
+        desc: 'Organized by category — Design, SEO, CRO, and Technical — so you can tackle them in order.',
+      },
+      {
+        name: 'Professional PDF or Notion Report',
+        why: null,
+        desc: 'Structured documentation you or your team can put to use immediately.',
+      },
+    ],
+    delivery: 'Delivery: 4–5 business days.',
+  },
+  {
+    id: 'premium-audit',
+    name: 'Premium Audit',
+    price: 750,
+    tag: 'Full roadmap',
+    desc: 'Everything in Standard, plus funnel analysis, redesign mockups, a working session, and a 30–60 day roadmap to actually implement it.',
+    priceLine: '$750 · One-time audit',
+    intro:
+      "The Premium Audit is for store owners ready to act on what's found, not just read about it. It includes everything in the Standard Audit, plus a full funnel analysis, homepage redesign mockups, a keyword strategy, and a live working session to walk through the findings together. You'll leave with a 30–60 day roadmap that tells you exactly what to fix first and why.",
+    features: [
+      {
+        name: 'Everything in the Standard Audit',
+        why: null,
+        desc: 'The full design, SEO, GA4, CRO, technical, and competitor review — all included as the foundation.',
+      },
+      {
+        name: 'Full GA4 Funnel Analysis',
+        why: 'Knowing where shoppers drop off matters more than knowing that they do.',
+        desc: 'Evaluates user paths, drop-off points, conversion bottlenecks, and event accuracy.',
+      },
+      {
+        name: 'Heatmap & Behavior Recommendations',
+        why: null,
+        desc: 'Suggests scroll-depth improvements, click-map insights, and layout adjustments based on how shoppers actually use your store.',
+      },
+      {
+        name: 'Product Page Rewrite Suggestions',
+        why: null,
+        desc: 'Improved product descriptions, feature highlights, and SEO-optimized copy suggestions.',
+      },
+      {
+        name: 'Homepage Redesign Mockups',
+        why: null,
+        desc: 'Visual mockups or wireframes showing an improved layout, banners, and trust elements.',
+      },
+      {
+        name: 'SEO Keyword Strategy',
+        why: null,
+        desc: 'Identifies target keywords, content gaps, and ranking opportunities.',
+      },
+      {
+        name: 'Technical Shopify Deep Scan',
+        why: null,
+        desc: 'Checks theme code issues, app conflicts, schema markup, and performance blockers.',
+      },
+      {
+        name: 'Working Session',
+        why: "A conversation surfaces context and priorities a written report alone can't.",
+        desc: 'A collaborative walkthrough (WhatsApp or screen share) of your store to identify issues and opportunities together.',
+      },
+      {
+        name: 'Findings & Recommendations Session',
+        why: null,
+        desc: 'A dedicated session (WhatsApp) to explain the audit results, improvements, and strategic next steps.',
+      },
+      {
+        name: 'Implementation Roadmap (30–60 days)',
+        why: null,
+        desc: 'A prioritized plan showing what to fix first and why, so the findings actually turn into progress.',
+      },
+    ],
+    delivery: 'Delivery: 5–7 business days, plus a scheduled working session.',
+  },
+];
 
 export const WEB_DESIGN_TIERS = [
   {

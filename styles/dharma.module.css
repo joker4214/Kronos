@@ -105,9 +105,54 @@
   background: var(--accent-light);
 }
 
+.navToggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+  padding: 6px;
+}
+
+.navMobileMenu {
+  display: none;
+}
+
 @media (max-width: 860px) {
   .navLinks {
     display: none;
+  }
+
+  .navToggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navMobileMenu {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 24px 20px;
+    background: rgba(22, 24, 28, 0.98);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .navMobileLink {
+    color: var(--gray-400);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .navMobileLink:hover {
+    color: var(--white);
+  }
+
+  .navMobileCta {
+    display: block;
+    text-align: center;
+    margin-top: 16px;
   }
 }
 
@@ -593,12 +638,13 @@
 }
 
 .featureHeader {
+  /* This holds a full sentence (pkg.why), not a short label -- uppercase
+     read as shouting and hurt scannability, so it's sentence case here. */
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--accent-light);
   margin-bottom: 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
+  line-height: 1.5;
 }
 
 .featureList {
@@ -668,10 +714,32 @@
   margin: 0 auto;
 }
 
-.detailPanel h3 {
+.detailPanel h3,
+.detailPanel h1 {
   font-family: var(--font-display);
   font-size: 1.5rem;
   margin-bottom: 6px;
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 32px;
+  padding: 10px 18px;
+  border: 1px solid var(--gray-400);
+  border-radius: 2px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--gray-700);
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.backButton:hover {
+  background: var(--charcoal);
+  color: var(--white);
+  border-color: var(--charcoal);
 }
 
 .detailSub {
@@ -730,6 +798,74 @@
   background: var(--gray-100);
   font-size: 0.88rem;
   color: var(--gray-700);
+}
+
+.detailCta {
+  display: inline-block;
+  margin-top: 32px;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--white);
+  background: linear-gradient(to bottom, var(--accent), var(--accent-light));
+  box-shadow: 0 4px 16px rgba(47, 95, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.detailCta:hover {
+  box-shadow: 0 6px 24px rgba(47, 95, 255, 0.4);
+}
+
+/* Detail pages (/packages/[slug], /shopify-audit/[slug]) sit on the same
+   dark .packages background as the card grids they're linked from, so the
+   text colors below re-tune .detailPanel's originally white-background
+   palette to read on dark instead. */
+.detailOnDark .detailPanel h1,
+.detailOnDark .detailPanel h3 {
+  color: var(--white);
+}
+
+.detailOnDark .detailSub {
+  color: var(--accent-light);
+}
+
+.detailOnDark .detailPanel > p {
+  color: var(--gray-400);
+}
+
+.detailOnDark .featureRow {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+.detailOnDark .featureRow strong {
+  color: var(--white);
+}
+
+.detailOnDark .featureRow p {
+  color: var(--gray-400);
+}
+
+.detailOnDark .featureWhy {
+  color: var(--gray-400);
+}
+
+.detailOnDark .deliveryNote {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--gray-400);
+}
+
+.detailOnDark .backButton {
+  color: var(--gray-400);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.detailOnDark .backButton:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 /* WEB DESIGN */

@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import GradientDots from './GradientDots';
 import BlobBackground from './BlobBackground';
 import styles from '@/styles/dharma.module.css';
+import { smoothScrollToId } from './scrollUtils';
 
 const container = {
   hidden: {},
@@ -40,10 +41,18 @@ export default function Hero() {
           affordable, and built around your brand. Powered by AI. Delivered by professionals.
         </motion.p>
         <motion.div variants={item} className={styles.btnRow}>
-          <a href="#packages" className={`${styles.btn} ${styles.btnAccent}`}>
+          <a
+            href="#packages"
+            onClick={(e) => smoothScrollToId(e, 'packages')}
+            className={`${styles.btn} ${styles.btnAccent}`}
+          >
             View Packages
           </a>
-          <a href="#webdesign" className={`${styles.btn} ${styles.btnOutline}`}>
+          <a
+            href="#webdesign"
+            onClick={(e) => smoothScrollToId(e, 'webdesign')}
+            className={`${styles.btn} ${styles.btnOutline}`}
+          >
             Web Design
           </a>
         </motion.div>

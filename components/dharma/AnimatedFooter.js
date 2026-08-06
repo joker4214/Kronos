@@ -5,9 +5,11 @@ import { useState, useCallback } from 'react';
 import styles from '@/styles/dharma.module.css';
 import Link from 'next/link';
 import { FaInstagram, FaTiktok, FaFacebook, FaWhatsapp } from 'react-icons/fa';
+import { smoothScrollToId } from './scrollUtils';
 
 const AnimatedLink = ({ href, children, className }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const isAnchor = href.startsWith('#');
 
   return (
     <motion.div
@@ -21,7 +23,11 @@ const AnimatedLink = ({ href, children, className }) => {
         animate={isHovered ? { x: 0 } : { x: '-100%' }}
         transition={{ duration: 0.3 }}
       />
-      <Link href={href} className={`${styles.footerLink} ${className || ''}`}>
+      <Link
+        href={href}
+        onClick={isAnchor ? (e) => smoothScrollToId(e, href.slice(1)) : undefined}
+        className={`${styles.footerLink} ${className || ''}`}
+      >
         <span style={{ position: 'relative', zIndex: 2 }}>{children}</span>
       </Link>
     </motion.div>
@@ -53,9 +59,9 @@ const AnimatedIconLink = ({ href, icon: Icon, ariaLabel }) => {
 export default function AnimatedFooter() {
   const socialLinks = [
     { href: 'https://instagram.com/dharmasestheticdesign', icon: FaInstagram, ariaLabel: 'Instagram' },
-    { href: 'https://tiktok.com/@dharmasesthetic', icon: FaTiktok, ariaLabel: 'TikTok' },
-    { href: 'https://facebook.com/dharmasesthetic', icon: FaFacebook, ariaLabel: 'Facebook' },
-    { href: 'https://wa.me/message', icon: FaWhatsapp, ariaLabel: 'WhatsApp' },
+    { href: 'https://tiktok.com/@dharmasestheticde', icon: FaTiktok, ariaLabel: 'TikTok' },
+    { href: 'https://facebook.com/dharmasestheticdesign', icon: FaFacebook, ariaLabel: 'Facebook' },
+    { href: 'https://wa.me/12482104830', icon: FaWhatsapp, ariaLabel: 'WhatsApp' },
   ];
 
   const footerLinks = [

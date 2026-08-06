@@ -1,6 +1,9 @@
 'use client';
 
+import { useState } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import styles from '@/styles/dharma.module.css';
+import { smoothScrollToId } from './scrollUtils';
 
 function LogoMark() {
   return (
@@ -34,26 +37,71 @@ const NAV_LINKS = [
 ];
 
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const navigate = (e, id) => {
+    setMenuOpen(false);
+    smoothScrollToId(e, id);
+  };
+
   return (
     <header className={styles.navbar}>
       <nav className={styles.navContent}>
-        <a href="#top" className={styles.logo}>
+        <a href="#top" className={styles.logo} onClick={(e) => navigate(e, 'top')}>
           <LogoMark />
           <span>
             DHARMA&apos;S <span className={styles.logoAccent}>Esthetic</span>
           </span>
         </a>
+
         <div className={styles.navLinks}>
           {NAV_LINKS.map((link) => (
-            <a key={link.href} href={link.href} className={styles.navLink}>
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={(e) => navigate(e, link.href.slice(1))}
+              className={styles.navLink}
+            >
               {link.label}
             </a>
           ))}
-          <a href="#contact" className={styles.navCta}>
+          <a href="#contact" onClick={(e) => navigate(e, 'contact')} className={styles.navCta}>
             Contact
           </a>
         </div>
+
+        <button
+          type="button"
+          className={styles.navToggle}
+          onClick={() => setMenuOpen((v) => !v)}
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={menuOpen}
+        >
+          {menuOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
+        </button>
       </nav>
+
+      {menuOpen && (
+        <div className={styles.navMobileMenu}>
+          {NAV_LINKS.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={(e) => navigate(e, link.href.slice(1))}
+              className={styles.navMobileLink}
+            >
+              {link.label}
+            </a>
+          ))}
+          <a
+            href="#contact"
+            onClick={(e) => navigate(e, 'contact')}
+            className={`${styles.navCta} ${styles.navMobileCta}`}
+          >
+            Contact
+          </a>
+        </div>
+      )}
     </header>
   );
 }

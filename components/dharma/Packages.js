@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import styles from '@/styles/dharma.module.css';
 import { PACKAGES } from './data';
 import Reveal from './Reveal';
@@ -15,8 +16,8 @@ export default function Packages() {
           <h2>Not sure where to start? Get an audit first.</h2>
         </Reveal>
 
-        <div style={{ maxWidth: '860px', margin: '0 auto 72px' }}>
-          <ShopifyAudit variant="dark" />
+        <div style={{ maxWidth: '1140px', margin: '0 auto 72px' }}>
+          <ShopifyAudit />
         </div>
 
         <Reveal className={styles.sectionHead}>
@@ -46,20 +47,14 @@ export default function Packages() {
               <div className={styles.pkgTag}>{pkg.tag}</div>
 
               <div className={styles.pkgPrice}>
-                <span className={styles.priceValue}>${pkg.monthlyPrice}</span>
-                <span className={styles.pricePeriod}>/month</span>
+                <span className={styles.priceValue}>${pkg.price.toLocaleString('en-US')}</span>
+                <span className={styles.pricePeriod}>one-time</span>
               </div>
 
               <p className={styles.pkgDesc}>{pkg.desc}</p>
 
               <button className={styles.pkgCta}>
-                <a
-                  href={pkg.stripeUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Get Started
-                </a>
+                <Link href={`/packages/${pkg.id}`}>View Details</Link>
               </button>
 
               <div className={styles.pkgFeatures}>

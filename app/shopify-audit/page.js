@@ -1,4 +1,5 @@
 import styles from '@/styles/dharma.module.css';
+import Navbar from '@/components/dharma/Navbar';
 import ShopifyAudit from '@/components/dharma/ShopifyAudit';
 
 export const metadata = {
@@ -9,12 +10,19 @@ export const metadata = {
 
 export default function ShopifyAuditPage() {
   return (
-    <main className={styles.section} style={{ maxWidth: '900px', margin: '0 auto', padding: '60px 20px' }}>
-      <div style={{ paddingBottom: '40px' }}>
-        <h1 style={{ marginBottom: '10px' }}>Shopify Store Audit Packages</h1>
-      </div>
+    <>
+      <Navbar />
+      <main className={`${styles.section} ${styles.packages}`}>
+        <div className={styles.packagesGlow} />
+        <div className={styles.packagesContent}>
+          <div className={styles.sectionHead} style={{ marginBottom: '48px' }}>
+            <div className={`${styles.sectionEyebrow} ${styles.eyebrowScale}`}>Shopify Store Audits</div>
+            <h1>Not sure where to start? Get an audit first.</h1>
+          </div>
 
-      <ShopifyAudit />
-    </main>
+          <ShopifyAudit />
+        </div>
+      </main>
+    </>
   );
 }
