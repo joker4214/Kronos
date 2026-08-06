@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Offer-Building Starter Kit — AI Business Empire</title>
+<!-- noindex kept as defense-in-depth even though the content itself is now
+     gated server-side (see /api/kit-content) -- no reason to also send
+     search engines here. -->
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Your Offer-Building Starter Kit — AI Business Empire">
+<meta property="og:description" content="Your primary offer, pricing benchmarks, delivery format, and a 48-hour action step — built for your specific AI business type.">
+<meta property="og:image" content="https://www.dharmasestheticdesign.com/og-ai-business-empire.png">
+<meta property="og:site_name" content="AI Business Empire">
+<style>
+  :root {
+    --bg: #0b0d12; --panel: #14171f; --panel-border: rgba(255,255,255,0.08);
+    --gold: #f2b705; --blue: #2563EB; --blue-light: #5c8dff; --teal: #00BFA5;
+    --white: #ffffff; --gray: #9aa1ae; --red: #ef4444;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: radial-gradient(circle at 50% -10%, #1a2140 0%, var(--bg) 55%);
+    color: var(--white);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 44px 20px 80px; }
+  header { text-align: center; margin-bottom: 32px; }
+  .eyebrow { color: var(--gold); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 10px; }
+  h1 { font-size: clamp(1.6rem, 5vw, 2.2rem); line-height: 1.25; margin: 0 0 10px; }
+  .sub { color: var(--gray); font-size: 1rem; line-height: 1.5; max-width: 520px; margin: 0 auto; }
+
+  .card { background: var(--panel); border: 1px solid var(--panel-border); border-radius: 16px; padding: 30px 26px; margin-bottom: 18px; }
+  .card h2 { font-size: 1.15rem; margin: 0 0 6px; color: var(--white); }
+  .card .kicker { color: var(--teal); font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px; }
+  .card p { color: #d7dbe4; line-height: 1.65; margin: 0 0 12px; }
+  .card p:last-child { margin-bottom: 0; }
+
+  .price-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 8px; }
+  .price-item { background: rgba(255,255,255,0.04); border-radius: 10px; padding: 12px 14px; }
+  .price-item .amt { font-weight: 700; color: var(--gold); font-size: 1.05rem; }
+  .price-item .lbl { color: var(--gray); font-size: 0.82rem; }
+
+  .action-card { background: rgba(37,99,235,0.1); border: 1px solid rgba(37,99,235,0.3); }
+  .action-card .kicker { color: var(--blue-light); }
+
+  .cta-block { text-align: center; margin-top: 40px; padding: 30px 24px; background: rgba(255,255,255,0.03); border: 1px solid var(--panel-border); border-radius: 16px; }
+  .cta-block h2 { font-size: 1.2rem; margin: 0 0 10px; }
+  .cta-block p { color: var(--gray); line-height: 1.55; margin: 0 0 20px; }
+  .cta-btn { display: inline-block; text-decoration: none; background: linear-gradient(180deg, var(--blue), #1d4ed8); color: var(--white); padding: 15px 28px; border-radius: 10px; font-size: 1rem; font-weight: 700; box-shadow: 0 8px 24px rgba(37,99,235,0.35); border: none; cursor: pointer; font-family: inherit; }
+  .cta-btn:hover { filter: brightness(1.08); }
+  .cta-btn:disabled { opacity: 0.6; cursor: default; }
+
+  footer { text-align: center; color: var(--gray); font-size: 0.78rem; margin-top: 40px; }
+
+  .picker { display: flex; flex-direction: column; gap: 12px; }
+  .picker-option {
+    display: block; width: 100%; text-align: left; background: rgba(255,255,255,0.03);
+    border: 1px solid var(--panel-border); color: var(--white); padding: 18px 20px;
+    border-radius: 12px; cursor: pointer; text-decoration: none; transition: all 0.15s ease;
+  }
+  .picker-option:hover { border-color: var(--blue-light); background: rgba(37,99,235,0.12); }
+  .picker-option .p-name { font-weight: 700; font-size: 1.02rem; margin-bottom: 4px; }
+  .picker-option .p-tag { color: var(--gray); font-size: 0.88rem; }
+
+  .gate-input { width: 100%; padding: 13px 14px; border-radius: 10px; border: 1px solid var(--panel-border); background: rgba(255,255,255,0.04); color: var(--white); font-size: 1rem; font-family: inherit; margin-bottom: 14px; }
+  .gate-input::placeholder { color: var(--gray); }
+  .gate-error { color: var(--red); font-size: 0.88rem; margin-top: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap" id="wrap">
+  <header>
+    <div class="eyebrow">AI Business Empire — Starter Kit</div>
+    <h1 id="pageTitle">Loading&hellip;</h1>
+    <p class="sub" id="pageSub"></p>
+  </header>
+  <div id="content"></div>
+  <footer id="pageFooter"></footer>
+</div>
+
+<script>
+"use strict";
+
+/* ---------------------------------------------------------------------
+ * The $7 tripwire. Kit content lives server-side now (/api/kit-content)
+ * and is only returned after checking the buyer's email against logged
+ * Gumroad Ping sale events -- this page ships no kit content itself
+ * until a real purchase is confirmed.
+ * ------------------------------------------------------------------- */
+
+const KIT_NAMES = {
+  teacher: { name: "The Teacher's Offer-Building Kit", short: "You turn what you know into a course, guide, or template system." },
+  guide: { name: "The Guide's Coaching Kit", short: "You help one person at a time — a defined coaching or consulting engagement." },
+  builder: { name: "The Builder's Product Kit", short: "You'd rather build the fix — a tool or micro-SaaS for one specific problem." },
+  operator: { name: "The Operator's Service Kit", short: "You'd rather just handle it — an AI-powered done-for-you service." },
+  connector: { name: "The Connector's Community Kit", short: "You like people showing up together — a recurring paid community." },
+};
+
+const params = new URLSearchParams(location.search);
+const type = params.get("type");
+
+const pageTitle = document.getElementById("pageTitle");
+const pageSub = document.getElementById("pageSub");
+const content = document.getElementById("content");
+const pageFooter = document.getElementById("pageFooter");
+
+function renderPicker() {
+  pageTitle.textContent = "Thanks — Which One Are You?";
+  pageSub.textContent = "Pick whichever matches your AI Business Empire quiz result. If you didn't take the quiz yet, pick whichever sounds most like you.";
+  content.innerHTML = `
+    <div class="card">
+      <div class="picker">
+        ${Object.entries(KIT_NAMES).map(([key, k]) => `
+          <a class="picker-option" href="?type=${key}">
+            <div class="p-name">${k.name}</div>
+            <div class="p-tag">${k.short}</div>
+          </a>
+        `).join("")}
+      </div>
+    </div>
+  `;
+}
+
+function renderGate(kitMeta) {
+  pageTitle.textContent = kitMeta.name;
+  pageSub.textContent = "Enter the email you used at checkout to unlock your kit.";
+  content.innerHTML = `
+    <div class="card">
+      <form id="gateForm">
+        <input class="gate-input" type="email" id="gateEmail" placeholder="you@email.com" required>
+        <button class="cta-btn" type="submit" id="gateSubmit" style="width:100%;">Unlock My Kit</button>
+        <div class="gate-error" id="gateError" style="display:none;"></div>
+      </form>
+      <p style="margin-top:16px;font-size:0.85rem;">Haven't bought it yet? <a href="https://gregoryjason54.gumroad.com/l/yoshgq" target="_blank" rel="noopener noreferrer" style="color:var(--blue-light);">Get the ${kitMeta.name.replace(/^The |'s.*$/g, "")} Starter Kit — $7</a></p>
+    </div>
+  `;
+
+  document.getElementById("gateForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const email = document.getElementById("gateEmail").value.trim();
+    const submitBtn = document.getElementById("gateSubmit");
+    const errorEl = document.getElementById("gateError");
+    errorEl.style.display = "none";
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Checking…";
+
+    try {
+      const res = await fetch("/api/kit-content", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, type }),
+      });
+      const data = await res.json();
+      if (res.ok && data.ok) {
+        renderKit(data.kit);
+      } else {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Unlock My Kit";
+        errorEl.textContent = "No purchase found for that email. Double-check it matches your Gumroad receipt, or buy the kit above.";
+        errorEl.style.display = "block";
+      }
+    } catch (err) {
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Unlock My Kit";
+      errorEl.textContent = "Something went wrong checking that. Try again in a moment.";
+      errorEl.style.display = "block";
+    }
+  });
+}
+
+function renderKit(kit) {
+  pageTitle.textContent = kit.name;
+  pageSub.textContent = kit.recap;
+
+  content.innerHTML = `
+    <div class="card">
+      <div class="kicker">${kit.offer.kicker}</div>
+      <p>${kit.offer.body}</p>
+    </div>
+
+    <div class="card">
+      <div class="kicker">Pricing Benchmarks</div>
+      <div class="price-grid">
+        ${kit.pricing.map(p => `
+          <div class="price-item">
+            <div class="amt">${p.amt}</div>
+            <div class="lbl">${p.lbl}</div>
+          </div>
+        `).join("")}
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="kicker">How You'll Deliver It</div>
+      <p>${kit.delivery}</p>
+    </div>
+
+    <div class="card">
+      <div class="kicker">The Transformation You're Selling</div>
+      <p>${kit.transformation}</p>
+    </div>
+
+    <div class="card">
+      <div class="kicker">Upsells &amp; Downsells</div>
+      <p>${kit.upsell}</p>
+    </div>
+
+    <div class="card action-card">
+      <div class="kicker">Your Next 48 Hours</div>
+      <p>${kit.action}</p>
+    </div>
+
+    <div class="cta-block">
+      <h2>You've solved Line 3. The map has 9 more.</h2>
+      <p>Toolkit, Content, Leads, Sales, Delivery, Scaling, Monetization, Freedom — the full 10-line roadmap with 50 worksheets, so you're never guessing what's next.</p>
+      <a class="cta-btn" href="https://gregoryjason54.gumroad.com/l/suped" target="_blank" rel="noopener noreferrer">Get the Full Map &mdash; $49</a>
+    </div>
+  `;
+  pageFooter.textContent = "Line 3 of 10 solved. The full map has the other 9.";
+}
+
+if (!type || !KIT_NAMES[type]) {
+  renderPicker();
+} else {
+  renderGate(KIT_NAMES[type]);
+}
+</script>
+</body>
+</html>
