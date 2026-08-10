@@ -197,48 +197,78 @@
   .bento-cell p{color:var(--gray-400);font-size:0.82rem;}
 
   /* PACKAGES */
-  .packages{background:var(--gray-100);}
+  .packages{background:#0a0a0a;}
+  .packages .section-head h2{color:var(--white);}
+  .packages .section-head p{color:var(--gray-400);}
+  .packages .section-eyebrow{color:var(--accent-light);}
   .pkg-grid{
-    display:grid;grid-template-columns:repeat(3,1fr);gap:2px;
+    display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
     max-width:1140px;margin:0 auto;align-items:start;
-    background:var(--gray-100);
   }
   .pkg-card{
-    background:var(--white);
+    background:linear-gradient(to right,#171717,#222,#171717);
+    border:1px solid #2a2a2a;
+    border-radius:14px;
     padding:36px 30px;
     position:relative;
     display:flex;flex-direction:column;
     height:100%;
-    transition:transform .2s ease;
+    color:var(--white);
+    transition:transform .2s ease,box-shadow .2s ease;
   }
   .pkg-card:hover{transform:translateY(-4px);}
   .pkg-card.featured{
-    background:var(--charcoal);
-    color:var(--white);
+    background:linear-gradient(to right,#171717,#222,#171717);
+    box-shadow:0px -13px 300px 0px #0900ff;
+    border-color:#262626;
+    z-index:2;
   }
   .pkg-badge{
     display:inline-block;
-    background:var(--accent);color:var(--white);
+    background:linear-gradient(to bottom,#3b82f6,#2563eb);
+    color:var(--white);
     font-size:0.7rem;font-weight:700;letter-spacing:0.06em;
     padding:5px 12px;margin-bottom:18px;
+    border-radius:20px;border:1px solid #3b82f6;
     text-transform:uppercase;
+    box-shadow:0 0 12px #3b82f680;
   }
-  .pkg-card h3{font-size:1.35rem;font-weight:600;margin-bottom:4px;}
-  .pkg-tag{color:var(--accent);font-size:0.85rem;font-weight:600;margin-bottom:18px;}
-  .pkg-card.featured .pkg-tag{color:var(--accent-light);}
-  .pkg-price{font-family:'Space Grotesk',Arial,sans-serif;font-size:2.2rem;font-weight:700;}
+  .pkg-card h3{font-size:1.6rem;font-weight:600;margin-bottom:8px;color:var(--white);}
+  .pkg-tag{color:var(--gray-400);font-size:0.85rem;font-weight:500;margin-bottom:14px;}
+  .pkg-price{font-family:'Space Grotesk',Arial,sans-serif;font-size:2.4rem;font-weight:700;color:var(--white);}
   .pkg-price span{font-size:0.92rem;font-weight:400;color:var(--gray-400);margin-left:6px;}
-  .pkg-desc{margin:18px 0 24px;font-size:0.95rem;color:var(--gray-700);}
-  .pkg-card.featured .pkg-desc{color:var(--gray-400);}
+  .pkg-desc{margin:16px 0 24px;font-size:0.92rem;color:#a3a3a3;line-height:1.6;}
   .pkg-cta{
-    margin-top:auto;
     display:block;text-align:center;
-    padding:13px;border-radius:2px;
-    font-weight:600;font-size:0.92rem;
-    border:1px solid var(--charcoal);
+    padding:14px;border-radius:12px;
+    font-weight:600;font-size:1.05rem;
+    transition:all .2s;
+    background:linear-gradient(to top,#0a0a0a,#525252);
+    border:1px solid #262626;
+    color:var(--white);
+    box-shadow:0 10px 15px -3px rgba(23,23,23,0.6),0 4px 6px -4px rgba(23,23,23,0.6);
   }
-  .pkg-card.featured .pkg-cta{background:var(--accent);color:var(--white);border-color:var(--accent);}
-  .pkg-card:not(.featured) .pkg-cta:hover{background:var(--charcoal);color:var(--white);}
+  .pkg-cta:hover{background:linear-gradient(to top,#171717,#636363);}
+  .pkg-card.featured .pkg-cta{
+    background:linear-gradient(to top,#3b82f6,#2563eb);
+    border:1px solid #3b82f6;
+    box-shadow:0 10px 15px -3px rgba(30,64,175,0.6),0 4px 6px -4px rgba(30,64,175,0.6);
+  }
+  .pkg-card.featured .pkg-cta:hover{background:linear-gradient(to top,#60a5fa,#3b82f6);}
+  .pkg-includes{
+    margin-top:24px;padding-top:16px;
+    border-top:1px solid #404040;
+  }
+  .pkg-includes h4{font-size:1rem;font-weight:500;color:var(--white);margin-bottom:12px;}
+  .pkg-includes ul{list-style:none;}
+  .pkg-includes li{
+    display:flex;align-items:center;gap:9px;
+    padding:4px 0;font-size:0.88rem;color:#d4d4d4;line-height:1.5;
+  }
+  .pkg-includes li::before{
+    content:"";flex-shrink:0;
+    width:10px;height:10px;border-radius:50%;background:#737373;
+  }
 
   /* PACKAGE DETAIL */
   .pkg-detail{background:var(--white);}
@@ -327,6 +357,43 @@
   .hero .spotlight-overlay{z-index:1;}
   .hero .spotlight-content{z-index:2;}
 
+  /* AUDITS */
+  .audits{background:#0a0a0a;}
+  .audits .section-head h2{color:var(--white);}
+  .audits .section-head p{color:var(--gray-400);}
+  .audits .section-eyebrow{color:var(--accent-light);}
+  .audit-grid{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:stretch;}
+  .audit-card{
+    background:linear-gradient(to right,#171717,#222,#171717);
+    border:1px solid #2a2a2a;
+    border-radius:14px;
+    overflow:hidden;
+    transition:box-shadow .2s ease;
+  }
+  .audit-header{
+    width:100%;display:flex;align-items:center;justify-content:space-between;gap:20px;
+    padding:26px 30px;background:none;border:none;text-align:left;cursor:pointer;font-family:inherit;
+  }
+  .audit-header:hover{background:rgba(255,255,255,0.04);}
+  .audit-header h3{font-size:1.2rem;font-weight:600;color:var(--white);margin-bottom:4px;}
+  .audit-price{
+    font-family:'Space Grotesk',Arial,sans-serif;font-weight:700;font-size:1.15rem;color:var(--white);
+    display:flex;align-items:center;gap:14px;white-space:nowrap;flex-shrink:0;
+  }
+  .audit-toggle-icon{
+    width:26px;height:26px;border-radius:50%;border:1px solid #404040;
+    display:flex;align-items:center;justify-content:center;font-size:1rem;color:#a3a3a3;
+    flex-shrink:0;
+  }
+  .audit-card.open .audit-toggle-icon{background:var(--accent);border-color:var(--accent);color:var(--white);}
+  .audit-content{display:none;padding:0 30px 30px;border-top:1px solid #2a2a2a;}
+  .audit-card.open .audit-content{display:block;}
+  .audit-list{list-style:none;padding-top:16px;}
+  .audit-list li{position:relative;padding:9px 0 9px 22px;font-size:0.92rem;color:#a3a3a3;line-height:1.5;}
+  .audit-list li::before{content:"";position:absolute;left:0;top:19px;width:8px;height:8px;background:#525252;border-radius:50%;}
+  .audit-list li strong{color:var(--white);}
+  .pkg-tag{color:var(--gray-400);font-size:0.82rem;font-weight:500;}
+
   .wd-grid{
     display:grid;grid-template-columns:repeat(3,1fr);gap:2px;
     max-width:1140px;margin:0 auto 64px;
@@ -383,13 +450,13 @@
   /* TEAM */
   .team{background:var(--gray-100);}
   .team-grid{
-    display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2px;
+    display:flex;flex-wrap:wrap;justify-content:center;gap:2px;
     max-width:1080px;margin:0 auto;
     background:var(--gray-100);
   }
   .team-card{
     background:var(--white);padding:20px 10px;text-align:center;
-    min-width:0;
+    min-width:0;flex:0 0 calc(33.333% - 2px);
     transition:transform .2s ease;
   }
   .team-card:hover{transform:translateY(-3px);}
@@ -437,7 +504,7 @@
     .pkg-grid{grid-template-columns:1fr;}
     .stats-grid{grid-template-columns:repeat(2,1fr);gap:28px;}
     .alacarte-grid{grid-template-columns:1fr;gap:32px;}
-    .team-grid{grid-template-columns:1fr;}
+    .team-card{flex:0 0 100%;}
     .wd-grid{grid-template-columns:1fr;}
     .maint-grid{grid-template-columns:1fr;}
     section{padding:64px 20px;}
@@ -465,6 +532,7 @@
     </a>
     <div class="nav-links">
       <a href="#about">About</a>
+      <a href="#audits">Audits</a>
       <a href="#packages">Packages</a>
       <a href="#webdesign">Web Design</a>
       <a href="#alacarte">À La Carte</a>
@@ -547,6 +615,85 @@
     </div>
   </div>
 </section>
+<section id="audits" class="audits">
+  <div class="section-head">
+    <div class="section-eyebrow">Store Audits</div>
+    <h2>Know exactly what's holding your store back.</h2>
+    <p>A structured review of your store — design, SEO, and conversion — with a clear, prioritized list of what to fix first.</p>
+  </div>
+  <div class="audit-grid">
+
+    <div class="audit-card" id="audit-basic">
+      <button class="audit-header" type="button" onclick="toggleAudit('audit-basic')" aria-expanded="false">
+        <div>
+          <h3>Basic Audit</h3>
+          <div class="pkg-tag">Get a clear starting point</div>
+        </div>
+        <div class="audit-price">$150–$250<span class="audit-toggle-icon">+</span></div>
+      </button>
+      <div class="audit-content">
+        <ul class="audit-list">
+          <li><strong>Homepage Review</strong> — layout clarity, hero banner effectiveness, navigation structure, and trust signals.</li>
+          <li><strong>Product Page Review</strong> — product descriptions, image quality, pricing visibility, CTA placement, and mobile responsiveness.</li>
+          <li><strong>Basic SEO Check</strong> — meta titles, meta descriptions, H1 tags, alt text usage, and keyword presence.</li>
+          <li><strong>Banner &amp; Logo Feedback</strong> — branding consistency, image resolution, color harmony, and professionalism.</li>
+          <li><strong>Mobile Optimization Check</strong> — usability and layout stability across mobile devices.</li>
+          <li><strong>Speed &amp; Performance Snapshot</strong> — quick review of load times and major performance blockers.</li>
+          <li><strong>10–15 Actionable Recommendations</strong> — prioritized list of improvements with clear next steps.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="audit-card" id="audit-standard">
+      <button class="audit-header" type="button" onclick="toggleAudit('audit-standard')" aria-expanded="false">
+        <div>
+          <h3>Standard Audit</h3>
+          <div class="pkg-tag">Most thorough for the price</div>
+        </div>
+        <div class="audit-price">$300–$450<span class="audit-toggle-icon">+</span></div>
+      </button>
+      <div class="audit-content">
+        <ul class="audit-list">
+          <li><strong>Full Design &amp; UX Review</strong> — layout consistency, spacing, typography, color usage, navigation flow, and user journey friction points.</li>
+          <li><strong>Branding Consistency Check</strong> — logo quality, banner design, color palette alignment, tone of voice, and trust-building elements.</li>
+          <li><strong>SEO Audit</strong> — meta titles, descriptions, H1/H2 structure, alt tags, keyword alignment, site speed, and basic schema presence.</li>
+          <li><strong>GA4 Setup Review</strong> — event tracking, enhanced ecommerce configuration, purchase funnel accuracy, and missing conversions.</li>
+          <li><strong>CRO Review</strong> — CTA placement, product page structure, social proof, reviews, cart visibility, and checkout flow.</li>
+          <li><strong>Technical Shopify Checks</strong> — apps, theme settings, broken links, duplicate content, and potential conflicts.</li>
+          <li><strong>Competitor Comparison</strong> — benchmarks design, pricing, SEO strength, and branding against 1–2 competitors.</li>
+          <li><strong>20–40 Actionable Recommendations</strong> — organized by category (Design, SEO, CRO, Technical).</li>
+          <li><strong>Professional PDF or Notion Report</strong> — structured documentation you can use immediately.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="audit-card" id="audit-premium">
+      <button class="audit-header" type="button" onclick="toggleAudit('audit-premium')" aria-expanded="false">
+        <div>
+          <h3>Premium Audit</h3>
+          <div class="pkg-tag">Full strategy, done with you</div>
+        </div>
+        <div class="audit-price">$500–$900<span class="audit-toggle-icon">+</span></div>
+      </button>
+      <div class="audit-content">
+        <ul class="audit-list">
+          <li><strong>Everything in the Standard Audit.</strong></li>
+          <li><strong>Full GA4 Funnel Analysis</strong> — user paths, drop-off points, conversion bottlenecks, and event accuracy.</li>
+          <li><strong>Heatmap &amp; Behavior Recommendations</strong> — scroll-depth improvements, click-map insights, and layout adjustments.</li>
+          <li><strong>Product Page Rewrite Suggestions</strong> — improved product descriptions, feature highlights, and SEO-optimized copy.</li>
+          <li><strong>Homepage Redesign Mockups</strong> — visual mockups or wireframes showing improved layout, banners, and trust elements.</li>
+          <li><strong>SEO Keyword Strategy</strong> — target keywords, content gaps, and ranking opportunities.</li>
+          <li><strong>Technical Shopify Deep Scan</strong> — theme code issues, app conflicts, schema markup, and performance blockers.</li>
+          <li><strong>Working Session (WhatsApp or screen share)</strong> — collaborative walkthrough of the store to identify issues and opportunities.</li>
+          <li><strong>Findings &amp; Recommendations Session (WhatsApp)</strong> — a dedicated session to explain the audit results, improvements, and strategic next steps.</li>
+          <li><strong>Implementation Roadmap (30–60 days)</strong> — prioritized plan showing what to fix first and why.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
 <section id="packages" class="packages reveal">
   <div class="section-head">
@@ -556,25 +703,48 @@
   <div class="pkg-grid">
     <div class="pkg-card">
       <h3>Starter Launch</h3>
-      <div class="pkg-tag">Get visible</div>
       <div class="pkg-price">$650<span>one-time</span></div>
-      <p class="pkg-desc">7-day TikTok and Facebook ad copy, 7 branded still photo placements, and a hashtag strategy. Everything you need to show up consistently online from day one.</p>
+      <p class="pkg-desc">Everything you need to show up consistently online from day one.</p>
       <a href="https://buy.stripe.com/00w5kDdqiezW0tKgMe2kw00" target="_blank" rel="noopener" class="pkg-cta">Get Started</a>
+      <div class="pkg-includes">
+        <h4>Starter includes:</h4>
+        <ul>
+          <li>7-day TikTok and Facebook ad copy</li>
+          <li>7 branded still photo placements</li>
+          <li>Hashtag strategy</li>
+        </ul>
+      </div>
     </div>
     <div class="pkg-card featured">
-      <span class="pkg-badge">Most Popular</span>
       <h3>Growth Bundle</h3>
-      <div class="pkg-tag">Most popular</div>
       <div class="pkg-price">$1,450<span>one-time</span></div>
-      <p class="pkg-desc">Everything in Starter Launch plus a 10-second AI video commercial, GA4 setup, product optimization for up to 10 listings, and on-page SEO.</p>
+      <p class="pkg-desc">Best value for stores ready to grow — our most popular package.</p>
       <a href="https://buy.stripe.com/7sYeVd85Y4Zm7Wc1Rk2kw01" target="_blank" rel="noopener" class="pkg-cta">Get Started</a>
+      <div class="pkg-includes">
+        <h4>Everything in Starter, plus:</h4>
+        <ul>
+          <li>10-second AI video commercial</li>
+          <li>GA4 setup</li>
+          <li>Product optimization for up to 10 listings</li>
+          <li>On-page SEO</li>
+        </ul>
+      </div>
     </div>
     <div class="pkg-card">
       <h3>Full Agency</h3>
-      <div class="pkg-tag">Complete solution</div>
       <div class="pkg-price">$2,200<span>one-time</span></div>
-      <p class="pkg-desc">Everything in Growth Bundle plus Facebook and Instagram page setup, store performance audit, brand enhancement, a blog post, and email marketing setup.</p>
+      <p class="pkg-desc">The complete solution — we handle your store's growth end to end.</p>
       <a href="https://buy.stripe.com/4gM5kD71U4Zm3FW67A2kw02" target="_blank" rel="noopener" class="pkg-cta">Get Started</a>
+      <div class="pkg-includes">
+        <h4>Everything in Growth, plus:</h4>
+        <ul>
+          <li>Facebook and Instagram page setup</li>
+          <li>Store performance audit</li>
+          <li>Brand enhancement</li>
+          <li>Blog post</li>
+          <li>Email marketing setup</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -594,7 +764,6 @@
     <h3>Starter Launch</h3>
     <div class="detail-sub">$650 · Save $150 vs à la carte</div>
     <p>Get visible on TikTok and Facebook from day one — with professional content, branded visuals, and a posting strategy that makes your store look like it's run by a full marketing team.</p>
-
     <div class="feature-row"><div class="check">&#10003;</div><div><strong>7-day TikTok ad copy</strong><p>Seven scroll-stopping posts — each with a strong hook, copy targeting store owner pain points, a clear call to action, and a full hashtag set. Delivered as a ready-to-post Google Doc.</p></div></div>
     <div class="feature-row"><div class="check">&#10003;</div><div><strong>7-day Facebook ad copy</strong><p>Seven story-driven posts written for Facebook's longer format. Builds trust and drives clicks. Each post includes caption and suggested targeting notes.</p></div></div>
     <div class="feature-row"><div class="check">&#10003;</div><div><strong>7 still photo placements</strong><p>Seven branded graphics designed and sized for both TikTok and Facebook. Each pairs with the matching day's copy so every post is complete — text and visual together.</p></div></div>
@@ -606,7 +775,6 @@
     <h3>Growth Bundle</h3>
     <div class="detail-sub">$1,450 · Save $400 vs à la carte</div>
     <p>Content plus store work — done. The Growth Bundle covers your social presence and your actual store in one package. This is the one most Shopify store owners need.</p>
-
     <div class="feature-row"><div class="check">&#10003;</div><div><strong>Everything in Starter Launch</strong><p>All 7-day TikTok and Facebook ad copy, 7 still photo placements, and hashtag strategy included.</p></div></div>
     <div class="feature-row"><div class="check">&#10003;</div><div><strong>10-second AI video commercial</strong><p>A live-action AI-generated video ad, ready to run on TikTok, Facebook, or Instagram. Fast, professional, no film crew needed.</p></div></div>
     <div class="feature-row"><div class="check">&#10003;</div><div><strong>GA4 installation and setup</strong><p>Google Analytics 4 fully installed and configured on your Shopify store. Goals set. Data flowing. You finally know what's working.</p></div></div>
@@ -619,7 +787,6 @@
     <h3>Full Agency</h3>
     <div class="detail-sub">$2,200 · Save $700 vs à la carte</div>
     <p>Everything, done for you. Content, store optimization, branding, social setup, email marketing, and more. One package that covers the entire digital foundation of your business.</p>
-
     <div class="feature-row"><div class="check">&#10003;</div><div><strong>Everything in Growth Bundle</strong><p>All content, video, GA4, product optimization, and SEO included.</p></div></div>
     <div class="feature-row"><div class="check">&#10003;</div><div><strong>Facebook and Instagram page setup</strong><p>Fully branded pages — bio, cover, highlights, and link-in-bio — optimized for your audience.</p></div></div>
     <div class="feature-row"><div class="check">&#10003;</div><div><strong>Store performance audit and fixes</strong><p>Speed, user experience, and conversion improvements applied to your live store.</p></div></div>
@@ -745,6 +912,13 @@
       <p class="role-accent">Shopify</p>
       <p><a href="https://wa.me/2348050835060" target="_blank" rel="noopener">WhatsApp +234 805 083 5060</a></p>
     </div>
+    <div class="team-card">
+      <div class="avatar">S</div>
+      <h3>Salman</h3>
+      <p class="role-accent">Shopify Developer</p>
+      <p><a href="https://www.instagram.com/shopifydevelopment_804?igsh=MW42YjB0bDV0YWh1dg==" target="_blank" rel="noopener">Instagram</a></p>
+      <p><a href="https://www.facebook.com/share/1E4d1EopEV/" target="_blank" rel="noopener">Facebook</a></p>
+    </div>
   </div>
 </section>
 
@@ -760,7 +934,7 @@
       <a href="mailto:jason@dharmasemporium.com">jason@dharmasemporium.com</a>
       <a href="https://www.instagram.com/dharmasestheticdesign/" target="_blank" rel="noopener">Instagram</a>
       <a href="https://www.tiktok.com/@dharmasestheticde" target="_blank" rel="noopener">TikTok</a>
-      <span>Facebook</span>
+      <a href="https://www.facebook.com/dharmasestheticdesign/" target="_blank" rel="noopener">Facebook</a>
     </div>
     <p style="margin-top:32px;font-size:0.85rem;color:var(--gray-400);max-width:480px;margin-left:auto;margin-right:auto;">We want you to love the final result. Every package includes one round of revisions at no extra cost — just let us know what you'd like adjusted within 5 business days of delivery, and we'll make it right. Additional revision rounds beyond the first can be added for a small fee. Refunds aren't available once work has started, but our goal is always to get it right together.</p>
   </div>
@@ -771,9 +945,45 @@
 </footer>
 
 <script>
+  function togglePkg(id){
+    const card = document.getElementById(id);
+    const header = card.querySelector('.pkg-acc-header');
+    const isOpen = card.classList.toggle('open');
+    header.setAttribute('aria-expanded', isOpen);
+    card.querySelector('.pkg-acc-toggle').textContent = isOpen ? '−' : '+';
+  }
+
+  function toggleAudit(id){
+    const card = document.getElementById(id);
+    const header = card.querySelector('.audit-header');
+    const isOpen = card.classList.toggle('open');
+    header.setAttribute('aria-expanded', isOpen);
+  }
+
   document.querySelectorAll('.detail-tab').forEach(tab => {
     tab.addEventListener('click', () => {
       document.querySelectorAll('.detail-tab').forEach(t => t.classList.remove('active'));
       document.querySelectorAll('.detail-panel').forEach(p => p.classList.remove('active'));
       tab.classList.add('active');
-      document.getElementById(tab.dataset.tab).classList.add
+      document.getElementById(tab.dataset.tab).classList.add('active');
+    });
+  });
+
+  const revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => io.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('in'));
+  }
+</script>
+
+</body>
+</html>
