@@ -30,7 +30,7 @@ Most agencies don't actually listen to their clients — this is the core thing 
 
 ## Who I serve
 
-Ideal client: **pet store owners** (number one preference/affinity). Beyond that, pragmatically open to any client who is paying and ethical — not narrowly niched down, but pet ecommerce is the dream-client lane if given a choice.
+Ideal client: **pet store owners** (number one preference/affinity). Beyond that, pragmatically open to any client who is paying and ethical — not narrowly niched down, but pet ecommerce is the dream-client lane if given a choice. The pet affinity is personal, not just strategic: Jason's own dog, **Dharma** — an American Bully XXL, 150 lbs — is the namesake and inspiration behind "Dharma's Esthetic Design Center."
 
 ## Team structure / lease arrangement
 
