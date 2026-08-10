@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Offer-Building Starter Kit — AI Business Empire</title>
+<!-- Deliberately noindex: this is paid ($7) content reached via Gumroad
+     purchase or a direct link, not meant for search discovery. There's no
+     real access control on the URL itself, so keeping it out of Google is
+     the only thing stopping it from being found for free. -->
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Your Offer-Building Starter Kit — AI Business Empire">
+<meta property="og:description" content="Your primary offer, pricing benchmarks, delivery format, and a 48-hour action step — built for your specific AI business type.">
+<meta property="og:image" content="https://www.dharmasestheticdesign.com/og-ai-business-empire.png">
+<meta property="og:site_name" content="AI Business Empire">
+<style>
+  :root {
+    --bg: #0b0d12; --panel: #14171f; --panel-border: rgba(255,255,255,0.08);
+    --gold: #f2b705; --blue: #2563EB; --blue-light: #5c8dff; --teal: #00BFA5;
+    --white: #ffffff; --gray: #9aa1ae;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: radial-gradient(circle at 50% -10%, #1a2140 0%, var(--bg) 55%);
+    color: var(--white);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 44px 20px 80px; }
+  header { text-align: center; margin-bottom: 32px; }
+  .eyebrow { color: var(--gold); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 10px; }
+  h1 { font-size: clamp(1.6rem, 5vw, 2.2rem); line-height: 1.25; margin: 0 0 10px; }
+  .sub { color: var(--gray); font-size: 1rem; line-height: 1.5; max-width: 520px; margin: 0 auto; }
+
+  .card { background: var(--panel); border: 1px solid var(--panel-border); border-radius: 16px; padding: 30px 26px; margin-bottom: 18px; }
+  .card h2 { font-size: 1.15rem; margin: 0 0 6px; color: var(--white); }
+  .card .kicker { color: var(--teal); font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px; }
+  .card p { color: #d7dbe4; line-height: 1.65; margin: 0 0 12px; }
+  .card p:last-child { margin-bottom: 0; }
+  .card ul { margin: 0; padding-left: 20px; color: #d7dbe4; line-height: 1.7; }
+  .card ul li { margin-bottom: 6px; }
+
+  .price-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 8px; }
+  .price-item { background: rgba(255,255,255,0.04); border-radius: 10px; padding: 12px 14px; }
+  .price-item .amt { font-weight: 700; color: var(--gold); font-size: 1.05rem; }
+  .price-item .lbl { color: var(--gray); font-size: 0.82rem; }
+
+  .action-card { background: rgba(37,99,235,0.1); border: 1px solid rgba(37,99,235,0.3); }
+  .action-card .kicker { color: var(--blue-light); }
+
+  .cta-block { text-align: center; margin-top: 40px; padding: 30px 24px; background: rgba(255,255,255,0.03); border: 1px solid var(--panel-border); border-radius: 16px; }
+  .cta-block h2 { font-size: 1.2rem; margin: 0 0 10px; }
+  .cta-block p { color: var(--gray); line-height: 1.55; margin: 0 0 20px; }
+  .cta-btn { display: inline-block; text-decoration: none; background: linear-gradient(180deg, var(--blue), #1d4ed8); color: var(--white); padding: 15px 28px; border-radius: 10px; font-size: 1rem; font-weight: 700; box-shadow: 0 8px 24px rgba(37,99,235,0.35); }
+  .cta-btn:hover { filter: brightness(1.08); }
+
+  footer { text-align: center; color: var(--gray); font-size: 0.78rem; margin-top: 40px; }
+
+  .picker { display: flex; flex-direction: column; gap: 12px; }
+  .picker-option {
+    display: block; width: 100%; text-align: left; background: rgba(255,255,255,0.03);
+    border: 1px solid var(--panel-border); color: var(--white); padding: 18px 20px;
+    border-radius: 12px; cursor: pointer; text-decoration: none; transition: all 0.15s ease;
+  }
+  .picker-option:hover { border-color: var(--blue-light); background: rgba(37,99,235,0.12); }
+  .picker-option .p-name { font-weight: 700; font-size: 1.02rem; margin-bottom: 4px; }
+  .picker-option .p-tag { color: var(--gray); font-size: 0.88rem; }
+</style>
+</head>
+<body>
+<div class="wrap" id="wrap">
+  <header>
+    <div class="eyebrow">AI Business Empire — Starter Kit</div>
+    <h1 id="pageTitle">Loading your kit&hellip;</h1>
+    <p class="sub" id="pageSub"></p>
+  </header>
+  <div id="content"></div>
+  <footer>Line 3 of 10 solved. The full map has the other 9.</footer>
+</div>
+
+<script>
+"use strict";
+
+/* ---------------------------------------------------------------------
+ * The $7 tripwire. The free quiz (quiz.html) tells someone WHAT to build;
+ * this kit is the first real step on HOW -- expanded, archetype-specific
+ * guidance pulled and built out from the full map's Line 3 (Offers),
+ * not a repeat of the free quiz result. Delivered via a direct link after
+ * purchase: starter-kit.html?type=teacher (or guide/builder/operator/connector).
+ * ------------------------------------------------------------------- */
+
+const KITS = {
+  teacher: {
+    name: "The Teacher's Offer-Building Kit",
+    short: "You turn what you know into a course, guide, or template system.",
+    recap: "You turn what you know into something others can follow. Here's how to package it into an offer someone will actually pay for.",
+    offer: {
+      kicker: "Your Primary Offer",
+      body: "Don't sell \"everything I know.\" Pick the ONE question people ask you most and build the offer around just that. Best starter formats: a focused mini-course (3–5 short modules), a written step-by-step guide, or a template/swipe-file pack. All three can be built in a weekend with AI doing the heavy lifting on drafts and structure — your job is the judgment and the voice.",
+    },
+    pricing: [
+      { amt: "$17–47", lbl: "Template or swipe-file pack" },
+      { amt: "$27–97", lbl: "Focused mini-course (3–5 modules)" },
+      { amt: "$197–497", lbl: "Comprehensive course" },
+      { amt: "$9–19", lbl: "Downsell: single cheat sheet" },
+    ],
+    delivery: "Gumroad, Notion, or even a Google Doc + unlisted video links for version one. Don't let the platform be the reason you don't ship.",
+    transformation: "Name the specific before-and-after. Not \"learn marketing\" — \"go from a blank page to a headline that actually converts, in one sitting.\"",
+    upsell: "Downsell: a single template or cheat sheet ($9–19) for people not ready for the full thing. Upsell: a 1:1 feedback call or access to a small cohort/community working through it together.",
+    action: "Write the outline for module 1 right now. Record it on your phone today. That's your MVP — not perfect, shipped.",
+  },
+  guide: {
+    name: "The Guide's Coaching Kit",
+    short: "You help one person at a time — a defined coaching or consulting engagement.",
+    recap: "You help one person at a time get unstuck. Here's how to turn that into a defined, sellable engagement.",
+    offer: {
+      kicker: "Your Primary Offer",
+      body: "\"Ongoing coaching\" is too vague to sell. Define a specific, bounded engagement instead — a 4-week sprint toward one named outcome, or a single deep-dive session that solves one specific problem. A defined scope is what makes someone say yes; open-ended is what makes them hesitate.",
+    },
+    pricing: [
+      { amt: "$75–250", lbl: "Single deep-dive session" },
+      { amt: "$500–1,500", lbl: "4–6 week engagement" },
+      { amt: "$300–800/mo", lbl: "Ongoing monthly retainer" },
+      { amt: "Free x3", lbl: "Downsell: founding-client sessions" },
+    ],
+    delivery: "Zoom or phone, with AI handling your prep notes and follow-up summaries between calls — this is exactly where AI buys back your time so you can take on more people without more hours.",
+    transformation: "Name the specific outcome by the end of the engagement. Not \"get unstuck\" — the actual thing that's different in their life or business.",
+    upsell: "Downsell: a single \"quick win\" session for people not ready to commit longer. Upsell: an extended engagement, or async text/Voxer support between calls.",
+    action: "Offer 3 free \"founding client\" sessions to people you already know, in exchange for a real testimonial and honest feedback. That's your case study and your proof, both at once.",
+  },
+  builder: {
+    name: "The Builder's Product Kit",
+    short: "You'd rather build the fix — a tool or micro-SaaS for one specific problem.",
+    recap: "You'd rather build the fix than explain it. Here's how to turn that instinct into a sellable tool.",
+    offer: {
+      kicker: "Your Primary Offer",
+      body: "One tool. One narrow, painful, repeated problem. Not a platform, not \"everything for X.\" The instinct to build broad is the same instinct that kills specificity everywhere else in marketing — resist it here too. Pick the lightest format that solves the problem: a simple web app, a Zapier/Make template, a Notion/Airtable template, a Chrome extension.",
+    },
+    pricing: [
+      { amt: "$9–29/mo", lbl: "Micro-SaaS subscription" },
+      { amt: "$49–199", lbl: "One-time tool, template, or script" },
+      { amt: "Free tier", lbl: "+ paid upgrade, if building an audience first" },
+      { amt: "+$", lbl: "Upsell: white-glove setup" },
+    ],
+    delivery: "Whatever's lightest to actually ship this week — don't let \"I should build a real app\" stop you from shipping a Zapier template that solves the exact same problem today.",
+    transformation: "Quantify it if you can. Not \"saves time\" — \"saves 3 hours a week\" or \"turns a 2-hour task into 5 minutes.\"",
+    upsell: "Downsell: a free or cheap version with a usage cap. Upsell: white-glove setup for them, or a \"pro\" tier with more usage or features.",
+    action: "Find the task you've already half-automated for yourself with a spreadsheet, a Zapier flow, or a saved prompt. That's your prototype. Ship it to 5 people this week, even ugly.",
+  },
+  operator: {
+    name: "The Operator's Service Kit",
+    short: "You'd rather just handle it — an AI-powered done-for-you service.",
+    recap: "You'd rather just handle it than teach someone how. Here's how to turn reliable execution into a sellable service.",
+    offer: {
+      kicker: "Your Primary Offer",
+      body: "Sell the SAME service people already pay for — don't invent a new category. The AI-era edge is doing it dramatically faster or better because AI handles the grunt work behind the scenes. The client doesn't need to know or care how; they're paying for the outcome and the turnaround.",
+    },
+    pricing: [
+      { amt: "Match market", lbl: "Price at or near typical rate — compete on speed, not price" },
+      { amt: "48hr", lbl: "A fast, defined turnaround is itself a sellable differentiator" },
+      { amt: "$-", lbl: "Downsell: a smaller single-task version" },
+      { amt: "$$/mo", lbl: "Upsell: an ongoing retainer" },
+    ],
+    delivery: "A clearly scoped deliverable with a stated turnaround time. Ambiguous scope is where service businesses lose money — write down exactly what's included before you pitch anyone.",
+    transformation: "What gets done, without them doing it themselves, and how fast — that's the entire pitch.",
+    upsell: "Downsell: a smaller, single-task version of the service. Upsell: a retainer for ongoing delivery — this one doubles as your future profit maximizer.",
+    action: "Pick one service you already do well. Time yourself doing it once. Find the single step AI can cut in half. That's your pitch, word for word.",
+  },
+  connector: {
+    name: "The Connector's Community Kit",
+    short: "You like people showing up together — a recurring paid community.",
+    recap: "You like it best when people show up together. Here's how to turn that into a recurring, sellable community.",
+    offer: {
+      kicker: "Your Primary Offer",
+      body: "\"Join my community\" is too vague to sell. Offer a specific recurring value instead: weekly co-working, a monthly challenge, an accountability pod, or curated resources with AI-assisted matchmaking between members. Specific and recurring beats vague and open-ended, every time.",
+    },
+    pricing: [
+      { amt: "$9–29/mo", lbl: "Casual community" },
+      { amt: "$49–99/mo", lbl: "Higher-touch, accountability-focused" },
+      { amt: "Free", lbl: "Public tier + paid \"inner circle\"" },
+      { amt: "+1:1", lbl: "Upsell: your time, directly" },
+    ],
+    delivery: "Discord, Circle, or Skool, with AI handling onboarding, reminders, and content curation so the community doesn't quietly become a second full-time job.",
+    transformation: "What's different for a member after 30, 60, or 90 days inside the group? Name it specifically.",
+    upsell: "Downsell: a free public community with limited access. Upsell: 1:1 time with you, or a higher-tier inner circle.",
+    action: "Name the 10 people who'd join on day one, by name. Message each one individually — not a broadcast post — and ask if they want into a founding cohort.",
+  },
+};
+
+const params = new URLSearchParams(location.search);
+const type = params.get("type");
+const kit = KITS[type];
+
+const pageTitle = document.getElementById("pageTitle");
+const pageSub = document.getElementById("pageSub");
+const content = document.getElementById("content");
+
+if (!kit) {
+  pageTitle.textContent = "Thanks — Which One Are You?";
+  pageSub.textContent = "Pick whichever matches your AI Business Empire quiz result. If you didn't take the quiz yet, pick whichever sounds most like you.";
+  content.innerHTML = `
+    <div class="card">
+      <div class="picker">
+        ${Object.entries(KITS).map(([key, k]) => `
+          <a class="picker-option" href="?type=${key}">
+            <div class="p-name">${k.name}</div>
+            <div class="p-tag">${k.short}</div>
+          </a>
+        `).join("")}
+      </div>
+    </div>
+  `;
+} else {
+  pageTitle.textContent = kit.name;
+  pageSub.textContent = kit.recap;
+
+  content.innerHTML = `
+    <div class="card">
+      <div class="kicker">${kit.offer.kicker}</div>
+      <p>${kit.offer.body}</p>
+    </div>
+
+    <div class="card">
+      <div class="kicker">Pricing Benchmarks</div>
+      <div class="price-grid">
+        ${kit.pricing.map(p => `
+          <div class="price-item">
+            <div class="amt">${p.amt}</div>
+            <div class="lbl">${p.lbl}</div>
+          </div>
+        `).join("")}
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="kicker">How You'll Deliver It</div>
+      <p>${kit.delivery}</p>
+    </div>
+
+    <div class="card">
+      <div class="kicker">The Transformation You're Selling</div>
+      <p>${kit.transformation}</p>
+    </div>
+
+    <div class="card">
+      <div class="kicker">Upsells &amp; Downsells</div>
+      <p>${kit.upsell}</p>
+    </div>
+
+    <div class="card action-card">
+      <div class="kicker">Your Next 48 Hours</div>
+      <p>${kit.action}</p>
+    </div>
+
+    <div class="cta-block">
+      <h2>You've solved Line 3. The map has 9 more.</h2>
+      <p>Toolkit, Content, Leads, Sales, Delivery, Scaling, Monetization, Freedom — the full 10-line roadmap with 50 worksheets, so you're never guessing what's next.</p>
+      <a class="cta-btn" href="https://gregoryjason54.gumroad.com/l/suped" target="_blank" rel="noopener noreferrer">Get the Full Map &mdash; $49</a>
+    </div>
+  `;
+}
+</script>
+</body>
+</html>

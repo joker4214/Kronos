@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Business Empire Map - Complete System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1A3A52 0%, #0f2a3a 100%);
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .header-subtitle {
+            font-size: 20px;
+            opacity: 0.95;
+            margin-bottom: 20px;
+        }
+
+        .header-intro {
+            font-size: 14px;
+            opacity: 0.85;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* NAVIGATION BAR */
+        .nav-bar {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px 30px;
+            background: linear-gradient(135deg, #f0f7ff 0%, #e8f4f8 100%);
+            border-bottom: 2px solid #00BFA5;
+        }
+
+        .nav-button {
+            background: linear-gradient(135deg, #2563EB 0%, #1e40af 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        .nav-button.primary {
+            background: linear-gradient(135deg, #00BFA5 0%, #00a896 100%);
+        }
+
+        .nav-button.primary:hover {
+            background: linear-gradient(135deg, #00a896 0%, #008878 100%);
+        }
+
+        /* SAVE / LOAD BAR */
+        .save-bar {
+            background: linear-gradient(135deg, #fff8ec 0%, #fef3d9 100%);
+            border-bottom: 2px solid #F2B705;
+            padding: 16px 30px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .save-bar-text {
+            font-size: 13px;
+            color: #6b5a1e;
+            line-height: 1.5;
+            flex: 1 1 320px;
+            max-width: 560px;
+        }
+
+        .save-bar-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .save-btn {
+            background: linear-gradient(135deg, #F2B705 0%, #d9a300 100%);
+            color: #1A3A52;
+        }
+
+        .save-btn:hover {
+            background: linear-gradient(135deg, #d9a300 0%, #b88800 100%);
+            box-shadow: 0 4px 12px rgba(242, 183, 5, 0.35);
+        }
+
+        .save-bar-status {
+            font-size: 13px;
+            font-weight: 600;
+            color: #059669;
+            min-height: 18px;
+            flex-basis: 100%;
+        }
+
+        /* MODAL STYLES */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            overflow: auto;
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 0;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 900px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, #1A3A52 0%, #0f2a3a 100%);
+            color: white;
+            padding: 30px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #2563EB;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        .close-modal {
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .close-modal:hover {
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+        }
+
+        .modal-body {
+            padding: 40px 30px;
+        }
+
+        /* JOURNEY MAP STYLES */
+        .journey-section {
+            padding: 40px 30px;
+            background: linear-gradient(135deg, #f0f7ff 0%, #e8f4f8 100%);
+            border-bottom: 3px solid #2563EB;
+        }
+
+        .journey-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1A3A52;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .progress-bar-container {
+            background: #e0e0e0;
+            height: 8px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #2563EB 0%, #00BFA5 100%);
+            width: 0%;
+            transition: width 0.3s ease;
+            border-radius: 10px;
+        }
+
+        .progress-text {
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1A3A52;
+            margin-bottom: 20px;
+        }
+
+        .journey-map {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .journey-step {
+            position: relative;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            border: 2px solid #ddd;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 13px;
+            color: #1A3A52;
+        }
+
+        .journey-step:hover {
+            border-color: #2563EB;
+            background: #f0f7ff;
+            transform: translateY(-2px);
+        }
+
+        .journey-step.completed {
+            background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+            color: white;
+            border-color: #059669;
+        }
+
+        .journey-step.active {
+            background: linear-gradient(135deg, #2563EB 0%, #1e40af 100%);
+            color: white;
+            border-color: #1e40af;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        .you-are-here {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff5252 100%);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            white-space: nowrap;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        /* LINES CONTAINER */
+        .lines-container {
+            padding: 30px 30px;
+        }
+
+        .line-item {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .line-item:hover {
+            border-color: #2563EB;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+        }
+
+        .line-header {
+            background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #1A3A52;
+        }
+
+        .line-header:hover {
+            background: linear-gradient(135deg, #f0f7ff 0%, #e8f4f8 100%);
+        }
+
+        .line-number {
+            background: linear-gradient(135deg, #2563EB 0%, #1e40af 100%);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin-right: 15px;
+        }
+
+        .line-title {
+            flex: 1;
+        }
+
+        .toggle-icon {
+            font-size: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .toggle-icon.open {
+            transform: rotate(180deg);
+        }
+
+        .line-content {
+            display: none;
+            padding: 30px;
+            background: white;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .line-content.open {
+            display: block;
+        }
+
+        .line-description {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #2563EB;
+        }
+
+        .line-items {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .item {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #2563EB;
+        }
+
+        .item-number {
+            display: inline-block;
+            background: #2563EB;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-weight: 700;
+            font-size: 12px;
+            margin-right: 10px;
+        }
+
+        .item-title {
+            font-weight: 600;
+            color: #1A3A52;
+            display: inline;
+        }
+
+        .item-description {
+            display: block;
+            margin-top: 8px;
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* WORKSHEET STYLES */
+        .worksheet {
+            background: #f0f7ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #00BFA5;
+        }
+
+        .worksheet-title {
+            font-weight: 700;
+            color: #1A3A52;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .worksheet-questions {
+            display: grid;
+            gap: 15px;
+        }
+
+        .question {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+        }
+
+        .question-text {
+            font-weight: 600;
+            color: #2563EB;
+            font-size: 14px;
+        }
+
+        .question-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #2563EB;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: inherit;
+            background: white;
+        }
+
+        .question-input:focus {
+            outline: none;
+            border-color: #00BFA5;
+            background: #f0f7ff;
+        }
+
+        .question-input.textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        /* OBSIDIAN SECTION */
+        .obsidian-section {
+            background: linear-gradient(135deg, #f0f7ff 0%, #e8f4f8 100%);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #00BFA5;
+        }
+
+        .obsidian-title {
+            font-weight: 700;
+            color: #1A3A52;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .obsidian-title::before {
+            content: "🗂️";
+            margin-right: 10px;
+        }
+
+        .obsidian-instruction {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .obsidian-instruction code {
+            background: white;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #2563EB;
+        }
+
+        /* COMPLETE BUTTON */
+        .complete-button-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .complete-button {
+            background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .complete-button:hover {
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+
+        .complete-button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        h2 {
+            color: #1A3A52;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <!-- MODALS -->
+    <div id="gettingStartedModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Getting Started</h2>
+                <button class="close-modal" onclick="closeModal('gettingStartedModal')">&times;</button>
+            </div>
+            <div class="modal-body" id="gettingStartedContent"></div>
+        </div>
+    </div>
+
+    <div id="toolsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Tools & Tech Stack</h2>
+                <button class="close-modal" onclick="closeModal('toolsModal')">&times;</button>
+            </div>
+            <div class="modal-body" id="toolsContent"></div>
+        </div>
+    </div>
+
+    <div id="obsidianSetupModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Obsidian Setup Guide</h2>
+                <button class="close-modal" onclick="closeModal('obsidianSetupModal')">&times;</button>
+            </div>
+            <div class="modal-body" id="obsidianSetupContent"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>AI Business Empire Map</h1>
+            <p class="header-subtitle">Your Complete System to Build an AI Business</p>
+            <p class="header-intro">10 lines from Foundation to Freedom. Interactive worksheets. Obsidian integration. Everything you need to launch your AI business with confidence.</p>
+        </div>
+
+        <!-- NAVIGATION BAR -->
+        <div class="nav-bar">
+            <button class="nav-button" onclick="openModal('gettingStartedModal'); loadGettingStarted()">📖 Getting Started</button>
+            <button class="nav-button" onclick="openModal('toolsModal'); loadTools()">🛠️ Tools & Tech Stack</button>
+            <button class="nav-button" onclick="openModal('obsidianSetupModal'); loadObsidianSetup()">🗂️ Obsidian Setup</button>
+            <a href="https://obsidian.md" target="_blank" class="nav-button primary">⬇️ Download Obsidian</a>
+        </div>
+
+        <!-- SAVE / LOAD BAR -->
+        <div class="save-bar">
+            <div class="save-bar-text">
+                💾 Your answers save to <em>this browser</em> automatically — but clearing your cache, switching browsers, or moving to a new computer will lose them. Save a file so your work is never stuck in one place.
+            </div>
+            <div class="save-bar-buttons">
+                <button class="nav-button save-btn" onclick="saveProgressToFile()">💾 Save My Progress</button>
+                <button class="nav-button save-btn" onclick="document.getElementById('loadFileInput').click()">📂 Load My Progress</button>
+                <input type="file" id="loadFileInput" accept=".json" style="display:none" onchange="loadProgressFromFile(event)">
+            </div>
+            <div class="save-bar-status" id="saveStatus"></div>
+        </div>
+
+        <!-- JOURNEY MAP SECTION -->
+        <div class="journey-section">
+            <div class="journey-title">Your Journey: 10 Steps to AI Business Freedom</div>
+
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill" id="progressBarFill"></div>
+            </div>
+
+            <div class="progress-text" id="progressText">0% Complete • Step 1 of 10</div>
+
+            <div class="journey-map" id="journeyMap"></div>
+        </div>
+
+        <!-- LINES CONTAINER -->
+        <div class="lines-container" id="linesContainer"></div>
+    </div>
+
+    <script>
+        // Data structure
+        const lines = [
+            {
+                id: 1,
+                name: "Foundation",
+                tagline: "Who you are & why",
+                description: "This is the foundation. Who are you? Why do you exist? What do you believe? This isn't fluff. This is THE thing that attracts customers.",
+                items: [
+                    { title: "Your Story", description: "What's your personal story? Why did you start this? What problem are you solving?" },
+                    { title: "Your Positioning", description: "Who do you serve? What makes you different from competitors?" },
+                    { title: "Your Beliefs", description: "What do you believe about your industry? What changes do you want to make?" },
+                    { title: "Your Brand Voice", description: "How do you talk? What tone and style defines you?" },
+                    { title: "Your Ideal Customer", description: "Who is buying from you? What do they need? What keeps them awake at night?" }
+                ],
+                questions: [
+                    "What's your personal story and why did you start this business?",
+                    "Who is your ideal customer and what problem are you solving for them?",
+                    "What makes you different from your competitors?",
+                    "What are your core beliefs about your industry?",
+                    "How would you describe your brand voice and tone?"
+                ]
+            },
+            {
+                id: 2,
+                name: "Toolkit",
+                tagline: "What tools you need",
+                description: "The right tools make everything 10x easier. You don't need 100 tools. You need 8 essential tools that work together. This line shows you which ones.",
+                items: [
+                    { title: "AI Tool (Claude)", description: "Your thinking partner. Use it for writing, coding, and problem-solving." },
+                    { title: "Email Marketing (Mailchimp)", description: "Build your audience list. Stay in touch with your customers." },
+                    { title: "Design Tool (Canva)", description: "Create graphics for social media and marketing without being a designer." },
+                    { title: "Payment Processor (Stripe)", description: "Accept payments on your website. Get paid immediately." },
+                    { title: "Hosting (Vercel)", description: "Put your website online. Easy, fast, and affordable." }
+                ],
+                questions: [
+                    "Which AI tool will you use for thinking and writing?",
+                    "How will you build and manage your email list?",
+                    "Which tools will you use to create graphics and designs?",
+                    "How will you accept payments from customers?",
+                    "Where and how will you host your website?"
+                ]
+            },
+            {
+                id: 3,
+                name: "Offers",
+                tagline: "What you're selling",
+                description: "What are you actually selling? Digital courses? Coaching? Software? Group programs? You must know this before anything else.",
+                items: [
+                    { title: "Your Primary Offer", description: "What's the main thing you sell? Describe it in one sentence." },
+                    { title: "Offer Price", description: "How much does it cost? What's the pricing model (one-time, subscription, etc.)?" },
+                    { title: "Offer Format", description: "How is it delivered? (Video course, 1-on-1 coaching, software, group program, etc.)" },
+                    { title: "Offer Value", description: "What transformation does it provide? What will customers get?" },
+                    { title: "Upsells & Downsells", description: "What's a lower-priced option? What's a higher-priced option?" }
+                ],
+                questions: [
+                    "What is your primary offer in one clear sentence?",
+                    "What's the price and pricing model for your offer?",
+                    "How will your offer be delivered to customers?",
+                    "What specific transformation will customers experience?",
+                    "What are your upsells and lower-priced entry-level offers?"
+                ]
+            },
+            {
+                id: 4,
+                name: "Content",
+                tagline: "How you attract people",
+                description: "Content is how you prove you know what you're talking about. It's free value that attracts your ideal customers and builds trust.",
+                items: [
+                    { title: "Content Pillars", description: "What are the 3-5 main topics you'll talk about?" },
+                    { title: "Content Formats", description: "Blog posts? Videos? Podcasts? Twitter? Pick 2-3 formats you enjoy." },
+                    { title: "Content Frequency", description: "How often will you create? 2 posts per week? 1 per week?" },
+                    { title: "Content Hooks", description: "What makes people STOP scrolling? What's your angle?" },
+                    { title: "Content Repurposing", description: "How will you turn 1 piece of content into 5 pieces?" }
+                ],
+                questions: [
+                    "What are your 3-5 main content pillars?",
+                    "Which content formats will you use (blog, video, social, podcast)?",
+                    "How frequently will you create and publish content?",
+                    "What's your unique hook or angle that makes content stand out?",
+                    "How will you repurpose single pieces of content?"
+                ]
+            },
+            {
+                id: 5,
+                name: "Leads",
+                tagline: "How you grow your audience",
+                description: "Content attracts people. Leads capture their contact information. Leads = future customers. This is how you build an audience.",
+                items: [
+                    { title: "Lead Magnet", description: "What free thing do you give away to get email addresses?" },
+                    { title: "Lead Generation Channels", description: "Where will you find leads? Social media, SEO, ads, partnerships?" },
+                    { title: "Lead Magnet Delivery", description: "How do they get it? Email? Download link? Video series?" },
+                    { title: "Lead Nurture Sequence", description: "What emails do you send after they sign up?" },
+                    { title: "Conversion Goal", description: "What's your lead quality target? How many leads per month?" }
+                ],
+                questions: [
+                    "What will your lead magnet (free offer) be?",
+                    "Which channels will you use to generate leads?",
+                    "How will you deliver your lead magnet?",
+                    "What's your email sequence for new subscribers?",
+                    "How many leads per month do you need to hit your revenue goals?"
+                ]
+            },
+            {
+                id: 6,
+                name: "Sales",
+                tagline: "How you convert customers",
+                description: "You have leads and an audience. Now convert them to customers. This is about sales pages, sales emails, and sales conversations.",
+                items: [
+                    { title: "Sales Page Copy", description: "What does your sales page say? How do you pitch?" },
+                    { title: "Sales Strategy", description: "Do you sell with email? 1-on-1 calls? Group webinars? Self-checkout?" },
+                    { title: "Sales Objection Handling", description: "What will people say to NOT buy? How do you handle those objections?" },
+                    { title: "Sales Timeline", description: "How long is your sales cycle? (Same day? 30 days? 90 days?)" },
+                    { title: "Sales Metrics", description: "What's your conversion rate goal? How much revenue per month?" }
+                ],
+                questions: [
+                    "What's your sales page or pitch strategy?",
+                    "How will you sell (email, calls, webinar, self-checkout)?",
+                    "What are the top 3 objections people will have?",
+                    "What's your typical sales cycle length?",
+                    "What's your target conversion rate and revenue goal?"
+                ]
+            },
+            {
+                id: 7,
+                name: "Delivery",
+                tagline: "How you serve customers",
+                description: "Once they buy, you must deliver. You must over-deliver. Make your customers so happy they become your best marketing.",
+                items: [
+                    { title: "Onboarding", description: "What's the first thing a customer experiences after paying?" },
+                    { title: "Delivery Method", description: "How is the product/service delivered? Videos? Files? Community? 1-on-1?" },
+                    { title: "Support System", description: "How do customers get help? Email? Chat? Community forum?" },
+                    { title: "Quality Control", description: "How do you ensure quality? How do you stay consistent?" },
+                    { title: "Success Metrics", description: "How do you know if customers are getting results?" }
+                ],
+                questions: [
+                    "What's your customer onboarding process?",
+                    "How will you deliver your product or service?",
+                    "How will customers get support from you?",
+                    "How will you ensure consistent quality?",
+                    "How will you measure customer success?"
+                ]
+            },
+            {
+                id: 8,
+                name: "Scaling",
+                tagline: "How you grow without burnout",
+                description: "You can't do everything yourself forever. This is about systematizing, automating, and delegating so you can scale without working 80 hours a week.",
+                items: [
+                    { title: "Automation Opportunities", description: "What can be automated? Email? Onboarding? Billing?" },
+                    { title: "Delegation Roadmap", description: "What will you hire someone else to do first?" },
+                    { title: "Systems & Processes", description: "What systems need documentation before you can scale?" },
+                    { title: "Pricing & Unit Economics", description: "At what price point can you afford to scale?" },
+                    { title: "Team Building", description: "How will you build a team? Freelancers? Employees? Partnerships?" }
+                ],
+                questions: [
+                    "What tasks can you automate first?",
+                    "What will you delegate or hire for first?",
+                    "Which systems need documentation?",
+                    "What pricing supports profitable scaling?",
+                    "How will you build your team?"
+                ]
+            },
+            {
+                id: 9,
+                name: "Monetization",
+                tagline: "How you make multiple income streams",
+                description: "One product is risky. Multiple income streams = a real business. This is about expanding beyond your primary offer.",
+                items: [
+                    { title: "Primary Income Stream", description: "Your main offer. (You defined this in Line 3)" },
+                    { title: "Secondary Income Stream", description: "A lower-priced product or service that brings in extra revenue." },
+                    { title: "Affiliate Opportunities", description: "Are there tools or products you can recommend for commission?" },
+                    { title: "Passive Income", description: "Courses, templates, or downloads that don't require your time." },
+                    { title: "Premium Tier", description: "A high-ticket offer for your best customers." }
+                ],
+                questions: [
+                    "What's your primary income stream?",
+                    "What secondary products or services will you create?",
+                    "Are there affiliate programs you can leverage?",
+                    "What passive income opportunities exist?",
+                    "What high-ticket premium offer could you create?"
+                ]
+            },
+            {
+                id: 10,
+                name: "Freedom",
+                tagline: "How you design your ideal life",
+                description: "Why did you start this business? Was it just for money? Or was it for time freedom, location freedom, impact freedom? This is about designing the life you actually want.",
+                items: [
+                    { title: "Financial Target", description: "How much money do you need to make annually?" },
+                    { title: "Time Freedom", description: "How many hours per week do you want to work?" },
+                    { title: "Location Freedom", description: "Where do you want to work? Office? Home? Traveling?" },
+                    { title: "Impact Goal", description: "How many people do you want to help? What change do you want to make?" },
+                    { title: "Your Definition of Success", description: "What does winning look like to you in 3 years? 5 years?" }
+                ],
+                questions: [
+                    "What's your annual revenue target?",
+                    "How many hours per week do you want to work?",
+                    "What's your ideal work location and lifestyle?",
+                    "How many people do you want to impact?",
+                    "What does success look like for you in 5 years?"
+                ]
+            }
+        ];
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            renderJourneyMap();
+            renderLines();
+            loadProgress();
+        });
+
+        // Render journey map circles
+        function renderJourneyMap() {
+            const map = document.getElementById('journeyMap');
+            map.innerHTML = '';
+
+            lines.forEach((line, index) => {
+                const step = document.createElement('div');
+                step.className = 'journey-step';
+                step.id = `journey-${line.id}`;
+                step.textContent = `${line.id}. ${line.name}`;
+
+                const currentLine = localStorage.getItem('currentLine') || '1';
+                if (String(line.id) === currentLine) {
+                    step.classList.add('active');
+                    const marker = document.createElement('div');
+                    marker.className = 'you-are-here';
+                    marker.textContent = '👈 YOU ARE HERE';
+                    step.appendChild(marker);
+                }
+
+                if (line.id < parseInt(currentLine)) {
+                    step.classList.add('completed');
+                }
+
+                step.addEventListener('click', () => expandLine(line.id));
+                map.appendChild(step);
+            });
+        }
+
+        // Render all lines
+        function renderLines() {
+            const container = document.getElementById('linesContainer');
+            container.innerHTML = '';
+
+            lines.forEach(line => {
+                const currentLine = localStorage.getItem('currentLine') || '1';
+                const isOpen = String(line.id) === currentLine;
+
+                const lineItem = document.createElement('div');
+                lineItem.className = 'line-item';
+                lineItem.id = `line-${line.id}`;
+
+                const header = document.createElement('div');
+                header.className = 'line-header';
+                header.onclick = () => expandLine(line.id);
+
+                header.innerHTML = `
+                    <div class="line-number">${line.id}</div>
+                    <div class="line-title">
+                        <strong>${line.name}</strong><br>
+                        <small style="color: #888; font-weight: normal;">${line.tagline}</small>
+                    </div>
+                    <div class="toggle-icon ${isOpen ? 'open' : ''}">▼</div>
+                `;
+
+                const content = document.createElement('div');
+                content.className = `line-content ${isOpen ? 'open' : ''}`;
+
+                // Description
+                content.innerHTML = `
+                    <div class="line-description">${line.description}</div>
+                    <div class="line-items">
+                        ${line.items.map((item, idx) => `
+                            <div class="item">
+                                <span class="item-number">${idx + 1}</span>
+                                <span class="item-title">${item.title}</span>
+                                <span class="item-description">${item.description}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+
+                // Worksheet
+                content.innerHTML += `
+                    <div class="worksheet">
+                        <div class="worksheet-title">✏️ Your Worksheet: Line ${line.id}</div>
+                        <div class="worksheet-questions">
+                            ${line.questions.map((q, idx) => `
+                                <div class="question">
+                                    <label class="question-text">${idx + 1}. ${q}</label>
+                                    <textarea class="question-input textarea" id="q${line.id}-${idx}" placeholder="Your answer here...">${getAnswer(line.id, idx)}</textarea>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+
+                // Obsidian section
+                content.innerHTML += `
+                    <div class="obsidian-section">
+                        <div class="obsidian-title">Save to Obsidian</div>
+                        <div class="obsidian-instruction">
+                            Create a new note in Obsidian called <code>Line ${line.id} - ${line.name}</code>.
+                            Copy your answers above into that note. Use <code>[[Line 1]], [[Line 2]]</code> syntax to link between lines.
+                        </div>
+                    </div>
+                `;
+
+                // Complete button
+                if (String(line.id) === currentLine) {
+                    content.innerHTML += `
+                        <div class="complete-button-section">
+                            <button class="complete-button" onclick="completeCurrentLine()">✅ Mark Line ${line.id} Complete & Move to Next</button>
+                        </div>
+                    `;
+                }
+
+                lineItem.appendChild(header);
+                lineItem.appendChild(content);
+                container.appendChild(lineItem);
+
+                // Auto-save on input
+                content.querySelectorAll('.question-input').forEach((input, idx) => {
+                    input.addEventListener('change', () => {
+                        saveAnswer(line.id, idx, input.value);
+                    });
+                });
+            });
+        }
+
+        function expandLine(lineId) {
+            const content = document.getElementById(`line-${lineId}`).querySelector('.line-content');
+            const icon = document.getElementById(`line-${lineId}`).querySelector('.toggle-icon');
+
+            content.classList.toggle('open');
+            icon.classList.toggle('open');
+        }
+
+        function completeCurrentLine() {
+            const currentLine = parseInt(localStorage.getItem('currentLine') || '1');
+            if (currentLine < lines.length) {
+                localStorage.setItem('currentLine', String(currentLine + 1));
+                updateProgress();
+                renderJourneyMap();
+                renderLines();
+            }
+        }
+
+        function saveAnswer(lineId, questionIdx, answer) {
+            const key = `line${lineId}q${questionIdx}`;
+            localStorage.setItem(key, answer);
+        }
+
+        function getAnswer(lineId, questionIdx) {
+            const key = `line${lineId}q${questionIdx}`;
+            return localStorage.getItem(key) || '';
+        }
+
+        // ---- Save progress to a file / load it back in ----
+        // localStorage alone means clearing the browser, switching devices,
+        // or using a different browser silently erases every answer with no
+        // warning. A save file is the buyer's own portable, durable copy --
+        // no account, no server, nothing but a JSON file they control.
+        function saveProgressToFile() {
+            const data = { savedAt: new Date().toISOString(), currentLine: localStorage.getItem('currentLine') || '1', answers: {} };
+            lines.forEach(line => {
+                line.questions.forEach((q, idx) => {
+                    const key = `line${line.id}q${idx}`;
+                    const val = localStorage.getItem(key);
+                    if (val) data.answers[key] = val;
+                });
+            });
+
+            const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            const dateStr = new Date().toISOString().slice(0, 10);
+            a.href = url;
+            a.download = `ai-business-empire-progress-${dateStr}.json`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+
+            showSaveStatus('✅ Saved. Move that file into the "My Progress Saves" folder next to this one so it doesn\'t get lost in Downloads.');
+        }
+
+        function loadProgressFromFile(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                let data;
+                try {
+                    data = JSON.parse(e.target.result);
+                } catch (err) {
+                    showSaveStatus('⚠️ That file isn\'t a valid progress save -- nothing was changed.', true);
+                    return;
+                }
+                if (!data || typeof data.answers !== 'object') {
+                    showSaveStatus('⚠️ That file isn\'t a valid progress save -- nothing was changed.', true);
+                    return;
+                }
+
+                Object.entries(data.answers).forEach(([key, val]) => localStorage.setItem(key, val));
+                if (data.currentLine) localStorage.setItem('currentLine', String(data.currentLine));
+
+                updateProgress();
+                renderJourneyMap();
+                renderLines();
+                showSaveStatus('✅ Progress loaded from file.');
+            };
+            reader.readAsText(file);
+            event.target.value = '';
+        }
+
+        function showSaveStatus(message, isWarning) {
+            const el = document.getElementById('saveStatus');
+            el.textContent = message;
+            el.style.color = isWarning ? '#dc2626' : '#059669';
+            clearTimeout(showSaveStatus._t);
+            showSaveStatus._t = setTimeout(() => { el.textContent = ''; }, 6000);
+        }
+
+        function loadProgress() {
+            updateProgress();
+        }
+
+        function updateProgress() {
+            const currentLine = parseInt(localStorage.getItem('currentLine') || '1');
+            const progress = ((currentLine - 1) / lines.length) * 100;
+            document.getElementById('progressBarFill').style.width = progress + '%';
+            document.getElementById('progressText').textContent = `${Math.round(progress)}% Complete • Step ${currentLine} of ${lines.length}`;
+        }
+
+        // Modal functions
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+            }
+        }
+
+        function loadGettingStarted() {
+            // Inlined directly -- a fetch() to a sibling file silently fails
+            // once someone just double-clicks this file from their Downloads
+            // folder instead of hosting it, since browsers block local
+            // file-to-file fetches. No dependency on the file being present.
+            document.getElementById('gettingStartedContent').innerHTML = "<h2>You've Got Everything You Need to Build Your AI Business</h2>\n\n            <p>You just purchased the most complete business framework created specifically for AI entrepreneurs.</p>\n\n            <p>Here's what you have:</p>\n\n            <h3>📁 What's In This Package?</h3>\n\n            <p>You have <strong>10 lines</strong> from Foundation to Freedom.</p>\n\n            <p>Each line has:</p>\n            <ul>\n                <li><strong>A description</strong> of what it is (in simple English)</li>\n                <li><strong>5 key items</strong> you need to know</li>\n                <li><strong>A worksheet</strong> to fill out</li>\n                <li><strong>Obsidian instructions</strong> for saving your work</li>\n            </ul>\n\n            <h2>🚀 How to Get Started (The Simple Path)</h2>\n\n            <h3>First 10 Minutes:</h3>\n            <ol>\n                <li>Open the main system file (AI-Empire-Map-10-Lines-to-Freedom.html)</li>\n                <li>Click \"Getting Started\" or \"Tools & Tech Stack\" buttons at the top to learn more</li>\n                <li>Then set up Obsidian (click the Obsidian Setup button)</li>\n            </ol>\n\n            <h3>Then Start Building:</h3>\n            <ol>\n                <li><strong>Click Line 1: Foundation</strong> (it will expand)</li>\n                <li><strong>Read the description</strong> (2 minutes)</li>\n                <li><strong>Fill out the worksheet</strong> (10 minutes)</li>\n                <li><strong>Copy your answers to Obsidian</strong> (5 minutes)</li>\n                <li><strong>Click \"Mark Complete\"</strong> to move to Line 2</li>\n            </ol>\n\n            <h2>📋 The 10 Lines (Quick Overview)</h2>\n\n            <table>\n                <tr>\n                    <th>Line</th>\n                    <th>What It Is</th>\n                    <th>Time</th>\n                </tr>\n                <tr>\n                    <td>1. Foundation</td>\n                    <td>Who you are & why</td>\n                    <td>1 day</td>\n                </tr>\n                <tr>\n                    <td>2. Toolkit</td>\n                    <td>What tools you need</td>\n                    <td>1 day</td>\n                </tr>\n                <tr>\n                    <td>3. Offers</td>\n                    <td>What you're selling</td>\n                    <td>2-3 days</td>\n                </tr>\n                <tr>\n                    <td>4. Content</td>\n                    <td>How you attract people</td>\n                    <td>3-5 days</td>\n                </tr>\n                <tr>\n                    <td>5. Leads</td>\n                    <td>How you grow your audience</td>\n                    <td>3-5 days</td>\n                </tr>\n                <tr>\n                    <td>6. Sales</td>\n                    <td>How you convert customers</td>\n                    <td>2-3 days</td>\n                </tr>\n                <tr>\n                    <td>7. Delivery</td>\n                    <td>How you serve customers</td>\n                    <td>1-2 days</td>\n                </tr>\n                <tr>\n                    <td>8. Scaling</td>\n                    <td>How you grow without burnout</td>\n                    <td>3-5 days</td>\n                </tr>\n                <tr>\n                    <td>9. Monetization</td>\n                    <td>How you make multiple income streams</td>\n                    <td>2-3 days</td>\n                </tr>\n                <tr>\n                    <td>10. Freedom</td>\n                    <td>How you design your ideal life</td>\n                    <td>1 day</td>\n                </tr>\n            </table>\n\n            <p><strong>Total Time: 2-4 weeks to complete (working a few hours per week)</strong></p>\n\n            <h2>✅ What Success Looks Like</h2>\n\n            <h3>By End of Week 1:</h3>\n            <ul>\n                <li>Foundation & Toolkit complete</li>\n                <li>Obsidian vault set up with 2 notes</li>\n                <li>Clear on WHO you are and WHAT you need</li>\n            </ul>\n\n            <h3>By End of Week 2-3:</h3>\n            <ul>\n                <li>All worksheets filled out (50 questions answered)</li>\n                <li>10 Obsidian notes with your answers + ideas</li>\n                <li>Ideas linked together</li>\n                <li>Clear business roadmap</li>\n            </ul>\n\n            <h3>By End of Week 4:</h3>\n            <ul>\n                <li>Ready to execute</li>\n                <li>You know EXACTLY what to do next</li>\n                <li>Everything documented for later reference</li>\n            </ul>\n\n            <h2>💡 Pro Tips for Success</h2>\n\n            <h3>Tip 1: One Line Per Day (At Minimum)</h3>\n            <p>Don't try to finish all 10 lines in one week. Pick a rhythm that works for you. The key is consistency.</p>\n\n            <h3>Tip 2: Be Honest in Your Worksheets</h3>\n            <p>Don't write what sounds smart. Write what's TRUE. Honesty = better decisions.</p>\n\n            <h3>Tip 3: Use Obsidian as Your Thinking Tool</h3>\n            <p>Write messy. Write incomplete thoughts. That's okay. This is your THINKING TOOL, not a perfect document.</p>\n\n            <h3>Tip 4: Review Weekly</h3>\n            <p>Set 1 hour every Sunday to review what you filled out that week. Read your Obsidian notes. Add new thoughts. Link ideas. This is when it clicks.</p>\n\n            <h3>Tip 5: Share Your Progress (Optional)</h3>\n            <p>As you work through this, share your progress on Twitter or LinkedIn. Two benefits: people will want to buy what you build, and you'll stay accountable.</p>\n\n            <h2>🆘 What If You Get Stuck?</h2>\n\n            <h3>Stuck on a Line?</h3>\n            <p>Re-read the description. It's written in simple language. If still stuck: Skip it for now. Come back tomorrow with fresh eyes.</p>\n\n            <h3>Don't Know How to Answer a Question?</h3>\n            <p>Write what you THINK is the answer. You don't need certainty. You need to make a decision. Many answers will change as you learn. That's fine. That's progress.</p>\n\n            <h3>Think You're Doing It Wrong?</h3>\n            <p>You're not. There's no \"wrong\" way to fill out these worksheets. The only wrong way is not filling them out at all.</p>\n\n            <h2>📞 Next Steps</h2>\n\n            <div class=\"highlight\">\n                <strong>1. Right now:</strong> Close this window and open AI-Empire-Map-10-Lines-to-Freedom.html<br>\n                <strong>2. Next 5 minutes:</strong> Click \"Tools & Tech Stack\" button to see what tools you might need<br>\n                <strong>3. Today:</strong> Set up Obsidian (click the Obsidian Setup button)<br>\n                <strong>4. Tomorrow:</strong> Start with Line 1: Foundation\n            </div>\n\n            <h2>The One Thing to Remember</h2>\n\n            <div class=\"highlight\">\n                <strong>This system works if you work it.</strong><br><br>\n                You can read it all in 2 hours. But reading isn't building.<br><br>\n                Building comes from filling out the worksheets, saving to Obsidian, reviewing what you wrote, and making decisions based on what you learned.<br><br>\n                The map is perfect. Your execution is what matters.\n            </div>\n\n            <h2>Ready?</h2>\n\n            <p><strong>Close this window and open AI-Empire-Map-10-Lines-to-Freedom.html now.</strong></p>\n\n            <p>Start with Line 1: Foundation.</p>\n\n            <p>Let's go build your AI empire.</p>";
+        }
+
+        function loadTools() {
+            // Inlined for the same reason as loadGettingStarted() above.
+            document.getElementById('toolsContent').innerHTML = "<h2>The Philosophy</h2>\n\n            <p>You don't need every tool. You need the RIGHT tools at the RIGHT time.</p>\n\n            <p>Too many options paralyze you. This guide gives you ONE recommended tool per category, plus FREE alternatives that act like paid software.</p>\n\n            <p><strong>Start with what's free. Upgrade only when you hit a real limit.</strong></p>\n\n            <h2>Essential Tools You Should Know About</h2>\n\n            <h3>🤖 AI & Writing Tools</h3>\n\n            <div class=\"tool-card\">\n                <strong>Claude <span class=\"free-badge\">RECOMMENDED</span></strong>\n                $20/month for Claude Pro (free version available)\n                <p style=\"margin-top: 8px;\">Use it for everything: writing, coding, thinking through problems, generating ideas. Weekly updates mean it keeps getting better.</p>\n            </div>\n\n            <div class=\"tool-card\">\n                <strong>ChatGPT</strong>\n                Free or $20/month\n                <p style=\"margin-top: 8px;\">Solid alternative to Claude. Both are excellent.</p>\n            </div>\n\n            <div class=\"tool-card\">\n                <strong>Gemini <span class=\"free-badge\">FREE</span></strong>\n                Completely free\n                <p style=\"margin-top: 8px;\">Google's AI. Free and surprisingly good. Helpful for setting up GA4.</p>\n            </div>\n\n            <h3>💻 Coding & Building</h3>\n\n            <div class=\"tool-card\">\n                <strong>GitHub <span class=\"free-badge\">FREE</span></strong>\n                Completely free\n                <p style=\"margin-top: 8px;\">Store your code. Not just for programmers — useful for anyone building anything.</p>\n            </div>\n\n            <div class=\"tool-card\">\n                <strong>Replit <span class=\"free-badge\">FREE TIER</span></strong>\n                Free to start\n                <p style=\"margin-top: 8px;\">Write code in your browser. No installation needed. Great for beginners.</p>\n            </div>\n\n            <div class=\"tool-card\">\n                <strong>Claude Code <span class=\"free-badge\">FREE (Claude Pro)</span></strong>\n                Included with Claude Pro\n                <p style=\"margin-top: 8px;\">Write and run code with Claude. Game-changer for building things fast.</p>\n            </div>\n\n            <h3>🎨 Design & Visuals</h3>\n\n            <div class=\"tool-card\">\n                <strong>Canva <span class=\"free-badge\">FREE TIER</span></strong>\n                Free or $13/month\n                <p style=\"margin-top: 8px;\">Design tool. You already know this one. Free version does 80% of what you need.</p>\n            </div>\n\n            <div class=\"tool-card\">\n                <strong>Figma <span class=\"free-badge\">FREE TIER</span></strong>\n                Free to start\n                <p style=\"margin-top: 8px;\">Design tool. More powerful than Canva but steeper learning curve. Free version is solid.</p>\n            </div>\n\n            <h3>📧 Email & Marketing</h3>\n\n            <div class=\"tool-card\">\n                <strong>Klaviyo</strong>\n                Free to start ($20+ per month)\n                <p style=\"margin-top: 8px;\">Powerful email automation. Used by successful businesses. Free tier covers small businesses.</p>\n            </div>\n\n            <div class=\"tool-card\">\n                <strong>Mailchimp <span class=\"free-badge\">FREE TIER</span></strong>\n                Free up to 500 contacts\n                <p style=\"margin-top: 8px;\">Simpler than Klaviyo. Great for beginners.</p>\n            </div>\n\n            <h3>🔄 Automation</h3>\n\n            <div class=\"tool-card\">\n                <strong>Make <span class=\"free-badge\">FREE TIER</span></strong>\n                Free to start\n                <p style=\"margin-top: 8px;\">Automate workflows. Connect tools together. \"If this, then that\" but much more powerful.</p>\n            </div>\n\n            <div class=\"tool-card\">\n                <strong>Zapier <span class=\"free-badge\">FREE TIER</span></strong>\n                Free to start\n                <p style=\"margin-top: 8px;\">Same as Make. Simpler interface. Pick one.</p>\n            </div>\n\n            <h3>💳 Payment Processing</h3>\n\n            <div class=\"tool-card\">\n                <strong>Stripe <span class=\"free-badge\">RECOMMENDED</span></strong>\n                2.9% + $0.30 per transaction\n                <p style=\"margin-top: 8px;\">Accept credit cards on your website. Industry standard.</p>\n            </div>\n\n            <div class=\"tool-card\">\n                <strong>PayPal</strong>\n                2.2% + $0.30 per transaction\n                <p style=\"margin-top: 8px;\">Everyone knows PayPal. Reliable alternative to Stripe.</p>\n            </div>\n\n            <div class=\"tool-card\">\n                <strong>Gumroad</strong>\n                10% commission\n                <p style=\"margin-top: 8px;\">If selling digital products, handles everything (payment + delivery).</p>\n            </div>\n\n            <div class=\"tool-card\">\n                <strong>Lemon Squeezy</strong>\n                8% + payment processing\n                <p style=\"margin-top: 8px;\">Better Gumroad alternative. Handles taxes automatically.</p>\n            </div>\n\n            <h3>🌐 Hosting & Deployment</h3>\n\n            <div class=\"tool-card\">\n                <strong>Vercel <span class=\"free-badge\">FREE TIER</span></strong>\n                Free tier very generous\n                <p style=\"margin-top: 8px;\">Host websites. Incredibly simple. Great for Next.js/React sites.</p>\n            </div>\n\n            <div class=\"tool-card\">\n                <strong>Netlify <span class=\"free-badge\">FREE TIER</span></strong>\n                Free tier very generous\n                <p style=\"margin-top: 8px;\">Similar to Vercel. Also great for static sites.</p>\n            </div>\n\n            <div class=\"tool-card\">\n                <strong>Supabase <span class=\"free-badge\">FREE TIER</span></strong>\n                Free tier available\n                <p style=\"margin-top: 8px;\">Database + backend. You build the website, Supabase handles data storage.</p>\n            </div>\n\n            <div class=\"tool-card\">\n                <strong>GoDaddy VPS</strong>\n                $3.99-12/month\n                <p style=\"margin-top: 8px;\">Full control. More freedom than drag-and-drop sites. Requires technical knowledge.</p>\n            </div>\n\n            <h3>📊 Analytics</h3>\n\n            <div class=\"tool-card\">\n                <strong>GA4 <span class=\"free-badge\">FREE</span></strong>\n                Completely free\n                <p style=\"margin-top: 8px;\">Google Analytics 4. Hard to set up alone, but use Claude or Gemini to help. Incredibly powerful once set up.</p>\n            </div>\n\n            <h2>The 10 Free Tools That Act Like Paid Software</h2>\n\n            <p>These are powerful and free. Really.</p>\n\n            <ol>\n                <li><strong>Obsidian</strong> — Note-taking like Notion but better for organizing complex ideas</li>\n                <li><strong>Figma</strong> — Design tool like Adobe but free and online</li>\n                <li><strong>GitHub</strong> — Version control like Bitbucket but with free private repos</li>\n                <li><strong>Replit</strong> — Code editor like Codepen with more power</li>\n                <li><strong>GA4</strong> — Analytics like Mixpanel but Google's (harder to set up)</li>\n                <li><strong>Mailchimp</strong> — Email marketing like Klaviyo but simpler and free</li>\n                <li><strong>Canva</strong> — Design like Adobe but 1% of the price</li>\n                <li><strong>Make</strong> — Automation like Zapier with more power</li>\n                <li><strong>Supabase</strong> — Database like Firebase but easier to use</li>\n                <li><strong>Vercel</strong> — Web hosting that's faster than traditional hosting</li>\n            </ol>\n\n            <h2>Start Here (8 Tools Maximum)</h2>\n\n            <div class=\"highlight\">\n                <strong>1. Claude</strong> (or ChatGPT) — For thinking, writing, coding<br>\n                <strong>2. Mailchimp</strong> (Free) — For email list<br>\n                <strong>3. Gumroad or Lemon Squeezy</strong> — For selling digital products<br>\n                <strong>4. Canva</strong> (Free) — For graphics<br>\n                <strong>5. Vercel or Netlify</strong> — For hosting your site<br>\n                <strong>6. Stripe</strong> — For payments<br>\n                <strong>7. Obsidian</strong> (Free) — For note-taking<br>\n                <strong>8. GA4</strong> (Free, with Claude's help) — For analytics<br><br>\n                <strong>You can build a six-figure business with just these 8 tools.</strong>\n            </div>\n\n            <h2>The Tool Nobody Knows About</h2>\n\n            <p><strong>Claude Code</strong> (Free for Claude Pro subscribers, $20/month)</p>\n\n            <p>This is a game-changer. It's Claude + a code editor + the ability to run code.</p>\n\n            <p>You tell Claude what you want to build. It writes the code. You can run it immediately. No setup needed.</p>\n\n            <p>Examples:</p>\n            <ul>\n                <li>\"Build me a landing page that converts\"</li>\n                <li>\"Create a database schema for my business\"</li>\n                <li>\"Write a script to automate my email list\"</li>\n                <li>\"Generate 100 product descriptions from a CSV\"</li>\n            </ul>\n\n            <p>Takes 5 minutes instead of 5 hours. This tool alone is worth the Claude Pro subscription.</p>\n\n            <h2>How to Stay Updated</h2>\n\n            <p>Tools change fast. New AI tools launch weekly.</p>\n\n            <p>Where to find new tools:</p>\n            <ul>\n                <li><strong>Product Hunt</strong> (producthunt.com) — New tools every day. Free.</li>\n                <li><strong>Twitter/X</strong> — Follow AI and startup accounts. New tools announced here first.</li>\n                <li><strong>YouTube</strong> — Search \"[tool name] tutorial\". See if it saves you time.</li>\n                <li><strong>Ask Claude</strong> — \"What new tools should I know about for [my use case]?\" Claude will tell you.</li>\n            </ul>\n\n            <h2>Final Word</h2>\n\n            <p>You don't need to know every tool. You need to know <strong>where to find</strong> the right tool when you need it.</p>\n\n            <p>Start with the 8 core tools above. Use them until they break. Then upgrade.</p>\n\n            <p>Build first. Optimize tools later.</p>";
+        }
+
+        function loadObsidianSetup() {
+            const content = document.getElementById('obsidianSetupContent');
+            content.innerHTML = `
+                <h2>3-Minute Obsidian Setup</h2>
+                <p>Obsidian is where you'll save all your thinking for this business framework.</p>
+
+                <h3>Step 1: Download & Install</h3>
+                <p>Go to <strong>obsidian.md</strong> and download. It's free.</p>
+
+                <h3>Step 2: Create Your Vault</h3>
+                <p>Open Obsidian. Click "Create new vault". Name it: <code>My AI Business</code></p>
+
+                <h3>Step 3: Create Folders</h3>
+                <p>Inside your vault, create 10 folders:</p>
+                <ul>
+                    <li>01 - Foundation</li>
+                    <li>02 - Toolkit</li>
+                    <li>03 - Offers</li>
+                    <li>04 - Content</li>
+                    <li>05 - Leads</li>
+                    <li>06 - Sales</li>
+                    <li>07 - Delivery</li>
+                    <li>08 - Scaling</li>
+                    <li>09 - Monetization</li>
+                    <li>10 - Freedom</li>
+                </ul>
+
+                <h3>Step 4: Create Notes</h3>
+                <p>In each folder, create a note. Name it: <code>Line X - [Name]</code></p>
+                <p>Example: <code>Line 1 - Foundation</code></p>
+
+                <h3>Step 5: Add Content</h3>
+                <p>Copy your worksheet answers from this system into each Obsidian note.</p>
+
+                <h3>Step 6: Link Notes</h3>
+                <p>Use <code>[[Line 1 - Foundation]]</code> to link between notes. This creates connections.</p>
+
+                <h3>Pro Tip: Weekly Review</h3>
+                <p>Set 1 hour every Sunday to read through your Obsidian notes. Add new thoughts. Link ideas together. This is when clarity happens.</p>
+            `;
+        }
+    </script>
+</body>
+</html>

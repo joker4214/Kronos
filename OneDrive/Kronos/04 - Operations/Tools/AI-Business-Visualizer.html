@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What Should You Actually Build? — Free AI Business Quiz</title>
+<meta name="description" content="Answer 5 quick questions and find out exactly what AI business to build — course, coaching, tool, service, or community. One specific answer, free, no signup to start.">
+<link rel="canonical" href="https://www.dharmasestheticdesign.com/quiz.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="What Should You Actually Build? — Free AI Business Quiz">
+<meta property="og:description" content="Answer 5 quick questions and find out exactly what AI business to build. One specific answer, not a generic list.">
+<meta property="og:url" content="https://www.dharmasestheticdesign.com/quiz.html">
+<meta property="og:image" content="https://www.dharmasestheticdesign.com/og-ai-business-empire.png">
+<meta property="og:site_name" content="AI Business Empire">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What Should You Actually Build? — Free AI Business Quiz">
+<meta name="twitter:description" content="5 quick questions. One specific answer for what AI business fits you.">
+<meta name="twitter:image" content="https://www.dharmasestheticdesign.com/og-ai-business-empire.png">
+<style>
+  :root {
+    --bg: #0b0d12;
+    --panel: #14171f;
+    --panel-border: rgba(255,255,255,0.08);
+    --gold: #f2b705;
+    --blue: #2563EB;
+    --blue-light: #5c8dff;
+    --teal: #00BFA5;
+    --white: #ffffff;
+    --gray: #9aa1ae;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0; min-height: 100%;
+    background: radial-gradient(circle at 50% -10%, #1a2140 0%, var(--bg) 55%);
+    color: var(--white);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  header { text-align: center; margin-bottom: 32px; }
+  .eyebrow {
+    color: var(--gold);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  h1 {
+    font-size: clamp(1.6rem, 5vw, 2.1rem);
+    line-height: 1.25;
+    margin: 0 0 10px;
+  }
+  h1 .accent { color: var(--gold); }
+  .sub { color: var(--gray); font-size: 1rem; line-height: 1.5; max-width: 480px; margin: 0 auto; }
+
+  .progress-track {
+    height: 6px; background: rgba(255,255,255,0.08); border-radius: 6px;
+    overflow: hidden; margin: 28px 0 8px;
+  }
+  .progress-fill {
+    height: 100%; background: linear-gradient(90deg, var(--blue), var(--teal));
+    width: 0%; transition: width 0.4s ease;
+  }
+  .progress-label { text-align: center; color: var(--gray); font-size: 0.82rem; margin-bottom: 24px; }
+
+  .card {
+    background: var(--panel); border: 1px solid var(--panel-border);
+    border-radius: 16px; padding: 32px 28px; flex: 1;
+  }
+
+  .q-text { font-size: 1.25rem; font-weight: 600; line-height: 1.4; margin-bottom: 24px; }
+
+  .options { display: flex; flex-direction: column; gap: 12px; }
+  .option {
+    display: block; width: 100%; text-align: left;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--panel-border);
+    color: var(--white);
+    padding: 16px 18px; border-radius: 10px;
+    font-size: 0.98rem; line-height: 1.45;
+    cursor: pointer; transition: all 0.15s ease;
+  }
+  .option:hover { border-color: var(--blue-light); background: rgba(37,99,235,0.12); }
+  .option:active { transform: scale(0.99); }
+
+  .nav-row { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; }
+  .back-btn {
+    background: none; border: none; color: var(--gray); font-size: 0.9rem;
+    cursor: pointer; padding: 8px 4px;
+  }
+  .back-btn:hover { color: var(--white); }
+  .back-btn:disabled { visibility: hidden; }
+
+  /* Email gate */
+  .gate h2 { font-size: 1.4rem; margin-bottom: 10px; }
+  .gate p { color: var(--gray); line-height: 1.55; margin-bottom: 22px; }
+  .gate form { display: flex; flex-direction: column; gap: 12px; }
+  .gate input[type="email"] {
+    background: rgba(255,255,255,0.05); border: 1px solid var(--panel-border);
+    color: var(--white); padding: 14px 16px; border-radius: 10px; font-size: 1rem;
+  }
+  .gate input[type="email"]::placeholder { color: var(--gray); }
+  .cta-btn {
+    background: linear-gradient(180deg, var(--blue), #1d4ed8);
+    color: var(--white); border: none; padding: 15px 20px; border-radius: 10px;
+    font-size: 1rem; font-weight: 700; cursor: pointer; box-shadow: 0 8px 24px rgba(37,99,235,0.35);
+  }
+  .cta-btn:hover { filter: brightness(1.08); }
+  .fine-print { color: var(--gray); font-size: 0.78rem; text-align: center; margin-top: 10px; }
+
+  /* Result */
+  .result-tag {
+    display: inline-block; color: var(--gold); font-size: 0.78rem; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px;
+  }
+  .result-name { font-size: 1.8rem; font-weight: 700; margin: 0 0 14px; }
+  .result-desc { color: #d7dbe4; line-height: 1.65; margin-bottom: 22px; }
+  .result-block {
+    background: rgba(255,255,255,0.04); border: 1px solid var(--panel-border);
+    border-radius: 12px; padding: 18px 20px; margin-bottom: 16px;
+  }
+  .result-block h3 {
+    font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em;
+    color: var(--teal); margin: 0 0 8px;
+  }
+  .result-block p { margin: 0; color: #cdd2dc; line-height: 1.55; font-size: 0.94rem; }
+  .result-cta { text-align: center; margin-top: 16px; }
+  .result-cta a.cta-btn { display: block; text-decoration: none; }
+
+  .tripwire-card {
+    margin-top: 28px; padding: 22px 20px; border-radius: 12px;
+    background: rgba(242, 183, 5, 0.08); border: 1px solid rgba(242, 183, 5, 0.3);
+  }
+  .tripwire-kicker { color: var(--gold); font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+  .tripwire-card h3 { font-size: 1.1rem; margin: 0 0 8px; }
+  .tripwire-card p { color: #d7dbe4; font-size: 0.92rem; line-height: 1.5; margin: 0 0 16px; }
+  .tripwire-btn {
+    display: block; text-align: center; text-decoration: none; padding: 14px 20px; border-radius: 10px;
+    font-weight: 700; font-size: 0.95rem; color: #1a1500;
+    background: linear-gradient(180deg, var(--gold), #d69e00);
+    box-shadow: 0 6px 18px rgba(242, 183, 5, 0.25);
+  }
+  .tripwire-btn:hover { filter: brightness(1.05); }
+
+  .secondary-cta {
+    display: block; text-align: center; margin-top: 14px; padding: 12px 16px;
+    color: var(--gray); font-size: 0.88rem; text-decoration: underline;
+  }
+  .secondary-cta:hover { color: var(--white); }
+
+  .restart-link {
+    display: block; text-align: center; color: var(--gray); font-size: 0.85rem;
+    margin-top: 16px; cursor: pointer; text-decoration: underline;
+  }
+
+  footer { text-align: center; color: var(--gray); font-size: 0.78rem; margin-top: 40px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">AI Business Empire</div>
+    <h1 id="headline">What Should You <span class="accent">Actually</span> Build?</h1>
+    <p class="sub" id="subhead">5 quick questions. No fluff. By the end you'll know exactly what kind of AI business fits you — not a generic list, one answer.</p>
+  </header>
+
+  <div id="quizArea"></div>
+
+  <footer>Want to see the whole path first? <a href="/free-map.html" style="color:#5c8dff;">View the free 10-line map</a>.</footer>
+</div>
+
+<script>
+"use strict";
+
+/* ---------------------------------------------------------------------
+ * Conditional logic: 5 multiple-choice questions, each answer scores
+ * points toward one or more of 5 archetypes. Highest score wins (ties
+ * broken by question order — earlier answers count slightly more since
+ * they're weighted higher below). Fully client-side, no backend needed.
+ * ------------------------------------------------------------------- */
+
+const QUESTIONS = [
+  {
+    text: "What are you already good at — the thing people come to YOU for?",
+    options: [
+      { label: "Explaining things so people finally get it", scores: { teacher: 2 } },
+      { label: "Helping someone one-on-one work through a problem", scores: { guide: 2 } },
+      { label: "Building, fixing, or automating things with tools or code", scores: { builder: 2 } },
+      { label: "Just doing the work for people so they don't have to", scores: { operator: 2 } },
+      { label: "Bringing people together around something", scores: { connector: 2 } },
+    ],
+  },
+  {
+    text: "What does your day actually look like right now?",
+    options: [
+      { label: "Client-facing work — consulting, coaching, freelancing", scores: { guide: 1, operator: 1 } },
+      { label: "Technical or operational — IT, engineering, systems", scores: { builder: 2 } },
+      { label: "Creative or content — writing, design, teaching, social", scores: { teacher: 2 } },
+      { label: "People-facing at scale — sales, community, events", scores: { connector: 1, guide: 1 } },
+      { label: "Repetitive work I'd love to automate, for me or others", scores: { operator: 2, builder: 1 } },
+    ],
+  },
+  {
+    text: "Something's broken — in your life or someone else's. What's your instinct?",
+    options: [
+      { label: "Write down exactly how I fixed it so others can follow it", scores: { teacher: 2 } },
+      { label: "Ask someone who's dealt with it — or become that person for others", scores: { guide: 2 } },
+      { label: "Build something so it never breaks that way again", scores: { builder: 2 } },
+      { label: "Just fix it myself, fast, and move on", scores: { operator: 2 } },
+      { label: "Get a few people together to solve it as a group", scores: { connector: 2 } },
+    ],
+  },
+  {
+    text: "Which sentence sounds most like you?",
+    options: [
+      { label: '"I could explain this in a way that finally makes sense."', scores: { teacher: 2 } },
+      { label: '"I\'m good at helping one person at a time get unstuck."', scores: { guide: 2 } },
+      { label: '"Give me a repetitive problem, I\'ll build something to kill it."', scores: { builder: 2 } },
+      { label: '"I\'d rather just handle it for you than teach you how."', scores: { operator: 2 } },
+      { label: '"I like it when people show up and we figure it out together."', scores: { connector: 2 } },
+    ],
+  },
+  {
+    text: "What pulls you more, long term?",
+    options: [
+      { label: "Freedom to work on my own schedule, teaching what I know", scores: { teacher: 1, connector: 1 } },
+      { label: "Deep 1:1 relationships with a handful of people", scores: { guide: 2 } },
+      { label: "Building something once that keeps working while I sleep", scores: { builder: 2 } },
+      { label: "Getting paid well to just handle things, reliably", scores: { operator: 2 } },
+      { label: "A recurring group or community that grows over time", scores: { connector: 2 } },
+    ],
+  },
+];
+
+const ARCHETYPES = {
+  teacher: {
+    name: "The Teacher — AI-Powered Course or Info Product",
+    kitName: "The Teacher's Offer-Building Kit",
+    tag: "You turn what you know into something others can follow",
+    desc: "You explain things well and people already ask you how you did it. That's the whole business: package what you know into a course, guide, or template system, and use AI to speed up the content creation — not replace your voice, just remove the grunt work.",
+    startLine: "Line 3 (Offers) — package your expertise into a clear, sellable format. Then Line 4 (Content) is where you'll naturally win, since explaining things is already your strength.",
+    firstStep: "Write down the one question people ask you most often. That's your first offer, not a broad \"everything I know\" course.",
+  },
+  guide: {
+    name: "The Guide — AI-Augmented Coaching or Consulting",
+    kitName: "The Guide's Coaching Kit",
+    tag: "You help one person at a time, and you're good at it",
+    desc: "You like the 1:1 work — sitting with someone's actual problem and helping them through it. AI's job here is to handle your prep, research, and follow-up so you can take on more people without working more hours.",
+    startLine: "Line 3 (Offers) — define the specific transformation you deliver 1:1. Line 7 (Delivery) is where AI automation buys back your time.",
+    firstStep: "Name the one transformation you're best at guiding someone through. Not \"business coaching\" — the specific thing.",
+  },
+  builder: {
+    name: "The Builder — An AI Tool or Micro-SaaS",
+    kitName: "The Builder's Product Kit",
+    tag: "You'd rather build the fix than explain it",
+    desc: "Give you a repeated, annoying problem and your instinct is to build something that kills it for good. That's a product instinct. Start small: one tool, one specific problem, for you or a narrow group of people just like you.",
+    startLine: "Line 2 (Toolkit) — pick the smallest tech stack that ships. Line 3 (Offers) — resist the urge to build everything before you sell anything.",
+    firstStep: "What repetitive task have you already half-automated for yourself? That's your first product, not a new idea.",
+  },
+  operator: {
+    name: "The Operator — An AI-Powered Done-For-You Service",
+    kitName: "The Operator's Service Kit",
+    tag: "You'd rather just handle it than teach someone else how",
+    desc: "You're reliable and you get things done. The AI-era version of a service business: use AI to deliver the same service faster and cheaper than competitors, while charging the same — or more — because the outcome is what people pay for, not your hours.",
+    startLine: "Line 7 (Delivery) — figure out exactly what AI can take off your plate per client. Line 8 (Scaling) is where this compounds.",
+    firstStep: "Pick one service you already do well. Map every step, then find the one AI can do 80% of for you.",
+  },
+  connector: {
+    name: "The Connector — An AI-Powered Community or Membership",
+    kitName: "The Connector's Community Kit",
+    tag: "You like it best when people show up together",
+    desc: "You're the person who gets people in a room (physical or virtual) and something good happens. A recurring paid community around a shared problem is your natural business — and AI keeps it running lean so it doesn't eat your life.",
+    startLine: "Line 9 (Monetization) — recurring revenue is the natural fit here, not a one-time sale. Line 5 (Leads) is your growth engine.",
+    firstStep: "Who are the 10 people who'd join on day one, by name? If you can't name them, that's the real first step.",
+  },
+};
+
+/* ---------------------------------------------------------------------
+ * Lead capture: this quiz is the lead magnet -- the email gate below is
+ * where the opt-in actually happens. Each submission POSTs to /api/quiz-lead
+ * (a route on this same Next.js app) which appends {email, result, ts} to
+ * data/quiz-leads.jsonl on the server. Read captured leads via SSH:
+ *   cat /home/jason/Kronos/data/quiz-leads.jsonl
+ * ------------------------------------------------------------------- */
+
+let currentQuestion = 0;
+const answers = []; // { scores } per answered question
+const scores = { teacher: 0, guide: 0, builder: 0, operator: 0, connector: 0 };
+
+const quizArea = document.getElementById("quizArea");
+const headline = document.getElementById("headline");
+const subhead = document.getElementById("subhead");
+
+function renderProgress(step, total) {
+  const pct = Math.round((step / total) * 100);
+  return `
+    <div class="progress-track"><div class="progress-fill" style="width:${pct}%"></div></div>
+    <div class="progress-label">Question ${Math.min(step + 1, total)} of ${total}</div>
+  `;
+}
+
+function renderQuestion() {
+  const q = QUESTIONS[currentQuestion];
+  const optionsHtml = q.options
+    .map(
+      (opt, i) => `<button class="option" data-index="${i}">${opt.label}</button>`
+    )
+    .join("");
+
+  quizArea.innerHTML = `
+    ${renderProgress(currentQuestion, QUESTIONS.length)}
+    <div class="card">
+      <div class="q-text">${q.text}</div>
+      <div class="options">${optionsHtml}</div>
+      <div class="nav-row">
+        <button class="back-btn" id="backBtn" ${currentQuestion === 0 ? "disabled" : ""}>&larr; Back</button>
+        <span></span>
+      </div>
+    </div>
+  `;
+
+  quizArea.querySelectorAll(".option").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const idx = parseInt(btn.dataset.index, 10);
+      const chosen = q.options[idx];
+      answers[currentQuestion] = chosen;
+      for (const key in chosen.scores) scores[key] = (scores[key] || 0) + chosen.scores[key];
+
+      if (currentQuestion < QUESTIONS.length - 1) {
+        currentQuestion++;
+        renderQuestion();
+      } else {
+        renderGate();
+      }
+    });
+  });
+
+  const backBtn = document.getElementById("backBtn");
+  if (backBtn) {
+    backBtn.addEventListener("click", () => {
+      if (currentQuestion === 0) return;
+      // unscore the answer we're leaving
+      const prevAnswer = answers[currentQuestion];
+      if (prevAnswer) {
+        for (const key in prevAnswer.scores) scores[key] -= prevAnswer.scores[key];
+      }
+      currentQuestion--;
+      renderQuestion();
+    });
+  }
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function topArchetype() {
+  let best = null, bestScore = -1;
+  for (const key in scores) {
+    if (scores[key] > bestScore) { best = key; bestScore = scores[key]; }
+  }
+  return best;
+}
+
+function renderGate() {
+  headline.innerHTML = 'Your Result Is Ready';
+  subhead.textContent = "Enter your email and I'll show you exactly what to build.";
+
+  quizArea.innerHTML = `
+    ${renderProgress(QUESTIONS.length, QUESTIONS.length)}
+    <div class="card gate">
+      <h2>One last thing</h2>
+      <p>Your answers point to a clear direction. Drop your email below and I'll show you your result, plus how it maps onto the 10-line roadmap for actually building it.</p>
+      <form id="gateForm">
+        <input type="email" id="gateEmail" placeholder="you@email.com" required>
+        <button type="submit" class="cta-btn" id="gateSubmitBtn">Show My Result</button>
+      </form>
+      <p class="fine-print" id="gateFinePrint">No spam. Just your result and, occasionally, something worth reading.</p>
+    </div>
+  `;
+
+  document.getElementById("gateForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const email = document.getElementById("gateEmail").value.trim();
+    submitEmail(email);
+  });
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+async function submitEmail(email) {
+  const btn = document.getElementById("gateSubmitBtn");
+  const fine = document.getElementById("gateFinePrint");
+  btn.disabled = true;
+  btn.textContent = "One sec...";
+
+  try {
+    const res = await fetch("/api/quiz-lead", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, result: topArchetype() }),
+    });
+    if (!res.ok) throw new Error("bad status " + res.status);
+  } catch (err) {
+    // Don't let a network hiccup block the user from seeing their result --
+    // but make the failure visible so it's not silently lost.
+    console.error("Lead capture failed:", err);
+    fine.textContent = "Couldn't save your email just now, but here's your result anyway.";
+    fine.style.color = "#f2b705";
+  }
+
+  renderResult();
+}
+
+function renderResult() {
+  const key = topArchetype();
+  const a = ARCHETYPES[key];
+
+  headline.innerHTML = 'Here&rsquo;s What You Should Build';
+  subhead.textContent = "";
+
+  quizArea.innerHTML = `
+    <div class="card">
+      <div class="result-tag">${a.tag}</div>
+      <div class="result-name">${a.name}</div>
+      <p class="result-desc">${a.desc}</p>
+
+      <div class="result-block">
+        <h3>Where to start on the map</h3>
+        <p>${a.startLine}</p>
+      </div>
+      <div class="result-block">
+        <h3>Your actual first step</h3>
+        <p>${a.firstStep}</p>
+      </div>
+
+      <div class="tripwire-card">
+        <div class="tripwire-kicker">Your Next Step &mdash; $7</div>
+        <h3>${a.kitName}</h3>
+        <p>Your primary offer, real pricing benchmarks, delivery format, and a 48-hour action step &mdash; built specifically for this, not a repeat of what you just read.</p>
+        <a class="tripwire-btn" href="https://gregoryjason54.gumroad.com/l/yoshgq" target="_blank" rel="noopener noreferrer">
+          Get My Starter Kit &mdash; $7
+        </a>
+      </div>
+
+      <a class="secondary-cta" href="https://gregoryjason54.gumroad.com/l/suped" target="_blank" rel="noopener noreferrer">
+        Or skip ahead &mdash; get the full 10-line map, $49
+      </a>
+      <span class="restart-link" id="restartLink">Take the quiz again</span>
+    </div>
+  `;
+
+  document.getElementById("restartLink").addEventListener("click", () => {
+    currentQuestion = 0;
+    answers.length = 0;
+    for (const k in scores) scores[k] = 0;
+    headline.innerHTML = 'What Should You <span class="accent">Actually</span> Build?';
+    subhead.textContent = "5 quick questions. No fluff. By the end you'll know exactly what kind of AI business fits you — not a generic list, one answer.";
+    renderQuestion();
+  });
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+renderQuestion();
+</script>
+</body>
+</html>
