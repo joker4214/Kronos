@@ -66,7 +66,7 @@
   gap: 12px;
   color: var(--white);
   font-family: var(--font-display);
-  font-size: 1.05rem;
+  font-size: 1.35rem;
   font-weight: 600;
   letter-spacing: 0.02em;
 }
@@ -82,8 +82,8 @@
 }
 
 .navLink {
-  color: var(--gray-400);
-  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1rem;
   font-weight: 500;
   transition: color 0.2s;
 }
@@ -230,6 +230,16 @@
   margin: 0 auto;
 }
 
+.heroGrain {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
 .eyebrow {
   color: var(--accent-light);
   font-size: 0.8rem;
@@ -358,6 +368,31 @@
   color: var(--gray-700);
   margin-bottom: 16px;
   font-size: 1.02rem;
+}
+
+.aboutMascot {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+  padding: 16px;
+  background: var(--gray-100);
+  border-radius: 12px;
+}
+
+.aboutMascot img {
+  width: 84px;
+  height: 84px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.aboutMascot p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--gray-700);
+  line-height: 1.5;
 }
 
 .bento {
@@ -1203,6 +1238,73 @@
   background: var(--accent-light);
 }
 
+.paypalWrap {
+  margin-top: 18px;
+}
+
+.cartError {
+  color: #ff8a80;
+  font-size: 0.82rem;
+  margin-bottom: 10px;
+}
+
+.cartSecondaryLink {
+  display: block;
+  text-align: center;
+  margin-top: 14px;
+  font-size: 0.82rem;
+  color: var(--gray-400);
+  text-decoration: underline;
+}
+
+.cartSecondaryLink:hover {
+  color: var(--white);
+}
+
+.cartSuccess {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.cartSuccess p {
+  color: var(--gray-100);
+  margin-bottom: 14px;
+}
+
+.cartSuccess code {
+  font-size: 0.8rem;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.cartSuccess ul {
+  list-style: none;
+  margin-bottom: 18px;
+  color: var(--gray-400);
+  font-size: 0.85rem;
+}
+
+.cartSuccess ul li {
+  padding: 4px 0;
+}
+
+.cartSuccess button {
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  border: 1px solid var(--gray-400);
+  color: var(--white);
+  border-radius: 2px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.cartSuccess button:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
 @media (max-width: 860px) {
   .cartLayout {
     grid-template-columns: 1fr;
@@ -1436,6 +1538,199 @@
   border-radius: 8px;
   border: 1px solid rgba(47, 95, 255, 0.2);
   margin: 24px 0;
+}
+
+/* Learn From Us video library (2026-08-07) -- fills what was an empty
+   placeholder div (.footerCanvasArea, still used decoratively elsewhere
+   isn't -- this is its real replacement in the footer). */
+.learnLibrary {
+  width: 100%;
+  margin: 24px 0 40px;
+  padding: 40px 32px;
+  border-radius: 16px;
+  background: linear-gradient(160deg, rgba(47, 95, 255, 0.1) 0%, rgba(22, 24, 28, 0.4) 60%);
+  border: 1px solid rgba(47, 95, 255, 0.18);
+}
+
+.learnHead {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 28px;
+}
+
+.learnHead h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 10px;
+  line-height: 1.25;
+}
+
+.learnHead p {
+  color: var(--gray-400);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.learnTabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.learnTab {
+  padding: 9px 18px;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--gray-400);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.learnTab:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: var(--white);
+}
+
+.learnTabActive {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--white);
+}
+
+.learnGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.learnCard {
+  text-align: left;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.learnCard:hover {
+  border-color: var(--accent-light);
+  transform: translateY(-2px);
+}
+
+.learnThumbWrap {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: var(--charcoal);
+}
+
+.learnThumbWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.learnPlayBtn {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: var(--white);
+  background: rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.learnCard:hover .learnPlayBtn {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.learnCardTitle {
+  padding: 14px 16px 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.35;
+}
+
+.learnCardTieIn {
+  padding: 0 16px 16px;
+  font-size: 0.8rem;
+  color: var(--accent-light);
+  line-height: 1.45;
+}
+
+.learnPlayerWrap {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.learnPlayerFrame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+}
+
+.learnPlayerFrame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.learnPlayerMeta {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.learnPlayerMeta p {
+  color: var(--gray-400);
+  font-size: 0.88rem;
+  margin: 0;
+}
+
+.learnBack {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--white);
+  padding: 8px 16px;
+  border-radius: 100px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.2s ease;
+}
+
+.learnBack:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 860px) {
+  .learnLibrary {
+    padding: 28px 18px;
+  }
 }
 
 .footerLinksGrid {

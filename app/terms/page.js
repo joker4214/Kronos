@@ -3,6 +3,9 @@ import styles from '@/styles/dharma.module.css';
 export const metadata = {
   title: 'Terms of Service | Dharma\'s Esthetic Design Center',
   description: 'Terms of service for Dharma\'s Esthetic Design Center digital marketing and web design services.',
+  alternates: {
+    canonical: '/terms',
+  },
 };
 
 export default function TermsPage() {
@@ -96,7 +99,7 @@ export default function TermsPage() {
 
         <h2>11. Contact</h2>
         <p>
-          For questions about these Terms of Service, contact us at <strong>jason@dharmasemporium.com</strong>.
+          For questions about these Terms of Service, contact us at <strong>jason@dharmasestheticdesign.com</strong>.
         </p>
 
         <p style={{ marginTop: '60px', paddingTop: '20px', borderTop: '1px solid #E0E0E0', opacity: 0.7, fontSize: '14px' }}>

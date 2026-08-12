@@ -6,6 +6,7 @@ import styles from '@/styles/dharma.module.css';
 import Link from 'next/link';
 import { FaInstagram, FaTiktok, FaFacebook, FaWhatsapp } from 'react-icons/fa';
 import { smoothScrollToId } from './scrollUtils';
+import LearnLibrary from './LearnLibrary';
 
 const AnimatedLink = ({ href, children, className }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -105,8 +106,8 @@ export default function AnimatedFooter() {
             ))}
           </div>
 
-          {/* Canvas Area */}
-          <div className={styles.footerCanvasArea} />
+          {/* Learn From Us video library -- replaces the old empty canvas placeholder */}
+          <LearnLibrary />
 
           {/* Links Grid */}
           <div className={styles.footerLinksGrid}>

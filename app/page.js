@@ -10,6 +10,12 @@ import FAQ from '@/components/dharma/FAQ';
 import FinalCTA from '@/components/dharma/FinalCTA';
 import AnimatedFooter from '@/components/dharma/AnimatedFooter';
 
+export const metadata = {
+  alternates: {
+    canonical: '/',
+  },
+};
+
 export default function Home() {
   return (
     <>

@@ -13,14 +13,14 @@ export default function FinalCTA() {
         </p>
         <div className={styles.btnRow}>
           <a
-            href="mailto:jason@dharmasemporium.com?subject=Let's%20talk%20about%20my%20Shopify%20store"
+            href="mailto:Dharma%27s%20Esthetic%20Design%20%3Cjason@dharmasestheticdesign.com%3E?subject=Let's%20talk%20about%20my%20Shopify%20store"
             className={`${styles.btn} ${styles.btnAccent}`}
           >
             Email Us
           </a>
         </div>
         <div className={styles.contactLinks}>
-          <a href="mailto:jason@dharmasemporium.com">jason@dharmasemporium.com</a>
+          <a href="mailto:Dharma%27s%20Esthetic%20Design%20%3Cjason@dharmasestheticdesign.com%3E">jason@dharmasestheticdesign.com</a>
           <a
             href="https://www.instagram.com/dharmasestheticdesign/"
             target="_blank"

@@ -1,0 +1,286 @@
+.wrap {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px 10px 10px;
+  border-radius: 100px;
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.chip:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-1px);
+}
+
+.chipActive {
+  border-color: var(--accent-light);
+  background: rgba(47, 95, 255, 0.14);
+  box-shadow: 0 0 0 1px var(--accent-light);
+}
+
+.chipSwatches {
+  display: flex;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15);
+}
+
+.chipSwatches span {
+  flex: 1;
+}
+
+.chipName {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--white);
+}
+
+.stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.mockup {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.06);
+  transition: background 0.35s ease;
+}
+
+.mockGlow {
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.35;
+  pointer-events: none;
+  transition: background 0.35s ease;
+}
+
+.mockNav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 22px;
+  transition: background 0.35s ease;
+}
+
+.mockLogoDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: background 0.35s ease;
+}
+
+.mockNavLabel {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+}
+
+.mockNavLinks {
+  margin-left: auto;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  opacity: 0.6;
+}
+
+.mockHero {
+  position: relative;
+  padding: 40px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.mockEyebrow {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.mockHeadline {
+  font-size: 2rem;
+  line-height: 1.08;
+  margin: 0;
+  max-width: 20ch;
+  transition: color 0.35s ease;
+}
+
+.mockSub {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0 0 6px;
+  max-width: 34ch;
+  opacity: 0.85;
+}
+
+.mockCta {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 11px 22px;
+  border-radius: 100px;
+  transition: background 0.35s ease, color 0.35s ease;
+}
+
+.mockProducts {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  padding: 0 32px 32px;
+}
+
+.mockProductCard {
+  border-radius: 12px;
+  padding: 16px;
+  transition: background 0.35s ease;
+}
+
+.mockProductImg {
+  width: 100%;
+  aspect-ratio: 1.4 / 1;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  transition: background 0.35s ease;
+}
+
+.mockProductName {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+  transition: color 0.35s ease;
+}
+
+.mockProductPrice {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 3px 9px;
+  border-radius: 6px;
+  font-variant-numeric: tabular-nums;
+  transition: background 0.35s ease, color 0.35s ease;
+}
+
+.metaBar {
+  width: 100%;
+  max-width: 640px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 18px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.12);
+}
+
+.metaLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.goodFit {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--gray-400);
+  margin: 0;
+}
+
+.hexRow {
+  display: flex;
+  gap: 10px;
+}
+
+.hexChip {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  color: var(--gray-400);
+  font-variant-numeric: tabular-nums;
+}
+
+.ctaBtn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  border-radius: 4px;
+  background: var(--accent);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: 0.2s ease;
+  white-space: nowrap;
+}
+
+.ctaBtn:hover {
+  background: var(--accent-light);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 620px) {
+  .mockHero {
+    padding: 32px 22px 24px;
+  }
+  .mockHeadline {
+    font-size: 1.6rem;
+  }
+  .mockProducts {
+    padding: 0 22px 24px;
+  }
+  .metaBar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .ctaBtn {
+    width: 100%;
+  }
+}

@@ -1,8 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import GradientDots from './GradientDots';
-import BlobBackground from './BlobBackground';
+import HeroMotion from './HeroMotion';
 import styles from '@/styles/dharma.module.css';
 import { smoothScrollToId } from './scrollUtils';
 
@@ -21,8 +20,8 @@ const item = {
 export default function Hero() {
   return (
     <section id="top" className={styles.hero}>
-      <BlobBackground />
-      <GradientDots backgroundColor="transparent" />
+      <HeroMotion />
+      <div className={styles.heroGrain} />
       <motion.div
         className={styles.heroInner}
         variants={container}

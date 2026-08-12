@@ -162,6 +162,14 @@
 
   footer { text-align: center; color: var(--gray); font-size: 0.78rem; margin-top: 40px; }
 </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NPZS1Q0X64"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NPZS1Q0X64');
+</script>
 </head>
 <body>
 <div class="wrap">
@@ -332,11 +340,15 @@ function renderQuestion() {
       const chosen = q.options[idx];
       answers[currentQuestion] = chosen;
       for (const key in chosen.scores) scores[key] = (scores[key] || 0) + chosen.scores[key];
+      if (typeof gtag === "function") {
+        gtag("event", "quiz_question_answered", { question_number: currentQuestion + 1 });
+      }
 
       if (currentQuestion < QUESTIONS.length - 1) {
         currentQuestion++;
         renderQuestion();
       } else {
+        if (typeof gtag === "function") gtag("event", "quiz_completed");
         renderGate();
       }
     });
@@ -406,6 +418,9 @@ async function submitEmail(email) {
       body: JSON.stringify({ email, result: topArchetype() }),
     });
     if (!res.ok) throw new Error("bad status " + res.status);
+    if (typeof gtag === "function") {
+      gtag("event", "generate_lead", { archetype: topArchetype() });
+    }
   } catch (err) {
     // Don't let a network hiccup block the user from seeing their result --
     // but make the failure visible so it's not silently lost.

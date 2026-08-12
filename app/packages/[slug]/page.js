@@ -3,6 +3,7 @@ import styles from '@/styles/dharma.module.css';
 import { PACKAGES, PACKAGE_DETAILS } from '@/components/dharma/data';
 import Navbar from '@/components/dharma/Navbar';
 import BackButton from '@/components/dharma/BackButton';
+import PackageCheckout from '@/components/dharma/PackageCheckout';
 
 export function generateStaticParams() {
   return Object.keys(PACKAGE_DETAILS).map((slug) => ({ slug }));
@@ -14,6 +15,9 @@ export function generateMetadata({ params }) {
   return {
     title: `${detail.name} | Dharma's Esthetic Design Center`,
     description: detail.intro,
+    alternates: {
+      canonical: `/packages/${params.slug}`,
+    },
   };
 }
 
@@ -48,15 +52,7 @@ export default function PackageDetailPage({ params }) {
 
             {detail.delivery && <div className={styles.deliveryNote}>{detail.delivery}</div>}
 
-            <a
-              href={pkg.stripeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.detailCta}
-            >
-              Get Started
-            </a>
-            <div className={styles.secureNote}>🔒 Payments secured by PayPal</div>
+            <PackageCheckout packageId={pkg.id} packageName={detail.name} price={pkg.price} />
           </div>
         </div>
       </main>

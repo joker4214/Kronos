@@ -3,6 +3,9 @@ import styles from '@/styles/dharma.module.css';
 export const metadata = {
   title: 'Privacy Policy | Dharma\'s Esthetic Design Center',
   description: 'Privacy policy for Dharma\'s Esthetic Design Center. Learn how we collect, use, and protect your personal information.',
+  alternates: {
+    canonical: '/privacy',
+  },
 };
 
 export default function PrivacyPage() {
@@ -164,7 +167,7 @@ export default function PrivacyPage() {
           <li>Right to lodge a complaint with a data protection authority</li>
         </ul>
         <p>
-          <strong>To exercise any of these rights, contact us at: jason@dharmasemporium.com</strong>
+          <strong>To exercise any of these rights, contact us at: jason@dharmasestheticdesign.com</strong>
         </p>
 
         <h2>11. Children's Privacy</h2>
@@ -207,7 +210,7 @@ export default function PrivacyPage() {
           <li>Non-discrimination for exercising these rights</li>
         </ul>
         <p>
-          <strong>To submit a CCPA request, contact us at: jason@dharmasemporium.com</strong>
+          <strong>To submit a CCPA request, contact us at: jason@dharmasestheticdesign.com</strong>
         </p>
 
         <h2>16. Changes to This Privacy Policy</h2>
@@ -219,7 +222,7 @@ export default function PrivacyPage() {
         <p>For questions about this Privacy Policy or to exercise your privacy rights, contact:</p>
         <p>
           <strong>Dharma's Esthetic Design Center</strong><br />
-          Email: jason@dharmasemporium.com<br />
+          Email: jason@dharmasestheticdesign.com<br />
           Website: dharmasestheticdesign.com
         </p>
 

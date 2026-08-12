@@ -14,6 +14,9 @@ export function generateMetadata({ params }) {
   return {
     title: `${audit.name} | Dharma's Esthetic Design Center`,
     description: audit.intro,
+    alternates: {
+      canonical: `/shopify-audit/${params.slug}`,
+    },
   };
 }
 

@@ -18,6 +18,13 @@ export default function About() {
             AI-generated video commercials — we handle the work so you can focus on running
             your business.
           </p>
+          <div className={styles.aboutMascot}>
+            <img src="/dharma-dog.jpg" alt="Dharma, an American Bully XXL, sitting in the grass" />
+            <p>
+              That&apos;s <strong>Dharma</strong> — 150 lbs of American Bully XXL, and the
+              reason pet store owners always get first pick of our calendar.
+            </p>
+          </div>
         </Reveal>
         <Reveal className={styles.bento} delay={0.15}>
           <div className={`${styles.bentoCell} ${styles.bentoWide}`}>

@@ -1,13 +1,14 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import styles from '@/styles/dharma.module.css';
 import { smoothScrollToId } from './scrollUtils';
 
 function LogoMark() {
   return (
-    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style={{ width: 40, height: 40, flexShrink: 0 }}>
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style={{ width: 50, height: 50, flexShrink: 0 }}>
       <circle cx="100" cy="100" r="96" fill="#16181C" />
       <circle cx="100" cy="100" r="92" fill="none" stroke="#2F5FFF" strokeWidth="1.5" />
       <circle cx="100" cy="100" r="85" fill="none" stroke="#2F5FFF" strokeWidth="0.5" opacity="0.4" />
@@ -34,6 +35,7 @@ const NAV_LINKS = [
   { href: '#webdesign', label: 'Web Design' },
   { href: '#alacarte', label: 'À La Carte' },
   { href: '#team', label: 'Team' },
+  { href: '/style-picker', label: 'Style Picker', page: true },
 ];
 
 export default function Navbar() {
@@ -43,6 +45,22 @@ export default function Navbar() {
     setMenuOpen(false);
     smoothScrollToId(e, id);
   };
+
+  const renderLink = (link, className) =>
+    link.page ? (
+      <Link key={link.href} href={link.href} className={className} onClick={() => setMenuOpen(false)}>
+        {link.label}
+      </Link>
+    ) : (
+      <a
+        key={link.href}
+        href={link.href}
+        onClick={(e) => navigate(e, link.href.slice(1))}
+        className={className}
+      >
+        {link.label}
+      </a>
+    );
 
   return (
     <header className={styles.navbar}>
@@ -55,16 +73,7 @@ export default function Navbar() {
         </a>
 
         <div className={styles.navLinks}>
-          {NAV_LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={(e) => navigate(e, link.href.slice(1))}
-              className={styles.navLink}
-            >
-              {link.label}
-            </a>
-          ))}
+          {NAV_LINKS.map((link) => renderLink(link, styles.navLink))}
           <a href="#contact" onClick={(e) => navigate(e, 'contact')} className={styles.navCta}>
             Contact
           </a>
@@ -83,16 +92,7 @@ export default function Navbar() {
 
       {menuOpen && (
         <div className={styles.navMobileMenu}>
-          {NAV_LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={(e) => navigate(e, link.href.slice(1))}
-              className={styles.navMobileLink}
-            >
-              {link.label}
-            </a>
-          ))}
+          {NAV_LINKS.map((link) => renderLink(link, styles.navMobileLink))}
           <a
             href="#contact"
             onClick={(e) => navigate(e, 'contact')}
