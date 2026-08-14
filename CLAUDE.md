@@ -42,6 +42,6 @@ Key guidance docs there:
 
 Write all user-facing copy and generated content to those voice rules.
 
-## The atlas/ folder (branch `claude/employee-from-document-5zrzer` only)
+## Atlas has moved out
 
-`atlas/` is a separate project — a voice-driven lead-gen AI employee — with its own `CLAUDE.md`, and it has been split out to its own repository (`joker4214/atlas`). Keep the two strictly separate: never mix Atlas code into the Kronos app or Kronos app code into `atlas/`. New Atlas work belongs in the standalone atlas repo.
+The `atlas/` folder (a separate voice-driven lead-gen AI employee project) has been deleted from this repo — it now lives only in the standalone `joker4214/atlas` repository. Do not recreate it here or mix its code into the Kronos app. It is unrelated to `dharma-brain` / the Jarvis voice pipeline.
