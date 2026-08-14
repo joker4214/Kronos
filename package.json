@@ -7,9 +7,12 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "^14.0.0",
     "@anthropic-ai/sdk": "^0.24.0",
     "@supabase/supabase-js": "^2.38.0",
-    "axios": "^1.6.2"
+    "axios": "^1.6.2",
+    "next": "^14.0.0"
+  },
+  "devDependencies": {
+    "shadcn": "^4.17.0"
   }
 }
