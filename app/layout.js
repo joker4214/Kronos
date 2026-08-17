@@ -42,29 +42,35 @@ export const metadata = {
   },
 };
 
-// GA4 property "Dharma's Esthetic Design Center" (created 2026-08-06, under
-// the same Google account as the Ecombuildshub properties). Covers this
-// React app; the static AI Business Empire funnel pages in public/
-// (quiz.html, starter-kit.html, free-map.html) carry their own copy of this
-// same snippet since they're outside Next.js's render tree.
-const GA_MEASUREMENT_ID = 'G-NPZS1Q0X64';
+// GTM container "dharmasestheticdesign.com" (created 2026-08-17, under the
+// Dharma's Emporium GTM account). Holds the GA4 config tag (property
+// "Dharma's Esthetic Design Center", G-NPZS1Q0X64) and the Meta Pixel base
+// code as tags inside GTM instead of hardcoded here, so both fire together
+// without double-counting GA4. Covers this React app; the static AI
+// Business Empire funnel pages in public/ (quiz.html, starter-kit.html,
+// free-map.html) carry their own copy of this same GTM snippet since
+// they're outside Next.js's render tree.
+const GTM_CONTAINER_ID = 'GTM-5LB46RDG';
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable}`}>
       <body>
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-          strategy="afterInteractive"
-        />
-        <Script id="ga4-init" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_MEASUREMENT_ID}');
-          `}
+        <Script id="gtm-init" strategy="afterInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','${GTM_CONTAINER_ID}');`}
         </Script>
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_CONTAINER_ID}`}
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
         <MotionProvider>{children}</MotionProvider>
       </body>
     </html>
