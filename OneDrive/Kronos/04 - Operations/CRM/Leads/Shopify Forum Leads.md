@@ -104,6 +104,58 @@
 
 ---
 
+## Status check — 2026-08-15
+
+*Scraped all 10 store sites looking for a WhatsApp contact for outreach. None publish one — all lean on email/contact forms instead. Turned up bigger news: 4 of the 10 are now dead.*
+
+- **Posh Pets** — live. Contact form only, no phone/WhatsApp. Social links still unconfigured Shopify placeholders (instagram.com/shopify).
+- **CreativeSignet** — site returns Cloudflare 403 to scrapers; likely still live, couldn't verify contact info.
+- **Petpal Accessories** — **DEAD.** Domain no longer resolves (DNS failure).
+- **Woof M-E-O-W** — live, now on a real custom domain (woofmeowshops.store) instead of the myshopify.com subdomain. No phone/WhatsApp.
+- **Go Paw Nation** — live, but `/pages/contact` 404s — the missing-contact-info gap flagged in Round 2 is still unresolved. All products currently show sold out.
+- **Lazywhisker.com** — live, real contact form, explicitly email-only ("we reply within one business day").
+- **Furpal** — **DOWN.** Store is password-gated / "Opening soon," not publicly accessible right now.
+- **Pawliciouz** — **DEAD.** Domain expired, now a GoDaddy resale/parking page.
+- **Ruff Days** — **DEAD.** Domain no longer resolves (DNS failure).
+- **Nine Lives Co** — site returns Cloudflare 403 to scrapers; likely still live, couldn't verify contact info.
+
+**Action:** drop Petpal Accessories, Pawliciouz, Ruff Days, and Furpal from active outreach — nothing to reach there right now. Outreach to the 4 confirmed-live leads should go through their contact-page email form, not WhatsApp/forum DM.
+
+---
+
+## Contact-form drafts, ready to send — 2026-08-15
+
+*Same messages as the Round 1/2 outreach drafts, rewritten for the on-site contact form instead of a forum reply, each signed off with dharmasestheticdesign.com. Posh Pets and Lazywhisker have working forms — paste directly. Go Paw Nation's contact page 404s and Woof M-E-O-W has no contact form at all, so those two are on hold until a working channel turns up.*
+
+**Posh Pets** (poshpetsstore.myshopify.com/pages/contact) — Hi Posh Pets team — came across your post on the Shopify forum asking for feedback on making the store feel more premium. One quick thing worth checking today: your product pages show your supplier's brand name instead of "Posh Pets" — that undercuts search visibility and the premium feel you're going for. Mixing $5 bandanas in with the luxury positioning sends a mixed signal too. Happy to send over a quick, free breakdown of what I'd fix first if that'd help — no pitch attached, just thought it might save you some guessing. — Jason, Dharma's Esthetic Design Center, dharmasestheticdesign.com
+
+**Woof M-E-O-W** (no working contact form found — hold) — Hi there — saw your post asking for feedback on Woof M-E-O-W's homepage. Don't take the 3/10 personally, new stores always get picked apart harder than they deserve. Looks like you've already moved off the myshopify.com subdomain onto your own site, which is a nice step. Getting off the default theme next will do more for how "real" the store feels than almost anything else. Happy to talk through a simple, affordable starting point whenever you're ready — no rush. — Jason, Dharma's Esthetic Design Center, dharmasestheticdesign.com
+
+**Go Paw Nation** (contact page 404s — hold, try social DM) — Hi Go Paw Nation team — saw your forum post about targeting the France/EU pet market, smart lane most stores don't bother with. One thing worth fixing fast: your footer's missing privacy/shipping/returns info, which in the EU isn't just a trust issue, it can be a compliance one. Also, heads up, your site's contact page is currently returning a 404, so customers can't reach you through it either. Happy to send a prioritized fix list, free, if useful. — Jason, Dharma's Esthetic Design Center, dharmasestheticdesign.com
+
+**Lazywhisker.com** (lazywhisker.com/pages/contact) — Hi — saw your post asking if Lazywhisker's ready for ads. Short answer, almost, but not quite yet. Right now there's no lifestyle photos of a cat actually using the furniture, no reviews, and only 3 products, so even good traffic will bounce off a store that doesn't have social proof yet. Fixing those conversion basics before spending on ads will save real money. Happy to walk through a quick pre-launch checklist, no charge. — Jason, Dharma's Esthetic Design Center, dharmasestheticdesign.com
+
+---
+
+## Send status — 2026-08-16
+
+- **Posh Pets** — Jason sending directly himself, has a contact email from their site.
+- **Lazywhisker.com** — no published email address found (contact form only, no mailto anywhere on site). Reply-to on file for outreach: jason@dharmasestheticdesign.com. Tried to auto-submit their contact form via browser automation; blocked by this session's permission mode (form-fill/snapshot tools denied). **Still needs manual submission** — go to lazywhisker.com/pages/contact and paste in: Name "Jason", Email jason@dharmasestheticdesign.com, Topic "Something else", Message as drafted above.
+
+## Subject lines — 2026-08-16
+
+*For the two contact-form drafts above that are ready to send now. Each references their own thread so it reads as a real reply, not a mass email.*
+
+**Posh Pets** — pick: **Saw your post about making Posh Pets feel more premium**
+- Quick thing on your product pages (from your forum post)
+- One fix for the "premium" problem you posted about
+
+**Lazywhisker.com** — pick: **Re: "is Lazywhisker ready for ads yet?"**
+- Almost ready for ads — one thing first
+- Saw your ads question on the Shopify forum
+
+---
+
 ## Outreach drafts — all 10 leads, sourced 2026-08-13
 
 *Written as forum replies/DMs, not promo copy — each leads with one specific, useful observation from their own thread before any soft mention of help. No pricing pushed, no hard CTA; keep it a peer offering a free look, not a pitch.*
