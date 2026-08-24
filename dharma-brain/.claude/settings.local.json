@@ -221,19 +221,24 @@
       "Bash(pip *)",
       "Bash(uv *)",
       "Bash(env)",
-      "WebFetch(**)",
       "WebSearch",
       "Edit",
       "Write",
       "Artifact",
       "Skill(*)",
       "mcp__claude-in-chrome__*",
-      "mcp__claude_ai_*",
       "mcp__zernio__*",
-      "mcp__plugin_*",
-      "PowerShell(*)"
+      "PowerShell(*)",
+      "Bash(whois migunshows.com)",
+      "Bash(npx create-next-app@latest event-planner-inc --typescript --tailwind --no-eslint --no-git --app --src-dir --import-alias=@/* --no-git)",
+      "Bash(npx create-next-app@latest house-of-pearls --typescript --tailwind --no-eslint --no-git --app --src-dir --import-alias=@/*)",
+      "Bash(uipro init *)"
     ]
-  },  
+  },
+  "enabledMcpjsonServers": [
+    "shadcn",
+    "21st"
+  ],
   "hooks": {
     "UserPromptSubmit": [
       {
@@ -276,9 +281,5 @@
   "remoteControlAtStartup": true,
   "crossSessionInbound": "accept",
   "inputNeededNotifEnabled": true,
-  "agentPushNotifEnabled": true,
-  "enabledMcpjsonServers": [
-    "shadcn",
-    "21st"
-  ]
+  "agentPushNotifEnabled": true
 }
