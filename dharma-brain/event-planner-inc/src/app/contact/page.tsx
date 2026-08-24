@@ -12,97 +12,78 @@ export default function Contact() {
     setTimeout(() => setSubmitted(false), 3000);
   };
 
+  const infoItems = [
+    { title: 'Address', content: '123 Gold Street, NY 10001' },
+    { title: 'Phone', content: '(555) 123-4567' },
+    { title: 'Email', content: 'hello@eventplannerinc.com' },
+  ];
+
+  const inputClass =
+    'w-full px-0 py-3 bg-transparent border-0 border-b border-ink/20 focus:outline-none focus:border-rust-500 placeholder:text-ink/40 transition-colors';
+
   return (
     <div className="w-full">
-      <section className="py-20 px-4 bg-gradient-to-br from-gold-50 to-white">
+      <section className="py-28 px-4 bg-cream">
         <div className="max-w-6xl mx-auto">
           <motion.div
-            className="text-center mb-16"
+            className="text-center mb-20"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.9 }}
           >
-            <h1 className="text-5xl font-bold text-slate-900 mb-6">Get in Touch</h1>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+            <p className="text-xs uppercase tracking-[0.3em] text-rose-500 mb-4">Get In Touch</p>
+            <h1 className="font-display text-5xl md:text-6xl text-ink mb-6">Let&rsquo;s Talk</h1>
+            <p className="text-lg text-ink/60 max-w-2xl mx-auto leading-relaxed">
               Ready to plan your event? Contact us today for a free consultation
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {[
-              { icon: '📍', title: 'Address', content: '123 Gold Street, NY 10001' },
-              { icon: '📞', title: 'Phone', content: '(555) 123-4567' },
-              { icon: '✉️', title: 'Email', content: 'hello@eventplannerinc.com' },
-            ].map((info, i) => (
+          <div className="grid md:grid-cols-3 gap-px bg-ink/10 border border-ink/10 mb-20">
+            {infoItems.map((info, i) => (
               <motion.div
-                key={i}
-                className="bg-white p-8 rounded-lg text-center shadow-lg"
+                key={info.title}
+                className="bg-cream p-10 text-center hover:bg-white transition-colors"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: i * 0.2 }}
+                transition={{ duration: 0.8, delay: i * 0.15, ease: [0.22, 1, 0.36, 1] }}
                 viewport={{ once: true }}
               >
-                <div className="text-4xl mb-4">{info.icon}</div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">{info.title}</h3>
-                <p className="text-slate-600">{info.content}</p>
+                <h3 className="text-xs uppercase tracking-[0.15em] text-rust-500 mb-3">{info.title}</h3>
+                <p className="text-ink/70">{info.content}</p>
               </motion.div>
             ))}
           </div>
 
           <motion.div
-            className="bg-white p-12 rounded-lg shadow-lg max-w-2xl mx-auto"
+            className="bg-white border border-ink/10 p-12 max-w-2xl mx-auto"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.9 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-bold text-slate-900 mb-8">Send us a Message</h2>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <input
-                  type="text"
-                  placeholder="Your Name"
-                  required
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:border-gold-500"
-                />
-                <input
-                  type="email"
-                  placeholder="Your Email"
-                  required
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:border-gold-500"
-                />
+            <h2 className="font-display text-3xl text-ink mb-10">Send Us a Message</h2>
+            <form onSubmit={handleSubmit} className="space-y-8">
+              <div className="grid md:grid-cols-2 gap-8">
+                <input type="text" placeholder="Your Name" required className={inputClass} />
+                <input type="email" placeholder="Your Email" required className={inputClass} />
               </div>
-              <input
-                type="text"
-                placeholder="Event Type"
-                required
-                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:border-gold-500"
-              />
-              <input
-                type="date"
-                required
-                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:border-gold-500"
-              />
-              <textarea
-                placeholder="Tell us about your event..."
-                rows={5}
-                required
-                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:border-gold-500 resize-none"
-              ></textarea>
+              <input type="text" placeholder="Event Type" required className={inputClass} />
+              <input type="date" required className={inputClass} />
+              <textarea placeholder="Tell us about your event..." rows={5} required className={`${inputClass} resize-none`}></textarea>
               <button
                 type="submit"
-                className="w-full bg-gold-500 text-white py-3 rounded-lg hover:bg-gold-600 transition-colors font-semibold text-lg"
+                className="w-full bg-ink text-cream py-3.5 text-xs uppercase tracking-[0.15em] hover:bg-rust-500 transition-colors"
               >
                 Send Message
               </button>
             </form>
             {submitted && (
               <motion.div
-                className="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg text-green-800"
+                className="mt-6 p-4 border border-rust-300 bg-rust-50 text-rust-700 text-sm"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
               >
-                Thank you! We'll be in touch soon with a quote for your event.
+                Thank you! We&rsquo;ll be in touch soon with a quote for your event.
               </motion.div>
             )}
           </motion.div>
