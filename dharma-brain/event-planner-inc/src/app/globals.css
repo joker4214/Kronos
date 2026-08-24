@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fef9f3;
+  --foreground: #2d1b0a;
+  --gold-accent: #d4a574;
+  --gold-dark: #6b4c2a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1a0f05;
+    --foreground: #fce7cc;
+    --gold-accent: #e49d47;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-slate-900;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+}
+
+* {
+  @apply transition-colors duration-200;
+}
