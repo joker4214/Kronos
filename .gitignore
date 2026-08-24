@@ -12,7 +12,6 @@
 !/atlas/
 !/package.json
 !/vercel.json
-!/vercel.json(config)
 !/.gitignore
 
 # defense in depth inside the trees above

@@ -30,7 +30,9 @@ Note the split: `app/lib/supabase.js` exports a service-role client, but the pro
 - `app/page.js` — status page only ("Kronos Running").
 - `app/api/projects/route.js` — GET/POST against the Supabase `projects` table.
 - `app/lib/claude.js` — `generateContentIdeas()` and `generateCaption()`: prompt Claude for 5–7 weekly content ideas / a caption, matched to a brand voice passed in.
-- `vercel.json` — declares a Vercel cron: `POST /api/cron/generate-content` every Monday 09:00. **That route does not exist yet** — implementing it is the intended wiring for the content pipeline. Also note the file on disk is currently named `vercel.json(config)`, which Vercel will not read; it must be renamed to `vercel.json` for the env/cron config to take effect.
+- `vercel.json` — declares a Vercel cron: `POST /api/cron/generate-content` every Monday 09:00. **That route does not exist yet** — implementing it is the intended wiring for the content pipeline, and needs a live (unpaused) Supabase project to confirm what table generated ideas/captions should write to. Renamed from the stale `vercel.json(config)` 2026-08-18 so Vercel actually reads it.
+
+**2026-08-18 housekeeping:** an 2026-08-09 commit had deleted `app/lib/claude.js` and left behind an orphaned `app/Components/page.js` importing two files that never existed (`./components/ProjectDashboard`, `./styles/dashboard.css`), breaking `npm run build` entirely. Removed the orphan page (dead code, not linked from anywhere) and restored `claude.js` from git history, fixing its hardcoded model string to a real current one (`claude-sonnet-5`). Build now compiles cleanly; a remaining local build error on `/api/projects` is expected — no `.env.local` exists in this environment, and that file is intentionally never committed.
 
 ## OneDrive/Kronos — the business vault (content, not code)
 
