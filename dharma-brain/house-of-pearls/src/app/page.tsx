@@ -9,6 +9,26 @@ const fadeInUp = {
   transition: { duration: 0.8 },
 };
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8 },
+  },
+};
+
 export default function Home() {
   return (
     <div className="w-full">
@@ -57,7 +77,13 @@ export default function Home() {
           >
             Why Couples Choose Us
           </motion.h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <motion.div
+            className="grid md:grid-cols-3 gap-8"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
             {[
               { icon: '💕', title: 'Personal Attention', desc: 'Your wedding deserves our full focus and care' },
               { icon: '✨', title: 'Elegant Design', desc: 'Sophisticated aesthetics tailored to your style' },
@@ -65,18 +91,22 @@ export default function Home() {
             ].map((feature, i) => (
               <motion.div
                 key={i}
-                className="bg-rose-50 p-8 rounded-lg text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: i * 0.2 }}
-                viewport={{ once: true }}
+                className="bg-gradient-to-br from-rose-50 to-rose-100 p-8 rounded-xl text-center hover:shadow-lg transition-shadow cursor-pointer border border-rose-200"
+                variants={itemVariants}
+                whileHover={{ y: -8, transition: { duration: 0.3 } }}
               >
-                <div className="text-5xl mb-4">{feature.icon}</div>
+                <motion.div
+                  className="text-5xl mb-4 inline-block"
+                  whileHover={{ scale: 1.2, rotate: -10 }}
+                  transition={{ type: 'spring', stiffness: 200 }}
+                >
+                  {feature.icon}
+                </motion.div>
                 <h3 className="text-xl font-serif font-bold text-slate-900 mb-2">{feature.title}</h3>
                 <p className="text-slate-600">{feature.desc}</p>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
