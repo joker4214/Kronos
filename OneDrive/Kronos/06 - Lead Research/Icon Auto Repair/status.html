@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Check My Car's Status | Icon Auto Repair & Collision</title>
+<meta name="description" content="Look up the live repair status of your vehicle at Icon Auto Repair & Collision in Madison Heights, MI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="topbar">AAA Approved &bull; Free Estimates &bull; Guaranteed Repairs &bull; Payment Plans Available</div>
+
+<header class="site-header">
+  <div class="header-inner container">
+    <a href="index.html" class="brand">
+      <img class="brand-logo" src="https://i.postimg.cc/VLM8R2Xr/unnamed.jpg" alt="Icon Auto Repair & Collision logo">
+      <span class="brand-text">
+        <span class="b1" style="display:block;">ICON AUTO REPAIR</span>
+        <span class="b2">&amp; COLLISION</span>
+      </span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="status.html" class="active">Check Status</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <a href="tel:+12484294897" class="header-phone"><span>&#9742;</span> (248) 429-4897</a>
+      <a href="contact.html" class="btn btn-primary">Free Estimate</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+    </div>
+  </div>
+</header>
+
+<div class="page-header">
+  <div class="container">
+    <h1>Check My Car's Status</h1>
+    <p>Search by make, model, or the first 3 characters of your license plate to see where your vehicle is in the repair process.</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="status-search">
+      <input type="text" id="searchMake" placeholder="Make (e.g. Ford)">
+      <input type="text" id="searchModel" placeholder="Model (e.g. F-150)">
+      <input type="text" id="searchPlate" placeholder="Plate (first 3 characters)" maxlength="3">
+      <button class="btn btn-primary" onclick="runSearch()">Search</button>
+      <button class="btn btn-outline" style="color:#1c1c1c; border-color:#ccc;" onclick="clearSearch()">Show All</button>
+    </div>
+
+    <div id="results" class="status-cards">
+      <div class="empty-state">Loading current repairs&hellip;</div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="https://i.postimg.cc/VLM8R2Xr/unnamed.jpg" alt="Icon Auto Repair & Collision logo" style="width:40px;height:40px;border-radius:50%;object-fit:cover;">
+          <span>ICON AUTO REPAIR &amp; COLLISION</span>
+        </div>
+        <p style="font-size:14px; color:#999;">Honest, reliable auto repair and collision service in Madison Heights, Michigan.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="status.html">Check Status</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:+12484294897">(248) 429-4897</a>
+        <a href="https://www.google.com/maps/dir//32301+Dequindre+Road,+Madison+Heights,+Michigan+48071" target="_blank" rel="noopener">32301 Dequindre Road<br>Madison Heights, MI 48071</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Icon Auto Repair &amp; Collision. All rights reserved.</span>
+      <a href="admin.html" style="color:#777;">Staff Login</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script src="main.js"></script>
+<script>
+const STEPS = ['Inspection', 'Waiting on Part', 'In Repair', 'Final Stretch', 'Complete'];
+const PILL_CLASS = {
+  'Inspection': 'pill-inspection',
+  'Waiting on Part': 'pill-waiting',
+  'In Repair': 'pill-repair',
+  'Final Stretch': 'pill-final',
+  'Complete': 'pill-complete'
+};
+
+function renderCard(car) {
+  const stepIndex = STEPS.indexOf(car.status);
+  const steps = STEPS.map((s, i) => `
+    <div class="step ${i <= stepIndex ? 'done' : ''}">
+      <div class="dot"></div>
+      <span class="label">${s}</span>
+    </div>
+  `).join('');
+
+  return `
+    <div class="status-card">
+      <div class="top-row">
+        <div>
+          <div class="vehicle">${car.make} ${car.model}</div>
+          <div class="mechanic">${car.mechanic ? 'Mechanic: ' + car.mechanic : 'Mechanic not yet assigned'}</div>
+        </div>
+        <div style="text-align:right;">
+          <div class="plate">${car.plate3}</div>
+          <div style="margin-top:8px;"><span class="pill ${PILL_CLASS[car.status] || ''}">${car.status}</span></div>
+        </div>
+      </div>
+      <div class="stepper">${steps}</div>
+    </div>
+  `;
+}
+
+function renderResults(cars) {
+  const el = document.getElementById('results');
+  if (!cars || cars.length === 0) {
+    el.innerHTML = '<div class="empty-state">No matching vehicles found. Double-check the details or call us at (248) 429-4897.</div>';
+    return;
+  }
+  el.innerHTML = cars.map(renderCard).join('');
+}
+
+async function loadAll() {
+  const { data, error } = await supabaseClient
+    .from('cars')
+    .select('*')
+    .order('updated_at', { ascending: false });
+  if (error) {
+    document.getElementById('results').innerHTML = '<div class="empty-state">Unable to load status board right now.</div>';
+    return;
+  }
+  renderResults(data);
+}
+
+async function runSearch() {
+  const make = document.getElementById('searchMake').value.trim();
+  const model = document.getElementById('searchModel').value.trim();
+  const plate = document.getElementById('searchPlate').value.trim();
+
+  let query = supabaseClient.from('cars').select('*');
+  if (make) query = query.ilike('make', `%${make}%`);
+  if (model) query = query.ilike('model', `%${model}%`);
+  if (plate) query = query.ilike('plate3', `%${plate}%`);
+
+  const { data, error } = await query.order('updated_at', { ascending: false });
+  if (error) {
+    document.getElementById('results').innerHTML = '<div class="empty-state">Search failed. Please try again.</div>';
+    return;
+  }
+  renderResults(data);
+}
+
+function clearSearch() {
+  document.getElementById('searchMake').value = '';
+  document.getElementById('searchModel').value = '';
+  document.getElementById('searchPlate').value = '';
+  loadAll();
+}
+
+loadAll();
+</script>
+</body>
+</html>
