@@ -1,5 +1,6 @@
 import styles from '@/styles/dharma.module.css';
 import Reveal from './Reveal';
+import ContactForm from './ContactForm';
 
 export default function FinalCTA() {
   return (
@@ -11,14 +12,8 @@ export default function FinalCTA() {
           Tell us about your store and we&apos;ll recommend the right package — or build
           something custom from our à la carte menu.
         </p>
-        <div className={styles.btnRow}>
-          <a
-            href="mailto:Dharma%27s%20Esthetic%20Design%20%3Cjason@dharmasestheticdesign.com%3E?subject=Let's%20talk%20about%20my%20Shopify%20store"
-            className={`${styles.btn} ${styles.btnAccent}`}
-          >
-            Email Us
-          </a>
-        </div>
+        <ContactForm />
+        <p className={styles.orDivider}>or email us directly</p>
         <div className={styles.contactLinks}>
           <a href="mailto:Dharma%27s%20Esthetic%20Design%20%3Cjason@dharmasestheticdesign.com%3E">jason@dharmasestheticdesign.com</a>
           <a

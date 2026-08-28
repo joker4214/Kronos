@@ -1414,12 +1414,72 @@
   font-size: 1.05rem;
 }
 
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 440px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contactInput {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--white);
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+.contactInput::placeholder {
+  color: var(--gray-400);
+}
+
+.contactInput:focus {
+  outline: none;
+  border-color: var(--accent-light);
+}
+
+textarea.contactInput {
+  resize: vertical;
+  min-height: 96px;
+}
+
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.contactSent {
+  color: var(--accent-light);
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.contactError {
+  color: var(--gray-400);
+  font-size: 0.88rem;
+  margin-top: 4px;
+}
+
+.orDivider {
+  color: var(--gray-400);
+  font-size: 0.85rem;
+  margin: 24px 0 0;
+}
+
 .contactLinks {
   display: flex;
   gap: 28px;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 36px;
+  margin-top: 12px;
   font-size: 0.92rem;
   color: var(--gray-400);
 }
