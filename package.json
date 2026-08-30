@@ -12,6 +12,7 @@
     "@react-three/fiber": "^9.6.1",
     "@supabase/supabase-js": "^2.38.0",
     "axios": "^1.6.2",
+    "cheerio": "^1.2.0",
     "framer-motion": "^10.18.0",
     "google-auth-library": "^9.0.0",
     "googleapis": "^118.0.0",

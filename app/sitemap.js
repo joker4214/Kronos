@@ -8,6 +8,7 @@ export default function sitemap() {
   const staticRoutes = [
     { path: '', priority: 1, changeFrequency: 'weekly' },
     { path: '/style-picker', priority: 0.8, changeFrequency: 'monthly' },
+    { path: '/tools', priority: 0.9, changeFrequency: 'monthly' },
     { path: '/shopify-audit', priority: 0.8, changeFrequency: 'monthly' },
     { path: '/privacy', priority: 0.3, changeFrequency: 'yearly' },
     { path: '/terms', priority: 0.3, changeFrequency: 'yearly' },

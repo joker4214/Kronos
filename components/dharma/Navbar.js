@@ -36,6 +36,7 @@ const NAV_LINKS = [
   { href: '#alacarte', label: 'À La Carte' },
   { href: '#team', label: 'Team' },
   { href: '/style-picker', label: 'Style Picker', page: true },
+  { href: '/tools', label: 'Free Tools', page: true },
 ];
 
 export default function Navbar() {
