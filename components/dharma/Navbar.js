@@ -22,7 +22,7 @@ function LogoMark() {
       </defs>
       <text fontFamily="Arial,sans-serif" fontSize="9" fill="#FFFFFF" letterSpacing="3.5" opacity="0.75">
         <textPath href="#dharma-badge-curve" startOffset="50%" textAnchor="middle">
-          &middot; ESTHETIC DESIGN CENTER &middot;
+          &middot; ESTHETIC DESIGN &middot;
         </textPath>
       </text>
     </svg>
@@ -35,6 +35,7 @@ const NAV_LINKS = [
   { href: '#webdesign', label: 'Web Design' },
   { href: '#alacarte', label: 'À La Carte' },
   { href: '#team', label: 'Team' },
+  { href: '#reviews', label: 'Reviews' },
   { href: '/style-picker', label: 'Style Picker', page: true },
   { href: '/tools', label: 'Free Tools', page: true },
 ];

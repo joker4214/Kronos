@@ -6,6 +6,7 @@ import Packages from '@/components/dharma/Packages';
 import WebDesign from '@/components/dharma/WebDesign';
 import AlaCarteCart from '@/components/dharma/AlaCarteCart';
 import Team from '@/components/dharma/Team';
+import Testimonials from '@/components/dharma/Testimonials';
 import FAQ from '@/components/dharma/FAQ';
 import FinalCTA from '@/components/dharma/FinalCTA';
 import AnimatedFooter from '@/components/dharma/AnimatedFooter';
@@ -27,6 +28,7 @@ export default function Home() {
       <WebDesign />
       <AlaCarteCart />
       <Team />
+      <Testimonials />
       <FAQ />
       <FinalCTA />
       <AnimatedFooter />
