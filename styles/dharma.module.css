@@ -1408,6 +1408,86 @@
   background: var(--white);
 }
 
+.testiFormWrap {
+  max-width: 480px;
+  margin: 0 auto 40px;
+}
+
+.testiForm {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: var(--white);
+  padding: 30px 26px;
+  border: 1px solid #e2e2e4;
+}
+
+.testiFormTitle {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--charcoal);
+  margin-bottom: 4px;
+}
+
+.testiInput,
+.testiTextarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--gray-400);
+  border-radius: 2px;
+  font-family: inherit;
+  font-size: 0.92rem;
+  color: var(--charcoal);
+  background: var(--white);
+}
+
+.testiInput:focus,
+.testiTextarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.testiTextarea {
+  resize: vertical;
+}
+
+.testiSubmitBtn {
+  align-self: flex-start;
+  padding: 13px 26px;
+  border-radius: 2px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  background: var(--accent);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.testiSubmitBtn:hover {
+  background: var(--accent-light);
+}
+
+.testiSubmitBtn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.testiSuccess {
+  text-align: center;
+  padding: 30px 26px;
+  background: var(--white);
+  border: 1px solid #e2e2e4;
+  color: var(--gray-700);
+  font-size: 0.98rem;
+}
+
+.testiErrorText {
+  color: #c0392b;
+  font-size: 0.85rem;
+}
+
 .reviewCtaRow {
   display: flex;
   gap: 16px;
