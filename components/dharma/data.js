@@ -334,28 +334,139 @@ export const AUDITS = [
 
 export const WEB_DESIGN_TIERS = [
   {
+    id: 'starter-site',
     tag: 'Solo store / startup',
     name: 'Starter Site',
     price: '$900–$1,200',
     priceNote: 'one-time',
+    priceLine: '$900–$1,200 · One-time build',
     why: 'A generic template site makes even a great product look unfinished.',
     desc: '1–5 pages, single custom design, mobile-responsive, on-brand from day one.',
+    intro:
+      "The Starter Site is built for a solo store or brand-new business that needs a real, custom-designed home online — not a generic template. You get a small, focused site that looks and feels like a real business from day one, live and ready to send customers to.",
+    features: [
+      {
+        name: 'Custom Design, Not a Template',
+        why: 'A templated site looks like every other store using the same theme — nothing about it says this is your brand.',
+        desc: "A one-of-a-kind layout and visual design built around your brand's colors, fonts, and voice — not a pre-made theme with your logo dropped in.",
+      },
+      {
+        name: '1–5 Custom Pages',
+        why: null,
+        desc: 'Home, About, Services/Products, and Contact — the pages a new visitor actually needs to trust you and take action, each built specifically for your business.',
+      },
+      {
+        name: 'Mobile-Responsive Build',
+        why: 'Most of your traffic will be on a phone — a site that only works on desktop is losing the majority of visitors before they even see what you offer.',
+        desc: 'Every page is built and tested to look and work correctly on phones, tablets, and desktop.',
+      },
+      {
+        name: 'On-Brand Copy Integration',
+        why: null,
+        desc: 'Your existing copy (or ours, if you need it written) is laid out and formatted for how people actually read online — short, scannable, and built around a clear call to action.',
+      },
+      {
+        name: 'Basic On-Page SEO Setup',
+        why: "A beautiful site that Google can't read is invisible to anyone searching for you.",
+        desc: 'Meta titles, descriptions, and heading structure set up correctly from launch, so search engines can index and understand your pages.',
+      },
+      {
+        name: 'Launch & Handoff',
+        why: null,
+        desc: 'Site goes live on your domain, with a walkthrough so you know how to make small updates yourself going forward.',
+      },
+    ],
+    delivery: 'Delivery: 1–2 weeks depending on page count and how quickly content is provided.',
   },
   {
+    id: 'growth-site',
     tag: 'Small business',
     name: 'Growth Site',
     price: '$1,800–$2,200',
     priceNote: 'one-time',
+    priceLine: '$1,800–$2,200 · One-time build',
     why: "Once you need bookings, email capture, or product feeds, a template can't keep up.",
     desc: '5–10 pages plus custom sections — booking, email capture, product feeds.',
+    intro:
+      "The Growth Site is for a small business that's outgrown a template — you need real functionality (bookings, email capture, product feeds) that a page builder can't handle cleanly, without the price tag of a full custom build.",
+    features: [
+      {
+        name: 'Everything in the Starter Site',
+        why: null,
+        desc: 'Custom design, mobile-responsive build, on-page SEO, and launch support, scaled up for a bigger site.',
+      },
+      {
+        name: '5–10 Custom Pages',
+        why: null,
+        desc: 'Room for a full services breakdown, an FAQ, a blog or resources section, or dedicated landing pages — whatever your business actually needs to explain itself.',
+      },
+      {
+        name: 'Custom Functional Sections',
+        why: 'Generic page builders handle simple pages fine, but fall apart the moment you need something interactive.',
+        desc: 'Booking/scheduling widgets, email capture forms tied into your list, or live product feeds — built to fit your actual workflow, not a generic plugin.',
+      },
+      {
+        name: 'Expanded On-Page SEO',
+        why: null,
+        desc: 'Keyword-aware structure and metadata across every page, not just the homepage, so more of your site is actually findable.',
+      },
+      {
+        name: 'Analytics Ready',
+        why: null,
+        desc: 'Google Analytics 4 wired in from day one, so you have real visitor data as soon as the site is live.',
+      },
+      {
+        name: 'Launch & Handoff',
+        why: null,
+        desc: 'Site goes live on your domain, with training so your team can manage day-to-day content changes.',
+      },
+    ],
+    delivery: 'Delivery: 2–4 weeks depending on scope and how quickly content/functionality requirements are finalized.',
   },
   {
+    id: 'full-custom-site',
     tag: 'Growing business',
     name: 'Full Custom Site',
     price: '$3,000–$3,500',
     priceNote: 'one-time',
+    priceLine: '$3,000–$3,500 · One-time build',
     why: 'Multi-location or e-commerce complexity breaks simple site builders.',
     desc: 'Multi-page build with more complex functionality — e-commerce, multi-location, custom features.',
+    intro:
+      "The Full Custom Site is built for a growing business with real complexity — multiple locations, e-commerce, or custom functionality a standard build can't support. Nothing here is templated; it's designed and engineered around exactly how your business actually operates.",
+    features: [
+      {
+        name: 'Everything in the Growth Site',
+        why: null,
+        desc: 'Custom design, expanded SEO, analytics, and functional sections, scaled to a multi-page, multi-feature build.',
+      },
+      {
+        name: 'Multi-Page, Multi-Section Architecture',
+        why: null,
+        desc: 'Built to organize a large or complex site without it feeling cluttered or confusing to navigate.',
+      },
+      {
+        name: 'E-Commerce Integration',
+        why: "Bolting a store onto a site that wasn't built for one usually means a clunky checkout and a slow site.",
+        desc: 'Product catalog, cart, and checkout built to convert, integrated cleanly into the rest of your site rather than feeling like a separate plugin.',
+      },
+      {
+        name: 'Multi-Location Support',
+        why: null,
+        desc: 'Location-specific pages, hours, and contact info if your business operates in more than one place.',
+      },
+      {
+        name: 'Custom Features on Request',
+        why: null,
+        desc: "Whatever specific functionality your business needs that a standard build doesn't cover — scoped and built specifically for you.",
+      },
+      {
+        name: 'Priority Launch & Handoff',
+        why: null,
+        desc: "Dedicated support through launch, plus training so your team can run the site confidently once it's live.",
+      },
+    ],
+    delivery: 'Delivery: 4–8 weeks depending on scope and complexity.',
   },
 ];
 

@@ -1,4 +1,4 @@
-import { PACKAGE_DETAILS, AUDITS } from '@/components/dharma/data';
+import { PACKAGE_DETAILS, AUDITS, WEB_DESIGN_TIERS } from '@/components/dharma/data';
 
 const BASE_URL = 'https://dharmasestheticdesign.com';
 
@@ -9,6 +9,7 @@ export default function sitemap() {
     { path: '', priority: 1, changeFrequency: 'weekly' },
     { path: '/style-picker', priority: 0.8, changeFrequency: 'monthly' },
     { path: '/tools', priority: 0.9, changeFrequency: 'monthly' },
+    { path: '/checklist', priority: 0.9, changeFrequency: 'monthly' },
     { path: '/shopify-audit', priority: 0.8, changeFrequency: 'monthly' },
     { path: '/privacy', priority: 0.3, changeFrequency: 'yearly' },
     { path: '/terms', priority: 0.3, changeFrequency: 'yearly' },
@@ -26,7 +27,13 @@ export default function sitemap() {
     changeFrequency: 'monthly',
   }));
 
-  return [...staticRoutes, ...packageRoutes, ...auditRoutes].map((route) => ({
+  const webDesignRoutes = WEB_DESIGN_TIERS.map((tier) => ({
+    path: `/web-design/${tier.id}`,
+    priority: 0.7,
+    changeFrequency: 'monthly',
+  }));
+
+  return [...staticRoutes, ...packageRoutes, ...auditRoutes, ...webDesignRoutes].map((route) => ({
     url: `${BASE_URL}${route.path}`,
     lastModified: now,
     changeFrequency: route.changeFrequency,

@@ -36,38 +36,30 @@ export default function Packages() {
 
         <div className={styles.pkgGrid}>
           {PACKAGES.map((pkg, index) => (
-            <Reveal
-              key={pkg.id}
-              delay={index * 0.1}
-              className={`${styles.pkgCard} ${pkg.featured ? styles.pkgFeatured : ''}`}
-            >
-              {pkg.featured && <span className={styles.pkgBadge}>Most Popular</span>}
+            <Reveal key={pkg.id} delay={index * 0.1} style={{ height: '100%' }}>
+              <Link
+                href={`/packages/${pkg.id}`}
+                className={`${styles.pkgCard} ${pkg.featured ? styles.pkgFeatured : ''}`}
+              >
+                {pkg.featured && <span className={styles.pkgBadge}>Most Popular</span>}
 
-              <h3>{pkg.name}</h3>
-              <div className={styles.pkgTag}>{pkg.tag}</div>
+                <h3>{pkg.name}</h3>
+                <div className={styles.pkgTag}>{pkg.tag}</div>
 
-              <div className={styles.pkgPrice}>
-                <span className={styles.priceValue}>${pkg.price.toLocaleString('en-US')}</span>
-                <span className={styles.pricePeriod}>one-time</span>
-              </div>
+                <div className={styles.pkgPrice}>
+                  <span className={styles.priceValue}>${pkg.price.toLocaleString('en-US')}</span>
+                  <span className={styles.pricePeriod}>one-time</span>
+                </div>
 
-              <p className={styles.pkgDesc}>{pkg.desc}</p>
+                <div className={styles.cardSpacer} />
 
-              <button className={styles.pkgCta}>
-                <Link href={`/packages/${pkg.id}`}>View Details</Link>
-              </button>
-
-              <div className={styles.pkgFeatures}>
-                <div className={styles.featureHeader}>{pkg.why}</div>
-                <ul className={styles.featureList}>
-                  {pkg.features?.map((feature, i) => (
-                    <li key={i}>
-                      <span className={styles.featureDot} />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                <span className={styles.viewDetailsLink}>
+                  View details
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3.5 8h9M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+              </Link>
             </Reveal>
           ))}
         </div>

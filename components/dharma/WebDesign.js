@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from '@/styles/dharma.module.css';
 import { WEB_DESIGN_TIERS, MAINTENANCE_PLANS } from './data';
 import Reveal from './Reveal';
@@ -19,15 +20,21 @@ export default function WebDesign() {
 
         <div className={styles.wdGrid}>
           {WEB_DESIGN_TIERS.map((tier, index) => (
-            <Reveal key={tier.name} delay={index * 0.1} className={styles.wdCard}>
-              <div className={styles.pkgTag}>{tier.tag}</div>
-              <h3>{tier.name}</h3>
-              <p className={styles.wdWhy}>{tier.why}</p>
-              <div className={styles.wdPrice}>
-                {tier.price}
-                <span> {tier.priceNote}</span>
-              </div>
-              <p className={styles.wdDesc}>{tier.desc}</p>
+            <Reveal key={tier.id} delay={index * 0.1} style={{ height: '100%' }}>
+              <Link href={`/web-design/${tier.id}`} className={styles.wdCard}>
+                <div className={styles.pkgTag}>{tier.tag}</div>
+                <h3>{tier.name}</h3>
+                <div className={styles.wdPrice}>
+                  {tier.price}
+                  <span> {tier.priceNote}</span>
+                </div>
+                <span className={styles.wdViewDetails}>
+                  View details
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3.5 8h9M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+              </Link>
             </Reveal>
           ))}
         </div>

@@ -509,11 +509,17 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .pkgCard:hover {
   transform: translateY(-8px);
-  border-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(47, 95, 255, 0.35);
+}
+
+.pkgCard:focus-visible {
+  outline: 2px solid var(--accent-light);
+  outline-offset: 3px;
 }
 
 .pkgFeatured {
@@ -622,89 +628,34 @@
   font-weight: 500;
 }
 
-.pkgDesc {
-  margin-bottom: 28px;
-  font-size: 0.95rem;
-  color: var(--gray-400);
-  line-height: 1.6;
-}
-
-.pkgCta {
-  display: block;
-  text-align: center;
-  padding: 14px 20px;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  border: none;
-  color: var(--white);
-  transition: all 0.3s ease;
-  cursor: pointer;
-  background: linear-gradient(to bottom, rgba(47, 95, 255, 0.2), rgba(47, 95, 255, 0.05));
-  border: 1px solid rgba(47, 95, 255, 0.2);
-  margin-bottom: 24px;
-}
-
-.pkgCta:hover {
-  border-color: rgba(47, 95, 255, 0.4);
-  background: linear-gradient(to bottom, rgba(47, 95, 255, 0.3), rgba(47, 95, 255, 0.1));
-}
-
-.pkgCta a {
-  color: inherit;
-  text-decoration: none;
-  display: block;
-}
-
-.pkgFeatured .pkgCta {
-  background: linear-gradient(to bottom, var(--accent), var(--accent-light));
-  border-color: var(--accent);
-  box-shadow: 0 4px 16px rgba(47, 95, 255, 0.3);
-}
-
-.pkgFeatured .pkgCta:hover {
-  box-shadow: 0 6px 24px rgba(47, 95, 255, 0.4);
-}
-
-.pkgFeatures {
+.cardSpacer {
   flex-grow: 1;
+}
+
+.viewDetailsLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 20px;
   padding-top: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.featureHeader {
-  /* This holds a full sentence (pkg.why), not a short label -- uppercase
-     read as shouting and hurt scannability, so it's sentence case here. */
-  font-size: 0.85rem;
   font-weight: 600;
+  font-size: 0.9rem;
   color: var(--accent-light);
-  margin-bottom: 14px;
-  line-height: 1.5;
 }
 
-.featureList {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
+.pkgCard:hover .viewDetailsLink,
+.pkgCard:focus-visible .viewDetailsLink {
   gap: 10px;
 }
 
-.featureList li {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  font-size: 0.88rem;
-  color: var(--gray-400);
-  line-height: 1.5;
+.viewDetailsLink svg {
+  transition: transform 0.2s ease;
 }
 
-.featureDot {
-  flex-shrink: 0;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--accent-light);
-  margin-top: 6px;
+.pkgCard:hover .viewDetailsLink svg,
+.pkgCard:focus-visible .viewDetailsLink svg {
+  transform: translateX(3px);
 }
 
 @media (max-width: 860px) {
@@ -939,11 +890,21 @@
 .wdCard {
   background: var(--white);
   padding: 30px 26px;
-  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
 }
 
 .wdCard:hover {
   transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(22, 24, 28, 0.1);
+}
+
+.wdCard:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
 }
 
 .wdCard h3 {
@@ -951,13 +912,6 @@
   font-size: 1.15rem;
   font-weight: 600;
   margin-bottom: 4px;
-}
-
-.wdWhy {
-  color: var(--gray-400);
-  font-size: 0.84rem;
-  font-style: italic;
-  margin-bottom: 10px;
 }
 
 .wdPrice {
@@ -974,9 +928,24 @@
   color: var(--gray-700);
 }
 
-.wdDesc {
-  color: var(--gray-700);
-  font-size: 0.9rem;
+.wdViewDetails {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+  padding-top: 16px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--accent);
+}
+
+.wdViewDetails svg {
+  transition: transform 0.2s ease;
+}
+
+.wdCard:hover .wdViewDetails svg,
+.wdCard:focus-visible .wdViewDetails svg {
+  transform: translateX(3px);
 }
 
 .maintWrap {
