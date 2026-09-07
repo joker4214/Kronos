@@ -1,4 +1,4 @@
-/* Icon Auto Repair & Collision — shared styles */
+/* shared styles */
 
 :root {
   --black: #0d0d0d;
@@ -152,7 +152,7 @@ nav.main-nav a.active { border-color: var(--red); color: var(--red); }
   background:
     linear-gradient(120deg, rgba(13,13,13,.94), rgba(13,13,13,.8)),
     radial-gradient(circle at 80% 20%, rgba(200,32,47,.35), transparent 55%),
-    url('https://lirp.cdn-website.com/5ad39f54/dms3rep/multi/opt/car-automobile-repair-service-center-with-softfocus-light-background-1920w.jpg');
+    url('/images/hero.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -183,6 +183,8 @@ nav.main-nav a.active { border-color: var(--red); color: var(--red); }
 .hero-rating .stars { color: #ffb400; letter-spacing: 2px; }
 
 /* Page header (interior pages) */
+.photo-band { height: 320px; background: url('/images/secondary.jpg') center / cover no-repeat fixed; }
+
 .page-header {
   background: var(--black);
   color: var(--white);

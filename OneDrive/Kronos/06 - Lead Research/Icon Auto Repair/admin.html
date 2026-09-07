@@ -3,21 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Staff Login | Icon Auto Repair & Collision</title>
+<title>Staff Login | Your Business Name Here</title>
 <meta name="robots" content="noindex, nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div style="background:#dc2626;color:#fff;text-align:center;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:8px;">Not a Production Site &mdash; Demo Only</div>
 
 <header class="site-header">
   <div class="header-inner container">
     <a href="index.html" class="brand">
-      <img class="brand-logo" src="https://i.postimg.cc/VLM8R2Xr/unnamed.jpg" alt="Icon Auto Repair & Collision logo">
+      <svg class="brand-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="47" fill="#0d0d0d" stroke="#ffffff" stroke-width="2.5"/><circle cx="50" cy="50" r="30" fill="none" stroke="#1c5faf" stroke-width="7"/><circle cx="50" cy="50" r="10" fill="#ffffff"/></svg>
       <span class="brand-text">
-        <span class="b1" style="display:block;">ICON AUTO REPAIR</span>
-        <span class="b2">&amp; COLLISION</span>
+        <span class="b1" style="display:block;">YOUR BUSINESS</span>
+        <span class="b2">NAME HERE</span>
       </span>
     </a>
     <nav class="main-nav">
@@ -28,7 +29,7 @@
       <a href="contact.html">Contact</a>
     </nav>
     <div class="header-cta">
-      <a href="tel:+12484294897" class="header-phone"><span>&#9742;</span> (248) 429-4897</a>
+      <a href="tel:" class="header-phone"><span>&#9742;</span> Your Phone Here</a>
       <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
     </div>
   </div>
@@ -90,51 +91,35 @@
   </div>
 </section>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="supabase-config.js"></script>
 <script>
+// Demo mode: no live backend. All data is in-memory and resets on page reload.
 const STATUSES = ['Inspection', 'Waiting on Part', 'In Repair', 'Final Stretch', 'Complete'];
+let nextId = 4;
+let CARS = [
+  { id: 1, make: 'Ford', model: 'F-150', plate3: 'ABC', mechanic: 'Sample Mechanic', status: 'In Repair', updated_at: new Date().toISOString() },
+  { id: 2, make: 'Honda', model: 'Civic', plate3: 'XYZ', mechanic: '', status: 'Waiting on Part', updated_at: new Date().toISOString() },
+  { id: 3, make: 'Ford', model: 'Bronco Sport', plate3: 'JKL', mechanic: 'Sample Mechanic', status: 'Complete', updated_at: new Date().toISOString() },
+];
 
-function getToken() { return localStorage.getItem('iconauto_session'); }
-function setToken(t) { localStorage.setItem('iconauto_session', t); }
-function clearToken() { localStorage.removeItem('iconauto_session'); }
-
-async function login() {
-  const username = document.getElementById('username').value.trim();
-  const password = document.getElementById('password').value;
-  const { data, error } = await supabaseClient.rpc('manager_login', { p_username: username, p_password: password });
-
-  if (error || !data) {
-    document.getElementById('loginError').style.display = 'block';
-    return;
-  }
-  setToken(data);
+function login() {
+  // Demo mode: any credentials log in, no real check.
   showDashboard();
 }
 
 function logout() {
-  clearToken();
   document.getElementById('dashboardView').style.display = 'none';
   document.getElementById('loginView').style.display = 'block';
 }
 
-async function checkSession() {
-  const token = getToken();
-  if (!token) return false;
-  const { data } = await supabaseClient.rpc('is_valid_session', { p_token: token });
-  return !!data;
-}
-
-async function showDashboard() {
+function showDashboard() {
   document.getElementById('loginView').style.display = 'none';
   document.getElementById('dashboardView').style.display = 'block';
-  await loadCars();
+  loadCars();
 }
 
-async function loadCars() {
-  const { data, error } = await supabaseClient.from('cars').select('*').order('updated_at', { ascending: false });
-  if (error) return;
-  const rows = data.map(car => {
+function loadCars() {
+  const sorted = [...CARS].sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+  const rows = sorted.map(car => {
     const options = STATUSES.map(s => `<option value="${s}" ${s === car.status ? 'selected' : ''}>${s}</option>`).join('');
     return `
       <tr data-id="${car.id}">
@@ -154,56 +139,41 @@ async function loadCars() {
   document.getElementById('carRows').innerHTML = rows || '<tr><td colspan="6" style="text-align:center; color:#888;">No vehicles yet.</td></tr>';
 }
 
-async function saveCar(id, btn) {
+function saveCar(id, btn) {
   const row = btn.closest('tr');
   const mechanic = row.querySelector('[data-field="mechanic"]').value;
   const status = row.querySelector('[data-field="status"]').value;
-  const token = getToken();
-
-  const { data, error } = await supabaseClient.rpc('update_car_status', {
-    p_token: token, p_car_id: id, p_status: status, p_mechanic: mechanic
-  });
-
-  if (!error && data) {
+  const car = CARS.find(c => String(c.id) === String(id));
+  if (car) {
+    car.mechanic = mechanic;
+    car.status = status;
+    car.updated_at = new Date().toISOString();
     const msg = row.querySelector('.save-msg');
     msg.style.display = 'inline';
     setTimeout(() => msg.style.display = 'none', 1500);
   }
 }
 
-async function removeCar(id) {
+function removeCar(id) {
   if (!confirm('Remove this vehicle from the status board?')) return;
-  const token = getToken();
-  await supabaseClient.rpc('delete_car', { p_token: token, p_car_id: id });
+  CARS = CARS.filter(c => String(c.id) !== String(id));
   loadCars();
 }
 
-async function addCar() {
+function addCar() {
   const make = document.getElementById('newMake').value.trim();
   const model = document.getElementById('newModel').value.trim();
   const plate = document.getElementById('newPlate').value.trim();
   const mechanic = document.getElementById('newMechanic').value.trim();
   if (!make || !model || !plate) { alert('Make, model, and plate are required.'); return; }
 
-  const token = getToken();
-  const { error } = await supabaseClient.rpc('add_car', {
-    p_token: token, p_make: make, p_model: model, p_plate3: plate, p_mechanic: mechanic, p_status: 'Inspection'
-  });
-
-  if (!error) {
-    document.getElementById('newMake').value = '';
-    document.getElementById('newModel').value = '';
-    document.getElementById('newPlate').value = '';
-    document.getElementById('newMechanic').value = '';
-    loadCars();
-  }
+  CARS.push({ id: nextId++, make, model, plate3: plate, mechanic, status: 'Inspection', updated_at: new Date().toISOString() });
+  document.getElementById('newMake').value = '';
+  document.getElementById('newModel').value = '';
+  document.getElementById('newPlate').value = '';
+  document.getElementById('newMechanic').value = '';
+  loadCars();
 }
-
-(async function init() {
-  if (await checkSession()) {
-    showDashboard();
-  }
-})();
 </script>
 </body>
 </html>

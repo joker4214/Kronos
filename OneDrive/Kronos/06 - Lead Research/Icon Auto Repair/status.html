@@ -3,23 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Check My Car's Status | Icon Auto Repair & Collision</title>
-<meta name="description" content="Look up the live repair status of your vehicle at Icon Auto Repair & Collision in Madison Heights, MI.">
+<title>Check My Car's Status | Your Business Name Here</title>
+<meta name="description" content="Look up the live repair status of your vehicle at Your Business Name Here in your area.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div style="background:#dc2626;color:#fff;text-align:center;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:8px;">Not a Production Site &mdash; Demo Only</div>
 
 <div class="topbar">AAA Approved &bull; Free Estimates &bull; Guaranteed Repairs &bull; Payment Plans Available</div>
 
 <header class="site-header">
   <div class="header-inner container">
     <a href="index.html" class="brand">
-      <img class="brand-logo" src="https://i.postimg.cc/VLM8R2Xr/unnamed.jpg" alt="Icon Auto Repair & Collision logo">
+      <svg class="brand-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="47" fill="#0d0d0d" stroke="#ffffff" stroke-width="2.5"/><circle cx="50" cy="50" r="30" fill="none" stroke="#1c5faf" stroke-width="7"/><circle cx="50" cy="50" r="10" fill="#ffffff"/></svg>
       <span class="brand-text">
-        <span class="b1" style="display:block;">ICON AUTO REPAIR</span>
-        <span class="b2">&amp; COLLISION</span>
+        <span class="b1" style="display:block;">YOUR BUSINESS</span>
+        <span class="b2">NAME HERE</span>
       </span>
     </a>
     <nav class="main-nav">
@@ -30,7 +31,7 @@
       <a href="contact.html">Contact</a>
     </nav>
     <div class="header-cta">
-      <a href="tel:+12484294897" class="header-phone"><span>&#9742;</span> (248) 429-4897</a>
+      <a href="tel:" class="header-phone"><span>&#9742;</span> Your Phone Here</a>
       <a href="contact.html" class="btn btn-primary">Free Estimate</a>
       <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
     </div>
@@ -65,10 +66,10 @@
     <div class="footer-grid">
       <div>
         <div class="footer-brand">
-          <img src="https://i.postimg.cc/VLM8R2Xr/unnamed.jpg" alt="Icon Auto Repair & Collision logo" style="width:40px;height:40px;border-radius:50%;object-fit:cover;">
-          <span>ICON AUTO REPAIR &amp; COLLISION</span>
+          <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="47" fill="#0d0d0d" stroke="#ffffff" stroke-width="2.5"/><circle cx="50" cy="50" r="30" fill="none" stroke="#1c5faf" stroke-width="7"/><circle cx="50" cy="50" r="10" fill="#ffffff"/></svg>
+          <span>YOUR BUSINESS NAME HERE</span>
         </div>
-        <p style="font-size:14px; color:#999;">Honest, reliable auto repair and collision service in Madison Heights, Michigan.</p>
+        <p style="font-size:14px; color:#999;">Honest, reliable auto repair and collision service in your area.</p>
       </div>
       <div>
         <h4>Quick Links</h4>
@@ -80,21 +81,26 @@
       </div>
       <div>
         <h4>Contact</h4>
-        <a href="tel:+12484294897">(248) 429-4897</a>
-        <a href="https://www.google.com/maps/dir//32301+Dequindre+Road,+Madison+Heights,+Michigan+48071" target="_blank" rel="noopener">32301 Dequindre Road<br>Madison Heights, MI 48071</a>
+        <a href="tel:">Your Phone Here</a>
+        <a href="#" target="_blank" rel="noopener">Your Address Here</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 Icon Auto Repair &amp; Collision. All rights reserved.</span>
+      <span>&copy; 2026 Your Business Name Here. All rights reserved.</span>
+      <br><span style="font-size:11px;">Site concept by <a href="https://dharmasestheticdesign.com" target="_blank" rel="noopener noreferrer" style="color:inherit;">Dharma&#39;s Esthetic Design</a></span>
       <a href="admin.html" style="color:#777;">Staff Login</a>
     </div>
   </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="supabase-config.js"></script>
 <script src="main.js"></script>
 <script>
+// Demo mode: no live backend. Sample data only.
+const SAMPLE_CARS = [
+  { make: 'Ford', model: 'F-150', plate3: 'ABC', mechanic: 'Sample Mechanic', status: 'In Repair', updated_at: new Date().toISOString() },
+  { make: 'Honda', model: 'Civic', plate3: 'XYZ', mechanic: '', status: 'Waiting on Part', updated_at: new Date().toISOString() },
+  { make: 'Ford', model: 'Bronco Sport', plate3: 'JKL', mechanic: 'Sample Mechanic', status: 'Complete', updated_at: new Date().toISOString() },
+];
 const STEPS = ['Inspection', 'Waiting on Part', 'In Repair', 'Final Stretch', 'Complete'];
 const PILL_CLASS = {
   'Inspection': 'pill-inspection',
@@ -133,40 +139,27 @@ function renderCard(car) {
 function renderResults(cars) {
   const el = document.getElementById('results');
   if (!cars || cars.length === 0) {
-    el.innerHTML = '<div class="empty-state">No matching vehicles found. Double-check the details or call us at (248) 429-4897.</div>';
+    el.innerHTML = '<div class="empty-state">No matching vehicles found. Double-check the details or call us at Your Phone Here.</div>';
     return;
   }
   el.innerHTML = cars.map(renderCard).join('');
 }
 
-async function loadAll() {
-  const { data, error } = await supabaseClient
-    .from('cars')
-    .select('*')
-    .order('updated_at', { ascending: false });
-  if (error) {
-    document.getElementById('results').innerHTML = '<div class="empty-state">Unable to load status board right now.</div>';
-    return;
-  }
-  renderResults(data);
+function loadAll() {
+  renderResults(SAMPLE_CARS);
 }
 
-async function runSearch() {
-  const make = document.getElementById('searchMake').value.trim();
-  const model = document.getElementById('searchModel').value.trim();
-  const plate = document.getElementById('searchPlate').value.trim();
+function runSearch() {
+  const make = document.getElementById('searchMake').value.trim().toLowerCase();
+  const model = document.getElementById('searchModel').value.trim().toLowerCase();
+  const plate = document.getElementById('searchPlate').value.trim().toLowerCase();
 
-  let query = supabaseClient.from('cars').select('*');
-  if (make) query = query.ilike('make', `%${make}%`);
-  if (model) query = query.ilike('model', `%${model}%`);
-  if (plate) query = query.ilike('plate3', `%${plate}%`);
-
-  const { data, error } = await query.order('updated_at', { ascending: false });
-  if (error) {
-    document.getElementById('results').innerHTML = '<div class="empty-state">Search failed. Please try again.</div>';
-    return;
-  }
-  renderResults(data);
+  const results = SAMPLE_CARS.filter(car =>
+    (!make || car.make.toLowerCase().includes(make)) &&
+    (!model || car.model.toLowerCase().includes(model)) &&
+    (!plate || car.plate3.toLowerCase().includes(plate))
+  );
+  renderResults(results);
 }
 
 function clearSearch() {

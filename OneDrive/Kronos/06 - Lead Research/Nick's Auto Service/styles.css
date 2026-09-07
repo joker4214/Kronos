@@ -1,4 +1,4 @@
-/* Nick's Auto Service & Tire — shared styles */
+/* shared styles */
 
 :root {
   --black: #0d0d0d;
@@ -68,7 +68,9 @@ nav.main-nav a:hover, nav.main-nav a.active { border-color: var(--red); color: v
 
 .topbar { background: var(--red); color: var(--white); font-size: 13px; text-align: center; padding: 6px 10px; font-family: 'Oswald', sans-serif; letter-spacing: .5px; }
 
-.hero { background: linear-gradient(120deg, rgba(13,13,13,.94), rgba(13,13,13,.8)), radial-gradient(circle at 80% 20%, rgba(28,95,175,.35), transparent 55%); color: var(--white); padding: 90px 20px 70px; }
+.hero { background: linear-gradient(120deg, rgba(13,13,13,.88), rgba(13,13,13,.75)), radial-gradient(circle at 80% 20%, rgba(28,95,175,.35), transparent 55%), url('/images/hero.jpg'); background-size: cover, cover, cover; background-position: center, center, center; background-attachment: scroll, scroll, fixed; color: var(--white); padding: 90px 20px 70px; }
+
+.photo-band { height: 320px; background: url('/images/secondary.jpg') center / cover no-repeat fixed; }
 .hero .container { text-align: left; }
 .hero h1 { color: var(--white); font-size: clamp(32px, 5vw, 54px); max-width: 720px; }
 .hero h1 .accent { color: var(--red); }
