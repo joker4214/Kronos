@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PawSchedule - Social Media Calendar for Pet Businesses</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500;600;700&family=Roboto+Mono:wght@400;500&display=swap">
+  <style>
+    :root {
+      --color-teal: #0891b2;
+      --color-orange: #fb923c;
+      --color-dark: #0f172a;
+      --color-gray: #f8fafc;
+      --color-white: #ffffff;
+      --border: #e2e8f0;
+      --space-8: 8px;
+      --space-12: 12px;
+      --space-16: 16px;
+      --space-24: 24px;
+      --space-32: 32px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --color-gray: #1e293b;
+        --color-white: #0f172a;
+        --color-dark: #f1f5f9;
+        --border: #334155;
+      }
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--color-gray); color: var(--color-dark); }
+
+    .app-header {
+      background: var(--color-white);
+      border-bottom: 1px solid var(--border);
+      padding: var(--space-16) var(--space-24);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .app-logo {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--color-teal);
+      letter-spacing: 1px;
+    }
+
+    .app-user {
+      display: flex;
+      align-items: center;
+      gap: var(--space-12);
+      font-size: 13px;
+    }
+
+    .user-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--color-teal), var(--color-orange));
+    }
+
+    .app-container {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      background: var(--color-white);
+      border-right: 1px solid var(--border);
+      padding: var(--space-24);
+      overflow-y: auto;
+    }
+
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 700;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: var(--space-16);
+    }
+
+    .sidebar-menu {
+      list-style: none;
+      margin-bottom: var(--space-24);
+    }
+
+    .sidebar-item {
+      padding: var(--space-12) var(--space-16);
+      margin-bottom: var(--space-8);
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 500;
+      transition: all 0.2s;
+      border-left: 3px solid transparent;
+      display: flex;
+      align-items: center;
+      gap: var(--space-12);
+    }
+
+    .sidebar-item:hover,
+    .sidebar-item.active {
+      background: var(--color-gray);
+      border-left-color: var(--color-teal);
+      color: var(--color-teal);
+    }
+
+    .sidebar-icon {
+      font-size: 16px;
+      min-width: 20px;
+    }
+
+    .main-content {
+      padding: var(--space-32);
+      overflow-y: auto;
+    }
+
+    .page-header {
+      margin-bottom: var(--space-32);
+    }
+
+    .page-title {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: var(--space-8);
+    }
+
+    .page-subtitle {
+      font-size: 13px;
+      color: #64748b;
+    }
+
+    .controls-bar {
+      display: flex;
+      gap: var(--space-16);
+      margin-bottom: var(--space-24);
+      flex-wrap: wrap;
+    }
+
+    .control-group {
+      display: flex;
+      gap: var(--space-8);
+      align-items: center;
+    }
+
+    .btn {
+      padding: var(--space-12) var(--space-16);
+      border: 1px solid var(--border);
+      background: var(--color-white);
+      color: var(--color-dark);
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn:hover {
+      background: var(--color-gray);
+      border-color: var(--color-teal);
+    }
+
+    .btn-primary {
+      background: var(--color-teal);
+      color: white;
+      border-color: var(--color-teal);
+    }
+
+    .btn-primary:hover {
+      background: #0891b2;
+    }
+
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: var(--space-24);
+      margin-bottom: var(--space-32);
+    }
+
+    .calendar-card {
+      background: var(--color-white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: all 0.2s;
+    }
+
+    .calendar-card:hover {
+      border-color: var(--color-teal);
+      box-shadow: 0 8px 20px rgba(8, 145, 178, 0.12);
+    }
+
+    .calendar-header {
+      background: var(--color-gray);
+      padding: var(--space-16);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .calendar-date {
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .calendar-platform {
+      display: flex;
+      gap: var(--space-4);
+      font-size: 12px;
+    }
+
+    .platform-icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 3px;
+      background: var(--color-teal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 10px;
+    }
+
+    .calendar-content {
+      padding: var(--space-16);
+    }
+
+    .post-title {
+      font-weight: 600;
+      font-size: 13px;
+      margin-bottom: var(--space-8);
+      line-height: 1.4;
+    }
+
+    .post-meta {
+      display: flex;
+      gap: var(--space-8);
+      font-size: 11px;
+      color: #64748b;
+      margin-bottom: var(--space-12);
+    }
+
+    .meta-badge {
+      background: var(--color-gray);
+      padding: 2px 8px;
+      border-radius: 3px;
+    }
+
+    .post-image {
+      width: 100%;
+      height: 100px;
+      background: linear-gradient(135deg, var(--color-teal), #06b6d4);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      margin-bottom: var(--space-12);
+    }
+
+    .post-actions {
+      display: flex;
+      gap: var(--space-8);
+      border-top: 1px solid var(--border);
+      padding-top: var(--space-12);
+    }
+
+    .action-btn {
+      flex: 1;
+      padding: var(--space-8);
+      background: var(--color-gray);
+      border: none;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .action-btn:hover {
+      background: var(--color-teal);
+      color: white;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--space-16);
+      margin-bottom: var(--space-32);
+    }
+
+    .stat-card {
+      background: var(--color-white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: var(--space-20);
+      text-align: center;
+    }
+
+    .stat-icon {
+      font-size: 28px;
+      margin-bottom: var(--space-8);
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: #64748b;
+      margin-bottom: var(--space-4);
+    }
+
+    .stat-value {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--color-teal);
+    }
+
+    .tables-section {
+      background: var(--color-white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: var(--space-24);
+      margin-bottom: var(--space-32);
+    }
+
+    .section-title {
+      font-weight: 700;
+      font-size: 15px;
+      margin-bottom: var(--space-16);
+    }
+
+    .simple-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+
+    .simple-table th {
+      background: var(--color-gray);
+      padding: var(--space-12);
+      text-align: left;
+      font-weight: 700;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .simple-table td {
+      padding: var(--space-12);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .simple-table tr:hover {
+      background: var(--color-gray);
+    }
+
+    .status-badge {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 10px;
+    }
+
+    .status-scheduled {
+      background: #dbeafe;
+      color: #0c4a6e;
+    }
+
+    .status-published {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .status-draft {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    @media (max-width: 768px) {
+      .app-container {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        display: none;
+      }
+
+      .controls-bar {
+        flex-direction: column;
+      }
+
+      .calendar-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app-header">
+    <div class="app-logo">pawschedule.</div>
+    <div class="app-user">
+      <span>Welcome back, Jessie</span>
+      <div class="user-avatar"></div>
+    </div>
+  </div>
+
+  <div class="app-container">
+    <aside class="sidebar">
+      <div class="sidebar-title">📅 Schedule</div>
+      <ul class="sidebar-menu">
+        <li class="sidebar-item active">
+          <span class="sidebar-icon">📆</span>
+          <span>Calendar View</span>
+        </li>
+        <li class="sidebar-item">
+          <span class="sidebar-icon">📋</span>
+          <span>Posts</span>
+        </li>
+        <li class="sidebar-item">
+          <span class="sidebar-icon">✍️</span>
+          <span>Drafts</span>
+        </li>
+        <li class="sidebar-item">
+          <span class="sidebar-icon">⏰</span>
+          <span>Scheduled</span>
+        </li>
+      </ul>
+
+      <div class="sidebar-title">🔧 Tools</div>
+      <ul class="sidebar-menu">
+        <li class="sidebar-item">
+          <span class="sidebar-icon">💡</span>
+          <span>AI Ideas</span>
+        </li>
+        <li class="sidebar-item">
+          <span class="sidebar-icon">📊</span>
+          <span>Analytics</span>
+        </li>
+        <li class="sidebar-item">
+          <span class="sidebar-icon">🔗</span>
+          <span>Accounts</span>
+        </li>
+        <li class="sidebar-item">
+          <span class="sidebar-icon">⚙️</span>
+          <span>Settings</span>
+        </li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-header">
+        <h1 class="page-title">Content Calendar</h1>
+        <p class="page-subtitle">Manage your social media content across all platforms</p>
+      </div>
+
+      <div class="controls-bar">
+        <div class="control-group">
+          <select class="btn" style="border: 1px solid var(--border); padding: var(--space-10) var(--space-12);">
+            <option>All Platforms</option>
+            <option>Instagram</option>
+            <option>TikTok</option>
+            <option>Facebook</option>
+            <option>YouTube</option>
+          </select>
+        </div>
+        <div class="control-group">
+          <select class="btn" style="border: 1px solid var(--border); padding: var(--space-10) var(--space-12);">
+            <option>This Week</option>
+            <option>This Month</option>
+            <option>Next Month</option>
+          </select>
+        </div>
+        <button class="btn btn-primary">+ New Post</button>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">📤</div>
+          <div class="stat-label">Scheduled This Week</div>
+          <div class="stat-value">12</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">👁️</div>
+          <div class="stat-label">Total Reach (7d)</div>
+          <div class="stat-value">24.5K</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">💬</div>
+          <div class="stat-label">Avg Engagement</div>
+          <div class="stat-value">3.2%</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">💰</div>
+          <div class="stat-label">Revenue Tracked</div>
+          <div class="stat-value">$1,240</div>
+        </div>
+      </div>
+
+      <div class="page-subtitle" style="margin-bottom: var(--space-16); margin-top: var(--space-24);">Upcoming Posts</div>
+
+      <div class="calendar-grid">
+        <div class="calendar-card">
+          <div class="calendar-header">
+            <div>
+              <div class="calendar-date">Tomorrow, 10:00 AM</div>
+            </div>
+            <div class="calendar-platform">
+              <div class="platform-icon">📱</div>
+              <div class="platform-icon">📘</div>
+            </div>
+          </div>
+          <div class="calendar-content">
+            <div class="post-image">🐕</div>
+            <div class="post-title">5 Signs Your Dog Needs a Grooming Appointment</div>
+            <div class="post-meta">
+              <span class="meta-badge">Scheduled</span>
+              <span class="meta-badge">Educational</span>
+            </div>
+            <div class="post-actions">
+              <button class="action-btn">Edit</button>
+              <button class="action-btn">Preview</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="calendar-card">
+          <div class="calendar-header">
+            <div>
+              <div class="calendar-date">Sept 28, 3:00 PM</div>
+            </div>
+            <div class="calendar-platform">
+              <div class="platform-icon">📱</div>
+            </div>
+          </div>
+          <div class="calendar-content">
+            <div class="post-image">✂️</div>
+            <div class="post-title">New Grooming Packages Available - 20% Off First Visit!</div>
+            <div class="post-meta">
+              <span class="meta-badge">Scheduled</span>
+              <span class="meta-badge">Promotional</span>
+            </div>
+            <div class="post-actions">
+              <button class="action-btn">Edit</button>
+              <button class="action-btn">Preview</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="calendar-card">
+          <div class="calendar-header">
+            <div>
+              <div class="calendar-date">Sept 29, 6:00 PM</div>
+            </div>
+            <div class="calendar-platform">
+              <div class="platform-icon">📱</div>
+              <div class="platform-icon">📘</div>
+              <div class="platform-icon">▶️</div>
+            </div>
+          </div>
+          <div class="calendar-content">
+            <div class="post-image">🐩</div>
+            <div class="post-title">Meet Our Master Groomer - Q&A Live Session</div>
+            <div class="post-meta">
+              <span class="meta-badge">Scheduled</span>
+              <span class="meta-badge">Community</span>
+            </div>
+            <div class="post-actions">
+              <button class="action-btn">Edit</button>
+              <button class="action-btn">Preview</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tables-section">
+        <div class="section-title">📊 Recent Performance</div>
+        <table class="simple-table">
+          <thead>
+            <tr>
+              <th>Post Title</th>
+              <th>Platform</th>
+              <th>Status</th>
+              <th>Reach</th>
+              <th>Engagement</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>5 Signs Your Dog Needs Grooming</td>
+              <td>Instagram</td>
+              <td><span class="status-badge status-published">Published</span></td>
+              <td>3,240</td>
+              <td>4.2%</td>
+            </tr>
+            <tr>
+              <td>Summer Grooming Tips</td>
+              <td>TikTok</td>
+              <td><span class="status-badge status-published">Published</span></td>
+              <td>12,560</td>
+              <td>6.8%</td>
+            </tr>
+            <tr>
+              <td>New Mobile Grooming Service</td>
+              <td>Facebook</td>
+              <td><span class="status-badge status-draft">Draft</span></td>
+              <td>—</td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

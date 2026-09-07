@@ -1,3 +1,30 @@
-.env.local
-.env
-node_modules/
+# Deny-by-default: this repo is rooted at the home directory, so nothing
+# is trackable unless explicitly re-included below. Add a new project by
+# adding its own !/path/ (and, if nested, the /parent/* + !/parent/child/
+# pair) -- never remove the leading `/*` line.
+/*
+
+!/OneDrive/
+/OneDrive/*
+!/OneDrive/Kronos/
+
+!/app/
+!/atlas/
+!/Nexus/
+!/package.json
+!/vercel.json
+!/.gitignore
+
+!/dharma-brain/
+/dharma-brain/*
+!/dharma-brain/d2-events/
+!/dharma-brain/michigan-premier-events/
+!/dharma-brain/event-planner-inc/
+!/dharma-brain/house-of-pearls/
+
+# defense in depth inside the trees above
+**/.env
+**/.env.local
+**/node_modules/
+**/.next/
+**/.vercel/

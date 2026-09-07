@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Staff Login | Your Business Name Here</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div style="background:#dc2626;color:#fff;text-align:center;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:8px;">Not a Production Site &mdash; Demo Only</div>
+
+<header class="site-header">
+  <div class="header-inner container">
+    <a href="index.html" class="brand">
+      <svg class="brand-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="47" fill="#0d0d0d" stroke="#ffffff" stroke-width="2.5"/>
+        <circle cx="50" cy="50" r="30" fill="none" stroke="#1c5faf" stroke-width="7"/>
+        <circle cx="50" cy="50" r="30" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="4 6"/>
+        <circle cx="50" cy="50" r="10" fill="#ffffff"/>
+      </svg>
+      <span class="brand-text">
+        <span class="b1" style="display:block;">YOUR BUSINESS</span>
+        <span class="b2">NAME HERE</span>
+      </span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="status.html">Check Status</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <a href="tel:" class="header-phone"><span>&#9742;</span> Your Phone Here</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+    </div>
+  </div>
+</header>
+
+<div class="page-header">
+  <div class="container">
+    <h1>Staff Dashboard</h1>
+    <p>Manager login &mdash; update vehicle status in real time.</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+
+    <!-- LOGIN VIEW -->
+    <div id="loginView">
+      <div class="login-box">
+        <h2 style="text-align:center; margin-bottom:0;">Manager Login</h2>
+        <label for="username">Username</label>
+        <input type="text" id="username" autocomplete="username">
+        <label for="password">Password</label>
+        <input type="password" id="password" autocomplete="current-password">
+        <button class="btn btn-primary" onclick="login()">Log In</button>
+        <div class="login-error" id="loginError">Incorrect username or password.</div>
+      </div>
+    </div>
+
+    <!-- DASHBOARD VIEW -->
+    <div id="dashboardView" style="display:none;">
+      <div class="admin-toolbar">
+        <h2 style="margin:0;">Vehicles</h2>
+        <button class="btn btn-dark" onclick="logout()">Log Out</button>
+      </div>
+
+      <div class="add-car-form">
+        <input type="text" id="newMake" placeholder="Make">
+        <input type="text" id="newModel" placeholder="Model">
+        <input type="text" id="newPlate" placeholder="Plate (3 chars)" maxlength="3">
+        <input type="text" id="newMechanic" placeholder="Mechanic">
+        <button class="btn btn-primary" onclick="addCar()">+ Add Vehicle</button>
+      </div>
+
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>Vehicle</th>
+            <th>Plate</th>
+            <th>Mechanic</th>
+            <th>Status</th>
+            <th>Updated</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="carRows"></tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+<script>
+// Demo mode: no live backend. All data is in-memory and resets on page reload.
+const STATUSES = ['Inspection', 'Waiting on Part', 'In Repair', 'Final Stretch', 'Complete'];
+let nextId = 4;
+let CARS = [
+  { id: 1, make: 'Chevy', model: 'Silverado', plate3: 'ABC', mechanic: 'Sample Mechanic', status: 'In Repair', updated_at: new Date().toISOString() },
+  { id: 2, make: 'Honda', model: 'Civic', plate3: 'XYZ', mechanic: '', status: 'Waiting on Part', updated_at: new Date().toISOString() },
+  { id: 3, make: 'Ford', model: 'Explorer', plate3: 'JKL', mechanic: 'Sample Mechanic', status: 'Complete', updated_at: new Date().toISOString() },
+];
+
+function login() {
+  // Demo mode: any credentials log in, no real check.
+  showDashboard();
+}
+
+function logout() {
+  document.getElementById('dashboardView').style.display = 'none';
+  document.getElementById('loginView').style.display = 'block';
+}
+
+function showDashboard() {
+  document.getElementById('loginView').style.display = 'none';
+  document.getElementById('dashboardView').style.display = 'block';
+  loadCars();
+}
+
+function loadCars() {
+  const sorted = [...CARS].sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+  const rows = sorted.map(car => {
+    const options = STATUSES.map(s => `<option value="${s}" ${s === car.status ? 'selected' : ''}>${s}</option>`).join('');
+    return `
+      <tr data-id="${car.id}">
+        <td>${car.make} ${car.model}</td>
+        <td>${car.plate3}</td>
+        <td><input type="text" value="${car.mechanic || ''}" data-field="mechanic"></td>
+        <td><select data-field="status">${options}</select></td>
+        <td style="font-size:12px; color:#888;">${new Date(car.updated_at).toLocaleString()}</td>
+        <td style="white-space:nowrap;">
+          <button class="btn btn-primary" style="padding:8px 14px; font-size:12px;" onclick="saveCar('${car.id}', this)">Save</button>
+          <span class="save-msg">Saved</span>
+          <button class="btn btn-dark" style="padding:8px 14px; font-size:12px;" onclick="removeCar('${car.id}')">Delete</button>
+        </td>
+      </tr>
+    `;
+  }).join('');
+  document.getElementById('carRows').innerHTML = rows || '<tr><td colspan="6" style="text-align:center; color:#888;">No vehicles yet.</td></tr>';
+}
+
+function saveCar(id, btn) {
+  const row = btn.closest('tr');
+  const mechanic = row.querySelector('[data-field="mechanic"]').value;
+  const status = row.querySelector('[data-field="status"]').value;
+  const car = CARS.find(c => String(c.id) === String(id));
+  if (car) {
+    car.mechanic = mechanic;
+    car.status = status;
+    car.updated_at = new Date().toISOString();
+    const msg = row.querySelector('.save-msg');
+    msg.style.display = 'inline';
+    setTimeout(() => msg.style.display = 'none', 1500);
+  }
+}
+
+function removeCar(id) {
+  if (!confirm('Remove this vehicle from the status board?')) return;
+  CARS = CARS.filter(c => String(c.id) !== String(id));
+  loadCars();
+}
+
+function addCar() {
+  const make = document.getElementById('newMake').value.trim();
+  const model = document.getElementById('newModel').value.trim();
+  const plate = document.getElementById('newPlate').value.trim();
+  const mechanic = document.getElementById('newMechanic').value.trim();
+  if (!make || !model || !plate) { alert('Make, model, and plate are required.'); return; }
+
+  CARS.push({ id: nextId++, make, model, plate3: plate, mechanic, status: 'Inspection', updated_at: new Date().toISOString() });
+  document.getElementById('newMake').value = '';
+  document.getElementById('newModel').value = '';
+  document.getElementById('newPlate').value = '';
+  document.getElementById('newMechanic').value = '';
+  loadCars();
+}
+</script>
+</body>
+</html>
