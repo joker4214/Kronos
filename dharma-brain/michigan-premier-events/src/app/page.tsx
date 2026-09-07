@@ -30,28 +30,32 @@ const clients = ['Your Client Here', 'Your Client Here', 'Your Client Here', 'Yo
 export default function Home() {
   return (
     <div className="w-full">
-      <section className="min-h-[85vh] flex items-center justify-center px-4 py-28 border-b border-navy/10">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.p className="text-xs uppercase tracking-[0.3em] text-gold-500 mb-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
+      <section
+        className="relative min-h-[85vh] flex items-center justify-center px-4 py-28 border-b border-navy/10 bg-cover bg-center bg-no-repeat md:bg-fixed"
+        style={{ backgroundImage: "url('/images/hero.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-navy/70" aria-hidden="true" />
+        <div className="relative max-w-4xl mx-auto text-center">
+          <motion.p className="text-xs uppercase tracking-[0.3em] text-gold-400 mb-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
             Your Company Name Here &middot; Est. 2016
           </motion.p>
           <motion.h1
-            className="font-display text-5xl md:text-7xl leading-[1.05] text-navy mb-8"
+            className="font-display text-5xl md:text-7xl leading-[1.05] text-mist mb-8"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
           >
             Ten Years Producing<br />
-            <span className="text-gold-500">Michigan&rsquo;s Events</span>
+            <span className="text-gold-400">Michigan&rsquo;s Events</span>
           </motion.h1>
-          <motion.p className="text-lg text-navy/60 mb-10 max-w-xl mx-auto leading-relaxed" {...fadeInUp} transition={{ duration: 0.9, delay: 0.2 }}>
+          <motion.p className="text-lg text-mist/80 mb-10 max-w-xl mx-auto leading-relaxed" {...fadeInUp} transition={{ duration: 0.9, delay: 0.2 }}>
             The Your Company Name Here team manages corporate, government, and community events across the state &mdash; galas, conferences, fundraisers, and everything in between.
           </motion.p>
           <motion.div className="flex gap-4 justify-center flex-wrap" {...fadeInUp} transition={{ duration: 0.9, delay: 0.35 }}>
-            <Link href="/contact" className="bg-navy text-mist px-8 py-3.5 text-xs uppercase tracking-[0.15em] hover:bg-gold-500 hover:text-navy transition-colors">
+            <Link href="/contact" className="bg-gold-500 text-navy px-8 py-3.5 text-xs uppercase tracking-[0.15em] hover:bg-mist transition-colors">
               Request a Consultation
             </Link>
-            <Link href="/packages" className="border border-navy text-navy px-8 py-3.5 text-xs uppercase tracking-[0.15em] hover:bg-navy hover:text-mist transition-colors">
+            <Link href="/packages" className="border border-mist text-mist px-8 py-3.5 text-xs uppercase tracking-[0.15em] hover:bg-mist hover:text-navy transition-colors">
               See Our Programs
             </Link>
           </motion.div>
@@ -81,11 +85,19 @@ export default function Home() {
               Request a Consultation
             </Link>
           </motion.div>
-          <motion.div className="bg-white border border-navy/10 p-10" initial={{ opacity: 0, x: 24 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.9, delay: 0.1 }} viewport={{ once: true }}>
-            <h4 className="text-xs uppercase tracking-[0.15em] text-gold-500 mb-6">Trusted By</h4>
-            <ul className="space-y-4">
+          <motion.div
+            className="relative border border-navy/10 p-10 bg-cover bg-center"
+            style={{ backgroundImage: "url('/images/secondary.jpg')" }}
+            initial={{ opacity: 0, x: 24 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.9, delay: 0.1 }}
+            viewport={{ once: true }}
+          >
+            <div className="absolute inset-0 bg-navy/80" aria-hidden="true" />
+            <h4 className="relative text-xs uppercase tracking-[0.15em] text-gold-400 mb-6">Trusted By</h4>
+            <ul className="relative space-y-4">
               {clients.map((c) => (
-                <li key={c} className="text-navy/70 border-b border-navy/10 pb-3 last:border-0">{c}</li>
+                <li key={c} className="text-mist/80 border-b border-mist/20 pb-3 last:border-0">{c}</li>
               ))}
             </ul>
           </motion.div>
