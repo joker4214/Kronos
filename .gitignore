@@ -10,7 +10,6 @@
 
 !/app/
 !/atlas/
-!/Nexus/
 !/package.json
 !/vercel.json
 !/.gitignore
