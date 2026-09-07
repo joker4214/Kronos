@@ -13,7 +13,7 @@ export default function About() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl font-serif font-bold text-slate-900 mb-6">About House of Pearls</h1>
+            <h1 className="text-5xl font-serif font-bold text-slate-900 mb-6">About Your Company Name Here</h1>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
               Creating timeless wedding celebrations since 2012
             </p>
@@ -28,7 +28,7 @@ export default function About() {
           >
             <h2 className="text-3xl font-serif font-bold text-slate-900 mb-6">Our Story</h2>
             <p className="text-slate-600 text-lg leading-relaxed mb-4">
-              House of Pearls was founded with a simple belief: every love story deserves to be celebrated in an elegant,
+              Your Company Name Here was founded with a simple belief: every love story deserves to be celebrated in an elegant,
               thoughtful, and personal way. Over a decade later, we've had the honor of creating hundreds of beautiful
               weddings for couples from all walks of life.
             </p>

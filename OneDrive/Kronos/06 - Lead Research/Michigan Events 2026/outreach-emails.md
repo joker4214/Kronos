@@ -26,7 +26,7 @@ Given how many shows you run annually, a site could actually save you time and g
 
 Best,  
 Jason Dharma  
-Dharma Esthetic Design Center  
+Dharma Esthetic Design  
 jason@dharmasestheticdesign.com  
 (You can also call direct if that's easier.)
 
@@ -49,13 +49,13 @@ I saw on migunshows.com that you're working on a website redesign. Good call—y
 
 The interesting part: you've got a solid audience (vendors, collectors coming back season after season), and a redesign is the perfect moment to make that site work harder for you. Better show calendar visibility, easier vendor communication, mobile-friendly scheduling.
 
-I work with Dharma Esthetic Design Center. We specialize in clean, fast redesigns that don't get lost in scope creep. We've helped event organizers and small businesses get from concept to launch without months of back-and-forth.
+I work with Dharma Esthetic Design. We specialize in clean, fast redesigns that don't get lost in scope creep. We've helped event organizers and small businesses get from concept to launch without months of back-and-forth.
 
 Since you're already in planning mode, would it make sense to grab 15 minutes and see if there's a fit? No pressure—just a conversation about what your redesign could actually accomplish.
 
 Best,  
 Jason Dharma  
-Dharma Esthetic Design Center  
+Dharma Esthetic Design  
 jason@dharmasestheticdesign.com  
 517-*** (your phone if available)
 
@@ -78,13 +78,13 @@ I saw your migunshow.com site for the Kalamazoo Fairgrounds show—solid events,
 
 Here's what I noticed: you're on Wix, which is fine for getting started, but you could get more out of the site. Better mobile experience, faster load times, easier event scheduling and vendor communication would let you run shows with less manual back-and-forth.
 
-I work with Dharma Esthetic Design Center. We specialize in building lean, conversion-focused websites for event organizers—the kind that make your life easier and bring in more vendor interest.
+I work with Dharma Esthetic Design. We specialize in building lean, conversion-focused websites for event organizers—the kind that make your life easier and bring in more vendor interest.
 
 Would you be open to a 15-minute call to talk about what a focused redesign could accomplish for your shows?
 
 Best,  
 Jason Dharma  
-Dharma Esthetic Design Center  
+Dharma Esthetic Design  
 jason@dharmasestheticdesign.com
 
 ---
@@ -106,13 +106,13 @@ I saw your Premier Vintage and Antique Firearm Show at Madison Place Event Cente
 
 Here's where I see opportunity: you've got a membership and vendor base that could be better leveraged. More engagement touchpoints, easier vendor onboarding, cleaner event promotion on the site—these could translate to more vendor interest and smoother event operations.
 
-I work with Dharma Esthetic Design Center. We focus on building websites that work harder for event organizers and membership organizations.
+I work with Dharma Esthetic Design. We focus on building websites that work harder for event organizers and membership organizations.
 
 Would you be open to a quick conversation about how we could support your next show?
 
 Best,  
 Jason Dharma  
-Dharma Esthetic Design Center  
+Dharma Esthetic Design  
 jason@dharmasestheticdesign.com
 
 ---

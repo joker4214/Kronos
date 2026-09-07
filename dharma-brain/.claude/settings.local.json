@@ -232,7 +232,8 @@
       "Bash(whois migunshows.com)",
       "Bash(npx create-next-app@latest event-planner-inc --typescript --tailwind --no-eslint --no-git --app --src-dir --import-alias=@/* --no-git)",
       "Bash(npx create-next-app@latest house-of-pearls --typescript --tailwind --no-eslint --no-git --app --src-dir --import-alias=@/*)",
-      "Bash(uipro init *)"
+      "Bash(uipro init *)",
+      "Bash(python3 -)"
     ]
   },
   "enabledMcpjsonServers": [

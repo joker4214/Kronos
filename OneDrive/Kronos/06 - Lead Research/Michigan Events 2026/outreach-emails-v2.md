@@ -51,7 +51,7 @@ If you're already planning that move to a new site, that's the perfect moment to
 Happy to put together a quick, free look at what that could be, genuinely no pressure either way.
 
 Jason
-Dharma's Esthetic Design Center
+Dharma's Esthetic Design
 jason@dharmasestheticdesign.com
 (248) 210-4830
 
@@ -73,7 +73,7 @@ The one thing that stood out is the site itself still runs on an older builder (
 Not reaching out because anything needs fixing, just thought a modern redesign might be worth having on your radar for whenever the club's ready for it. Happy to put together a free look at what that could be, no pressure at all.
 
 Jason
-Dharma's Esthetic Design Center
+Dharma's Esthetic Design
 jason@dharmasestheticdesign.com
 (248) 210-4830
 

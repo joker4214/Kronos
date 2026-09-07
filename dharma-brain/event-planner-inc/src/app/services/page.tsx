@@ -4,12 +4,12 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 const services = [
-  { num: '01', title: 'Corporate Galas', desc: 'Elegant dinner events for celebrating corporate milestones and achievements.' },
-  { num: '02', title: 'Product Launches', desc: 'High-impact events to introduce your latest products to the market.' },
-  { num: '03', title: 'Conference Planning', desc: 'Large-scale professional events with breakout sessions and networking.' },
-  { num: '04', title: 'Team Building Events', desc: 'Engaging activities designed to strengthen team bonds and morale.' },
-  { num: '05', title: 'Award Ceremonies', desc: 'Prestigious celebrations recognizing excellence and achievement.' },
-  { num: '06', title: 'Networking Mixers', desc: 'Curated social events connecting industry professionals.' },
+  { num: '01', title: 'Full Wedding Planning', desc: 'Start-to-finish planning from your first vendor call to the last dance.' },
+  { num: '02', title: 'Month-of Coordination', desc: 'Already planned everything? We run the day so you don’t have to.' },
+  { num: '03', title: 'Design &amp; Styling', desc: 'Palette, tablescape, and signage direction that ties the whole day together.' },
+  { num: '04', title: 'Private Parties', desc: 'Milestone birthdays, anniversaries, and celebrations planned with the same care as a wedding.' },
+  { num: '05', title: 'Corporate &amp; Community Events', desc: 'Local corporate gatherings, fundraisers, and community celebrations.' },
+  { num: '06', title: 'Vow Renewals', desc: 'Intimate to elaborate — celebrating a commitment that’s already been made.' },
 ];
 
 export default function Services() {
@@ -26,7 +26,7 @@ export default function Services() {
             <p className="text-xs uppercase tracking-[0.3em] text-rose-500 mb-4">What We Offer</p>
             <h1 className="font-display text-5xl md:text-6xl text-ink mb-6">Our Services</h1>
             <p className="text-lg text-ink/60 max-w-2xl mx-auto leading-relaxed">
-              Comprehensive event planning solutions tailored to your corporate needs
+              Twenty years planning weddings and events across Metro Detroit, from intimate gatherings to full celebrations.
             </p>
           </motion.div>
 
@@ -57,12 +57,12 @@ export default function Services() {
             transition={{ duration: 0.9 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-display text-3xl md:text-4xl text-cream mb-4">Custom Event Solutions</h2>
+            <h2 className="font-display text-3xl md:text-4xl text-cream mb-4">Not Sure Which Fits?</h2>
             <p className="text-cream/60 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Don&rsquo;t see what you&rsquo;re looking for? We specialize in creating custom event experiences tailored to your unique vision and requirements.
+              Most people start with a planning session, not a package. Bring us whatever you&rsquo;ve got, even if it&rsquo;s nothing yet.
             </p>
-            <Link href="/contact" className="inline-block bg-cream text-ink px-8 py-3.5 text-xs uppercase tracking-[0.15em] hover:bg-rust-500 hover:text-cream transition-colors">
-              Get Custom Quote
+            <Link href="/packages" className="inline-block bg-cream text-ink px-8 py-3.5 text-xs uppercase tracking-[0.15em] hover:bg-rust-500 hover:text-cream transition-colors">
+              Compare Packages
             </Link>
           </motion.div>
         </div>

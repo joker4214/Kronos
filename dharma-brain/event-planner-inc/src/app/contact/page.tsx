@@ -13,9 +13,9 @@ export default function Contact() {
   };
 
   const infoItems = [
-    { title: 'Address', content: '123 Gold Street, NY 10001' },
-    { title: 'Phone', content: '(555) 123-4567' },
-    { title: 'Email', content: 'hello@eventplannerinc.com' },
+    { title: 'Address', content: 'Your Company Name Here' },
+    { title: 'Phone', content: 'Your Phone Here' },
+    { title: 'Email', content: 'email@yourcompanyname.com' },
   ];
 
   const inputClass =

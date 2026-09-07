@@ -13,7 +13,7 @@ const testimonials = [
   },
   {
     name: 'Jessica & David',
-    quote: 'House of Pearls created something so beautiful and personal. Our guests are still talking about it!',
+    quote: 'Your Company Name Here created something so beautiful and personal. Our guests are still talking about it!',
   },
   {
     name: 'Laura & Christopher',

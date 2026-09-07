@@ -30,9 +30,9 @@ export default function Contact() {
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {[
-              { icon: '📍', title: 'Location', content: '456 Pearl Avenue, NY 10005' },
-              { icon: '📞', title: 'Phone', content: '(555) 987-6543' },
-              { icon: '✉️', title: 'Email', content: 'hello@houseofpearls.com' },
+              { icon: '📍', title: 'Location', content: 'Your Company Name Here' },
+              { icon: '📞', title: 'Phone', content: 'Your Phone Here' },
+              { icon: '✉️', title: 'Email', content: 'email@yourcompanyname.com' },
             ].map((info, i) => (
               <motion.div
                 key={i}

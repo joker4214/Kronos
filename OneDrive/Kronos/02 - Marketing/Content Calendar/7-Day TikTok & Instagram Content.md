@@ -1,7 +1,7 @@
-# Dharma's Esthetic Design Center — 7-Day Launch Content
+# Dharma's Esthetic Design — 7-Day Launch Content
 
 **Audience:** Shopify/Wix/WordPress store owners who want more sales without hiring a full agency.
-**Goal:** Build awareness for Dharma's Esthetic Design Center as the go-to boutique agency for AI-powered content + store growth.
+**Goal:** Build awareness for Dharma's Esthetic Design as the go-to boutique agency for AI-powered content + store growth.
 **Voice:** Confident, approachable, no-fluff. We talk to store owners like peers, not prospects.
 
 ---
@@ -73,7 +73,7 @@ CTA: DM "READY" and we'll get you started today.
 1. You're posting inconsistently (or not at all)
 2. Your product photos don't match across platforms
 3. You don't know what's actually converting
-Caption: We built Dharma's Esthetic Design Center to fix exactly this — AI-powered content, real human strategy, built around your brand. Three packages, one goal: your store grows.
+Caption: We built Dharma's Esthetic Design to fix exactly this — AI-powered content, real human strategy, built around your brand. Three packages, one goal: your store grows.
 #DharmasEmporium #ShopifyStore #EcommerceMarketing #ShopifyTips #SmallBusinessMarketing #ContentStrategy
 
 **Day 2 — Single image/reel: Meet the team**

@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "House of Pearls | Luxury Wedding Planning",
+  title: "Your Company Name Here | Luxury Wedding Planning",
   description: "Exquisite wedding planning services for your perfect day.",
 };
 
@@ -29,6 +29,9 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-white text-slate-900">
+        <div className="w-full bg-red-600 text-white text-center text-xs font-bold uppercase tracking-widest py-2">
+          Not a Production Site — Demo Only
+        </div>
         <nav className="sticky top-0 z-50 bg-white border-b border-rose-100 shadow-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
@@ -36,7 +39,7 @@ export default function RootLayout({
                 <div className="w-10 h-10 bg-gradient-to-br from-rose-400 to-rose-600 rounded-full flex items-center justify-center">
                   <span className="text-white font-serif text-lg">♦</span>
                 </div>
-                <span className="text-xl font-serif font-bold text-rose-700">House of Pearls</span>
+                <span className="text-xl font-serif font-bold text-rose-700">Your Company Name Here</span>
               </Link>
               <div className="hidden md:flex gap-8">
                 <Link href="/" className="text-slate-700 hover:text-rose-600 transition-colors">Home</Link>
@@ -57,7 +60,7 @@ export default function RootLayout({
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
               <div>
-                <h3 className="text-rose-400 font-serif font-bold text-lg mb-4">House of Pearls</h3>
+                <h3 className="text-rose-400 font-serif font-bold text-lg mb-4">Your Company Name Here</h3>
                 <p className="text-slate-300 text-sm">Creating timeless wedding moments since 2012.</p>
               </div>
               <div>
@@ -78,12 +81,18 @@ export default function RootLayout({
               </div>
               <div>
                 <h4 className="text-rose-400 font-semibold mb-4">Contact</h4>
-                <p className="text-slate-300 text-sm">hello@houseofpearls.com</p>
-                <p className="text-slate-300 text-sm">(555) 987-6543</p>
+                <p className="text-slate-300 text-sm">email@yourcompanyname.com</p>
+                <p className="text-slate-300 text-sm">Your Phone Here</p>
               </div>
             </div>
             <div className="border-t border-slate-700 pt-8 text-center text-slate-400 text-sm">
-              <p>&copy; 2024 House of Pearls. All rights reserved.</p>
+              <p>&copy; 2024 Your Company Name Here. All rights reserved.</p>
+              <p className="mt-2">
+                Site concept by{' '}
+                <a href="https://dharmasestheticdesign.com" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">
+                  Dharma&apos;s Esthetic Design
+                </a>
+              </p>
             </div>
           </div>
         </footer>

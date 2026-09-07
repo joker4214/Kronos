@@ -1,14 +1,11 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const testimonials = [
-  { name: 'Sarah Johnson', title: 'CEO, TechCorp', quote: 'Event Planner, Inc. transformed our annual summit into an unforgettable experience. Every detail was perfect.' },
-  { name: 'Michael Chen', title: 'Marketing Director, LuxeBrand', quote: 'Professional, creative, and incredibly responsive. They brought our vision to life beyond our expectations.' },
-  { name: 'Emma Wilson', title: 'VP Operations, FinanceGlobal', quote: 'The team’s attention to detail and flawless execution made our gala evening absolutely spectacular.' },
-  { name: 'James Davis', title: 'Founder, InnovateTech', quote: 'They handled our product launch with such finesse. Our guests are still talking about it.' },
-  { name: 'Lisa Anderson', title: 'HR Director, CorpLife', quote: 'Our team building event was incredible. The team felt valued and celebrated. Highly recommended!' },
-  { name: 'Robert Martinez', title: 'Director, EliteEvents', quote: 'Working with Event Planner, Inc. was seamless. They truly understand luxury and excellence.' },
+  { name: 'Amanda T.', quote: 'Working with Dalia was a blessing. She thought of things we never would have, and the whole day ran without a single hiccup.' },
+  { name: 'Sabrina K.', quote: 'Her attention to detail was incredible from start to finish. I would recommend her 1000% to anyone planning a wedding.' },
 ];
 
 export default function Testimonials() {
@@ -25,11 +22,11 @@ export default function Testimonials() {
             <p className="text-xs uppercase tracking-[0.3em] text-rose-500 mb-4">Testimonials</p>
             <h1 className="font-display text-5xl md:text-6xl text-ink mb-6">What Our Clients Say</h1>
             <p className="text-lg text-ink/60 max-w-2xl mx-auto leading-relaxed">
-              Hear from the executives and leaders who trust us with their most important events
+              Real words from real Your Company Name Here weddings and events.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-x-12 gap-y-14">
+          <div className="grid md:grid-cols-2 gap-x-12 gap-y-14 max-w-4xl mx-auto">
             {testimonials.map((testimonial, i) => (
               <motion.div
                 key={testimonial.name}
@@ -42,7 +39,6 @@ export default function Testimonials() {
                 <p className="font-display text-2xl text-ink leading-snug mb-6">&ldquo;{testimonial.quote}&rdquo;</p>
                 <div>
                   <p className="text-xs uppercase tracking-[0.15em] text-ink">{testimonial.name}</p>
-                  <p className="text-ink/50 text-sm mt-1">{testimonial.title}</p>
                 </div>
               </motion.div>
             ))}
@@ -55,10 +51,13 @@ export default function Testimonials() {
             transition={{ duration: 0.9 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-display text-3xl md:text-4xl text-cream mb-4">Join Our Satisfied Clients</h2>
-            <p className="text-cream/60 max-w-2xl mx-auto leading-relaxed">
-              Your event deserves the same level of excellence. Let&rsquo;s create your success story.
+            <h2 className="font-display text-3xl md:text-4xl text-cream mb-4">Join Our Clients</h2>
+            <p className="text-cream/60 max-w-2xl mx-auto leading-relaxed mb-8">
+              Your event deserves the same level of care. Let&rsquo;s talk about your day.
             </p>
+            <Link href="/contact" className="inline-block bg-cream text-ink px-8 py-3.5 text-xs uppercase tracking-[0.15em] hover:bg-rust-500 hover:text-cream transition-colors">
+              Schedule Consultation
+            </Link>
           </motion.div>
         </div>
       </section>

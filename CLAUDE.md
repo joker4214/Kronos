@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What is Kronos?
 
-Kronos is a minimal Next.js 14 (App Router) app deployed on Vercel — a content-generation agent for Dharma's Esthetic Design Center (a pet e-commerce web design agency). It stores projects in Supabase and uses the Anthropic SDK to generate weekly content ideas and captions in the brand voice.
+Kronos is a minimal Next.js 14 (App Router) app deployed on Vercel — a content-generation agent for Dharma's Esthetic Design (a pet e-commerce web design agency). It stores projects in Supabase and uses the Anthropic SDK to generate weekly content ideas and captions in the brand voice.
 
 ## Commands
 
