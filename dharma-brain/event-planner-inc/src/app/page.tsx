@@ -54,10 +54,14 @@ export default function Home() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="min-h-[90vh] flex items-center justify-center px-4 py-32 border-b border-ink/10">
-        <div className="max-w-4xl mx-auto text-center">
+      <section
+        className="relative min-h-[90vh] flex items-center justify-center px-4 py-32 border-b border-ink/10 bg-cover bg-center bg-no-repeat md:bg-fixed"
+        style={{ backgroundImage: "url('/images/hero.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-ink/60" aria-hidden="true" />
+        <div className="relative max-w-4xl mx-auto text-center">
           <motion.p
-            className="text-xs uppercase tracking-[0.3em] text-rust-500 mb-6"
+            className="text-xs uppercase tracking-[0.3em] text-rose-400 mb-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
@@ -65,16 +69,16 @@ export default function Home() {
             Your Company Name Here, Michigan &middot; Est. 2000
           </motion.p>
           <motion.h1
-            className="font-display text-6xl md:text-8xl leading-[1.05] text-ink mb-8"
+            className="font-display text-6xl md:text-8xl leading-[1.05] text-cream mb-8"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
           >
             Twenty Years of<br />
-            <span className="text-rust-500">Getting It Right</span>
+            <span className="text-rust-300">Getting It Right</span>
           </motion.h1>
           <motion.p
-            className="text-lg text-ink/60 mb-10 max-w-xl mx-auto leading-relaxed"
+            className="text-lg text-cream/80 mb-10 max-w-xl mx-auto leading-relaxed"
             {...fadeInUp}
             transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           >
@@ -85,10 +89,10 @@ export default function Home() {
             {...fadeInUp}
             transition={{ duration: 0.9, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
           >
-            <Link href="/packages" className="bg-ink text-cream px-8 py-3.5 text-xs uppercase tracking-[0.15em] hover:bg-rust-500 transition-colors">
+            <Link href="/packages" className="bg-cream text-ink px-8 py-3.5 text-xs uppercase tracking-[0.15em] hover:bg-rust-500 hover:text-cream transition-colors">
               Pick a Package
             </Link>
-            <Link href="/contact" className="border border-ink text-ink px-8 py-3.5 text-xs uppercase tracking-[0.15em] hover:bg-ink hover:text-cream transition-colors">
+            <Link href="/contact" className="border border-cream text-cream px-8 py-3.5 text-xs uppercase tracking-[0.15em] hover:bg-cream hover:text-ink transition-colors">
               Talk to Us
             </Link>
           </motion.div>
@@ -132,15 +136,17 @@ export default function Home() {
             </Link>
           </motion.div>
           <motion.div
-            className="bg-white border border-ink/10 p-10"
+            className="relative border border-ink/10 p-10 min-h-[340px] flex flex-col justify-end bg-cover bg-center"
+            style={{ backgroundImage: "url('/images/secondary.jpg')" }}
             initial={{ opacity: 0, x: 24 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <div className="font-display text-3xl text-ink mb-1">Your Company Name Here</div>
-            <p className="text-xs uppercase tracking-[0.15em] text-rust-500 mb-6">Founder &amp; Lead Planner</p>
-            <p className="text-ink/60 leading-relaxed">
+            <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/40 to-transparent" aria-hidden="true" />
+            <div className="relative font-display text-3xl text-cream mb-1">Your Company Name Here</div>
+            <p className="relative text-xs uppercase tracking-[0.15em] text-rust-300 mb-6">Founder &amp; Lead Planner</p>
+            <p className="relative text-cream/80 leading-relaxed">
               Twenty-plus years producing events across Metro Detroit, from intimate gatherings of ten to celebrations of two hundred. Every client works directly with their planner from the first call through the last dance.
             </p>
           </motion.div>

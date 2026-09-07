@@ -19,6 +19,8 @@
 /dharma-brain/*
 !/dharma-brain/d2-events/
 !/dharma-brain/michigan-premier-events/
+!/dharma-brain/event-planner-inc/
+!/dharma-brain/house-of-pearls/
 
 # defense in depth inside the trees above
 **/.env
