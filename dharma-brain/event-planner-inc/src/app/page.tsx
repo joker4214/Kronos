@@ -78,7 +78,7 @@ export default function Home() {
             {...fadeInUp}
             transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           >
-            Dalia Atisha has planned Your Company Name Here weddings and events since 2000. Pick a package, meet your planner, and see exactly what you&rsquo;re booking before you ever pick up the phone.
+            Our lead planner has planned Your Company Name Here weddings and events since 2000. Pick a package, meet your planner, and see exactly what you&rsquo;re booking before you ever pick up the phone.
           </motion.p>
           <motion.div
             className="flex gap-4 justify-center flex-wrap"
@@ -89,7 +89,7 @@ export default function Home() {
               Pick a Package
             </Link>
             <Link href="/contact" className="border border-ink text-ink px-8 py-3.5 text-xs uppercase tracking-[0.15em] hover:bg-ink hover:text-cream transition-colors">
-              Talk to Dalia
+              Talk to Us
             </Link>
           </motion.div>
         </div>
@@ -138,10 +138,10 @@ export default function Home() {
             transition={{ duration: 0.9, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <div className="font-display text-3xl text-ink mb-1">Dalia Atisha</div>
+            <div className="font-display text-3xl text-ink mb-1">Your Company Name Here</div>
             <p className="text-xs uppercase tracking-[0.15em] text-rust-500 mb-6">Founder &amp; Lead Planner</p>
             <p className="text-ink/60 leading-relaxed">
-              Twenty-plus years producing events across Metro Detroit, from intimate gatherings of ten to celebrations of two hundred. Every client works directly with Dalia from the first call through the last dance.
+              Twenty-plus years producing events across Metro Detroit, from intimate gatherings of ten to celebrations of two hundred. Every client works directly with their planner from the first call through the last dance.
             </p>
           </motion.div>
         </div>
@@ -190,8 +190,8 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <p className="text-ink/70 italic leading-relaxed mb-3">&ldquo;Working with Dalia was a blessing.&rdquo;</p>
-            <footer className="text-xs uppercase tracking-[0.15em] text-ink/40">Amanda T.</footer>
+            <p className="text-ink/70 italic leading-relaxed mb-3">&ldquo;Working with our planner was a blessing.&rdquo;</p>
+            <footer className="text-xs uppercase tracking-[0.15em] text-ink/40">Your Client Here</footer>
           </motion.blockquote>
           <motion.blockquote
             className="border-l-2 border-rust-500 pl-6"
@@ -201,7 +201,7 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <p className="text-ink/70 italic leading-relaxed mb-3">&ldquo;Attention to detail was incredible &mdash; I&rsquo;d recommend her 1000%.&rdquo;</p>
-            <footer className="text-xs uppercase tracking-[0.15em] text-ink/40">Sabrina K.</footer>
+            <footer className="text-xs uppercase tracking-[0.15em] text-ink/40">Your Client Here</footer>
           </motion.blockquote>
         </div>
       </section>
@@ -225,7 +225,7 @@ export default function Home() {
             transition={{ duration: 0.9, delay: 0.15 }}
             viewport={{ once: true }}
           >
-            Pick a package or just talk it through with Dalia first &mdash; either way, no call center, no hand-off.
+            Pick a package or just talk it through with us first &mdash; either way, no call center, no hand-off.
           </motion.p>
           <Link href="/contact" className="inline-block bg-cream text-ink px-8 py-3.5 text-xs uppercase tracking-[0.15em] hover:bg-rose-500 hover:text-cream transition-colors">
             Schedule Consultation

@@ -15,7 +15,14 @@
 !/vercel.json
 !/.gitignore
 
+!/dharma-brain/
+/dharma-brain/*
+!/dharma-brain/d2-events/
+!/dharma-brain/michigan-premier-events/
+
 # defense in depth inside the trees above
 **/.env
 **/.env.local
 **/node_modules/
+**/.next/
+**/.vercel/

@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+:root {
+  --background: #F7F5F1;
+  --foreground: #171614;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-roboto);
+  --font-display: var(--font-italiana);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-linen text-ink;
+  font-family: var(--font-roboto), 'Segoe UI', sans-serif;
+}
+
+* {
+  @apply transition-colors duration-200;
+}

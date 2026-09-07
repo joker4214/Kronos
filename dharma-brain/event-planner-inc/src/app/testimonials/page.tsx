@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 const testimonials = [
-  { name: 'Amanda T.', quote: 'Working with Dalia was a blessing. She thought of things we never would have, and the whole day ran without a single hiccup.' },
-  { name: 'Sabrina K.', quote: 'Her attention to detail was incredible from start to finish. I would recommend her 1000% to anyone planning a wedding.' },
+  { name: 'Your Client Here', quote: 'Working with our planner was a blessing. They thought of things we never would have, and the whole day ran without a single hiccup.' },
+  { name: 'Your Client Here', quote: 'Their attention to detail was incredible from start to finish. I would recommend them 1000% to anyone planning a wedding.' },
 ];
 
 export default function Testimonials() {
@@ -29,7 +29,7 @@ export default function Testimonials() {
           <div className="grid md:grid-cols-2 gap-x-12 gap-y-14 max-w-4xl mx-auto">
             {testimonials.map((testimonial, i) => (
               <motion.div
-                key={testimonial.name}
+                key={i}
                 className="border-l-2 border-rust-500 pl-8"
                 initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
