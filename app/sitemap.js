@@ -7,6 +7,7 @@ export default function sitemap() {
 
   const staticRoutes = [
     { path: '', priority: 1, changeFrequency: 'weekly' },
+    { path: '/portfolio', priority: 0.8, changeFrequency: 'monthly' },
     { path: '/style-picker', priority: 0.8, changeFrequency: 'monthly' },
     { path: '/tools', priority: 0.9, changeFrequency: 'monthly' },
     { path: '/checklist', priority: 0.9, changeFrequency: 'monthly' },

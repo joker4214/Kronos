@@ -777,3 +777,55 @@ export const THEME_PACKAGES = [
     products: ['Squeaky Toy', 'Treat Bundle'],
   },
 ];
+
+export const PORTFOLIO_SITES = [
+  {
+    id: 'event-planner-inc',
+    name: 'Full-Service Event Planner',
+    category: 'Wedding & event planning',
+    desc: 'Editorial, premium redesign — Italiana display serif, rust/rose/cream palette, portfolio and package pages.',
+    url: 'https://your-event-planning-business-name.vercel.app',
+  },
+  {
+    id: 'd2-events',
+    name: 'Boutique Event Studio',
+    category: 'Wedding & event planning',
+    desc: 'Teal-and-linen editorial site with packages, services, portfolio, and testimonials pages.',
+    url: 'https://your-event-demo.vercel.app',
+  },
+  {
+    id: 'michigan-premier-events',
+    name: 'Premier Events Co.',
+    category: 'Wedding & event planning',
+    desc: 'A second full-service event-planning redesign, distinct visual direction from the studio above.',
+    url: 'https://your-demo-premier-events.vercel.app',
+  },
+  {
+    id: 'house-of-pearls',
+    name: 'House of Pearls',
+    category: 'Weddings',
+    desc: 'Weddings-focused site with an about, services, and testimonials flow.',
+    url: 'https://your-wedding-event.vercel.app',
+  },
+  {
+    id: 'golf-course',
+    name: 'Championship Golf Course',
+    category: 'Golf & recreation',
+    desc: 'Full booking flow, live scorecard, league standings, event hosting, and an aerial course flyover.',
+    url: 'https://your-golf-course-name.vercel.app',
+  },
+  {
+    id: 'nicks-auto',
+    name: 'Auto Repair & Tire Shop',
+    category: 'Local service',
+    desc: 'Full-service auto shop site with a live repair-status lookup and staff dashboard demo.',
+    url: 'https://nicks-auto-demo.vercel.app',
+  },
+  {
+    id: 'icon-auto',
+    name: 'Auto Repair & Collision',
+    category: 'Local service',
+    desc: 'AAA-approved auto repair and collision shop site with reviews, quote form, and status lookup.',
+    url: 'https://icon-auto-demo.vercel.app',
+  },
+];
