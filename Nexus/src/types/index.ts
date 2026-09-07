@@ -64,3 +64,18 @@ export interface SystemLogEntry {
   message: string;
   level: "info" | "warn" | "error";
 }
+
+export type VoiceStatus =
+  | "offline"
+  | "idle"
+  | "listening"
+  | "thinking"
+  | "streaming"
+  | "speaking"
+  | "interrupted";
+
+export interface ConversationTurn {
+  id: number;
+  role: "user" | "assistant";
+  text: string;
+}

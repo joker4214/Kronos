@@ -27,3 +27,36 @@ body {
 canvas {
   touch-action: none;
 }
+
+@keyframes nexus-wake-ring {
+  0% {
+    transform: scale(0.3);
+    opacity: 0.55;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes nexus-word-in {
+  from {
+    opacity: 0;
+    filter: blur(6px);
+    transform: translateY(6px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0) scale(1);
+  }
+}
+
+.nexus-wake-ring {
+  animation: nexus-wake-ring 2.4s ease-out infinite;
+}
+
+.nexus-word {
+  display: inline-block;
+  animation: nexus-word-in 0.35s ease-out both;
+}

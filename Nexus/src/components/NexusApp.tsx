@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import { Scene } from "@/components/scene/Scene";
 import { HUD } from "@/components/hud/HUD";
 import { useHandTracking, bindGestureToStore } from "@/hooks/useHandTracking";
+import { useVoiceAssistant } from "@/hooks/useVoiceAssistant";
 import { useSystemStore } from "@/stores/useSystemStore";
 import { startAmbientPad } from "@/audio/AudioEngine";
 import type { GestureEvent } from "@/types";
@@ -29,6 +30,7 @@ export function NexusApp() {
   const pushLog = useSystemStore((s) => s.pushLog);
 
   useHandTracking((event: GestureEvent) => bindGestureToStore(event));
+  useVoiceAssistant();
 
   useEffect(() => {
     setGpu(detectGpu());
