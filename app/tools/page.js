@@ -5,7 +5,7 @@ import SeoAnalyzer from '@/components/dharma/SeoAnalyzer';
 import AnimatedFooter from '@/components/dharma/AnimatedFooter';
 
 export const metadata = {
-  title: "Free Shopify SEO Analyzer | Dharma's Esthetic Design Center",
+  title: "Free Shopify SEO Analyzer | Dharma's Esthetic Design",
   description:
     'Paste in your store URL and get an instant SEO scan — title tags, meta descriptions, mobile-friendliness, alt text, and more, each with a plain-English fix.',
   alternates: {

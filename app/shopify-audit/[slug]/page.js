@@ -12,7 +12,7 @@ export function generateMetadata({ params }) {
   const audit = AUDITS.find((a) => a.id === params.slug);
   if (!audit) return {};
   return {
-    title: `${audit.name} | Dharma's Esthetic Design Center`,
+    title: `${audit.name} | Dharma's Esthetic Design`,
     description: audit.intro,
     alternates: {
       canonical: `/shopify-audit/${params.slug}`,

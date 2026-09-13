@@ -9,7 +9,7 @@ export default function About() {
           <div className={styles.sectionEyebrow}>Who We Are</div>
           <h2>A boutique agency built for online store owners</h2>
           <p>
-            Dharma&apos;s Esthetic Design Center is a boutique digital agency built for online
+            Dharma&apos;s Esthetic Design is a boutique digital agency built for online
             store owners. We combine AI-powered content creation with real human expertise to
             deliver professional results — fast, affordable, and built around your brand.
           </p>

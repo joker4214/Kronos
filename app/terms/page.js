@@ -1,8 +1,8 @@
 import styles from '@/styles/dharma.module.css';
 
 export const metadata = {
-  title: 'Terms of Service | Dharma\'s Esthetic Design Center',
-  description: 'Terms of service for Dharma\'s Esthetic Design Center digital marketing and web design services.',
+  title: 'Terms of Service | Dharma\'s Esthetic Design',
+  description: 'Terms of service for Dharma\'s Esthetic Design digital marketing and web design services.',
   alternates: {
     canonical: '/terms',
   },
@@ -19,12 +19,12 @@ export default function TermsPage() {
       <div style={{ lineHeight: '1.8', color: '#3F434B' }}>
         <h2>1. Agreement to Terms</h2>
         <p>
-          By engaging Dharma's Esthetic Design Center ("we," "us," "our," or "Company") for services, you ("Client," "you," or "your") agree to be bound by these Terms of Service. If you do not agree to abide by the above, please do not use this service.
+          By engaging Dharma's Esthetic Design ("we," "us," "our," or "Company") for services, you ("Client," "you," or "your") agree to be bound by these Terms of Service. If you do not agree to abide by the above, please do not use this service.
         </p>
 
         <h2>2. Services Description</h2>
         <p>
-          Dharma's Esthetic Design Center provides digital marketing and web design services for online store owners, including but not limited to:
+          Dharma's Esthetic Design provides digital marketing and web design services for online store owners, including but not limited to:
         </p>
         <ul>
           <li>Content creation (social media copy, video commercials, blog posts)</li>

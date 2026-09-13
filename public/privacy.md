@@ -4,7 +4,7 @@
 
 ## 1. Introduction
 
-Dharma's Esthetic Design Center ("we," "us," "our," "Company") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard information when you visit our website and engage with our services.
+Dharma's Esthetic Design ("we," "us," "our," "Company") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard information when you visit our website and engage with our services.
 
 Please read this Privacy Policy carefully. If you do not agree with our policies and practices, please do not use our website or services.
 
@@ -177,7 +177,7 @@ We may update this Privacy Policy at any time. Changes will be effective immedia
 
 For questions about this Privacy Policy or to exercise your privacy rights, contact:
 
-**Dharma's Esthetic Design Center**
+**Dharma's Esthetic Design**
 Email: jason@dharmasemporium.com
 Website: dharmasestheticdesign.com
 

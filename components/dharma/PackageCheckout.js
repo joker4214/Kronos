@@ -38,7 +38,7 @@ export default function PackageCheckout({ packageId, packageName, price }) {
         actions.order.create({
           purchase_units: [
             {
-              description: `${packageName} package — Dharma's Esthetic Design Center`.slice(0, 127),
+              description: `${packageName} package — Dharma's Esthetic Design`.slice(0, 127),
               amount: { value: price.toFixed(2), currency_code: 'USD' },
             },
           ],

@@ -1,8 +1,8 @@
 import styles from '@/styles/dharma.module.css';
 
 export const metadata = {
-  title: 'Privacy Policy | Dharma\'s Esthetic Design Center',
-  description: 'Privacy policy for Dharma\'s Esthetic Design Center. Learn how we collect, use, and protect your personal information.',
+  title: 'Privacy Policy | Dharma\'s Esthetic Design',
+  description: 'Privacy policy for Dharma\'s Esthetic Design. Learn how we collect, use, and protect your personal information.',
   alternates: {
     canonical: '/privacy',
   },
@@ -19,7 +19,7 @@ export default function PrivacyPage() {
       <div style={{ lineHeight: '1.8', color: '#3F434B' }}>
         <h2>1. Introduction</h2>
         <p>
-          Dharma's Esthetic Design Center ("we," "us," "our," "Company") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard information when you visit our website and engage with our services.
+          Dharma's Esthetic Design ("we," "us," "our," "Company") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard information when you visit our website and engage with our services.
         </p>
         <p>
           Please read this Privacy Policy carefully. If you do not agree with our policies and practices, please do not use our website or services.
@@ -221,7 +221,7 @@ export default function PrivacyPage() {
         <h2>17. Contact Us</h2>
         <p>For questions about this Privacy Policy or to exercise your privacy rights, contact:</p>
         <p>
-          <strong>Dharma's Esthetic Design Center</strong><br />
+          <strong>Dharma's Esthetic Design</strong><br />
           Email: jason@dharmasestheticdesign.com<br />
           Website: dharmasestheticdesign.com
         </p>

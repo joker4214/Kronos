@@ -3,7 +3,7 @@ import Navbar from '@/components/dharma/Navbar';
 import ShopifyAudit from '@/components/dharma/ShopifyAudit';
 
 export const metadata = {
-  title: "Shopify Store Audit Packages | Dharma's Esthetic Design Center",
+  title: "Shopify Store Audit Packages | Dharma's Esthetic Design",
   description:
     'Basic, Standard, and Premium Shopify store audit packages — design, SEO, CRO, and analytics review with actionable recommendations.',
   alternates: {

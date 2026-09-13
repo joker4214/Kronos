@@ -13,7 +13,7 @@ export function generateMetadata({ params }) {
   const detail = PACKAGE_DETAILS[params.slug];
   if (!detail) return {};
   return {
-    title: `${detail.name} | Dharma's Esthetic Design Center`,
+    title: `${detail.name} | Dharma's Esthetic Design`,
     description: detail.intro,
     alternates: {
       canonical: `/packages/${params.slug}`,

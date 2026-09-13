@@ -5,7 +5,7 @@ import ThemeCustomizer from '@/components/dharma/ThemeCustomizer';
 import AnimatedFooter from '@/components/dharma/AnimatedFooter';
 
 export const metadata = {
-  title: "Style Picker | Dharma's Esthetic Design Center",
+  title: "Style Picker | Dharma's Esthetic Design",
   description:
     'Play with color and font packages for your Shopify store — pick a look, see it live, and tell us what you want built.',
   alternates: {

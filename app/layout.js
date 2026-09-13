@@ -19,7 +19,7 @@ const inter = Inter({
 
 export const metadata = {
   metadataBase: new URL('https://dharmasestheticdesign.com'),
-  title: "Shopify Store Design & Optimization Agency | Dharma's Esthetic Design Center",
+  title: "Shopify Store Design & Optimization Agency | Dharma's Esthetic Design",
   description:
     'Shopify store design, SEO & social media marketing for ecommerce stores. Custom web design, store optimization & content packages — one-time pricing, no retainers.',
   icons: {
@@ -29,12 +29,12 @@ export const metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: "Shopify Store Design & Optimization Agency | Dharma's Esthetic Design Center",
+    title: "Shopify Store Design & Optimization Agency | Dharma's Esthetic Design",
     description:
       'Shopify store design, SEO & social media marketing for ecommerce stores. Custom web design, store optimization & content packages — one-time pricing, no retainers.',
     url: 'https://dharmasestheticdesign.com',
     type: 'website',
-    images: [{ url: '/ded-post-offer.jpg', width: 1064, height: 895, alt: "Dharma's Esthetic Design Center — Starter Launch, Growth Bundle, Full Agency packages" }],
+    images: [{ url: '/ded-post-offer.jpg', width: 1064, height: 895, alt: "Dharma's Esthetic Design — Starter Launch, Growth Bundle, Full Agency packages" }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -44,7 +44,7 @@ export const metadata = {
 
 // GTM container "dharmasestheticdesign.com" (created 2026-08-17, under the
 // Dharma's Emporium GTM account). Holds the GA4 config tag (property
-// "Dharma's Esthetic Design Center", G-NPZS1Q0X64) and the Meta Pixel base
+// "Dharma's Esthetic Design", G-NPZS1Q0X64) and the Meta Pixel base
 // code as tags inside GTM instead of hardcoded here, so both fire together
 // without double-counting GA4. Covers this React app; the static AI
 // Business Empire funnel pages in public/ (quiz.html, starter-kit.html,

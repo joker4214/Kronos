@@ -4,11 +4,11 @@
 
 ## 1. Agreement to Terms
 
-By engaging Dharma's Esthetic Design Center ("we," "us," "our," or "Company") for services, you ("Client," "you," or "your") agree to be bound by these Terms of Service. If you do not agree to abide by the above, please do not use this service.
+By engaging Dharma's Esthetic Design ("we," "us," "our," or "Company") for services, you ("Client," "you," or "your") agree to be bound by these Terms of Service. If you do not agree to abide by the above, please do not use this service.
 
 ## 2. Services Description
 
-Dharma's Esthetic Design Center provides digital marketing and web design services for online store owners, including but not limited to:
+Dharma's Esthetic Design provides digital marketing and web design services for online store owners, including but not limited to:
 - Content creation (social media copy, video commercials, blog posts)
 - Store optimization and audits
 - Web design and development
@@ -88,7 +88,7 @@ We reserve the right to update these Terms of Service at any time. Changes will 
 
 ## 14. Governing Law
 
-These Terms of Service are governed by the laws of the jurisdiction in which Dharma's Esthetic Design Center operates, without regard to conflict of laws principles. Any disputes will be resolved through binding arbitration or small claims court, at Client's option.
+These Terms of Service are governed by the laws of the jurisdiction in which Dharma's Esthetic Design operates, without regard to conflict of laws principles. Any disputes will be resolved through binding arbitration or small claims court, at Client's option.
 
 ## 15. Contact
 
