@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import fs from 'fs/promises';
 import path from 'path';
+import { recordClient } from '@/app/lib/crm';
 
 // Same append-only JSONL pattern as quiz-lead, gumroad-ping, and
 // alacarte-order. Trusts client-reported capture details (no server-side
@@ -26,6 +27,20 @@ export async function POST(request) {
     const entry = { orderId, packageId, packageName, total, payerEmail, payerName, ts: new Date().toISOString() };
     await fs.mkdir(path.dirname(ORDERS_FILE), { recursive: true });
     await fs.appendFile(ORDERS_FILE, JSON.stringify(entry) + '\n', 'utf8');
+
+    // CRM sync (System 2) -- a real purchase makes them a client, best-effort,
+    // never blocks the JSONL-backed response above.
+    try {
+      if (payerEmail) {
+        await recordClient({
+          email: payerEmail,
+          name: payerName,
+          notes: `Package order ${orderId}: ${packageName || packageId} -- \$${total}`,
+        });
+      }
+    } catch (crmError) {
+      console.error('CRM sync failed for package order (JSONL log still succeeded):', crmError);
+    }
 
     return NextResponse.json({ ok: true });
   } catch (error) {

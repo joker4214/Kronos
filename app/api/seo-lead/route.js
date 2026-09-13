@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import fs from 'fs/promises';
 import path from 'path';
+import { recordLead } from '@/app/lib/crm';
 
 // Same append-only JSONL pattern as alacarte-order/quiz-lead. This is the
 // SEO Analyzer's lead capture: gates the full fix-it list behind an email,
@@ -25,6 +26,17 @@ export async function POST(request) {
     const entry = { email, scannedUrl, score, ts: new Date().toISOString(), source: 'seo-analyzer' };
     await fs.mkdir(path.dirname(LEADS_FILE), { recursive: true });
     await fs.appendFile(LEADS_FILE, JSON.stringify(entry) + '\n', 'utf8');
+
+    // CRM sync (System 2) -- best-effort, never blocks the JSONL-backed response above.
+    try {
+      await recordLead({
+        email,
+        source: 'seo-analyzer',
+        message: `Scanned ${scannedUrl}, score ${score}`,
+      });
+    } catch (crmError) {
+      console.error('CRM sync failed for SEO analyzer lead (JSONL log still succeeded):', crmError);
+    }
 
     return NextResponse.json({ ok: true });
   } catch (error) {
