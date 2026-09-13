@@ -2,15 +2,23 @@
 
 import { motion } from 'framer-motion';
 import { useState, useCallback } from 'react';
+import { usePathname } from 'next/navigation';
 import styles from '@/styles/dharma.module.css';
 import Link from 'next/link';
 import { FaInstagram, FaTiktok, FaFacebook, FaWhatsapp } from 'react-icons/fa';
 import { smoothScrollToId } from './scrollUtils';
 import LearnLibrary from './LearnLibrary';
 
+// Section anchors (#about, #packages, #contact) only exist in the DOM on
+// the homepage. On any other page they must be real links back to "/#id"
+// so Next.js navigates home and then jumps to the section, instead of
+// silently no-oping against an element that isn't on the current page.
 const AnimatedLink = ({ href, children, className }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const pathname = usePathname();
+  const onHomepage = pathname === '/';
   const isAnchor = href.startsWith('#');
+  const resolvedHref = isAnchor && !onHomepage ? `/${href}` : href;
 
   return (
     <motion.div
@@ -25,8 +33,8 @@ const AnimatedLink = ({ href, children, className }) => {
         transition={{ duration: 0.3 }}
       />
       <Link
-        href={href}
-        onClick={isAnchor ? (e) => smoothScrollToId(e, href.slice(1)) : undefined}
+        href={resolvedHref}
+        onClick={isAnchor && onHomepage ? (e) => smoothScrollToId(e, href.slice(1)) : undefined}
         className={`${styles.footerLink} ${className || ''}`}
       >
         <span style={{ position: 'relative', zIndex: 2 }}>{children}</span>
@@ -73,7 +81,7 @@ export default function AnimatedFooter() {
     { label: 'Terms', href: '/terms' },
   ];
 
-  const companyDescription = 'Dharma\'s Esthetic Design Center transforms Shopify stores into recognizable brands through AI-powered content creation and expert web design. We combine cutting-edge technology with human expertise to deliver professional results fast.';
+  const companyDescription = 'Dharma\'s Esthetic Design transforms Shopify stores into recognizable brands through AI-powered content creation and expert web design. We combine cutting-edge technology with human expertise to deliver professional results fast.';
 
   const currentYear = new Date().getFullYear();
 
@@ -160,7 +168,7 @@ export default function AnimatedFooter() {
           viewport={{ once: false }}
         >
           <p>
-            © {currentYear} Dharma&apos;s Esthetic Design Center. All rights reserved.
+            © {currentYear} Dharma&apos;s Esthetic Design. All rights reserved.
           </p>
         </motion.div>
       </div>

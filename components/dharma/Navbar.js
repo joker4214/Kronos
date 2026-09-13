@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import styles from '@/styles/dharma.module.css';
 import { smoothScrollToId } from './scrollUtils';
@@ -43,18 +44,35 @@ const NAV_LINKS = [
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const onHomepage = pathname === '/';
 
   const navigate = (e, id) => {
     setMenuOpen(false);
     smoothScrollToId(e, id);
   };
 
-  const renderLink = (link, className) =>
-    link.page ? (
-      <Link key={link.href} href={link.href} className={className} onClick={() => setMenuOpen(false)}>
-        {link.label}
-      </Link>
-    ) : (
+  // Section anchors (#about, #packages, ...) only exist in the DOM on the
+  // homepage. On any other page (style picker, free tools, portfolio) they
+  // must be real links back to "/#id" so Next.js navigates home and then
+  // jumps to the section, instead of silently no-oping against an element
+  // that isn't on the current page.
+  const renderLink = (link, className) => {
+    if (link.page) {
+      return (
+        <Link key={link.href} href={link.href} className={className} onClick={() => setMenuOpen(false)}>
+          {link.label}
+        </Link>
+      );
+    }
+    if (!onHomepage) {
+      return (
+        <Link key={link.href} href={`/${link.href}`} className={className} onClick={() => setMenuOpen(false)}>
+          {link.label}
+        </Link>
+      );
+    }
+    return (
       <a
         key={link.href}
         href={link.href}
@@ -64,11 +82,20 @@ export default function Navbar() {
         {link.label}
       </a>
     );
+  };
+
+  const logoProps = onHomepage
+    ? { href: '#top', onClick: (e) => navigate(e, 'top') }
+    : { href: '/#top' };
+
+  const contactProps = onHomepage
+    ? { href: '#contact', onClick: (e) => navigate(e, 'contact') }
+    : { href: '/#contact' };
 
   return (
     <header className={styles.navbar}>
       <nav className={styles.navContent}>
-        <a href="#top" className={styles.logo} onClick={(e) => navigate(e, 'top')}>
+        <a className={styles.logo} {...logoProps}>
           <LogoMark />
           <span>
             DHARMA&apos;S <span className={styles.logoAccent}>Esthetic</span>
@@ -77,7 +104,7 @@ export default function Navbar() {
 
         <div className={styles.navLinks}>
           {NAV_LINKS.map((link) => renderLink(link, styles.navLink))}
-          <a href="#contact" onClick={(e) => navigate(e, 'contact')} className={styles.navCta}>
+          <a className={styles.navCta} {...contactProps}>
             Contact
           </a>
         </div>
@@ -97,9 +124,8 @@ export default function Navbar() {
         <div className={styles.navMobileMenu}>
           {NAV_LINKS.map((link) => renderLink(link, styles.navMobileLink))}
           <a
-            href="#contact"
-            onClick={(e) => navigate(e, 'contact')}
             className={`${styles.navCta} ${styles.navMobileCta}`}
+            {...contactProps}
           >
             Contact
           </a>
