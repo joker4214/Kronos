@@ -1,0 +1,243 @@
+.page {
+  min-height: 100vh;
+  background: var(--charcoal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 20px;
+}
+
+.card {
+  max-width: 620px;
+  width: 100%;
+  text-align: center;
+}
+
+.resultsCard {
+  max-width: 780px;
+  width: 100%;
+}
+
+.eyebrow {
+  color: var(--accent-light);
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.headline {
+  font-family: var(--font-display);
+  color: var(--white);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+
+.subhead {
+  color: var(--gray-400);
+  font-size: 1.05rem;
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+
+.teaserList {
+  list-style: none;
+  text-align: left;
+  max-width: 460px;
+  margin: 0 auto 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.teaserList li {
+  color: var(--white);
+  font-size: 0.95rem;
+  padding-left: 28px;
+  position: relative;
+}
+
+.teaserList li::before {
+  content: '✅';
+  position: absolute;
+  left: 0;
+}
+
+.form {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.input {
+  flex: 1;
+  min-width: 240px;
+  max-width: 320px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 4px;
+  padding: 14px 16px;
+  color: var(--white);
+  font-size: 1rem;
+}
+
+.input::placeholder {
+  color: var(--gray-400);
+}
+
+.cta {
+  background: var(--accent);
+  color: var(--white);
+  border: none;
+  padding: 14px 30px;
+  border-radius: 2px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  white-space: nowrap;
+}
+
+.cta:hover:not(:disabled) {
+  background: var(--accent-light);
+  transform: translateY(-1px);
+}
+
+.cta:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.errorText {
+  color: #ff8a8a;
+  margin-bottom: 12px;
+}
+
+.finePrint {
+  color: var(--gray-400);
+  font-size: 0.8rem;
+}
+
+.checklistGrid {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.checklistItem {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 24px 26px;
+  text-align: left;
+}
+
+.itemHead {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.itemNumber {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, var(--accent), var(--accent-light));
+  color: var(--white);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.itemTitle {
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.itemQ {
+  color: var(--accent-light);
+  font-size: 0.92rem;
+  margin-top: 2px;
+}
+
+.itemWhy,
+.itemFix {
+  color: var(--gray-400);
+  font-size: 0.92rem;
+  margin-top: 8px;
+  line-height: 1.55;
+}
+
+.itemWhy strong,
+.itemFix strong {
+  color: var(--white);
+}
+
+.tripwire {
+  background: rgba(47, 95, 255, 0.08);
+  border: 1px solid rgba(47, 95, 255, 0.25);
+  border-radius: 12px;
+  padding: 36px 30px;
+  text-align: center;
+}
+
+.tripwireHeadline {
+  font-family: var(--font-display);
+  color: var(--white);
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.tripwireBody {
+  color: var(--gray-400);
+  margin-bottom: 18px;
+}
+
+.tripwireList {
+  list-style: none;
+  text-align: left;
+  max-width: 400px;
+  margin: 0 auto 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tripwireList li {
+  color: var(--white);
+  font-size: 0.95rem;
+  padding-left: 28px;
+  position: relative;
+}
+
+.tripwireList li::before {
+  content: '✅';
+  position: absolute;
+  left: 0;
+}
+
+.tripwireNote {
+  color: var(--accent-light);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 560px) {
+  .form {
+    flex-direction: column;
+  }
+
+  .input {
+    max-width: none;
+  }
+}

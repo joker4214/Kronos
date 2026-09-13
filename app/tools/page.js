@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from '@/styles/dharma.module.css';
 import Navbar from '@/components/dharma/Navbar';
 import BackButton from '@/components/dharma/BackButton';
@@ -32,6 +33,13 @@ export default function ToolsPage() {
           </div>
 
           <SeoAnalyzer />
+
+          <p className={styles.pkgLink} style={{ textAlign: 'center', marginTop: '48px' }}>
+            Prefer a written checklist instead?{' '}
+            <Link href="/checklist" className={styles.pkgLink}>
+              Get the free Shopify Invisibility Checklist
+            </Link>
+          </p>
         </div>
       </main>
       <AnimatedFooter />
