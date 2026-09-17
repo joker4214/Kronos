@@ -2,11 +2,16 @@
 Transforms a raw Buffer posts export (list of {id, platform, sentAt, text,
 assetType, source, metrics}) into the aggregated dataset the dashboard reads.
 
-Usage: python transform.py <raw_posts.json> <output/dashboard-data.json>
+Usage: python transform.py <raw_posts.json> <output/dashboard-data.json> [ga4_traffic.json]
 
 The raw input is produced each refresh cycle by pulling every sent post via
 the Buffer MCP tools (list_posts with includeMetrics=true), since Buffer's
 API is only reachable through that MCP session, not from this script directly.
+
+The optional third argument is the output of fetch_ga4.py -- site-wide
+traffic by hour, kept separate from the per-post Buffer metrics above since
+posts don't carry UTM tags yet, so GA4 traffic can't be attributed to any
+one post, only to the site as a whole.
 """
 import json
 import sys
@@ -63,8 +68,14 @@ def engagement_score(metrics):
 
 def main():
     raw_path, out_path = sys.argv[1], sys.argv[2]
+    ga4_path = sys.argv[3] if len(sys.argv) > 3 else None
     with open(raw_path, encoding="utf-8") as f:
         posts = json.load(f)
+
+    site_traffic = None
+    if ga4_path:
+        with open(ga4_path, encoding="utf-8") as f:
+            site_traffic = json.load(f)
 
     for p in posts:
         p["contentType"] = classify_content_type(p)
@@ -131,6 +142,7 @@ def main():
         "platformSummary": platform_summary,
         "hourlyTotals": hourly_totals,
         "posts": posts_sorted,
+        "siteTraffic": site_traffic,
     }
 
     with open(out_path, "w", encoding="utf-8") as f:

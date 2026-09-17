@@ -33,6 +33,20 @@ export type HourlyTotal = {
   deltaVsAvg: number | null;
 };
 
+export type SiteTrafficHour = {
+  hour: number;
+  sessions: number;
+  pageviews: number;
+  deltaVsAvg: number | null;
+};
+
+export type SiteTraffic = {
+  propertyId: string;
+  dateRangeDays: number;
+  avgSessionsPerActiveHour: number;
+  hourly: SiteTrafficHour[];
+};
+
 export type DashboardData = {
   generatedAt: string;
   postCount: number;
@@ -40,4 +54,5 @@ export type DashboardData = {
   platformSummary: Record<Platform, PlatformSummary>;
   hourlyTotals: HourlyTotal[];
   posts: Post[];
+  siteTraffic: SiteTraffic | null;
 };

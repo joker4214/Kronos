@@ -2,6 +2,7 @@ import dashboardData from "@/data/dashboard-data.json";
 import type { DashboardData, Platform } from "@/data/types";
 import HourlyChart from "./HourlyChart";
 import PlatformCard from "./PlatformCard";
+import SiteTrafficChart from "./SiteTrafficChart";
 
 const data = dashboardData as unknown as DashboardData;
 
@@ -45,6 +46,21 @@ export default function Home() {
         </p>
         <HourlyChart data={data.hourlyTotals} avg={data.avgEngagementPerActiveHour} />
       </div>
+
+      {data.siteTraffic && (
+        <div className="bg-[var(--surface)] border border-white/10 rounded-lg p-6 mb-8">
+          <div className="flex items-baseline justify-between mb-1">
+            <h2 className="font-display font-bold text-lg">Site Traffic by Hour (GA4)</h2>
+          </div>
+          <p className="text-xs text-[var(--gray-400)] mb-4">
+            Real sessions to dharmasestheticdesign.com from Google Analytics, last {data.siteTraffic.dateRangeDays} days
+            — <strong className="text-[var(--gray-100)]">site-wide, not attributed to individual posts.</strong> Posts
+            don&apos;t carry UTM tracking links yet, so this can&apos;t be split out per-post the way the chart above
+            is — it shows when the site gets visited overall, not which post drove it.
+          </p>
+          <SiteTrafficChart data={data.siteTraffic.hourly} avg={data.siteTraffic.avgSessionsPerActiveHour} />
+        </div>
+      )}
 
       <div className="flex flex-col lg:flex-row gap-5">
         {PLATFORMS.map((platform) => (

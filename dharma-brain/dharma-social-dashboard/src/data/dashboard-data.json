@@ -1,31 +1,31 @@
 {
-  "generatedAt": "2026-09-16T02:43:13.684547+00:00",
-  "postCount": 49,
-  "avgEngagementPerActiveHour": 0.33,
+  "generatedAt": "2026-09-17T02:50:13.923130+00:00",
+  "postCount": 59,
+  "avgEngagementPerActiveHour": 0.62,
   "platformSummary": {
-    "tiktok": {
-      "postCount": 10,
-      "engagement": 4,
-      "byContentType": {
-        "video": 3,
-        "still": 7
-      }
-    },
     "instagram": {
-      "postCount": 21,
+      "postCount": 26,
       "engagement": 0,
       "byContentType": {
+        "poster": 9,
         "video": 4,
-        "still": 13,
-        "poster": 4
+        "still": 13
       }
     },
     "facebook": {
-      "postCount": 18,
+      "postCount": 23,
       "engagement": 0,
       "byContentType": {
-        "still": 12,
-        "poster": 6
+        "poster": 11,
+        "still": 12
+      }
+    },
+    "tiktok": {
+      "postCount": 10,
+      "engagement": 10,
+      "byContentType": {
+        "video": 3,
+        "still": 7
       }
     }
   },
@@ -34,13 +34,13 @@
       "hour": 0,
       "postCount": 1,
       "engagement": 0,
-      "deltaVsAvg": -0.33
+      "deltaVsAvg": -0.62
     },
     {
       "hour": 1,
       "postCount": 2,
       "engagement": 0,
-      "deltaVsAvg": -0.33
+      "deltaVsAvg": -0.62
     },
     {
       "hour": 2,
@@ -64,7 +64,7 @@
       "hour": 5,
       "postCount": 2,
       "engagement": 0,
-      "deltaVsAvg": -0.33
+      "deltaVsAvg": -0.62
     },
     {
       "hour": 6,
@@ -76,7 +76,7 @@
       "hour": 7,
       "postCount": 1,
       "engagement": 0,
-      "deltaVsAvg": -0.33
+      "deltaVsAvg": -0.62
     },
     {
       "hour": 8,
@@ -86,33 +86,33 @@
     },
     {
       "hour": 9,
-      "postCount": 6,
+      "postCount": 8,
       "engagement": 0,
-      "deltaVsAvg": -0.33
+      "deltaVsAvg": -0.62
     },
     {
       "hour": 10,
-      "postCount": 0,
+      "postCount": 2,
       "engagement": 0,
-      "deltaVsAvg": null
+      "deltaVsAvg": -0.62
     },
     {
       "hour": 11,
-      "postCount": 0,
+      "postCount": 2,
       "engagement": 0,
-      "deltaVsAvg": null
+      "deltaVsAvg": -0.62
     },
     {
       "hour": 12,
-      "postCount": 0,
+      "postCount": 2,
       "engagement": 0,
-      "deltaVsAvg": null
+      "deltaVsAvg": -0.62
     },
     {
       "hour": 13,
-      "postCount": 0,
+      "postCount": 2,
       "engagement": 0,
-      "deltaVsAvg": null
+      "deltaVsAvg": -0.62
     },
     {
       "hour": 14,
@@ -124,37 +124,37 @@
       "hour": 15,
       "postCount": 8,
       "engagement": 0,
-      "deltaVsAvg": -0.33
+      "deltaVsAvg": -0.62
     },
     {
       "hour": 16,
       "postCount": 8,
       "engagement": 0,
-      "deltaVsAvg": -0.33
+      "deltaVsAvg": -0.62
     },
     {
       "hour": 17,
       "postCount": 4,
       "engagement": 1,
-      "deltaVsAvg": 0.67
+      "deltaVsAvg": 0.38
     },
     {
       "hour": 18,
       "postCount": 2,
       "engagement": 1,
-      "deltaVsAvg": 0.67
+      "deltaVsAvg": 0.38
     },
     {
       "hour": 19,
       "postCount": 6,
       "engagement": 0,
-      "deltaVsAvg": -0.33
+      "deltaVsAvg": -0.62
     },
     {
       "hour": 20,
       "postCount": 6,
-      "engagement": 2,
-      "deltaVsAvg": 1.67
+      "engagement": 8,
+      "deltaVsAvg": 7.38
     },
     {
       "hour": 21,
@@ -166,7 +166,7 @@
       "hour": 22,
       "postCount": 3,
       "engagement": 0,
-      "deltaVsAvg": -0.33
+      "deltaVsAvg": -0.62
     },
     {
       "hour": 23,
@@ -177,47 +177,45 @@
   ],
   "posts": [
     {
-      "id": "6aa8b2cb7a172fa74f8614ff",
+      "id": "6aa9f95981d74a10250a8684",
       "platform": "instagram",
-      "sentAt": "2026-09-15T23:03:34.651Z",
-      "text": "Every store owner's climbing the same hill. We help you win it.\n\nDharmasEsthetic",
-      "assetType": "video",
-      "source": "https://tempfile.redpandaai.co/kieai/11641115/videos/dharma_hill_fight_final.mp4",
+      "sentAt": "2026-09-16T17:02:22.573Z",
+      "text": "Traffic is easy. Converting it is the job.\n\nGetting people to your store isn't the hard part anymore \u2014 getting them to buy is. These add-ons fix the backend that's quietly costing you sales.\n\n\u2705 Store performance audit & fixes\n\u2705 Product listing optimization\n\u2705 GA4 setup\n\u2705 On-page SEO\n\nMix and match any add-on to build your bundle.\n\nLink in bio to get started.\n\n#DharmasEmporium #ShopifyStore #EcommerceMarketing #ShopifyTips #SmallBusinessMarketing #ContentStrategy",
+      "assetType": "image",
+      "source": "https://dharma-marketing-assets.vercel.app/store-growth.png",
       "metrics": {},
-      "contentType": "video",
-      "hourLocal": 19,
+      "contentType": "poster",
+      "hourLocal": 13,
       "engagement": 0,
       "displayMetrics": []
     },
     {
-      "id": "6aa8b2cda8c36ff9777720b9",
-      "platform": "tiktok",
-      "sentAt": "2026-09-15T23:01:47.959Z",
-      "text": "Every store owner's climbing the same hill. We help you win it.\n\nDharmasEsthetic",
-      "assetType": "video",
-      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6aa8b2cda8c36ff9777720b9_video.mp4",
+      "id": "6aa9f9568df35c613718d785",
+      "platform": "facebook",
+      "sentAt": "2026-09-16T17:01:40.540Z",
+      "text": "Traffic is easy. Converting it is the job.\n\nGetting people to your store isn't the hard part anymore \u2014 getting them to buy is. These add-ons fix the backend that's quietly costing you sales.\n\n\u2705 Store performance audit & fixes\n\u2705 Product listing optimization\n\u2705 GA4 setup\n\u2705 On-page SEO\n\nMix and match any add-on to build your bundle.\n\nLink in bio to get started.\n\n#DharmasEmporium #ShopifyStore #EcommerceMarketing #ShopifyTips #SmallBusinessMarketing #ContentStrategy",
+      "assetType": "image",
+      "source": "https://dharma-marketing-assets.vercel.app/store-growth.png",
       "metrics": {
         "reactions": 0,
         "comments": 0,
         "engagementRate": 0,
-        "views": 0,
+        "impressions": 0,
         "shares": 0,
-        "reach": 0,
-        "totalTimeWatched": 0,
-        "averageTimeWatched": 0
+        "clicks": 0
       },
-      "contentType": "video",
-      "hourLocal": 19,
+      "contentType": "poster",
+      "hourLocal": 13,
       "engagement": 0,
       "displayMetrics": [
         {
-          "key": "reach",
-          "label": "Reach",
+          "key": "impressions",
+          "label": "Impressions",
           "value": 0
         },
         {
-          "key": "views",
-          "label": "Views",
+          "key": "clicks",
+          "label": "Clicks",
           "value": 0
         },
         {
@@ -239,57 +237,242 @@
           "key": "engagementRate",
           "label": "Eng. Rate",
           "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6aa9f94cc9dce8b453160c1a",
+      "platform": "instagram",
+      "sentAt": "2026-09-16T16:05:33.699Z",
+      "text": "Your product deserves more than a photo.\n\nA static image only tells half the story. A 10-second AI-generated commercial, built around your product and brand, does the rest \u2014 ready to run as an ad or a post.\n\n\u2705 10-second commercial, built for your brand\n\u2705 3\u20135 day delivery\n\u2705 Pairs perfectly with TikTok & Facebook ad copy\n\nStarting at $300.\n\nBook a free consult to get started.\n\n#DharmasEmporium #ShopifyStore #EcommerceMarketing #ShopifyTips #SmallBusinessMarketing #ContentStrategy",
+      "assetType": "image",
+      "source": "https://dharma-marketing-assets.vercel.app/ai-video.png",
+      "metrics": {},
+      "contentType": "poster",
+      "hourLocal": 12,
+      "engagement": 0,
+      "displayMetrics": []
+    },
+    {
+      "id": "6aa9f949501861120db3d04e",
+      "platform": "facebook",
+      "sentAt": "2026-09-16T16:01:41.798Z",
+      "text": "Your product deserves more than a photo.\n\nA static image only tells half the story. A 10-second AI-generated commercial, built around your product and brand, does the rest \u2014 ready to run as an ad or a post.\n\n\u2705 10-second commercial, built for your brand\n\u2705 3\u20135 day delivery\n\u2705 Pairs perfectly with TikTok & Facebook ad copy\n\nStarting at $300.\n\nBook a free consult to get started.\n\n#DharmasEmporium #ShopifyStore #EcommerceMarketing #ShopifyTips #SmallBusinessMarketing #ContentStrategy",
+      "assetType": "image",
+      "source": "https://dharma-marketing-assets.vercel.app/ai-video.png",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 0,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "poster",
+      "hourLocal": 12,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 0
         },
         {
-          "key": "averageTimeWatched",
-          "label": "Avg Watch (s)",
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
           "value": 0
         }
       ]
     },
     {
-      "id": "6aa89ecabb9b8eb9659c014b",
+      "id": "6aa9f93fbcef7237b5a9738c",
       "platform": "instagram",
-      "sentAt": "2026-09-15T13:02:15.897Z",
-      "text": "Store not selling? We sent a ship to go find out why. \ud83d\ude80 Get a real Shopify Store",
-      "assetType": "video",
-      "source": "https://tempfile.redpandaai.co/kieai/11641115/videos/scifi-store-quest-with-overlay.mp4",
+      "sentAt": "2026-09-16T15:03:37.513Z",
+      "text": "53% of visitors leave a store that takes more than 3 seconds to load.\n\nIf you don't know what's slowing your store down, you can't fix it. Our audit tells you exactly what's costing you sales \u2014 and exactly how to fix it.\n\n\u2705 Full design, speed & SEO review\n\u2705 Clear, prioritized fix list\n\u2705 Delivered in days, not weeks\n\nStarting at $200, one-time.\n\nDM us to book your audit.\n\n#DharmasEmporium #ShopifyStore #EcommerceMarketing #ShopifyTips #SmallBusinessMarketing #ContentStrategy",
+      "assetType": "image",
+      "source": "https://dharma-marketing-assets.vercel.app/store-audit.png",
       "metrics": {},
-      "contentType": "video",
+      "contentType": "poster",
+      "hourLocal": 11,
+      "engagement": 0,
+      "displayMetrics": []
+    },
+    {
+      "id": "6aa9f93dbcef7237b5a9731a",
+      "platform": "facebook",
+      "sentAt": "2026-09-16T15:01:50.462Z",
+      "text": "53% of visitors leave a store that takes more than 3 seconds to load.\n\nIf you don't know what's slowing your store down, you can't fix it. Our audit tells you exactly what's costing you sales \u2014 and exactly how to fix it.\n\n\u2705 Full design, speed & SEO review\n\u2705 Clear, prioritized fix list\n\u2705 Delivered in days, not weeks\n\nStarting at $200, one-time.\n\nDM us to book your audit.\n\n#DharmasEmporium #ShopifyStore #EcommerceMarketing #ShopifyTips #SmallBusinessMarketing #ContentStrategy",
+      "assetType": "image",
+      "source": "https://dharma-marketing-assets.vercel.app/store-audit.png",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 0,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "poster",
+      "hourLocal": 11,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 0
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6aa9f93381d74a10250a7d15",
+      "platform": "instagram",
+      "sentAt": "2026-09-16T14:02:54.788Z",
+      "text": "Your store looks amazing. So why isn't anyone buying?\n\nSometimes it's not the product \u2014 it's the site. Slow load times, a homepage that doesn't convert, a mobile experience that feels like an afterthought.\n\n\u2705 Complete store setup\n\u2705 Theme customization\n\u2705 Mobile responsive design\n\u2705 Store speed optimization\n\nA custom site that looks as good as your product.\n\nComment \"SITE\" and we'll walk you through it.\n\n#DharmasEmporium #ShopifyStore #EcommerceMarketing #ShopifyTips #SmallBusinessMarketing #ContentStrategy",
+      "assetType": "image",
+      "source": "https://dharma-marketing-assets.vercel.app/web-design.png",
+      "metrics": {},
+      "contentType": "poster",
+      "hourLocal": 10,
+      "engagement": 0,
+      "displayMetrics": []
+    },
+    {
+      "id": "6aa9f930bcef7237b5a97181",
+      "platform": "facebook",
+      "sentAt": "2026-09-16T14:01:54.870Z",
+      "text": "Your store looks amazing. So why isn't anyone buying?\n\nSometimes it's not the product \u2014 it's the site. Slow load times, a homepage that doesn't convert, a mobile experience that feels like an afterthought.\n\n\u2705 Complete store setup\n\u2705 Theme customization\n\u2705 Mobile responsive design\n\u2705 Store speed optimization\n\nA custom site that looks as good as your product.\n\nComment \"SITE\" and we'll walk you through it.\n\n#DharmasEmporium #ShopifyStore #EcommerceMarketing #ShopifyTips #SmallBusinessMarketing #ContentStrategy",
+      "assetType": "image",
+      "source": "https://dharma-marketing-assets.vercel.app/web-design.png",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 0,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "poster",
+      "hourLocal": 10,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 0
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6aa9f925501861120db3cc66",
+      "platform": "instagram",
+      "sentAt": "2026-09-16T13:01:29.244Z",
+      "text": "You built the store. We build the audience.\n\nMost Shopify store owners are invisible online \u2014 not because their products aren't good, but because consistent, professional content takes time they don't have.\n\n\u2705 TikTok & Facebook ad copy\n\u2705 Branded photo placements\n\u2705 AI video commercials\n\u2705 GA4 setup & on-page SEO\n\nAll done for you. Fast. Professional. Built around your brand.\n\nLink in bio to see our packages \u2014 starting at $650.\n\n#DharmasEmporium #ShopifyStore #EcommerceMarketing #ShopifyTips #SmallBusinessMarketing #ContentStrategy",
+      "assetType": "image",
+      "source": "https://dharma-marketing-assets.vercel.app/content-growth.png",
+      "metrics": {},
+      "contentType": "poster",
       "hourLocal": 9,
       "engagement": 0,
       "displayMetrics": []
     },
     {
-      "id": "6a7cb5bf7a5ea251d8dff321",
-      "platform": "tiktok",
-      "sentAt": "2026-09-15T00:23:41.512Z",
-      "text": "POV: you spent $0 on marketing and expected customers to just show up.\n\nDharma g",
+      "id": "6aa9f9228df35c613718ce00",
+      "platform": "facebook",
+      "sentAt": "2026-09-16T13:01:13.854Z",
+      "text": "You built the store. We build the audience.\n\nMost Shopify store owners are invisible online \u2014 not because their products aren't good, but because consistent, professional content takes time they don't have.\n\n\u2705 TikTok & Facebook ad copy\n\u2705 Branded photo placements\n\u2705 AI video commercials\n\u2705 GA4 setup & on-page SEO\n\nAll done for you. Fast. Professional. Built around your brand.\n\nLink in bio to see our packages \u2014 starting at $650.\n\n#DharmasEmporium #ShopifyStore #EcommerceMarketing #ShopifyTips #SmallBusinessMarketing #ContentStrategy",
       "assetType": "image",
-      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6a7cb5bf7a5ea251d8dff321_photo.jpg",
+      "source": "https://dharma-marketing-assets.vercel.app/content-growth.png",
       "metrics": {
         "reactions": 0,
         "comments": 0,
         "engagementRate": 0,
-        "views": 1,
+        "impressions": 0,
         "shares": 0,
-        "reach": 0,
-        "totalTimeWatched": 0,
-        "averageTimeWatched": 0.62
+        "clicks": 0
       },
-      "contentType": "still",
-      "hourLocal": 20,
+      "contentType": "poster",
+      "hourLocal": 9,
       "engagement": 0,
       "displayMetrics": [
         {
-          "key": "reach",
-          "label": "Reach",
+          "key": "impressions",
+          "label": "Impressions",
           "value": 0
         },
         {
-          "key": "views",
-          "label": "Views",
-          "value": 1
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
         },
         {
           "key": "reactions",
@@ -310,21 +493,16 @@
           "key": "engagementRate",
           "label": "Eng. Rate",
           "value": 0
-        },
-        {
-          "key": "averageTimeWatched",
-          "label": "Avg Watch (s)",
-          "value": 0.62
         }
       ]
     },
     {
-      "id": "6aa88cd1a56f2b823c93b39d",
+      "id": "6aa8b2cb7a172fa74f8614ff",
       "platform": "instagram",
-      "sentAt": "2026-09-15T00:19:59.223Z",
-      "text": "Store's set up but nothing's selling? We sent a dog to go find out why. \ud83d\udc3e Get a ",
+      "sentAt": "2026-09-15T23:03:34.651Z",
+      "text": "Every store owner's climbing the same hill. We help you win it.\n\nDharmasEstheticDesign.com",
       "assetType": "video",
-      "source": "https://tempfile.redpandaai.co/kieai/11641115/videos/dog-detective-final.mp4",
+      "source": "https://tempfile.redpandaai.co/kieai/11641115/videos/dharma_hill_fight_final.mp4",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -336,7 +514,7 @@
         "reach": 0
       },
       "contentType": "video",
-      "hourLocal": 20,
+      "hourLocal": 19,
       "engagement": 0,
       "displayMetrics": [
         {
@@ -377,25 +555,25 @@
       ]
     },
     {
-      "id": "6aa88cd2ac4a884f436b5cf1",
+      "id": "6aa8b2cda8c36ff9777720b9",
       "platform": "tiktok",
-      "sentAt": "2026-09-15T00:18:18.803Z",
-      "text": "Store's set up but nothing's selling? We sent a dog to go find out why. \ud83d\udc3e Get a ",
+      "sentAt": "2026-09-15T23:01:47.959Z",
+      "text": "Every store owner's climbing the same hill. We help you win it.\n\nDharmasEstheticDesign.com",
       "assetType": "video",
-      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6aa88cd2ac4a884f436b5cf1_video.mp4",
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6aa8b2cda8c36ff9777720b9_video.mp4",
       "metrics": {
-        "reactions": 2,
+        "reactions": 0,
         "comments": 0,
-        "engagementRate": 1.94,
-        "views": 103,
+        "engagementRate": 0,
+        "views": 31,
         "shares": 0,
         "reach": 0,
-        "totalTimeWatched": 5.67,
-        "averageTimeWatched": 3.27
+        "totalTimeWatched": 0.95,
+        "averageTimeWatched": 1.91
       },
       "contentType": "video",
-      "hourLocal": 20,
-      "engagement": 2,
+      "hourLocal": 19,
+      "engagement": 0,
       "displayMetrics": [
         {
           "key": "reach",
@@ -405,12 +583,12 @@
         {
           "key": "views",
           "label": "Views",
-          "value": 103
+          "value": 31
         },
         {
           "key": "reactions",
           "label": "Likes",
-          "value": 2
+          "value": 0
         },
         {
           "key": "comments",
@@ -425,12 +603,244 @@
         {
           "key": "engagementRate",
           "label": "Eng. Rate",
-          "value": 1.94
+          "value": 0
         },
         {
           "key": "averageTimeWatched",
           "label": "Avg Watch (s)",
-          "value": 3.27
+          "value": 1.91
+        }
+      ]
+    },
+    {
+      "id": "6aa89ecabb9b8eb9659c014b",
+      "platform": "instagram",
+      "sentAt": "2026-09-15T13:02:15.897Z",
+      "text": "Store not selling? We sent a ship to go find out why. \ud83d\ude80 Get a real Shopify Store Audit \u2014 link in bio.",
+      "assetType": "video",
+      "source": "https://tempfile.redpandaai.co/kieai/11641115/videos/scifi-store-quest-with-overlay.mp4",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 0,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "reach": 0
+      },
+      "contentType": "video",
+      "hourLocal": 9,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 0
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 0
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6a7cb5bf7a5ea251d8dff321",
+      "platform": "tiktok",
+      "sentAt": "2026-09-15T00:23:41.512Z",
+      "text": "POV: you spent $0 on marketing and expected customers to just show up.\n\nDharma gets it. Dharma also expects treats to just show up. Neither of those is how it works.\n\n#DharmasEmporium #ShopifyStore #SmallBusinessMarketing",
+      "assetType": "image",
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6a7cb5bf7a5ea251d8dff321_photo.jpg",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 75,
+        "shares": 0,
+        "reach": 0,
+        "totalTimeWatched": 1.3,
+        "averageTimeWatched": 1.04
+      },
+      "contentType": "still",
+      "hourLocal": 20,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 0
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 75
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        },
+        {
+          "key": "averageTimeWatched",
+          "label": "Avg Watch (s)",
+          "value": 1.04
+        }
+      ]
+    },
+    {
+      "id": "6aa88cd1a56f2b823c93b39d",
+      "platform": "instagram",
+      "sentAt": "2026-09-15T00:19:59.223Z",
+      "text": "Store's set up but nothing's selling? We sent a dog to go find out why. \ud83d\udc3e Get a real Shopify Store Audit \u2014 link in bio.",
+      "assetType": "video",
+      "source": "https://tempfile.redpandaai.co/kieai/11641115/videos/dog-detective-final.mp4",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 2,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "reach": 2
+      },
+      "contentType": "video",
+      "hourLocal": 20,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 2
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 2
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6aa88cd2ac4a884f436b5cf1",
+      "platform": "tiktok",
+      "sentAt": "2026-09-15T00:18:18.803Z",
+      "text": "Store's set up but nothing's selling? We sent a dog to go find out why. \ud83d\udc3e Get a real Shopify Store Audit \u2014 link in bio.",
+      "assetType": "video",
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6aa88cd2ac4a884f436b5cf1_video.mp4",
+      "metrics": {
+        "reactions": 8,
+        "comments": 0,
+        "engagementRate": 5.3,
+        "views": 151,
+        "shares": 0,
+        "reach": 0,
+        "totalTimeWatched": 11.4,
+        "averageTimeWatched": 4.41
+      },
+      "contentType": "video",
+      "hourLocal": 20,
+      "engagement": 8,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 0
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 151
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 8
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 5.3
+        },
+        {
+          "key": "averageTimeWatched",
+          "label": "Avg Watch (s)",
+          "value": 4.41
         }
       ]
     },
@@ -438,7 +848,7 @@
       "id": "6a88b8dd24833b288b24698e",
       "platform": "instagram",
       "sentAt": "2026-08-21T23:51:41.690Z",
-      "text": "The little feature that makes a shop site actually useful: a live repair status ",
+      "text": "The little feature that makes a shop site actually useful: a live repair status tracker. Customers type in their plate, see exactly where their car's at. Built it for Icon Auto Repair \u2014 because \"we'll call you\" isn't good enough anymore. \ud83d\udcf2 #WebDesign #SmallBusinessTech",
       "assetType": "image",
       "source": "https://files.catbox.moe/p8q470.jpg",
       "metrics": {
@@ -496,7 +906,7 @@
       "id": "6a88b8e33869cf665896cf7b",
       "platform": "instagram",
       "sentAt": "2026-08-21T23:51:32.586Z",
-      "text": "Plymouth, MI meet your new favorite auto &amp; tire shop's website. Built for Ni",
+      "text": "Plymouth, MI meet your new favorite auto &amp; tire shop's website. Built for Nick's Auto Service &amp; Tire \u2014 clean, fast, and built to convert. Every shop deserves a site this good. \ud83d\udede #WebDesign #PlymouthMI #SmallBusinessSupport",
       "assetType": "image",
       "source": "https://files.catbox.moe/ojg1sq.jpg",
       "metrics": {
@@ -554,7 +964,7 @@
       "id": "6a88b8e73869cf665896cf9f",
       "platform": "tiktok",
       "sentAt": "2026-08-21T23:01:30.383Z",
-      "text": "another local shop, another site that doesn't look like a template from 2015 \ud83d\udd27 #",
+      "text": "another local shop, another site that doesn't look like a template from 2015 \ud83d\udd27 #smallbusiness #localbusiness #webdesign",
       "assetType": "image",
       "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6a88b8e73869cf665896cf9f_photo.jpg",
       "metrics": {
@@ -612,7 +1022,7 @@
       "id": "6a88b8e5dc319146a283ab9a",
       "platform": "facebook",
       "sentAt": "2026-08-21T23:00:15.460Z",
-      "text": "New site live for Nick's Auto Service &amp; Tire in Plymouth! Full-service auto ",
+      "text": "New site live for Nick's Auto Service &amp; Tire in Plymouth! Full-service auto and tire shop, now with a website that actually represents the quality of work they do. Small business owners \u2014 if this is the kind of site you want, send us a message.",
       "assetType": "image",
       "source": "https://files.catbox.moe/eiodoi.jpeg",
       "metrics": {
@@ -663,7 +1073,7 @@
       "id": "6a88b8e03869cf665896cef2",
       "platform": "tiktok",
       "sentAt": "2026-08-21T22:01:54.988Z",
-      "text": "we built a live car repair tracker for a client and now their customers never ha",
+      "text": "we built a live car repair tracker for a client and now their customers never have to call and ask \"is it done yet\" \ud83d\udc40 #smallbusinesstools #webdev",
       "assetType": "image",
       "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6a88b8e03869cf665896cef2_photo.jpg",
       "metrics": {
@@ -721,7 +1131,7 @@
       "id": "6a88b8dfb1e0795f7f637ddb",
       "platform": "facebook",
       "sentAt": "2026-08-21T22:00:14.732Z",
-      "text": "Ever wonder why your mechanic never calls back with an update? We built Icon Aut",
+      "text": "Ever wonder why your mechanic never calls back with an update? We built Icon Auto Repair a live \"Check My Car's Status\" tracker so customers can see exactly where their vehicle is in the repair process \u2014 no phone tag required. This is the kind of feature that makes customers actually trust a shop.",
       "assetType": "image",
       "source": "https://files.catbox.moe/x7ajzn.jpeg",
       "metrics": {
@@ -772,7 +1182,7 @@
       "id": "6a88b8dab1e0795f7f637d21",
       "platform": "tiktok",
       "sentAt": "2026-08-21T21:01:26.315Z",
-      "text": "POV: your auto shop finally has a website that doesn't look like it's from 2010 ",
+      "text": "POV: your auto shop finally has a website that doesn't look like it's from 2010 \ud83d\udd27\ud83d\ude97 #smallbusiness #webdesign #beforeandafter",
       "assetType": "image",
       "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6a88b8dab1e0795f7f637d21_photo.jpg",
       "metrics": {
@@ -830,7 +1240,7 @@
       "id": "6a88b8d6dc319146a283aaa0",
       "platform": "instagram",
       "sentAt": "2026-08-21T21:00:25.128Z",
-      "text": "Built this for Icon Auto Repair &amp; Collision in Madison Heights, MI \u2014 live si",
+      "text": "Built this for Icon Auto Repair &amp; Collision in Madison Heights, MI \u2014 live site, real reviews, real number. This is what a small shop site should look like: fast, honest, no fluff. \ud83d\udd27 #WebDesign #SmallBusiness #MadisonHeightsMI #AutoRepair",
       "assetType": "image",
       "source": "https://files.catbox.moe/ah38vs.jpeg",
       "metrics": {
@@ -888,7 +1298,7 @@
       "id": "6a88b8d85b4a6e681b30fd94",
       "platform": "facebook",
       "sentAt": "2026-08-21T21:00:07.871Z",
-      "text": "Just wrapped a new website for Icon Auto Repair &amp; Collision here in Madison ",
+      "text": "Just wrapped a new website for Icon Auto Repair &amp; Collision here in Madison Heights. Clean, fast, and built to actually get their phone ringing \u2014 no bloated templates, no stock photo nonsense. If your shop's site looks like it's from 2012, let's talk.",
       "assetType": "image",
       "source": "https://files.catbox.moe/ah38vs.jpeg",
       "metrics": {
@@ -939,7 +1349,7 @@
       "id": "6a88bc1c5b4a6e681b312045",
       "platform": "instagram",
       "sentAt": "2026-08-21T20:59:19.289Z",
-      "text": "Running a weekend conference? Here's what a real event site looks like: schedule",
+      "text": "Running a weekend conference? Here's what a real event site looks like: schedule, speakers, and location live for the days your attendees need it \u2014 then it's gone. No leftover domain to manage. \ud83c\udfa4 #ConferenceMarketing #EventTech #WebDesign",
       "assetType": "image",
       "source": "https://files.catbox.moe/cgewub.jpg",
       "metrics": {
@@ -997,7 +1407,7 @@
       "id": "6a88b96a3869cf665896d6e9",
       "platform": "tiktok",
       "sentAt": "2026-08-21T20:49:21.916Z",
-      "text": "a whole website for one wedding weekend, gone as soon as the last dance ends \ud83d\udc8d #",
+      "text": "a whole website for one wedding weekend, gone as soon as the last dance ends \ud83d\udc8d #weddingwebsite #eventplanning #webdesign",
       "assetType": "image",
       "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6a88b96a3869cf665896d6e9_photo.jpg",
       "metrics": {
@@ -1055,7 +1465,7 @@
       "id": "6a88b93ddc319146a283b03f",
       "platform": "tiktok",
       "sentAt": "2026-08-21T20:48:37.459Z",
-      "text": "a whole website for a 3-day pop-up shop, live in 48 hours, gone when the weekend",
+      "text": "a whole website for a 3-day pop-up shop, live in 48 hours, gone when the weekend's over \ud83d\udecd\ufe0f #popupshop #smallbusiness #webdesign",
       "assetType": "image",
       "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6a88b93ddc319146a283b03f_photo.jpg",
       "metrics": {
@@ -1113,7 +1523,7 @@
       "id": "6a88b97d24833b288b24710c",
       "platform": "instagram",
       "sentAt": "2026-08-21T20:48:06.582Z",
-      "text": "Running a weekend conference? Here's what a real event site looks like: schedule",
+      "text": "Running a weekend conference? Here's what a real event site looks like: schedule, speakers, and location live for the days your attendees need it \u2014 then it's gone. No leftover domain to manage. \ud83c\udfa4 #ConferenceMarketing #EventTech #WebDesign",
       "assetType": "image",
       "source": "https://files.catbox.moe/cgewub.jpg",
       "metrics": {
@@ -1171,7 +1581,7 @@
       "id": "6a88b9615b4a6e681b31071f",
       "platform": "instagram",
       "sentAt": "2026-08-21T20:47:37.279Z",
-      "text": "Wedding weekend, meet your own website. Schedule, details, and RSVP \u2014 all in one",
+      "text": "Wedding weekend, meet your own website. Schedule, details, and RSVP \u2014 all in one place your guests can actually find, gone once the celebration wraps. \ud83d\udc8d #WeddingWebsite #EventMarketing #WebDesign",
       "assetType": "image",
       "source": "https://files.catbox.moe/zvwx24.jpg",
       "metrics": {
@@ -1229,7 +1639,7 @@
       "id": "6a88b9503869cf665896d608",
       "platform": "instagram",
       "sentAt": "2026-08-21T20:47:21.609Z",
-      "text": "Wedding weekend, meet your own website. Schedule, details, and RSVP \u2014 all in one",
+      "text": "Wedding weekend, meet your own website. Schedule, details, and RSVP \u2014 all in one place your guests can actually find, gone once the celebration wraps. \ud83d\udc8d #WeddingWebsite #EventMarketing #WebDesign",
       "assetType": "image",
       "source": "https://files.catbox.moe/zvwx24.jpg",
       "metrics": {
@@ -1287,7 +1697,7 @@
       "id": "6a88b932b1e0795f7f638246",
       "platform": "instagram",
       "sentAt": "2026-08-21T20:46:53.208Z",
-      "text": "Pop-up shop, meet your 3-day website. Built for a weekend event, live in 48 hour",
+      "text": "Pop-up shop, meet your 3-day website. Built for a weekend event, live in 48 hours, gone when it's over \u2014 no domain to manage, no leftover site cluttering the internet. Mockup shown, built by us. \ud83d\udecd\ufe0f #PopUpShop #EventMarketing #WebDesign",
       "assetType": "image",
       "source": "https://files.catbox.moe/om5t21.jpg",
       "metrics": {
@@ -1345,7 +1755,7 @@
       "id": "6a88b90c3869cf665896d370",
       "platform": "instagram",
       "sentAt": "2026-08-21T20:46:14.853Z",
-      "text": "Pop-up shop, meet your 3-day website. Built for a weekend event, live in 48 hour",
+      "text": "Pop-up shop, meet your 3-day website. Built for a weekend event, live in 48 hours, gone when it's over \u2014 no domain to manage, no leftover site cluttering the internet. Mockup shown, built by us. \ud83d\udecd\ufe0f #PopUpShop #EventMarketing #WebDesign",
       "assetType": "image",
       "source": "https://files.catbox.moe/om5t21.jpg",
       "metrics": {
@@ -1403,7 +1813,7 @@
       "id": "6a88a4c024833b288b233cbc",
       "platform": "facebook",
       "sentAt": "2026-08-21T19:22:06.215Z",
-      "text": "Pop-up shops need a site that's live in 48 hours, not 48 days. Here's a mockup f",
+      "text": "Pop-up shops need a site that's live in 48 hours, not 48 days. Here's a mockup for a 3-day pop-up event, built to go live fast and disappear when the event's over. No domain hassle, no lingering site after the fact \u2014 just a clean landing page for the weekend that matters.",
       "assetType": "image",
       "source": "https://files.catbox.moe/om5t21.jpg",
       "metrics": {
@@ -1454,7 +1864,7 @@
       "id": "6a7cb51ef9e3951c4019d226",
       "platform": "facebook",
       "sentAt": "2026-08-21T19:21:57.156Z",
-      "text": "You built the store. We build the audience.\n\nMost Shopify store owners are invis",
+      "text": "You built the store. We build the audience.\n\nMost Shopify store owners are invisible online \u2014 not because their products aren't good, but because consistent, professional content takes time they don't have.\n\nThe Growth Bundle is our most popular package: everything in Starter Launch, plus a 10-sec AI video commercial, GA4 setup, and product optimization for 10 listings.\n\n\u2705 7-day TikTok + Facebook ad copy\n\u2705 AI video commercial\n\u2705 GA4 + product optimization\n\u2705 Dedicated account manager\n\nAll done for you. Fast. Professional. Built around your brand.\n\nLink in bio to see all three packages \u2014 Growth starts at $1,450.\n\n#DharmasEmporium #ShopifyStore #EcommerceMarketing #ShopifyTips #SmallBusinessMarketing #ContentStrategy",
       "assetType": "image",
       "source": "https://www.dharmasestheticdesign.com/ded-post-offer.jpg",
       "metrics": {
@@ -1505,7 +1915,7 @@
       "id": "6a7cb5b5f9e3951c4019dc5d",
       "platform": "facebook",
       "sentAt": "2026-08-21T19:21:50.657Z",
-      "text": "If you're still posting product photos with no strategy, this is your sign.\n\nA p",
+      "text": "If you're still posting product photos with no strategy, this is your sign.\n\nA photo alone doesn't tell people why your store is worth trusting. It needs context \u2014 what makes you different, why now, why you.\n\nThat's the gap most Shopify stores are stuck in: good products, no story doing the selling for them.\n\nComment \"GROW\" and we'll send you three quick fixes for your store's content \u2014 no charge, no catch.\n\n#DharmasEmporium #ShopifyStore #SocialMediaMarketing #ContentCreation #ShopifyTips #SmallBusinessMarketing",
       "assetType": "image",
       "source": "https://www.dharmasestheticdesign.com/dharma-dog.jpg",
       "metrics": {
@@ -1556,7 +1966,7 @@
       "id": "6a88a4c23869cf665895bc30",
       "platform": "facebook",
       "sentAt": "2026-08-21T19:21:45.799Z",
-      "text": "Wedding weekend, meet your own website. A mockup for a short-term event site bui",
+      "text": "Wedding weekend, meet your own website. A mockup for a short-term event site built for a couple's big weekend \u2014 schedule, details, RSVP, all in one place your guests can actually find. Built for the days that matter, gone when they're over.",
       "assetType": "image",
       "source": "https://files.catbox.moe/zvwx24.jpg",
       "metrics": {
@@ -1607,7 +2017,7 @@
       "id": "6a88a4c3b1e0795f7f62596c",
       "platform": "facebook",
       "sentAt": "2026-08-21T19:21:43.229Z",
-      "text": "Running a weekend conference? Here's a mockup built for exactly that \u2014 schedule,",
+      "text": "Running a weekend conference? Here's a mockup built for exactly that \u2014 schedule, speakers, and location live in a real site for the days your attendees need it, then it's gone. No leftover domain to manage once the event wraps.",
       "assetType": "image",
       "source": "https://files.catbox.moe/cgewub.jpg",
       "metrics": {
@@ -1658,7 +2068,7 @@
       "id": "6a83c0892485bd5f3fffb8a7",
       "platform": "facebook",
       "sentAt": "2026-08-18T02:16:51.105Z",
-      "text": "3 signs your Shopify store needs a content strategy: you're posting inconsistent",
+      "text": "3 signs your Shopify store needs a content strategy: you're posting inconsistently (or not at all), your product photos don't match across platforms, and you don't actually know what's converting.\n\nWe built Dharma's Esthetic Design Center to fix exactly this \u2014 AI-powered content, real human strategy, built around your brand. Three packages, one goal: your store grows.\n\n#DharmasEmporium #ShopifyStore #EcommerceMarketing #ShopifyTips #SmallBusinessMarketing #ContentStrategy",
       "assetType": "image",
       "source": "https://dharmasestheticdesign.com/ded-post-content-strategy.jpg",
       "metrics": {
@@ -1709,7 +2119,7 @@
       "id": "6a83c07fa6afcff0dbc14d93",
       "platform": "instagram",
       "sentAt": "2026-08-18T02:16:40.192Z",
-      "text": "3 signs your Shopify store needs a content strategy: you're posting inconsistent",
+      "text": "3 signs your Shopify store needs a content strategy: you're posting inconsistently (or not at all), your product photos don't match across platforms, and you don't actually know what's converting.\n\nWe built Dharma's Esthetic Design Center to fix exactly this \u2014 AI-powered content, real human strategy, built around your brand. Three packages, one goal: your store grows.\n\n#DharmasEmporium #ShopifyStore #EcommerceMarketing #ShopifyTips #SmallBusinessMarketing #ContentStrategy",
       "assetType": "image",
       "source": "https://dharmasestheticdesign.com/ded-post-content-strategy.jpg",
       "metrics": {
@@ -1767,7 +2177,7 @@
       "id": "6a7cb5bad8a816a32d1155e3",
       "platform": "facebook",
       "sentAt": "2026-08-16T09:07:16.615Z",
-      "text": "You don't need a $5k/month agency to grow your Shopify store.\n\nWe started Dharma",
+      "text": "You don't need a $5k/month agency to grow your Shopify store.\n\nWe started Dharma's Esthetic Design Center because most store owners we talked to were stuck between two bad options: do it all themselves with no time left over, or pay agency rates built for brands ten times their size.\n\nThere's a real middle \u2014 professional results, AI-powered speed, human judgment on top, at a price a solo store owner can actually justify.\n\nDM us and let's talk about where your store's at.\n\n#DharmasEmporium #ShopifyStore #SmallBusinessMarketing #EcommerceMarketing #ContentStrategy",
       "assetType": "image",
       "source": "https://www.dharmasestheticdesign.com/founder.jpg",
       "metrics": {
@@ -1818,7 +2228,7 @@
       "id": "6a7cb5c0a5805ff3f58b0ce0",
       "platform": "facebook",
       "sentAt": "2026-08-16T09:06:47.205Z",
-      "text": "POV: you spent $0 on marketing and expected customers to just show up.\n\nDharma g",
+      "text": "POV: you spent $0 on marketing and expected customers to just show up.\n\nDharma gets it. Dharma also expects treats to just show up. Neither of those is how it works.\n\n#DharmasEmporium #ShopifyStore #SmallBusinessMarketing",
       "assetType": "image",
       "source": "https://www.dharmasestheticdesign.com/dharma-dog.jpg",
       "metrics": {
@@ -1869,7 +2279,7 @@
       "id": "6a76bd4f8aa5e1393fae4b25",
       "platform": "facebook",
       "sentAt": "2026-08-08T05:23:32.609Z",
-      "text": "Everything you need to show up consistently online \u2014 starting this week. \ud83d\udc47\n\nStar",
+      "text": "Everything you need to show up consistently online \u2014 starting this week. \ud83d\udc47\n\nStarter Launch ($650) includes:\n\u2705 7-day TikTok ad copy\n\u2705 7-day Facebook ad copy\n\u2705 7 branded photo placements\n\u2705 Hashtag strategy\n\u2705 Social posting guide\n\nNo guesswork, no waiting around \u2014 just a real content push from day one. Link in bio to get started.\n\n#DharmasEmporium #ShopifyStore #ContentStrategy #SmallBusinessMarketing #ShopifyTips",
       "assetType": "image",
       "source": "https://www.dharmasestheticdesign.com/ded-post-starter-included.png",
       "metrics": {
@@ -1920,7 +2330,7 @@
       "id": "6a76bd3deb086b1202d1d04b",
       "platform": "instagram",
       "sentAt": "2026-08-08T05:23:15.136Z",
-      "text": "Everything you need to show up consistently online \u2014 starting this week. \ud83d\udc47\n\nStar",
+      "text": "Everything you need to show up consistently online \u2014 starting this week. \ud83d\udc47\n\nStarter Launch ($650) includes:\n\u2705 7-day TikTok ad copy\n\u2705 7-day Facebook ad copy\n\u2705 7 branded photo placements\n\u2705 Hashtag strategy\n\u2705 Social posting guide\n\nNo guesswork, no waiting around \u2014 just a real content push from day one. Link in bio to get started.\n\n#DharmasEmporium #ShopifyStore #ContentStrategy #SmallBusinessMarketing #ShopifyTips",
       "assetType": "image",
       "source": "https://www.dharmasestheticdesign.com/ded-post-starter-included.png",
       "metrics": {},
@@ -1933,7 +2343,7 @@
       "id": "6a74dc5af6ddee415dd3f3f1",
       "platform": "facebook",
       "sentAt": "2026-08-06T19:11:26.437Z",
-      "text": "Most people don't need more hustle. They need a map.\n\nThe AI Business Empire Map",
+      "text": "Most people don't need more hustle. They need a map.\n\nThe AI Business Empire Map breaks down 10 real lines of income you can build with AI \u2014 no fluff, no \"6-figure guru\" nonsense. Just the framework.\n\n\ud83d\udc49 Link in bio to grab it.\n\n#AIBusinessEmpire #PassiveIncome #DigitalProducts #SideHustle #Entrepreneur",
       "assetType": null,
       "source": null,
       "metrics": {
@@ -1984,7 +2394,7 @@
       "id": "6a74dc4a9aa78dffa28f43b6",
       "platform": "instagram",
       "sentAt": "2026-08-06T19:11:15.449Z",
-      "text": "Stop guessing what AI business to build. I built a free 2-minute quiz that tells",
+      "text": "Stop guessing what AI business to build. I built a free 2-minute quiz that tells you exactly which one fits you \u2014 5 questions, one specific answer, not a generic list. Link in bio.\n#AIbusiness #buildinpublic #sidehustle #AItools #entrepreneurship #AIbusinessideas #solopreneur",
       "assetType": "image",
       "source": "https://www.dharmasestheticdesign.com/abe-post-quiz-hook.jpg",
       "metrics": {
@@ -2042,7 +2452,7 @@
       "id": "6a748d48be3538462cb9ad7e",
       "platform": "instagram",
       "sentAt": "2026-08-06T13:34:08.856Z",
-      "text": "Here's our promise: you'll love the final result, or we'll make it right.\nEvery ",
+      "text": "Here's our promise: you'll love the final result, or we'll make it right.\nEvery package includes one full round of revisions at no extra cost \u2014 just tell us what to adjust, and we'll get it right.\nReal team. Real strategy. Built around your brand.\nGot questions before you start? We just added an FAQ to the site \u2014 DM us anytime.\n#DharmasEmporium #ShopifyStore #SmallBusinessMarketing #EcommerceMarketing #ContentStrategy",
       "assetType": "image",
       "source": "https://www.dharmasestheticdesign.com/ded-post-guarantee.jpg",
       "metrics": {
@@ -2100,7 +2510,7 @@
       "id": "6a748d43be4ad0b566a9a8e9",
       "platform": "facebook",
       "sentAt": "2026-08-06T13:33:59.063Z",
-      "text": "Here's our promise: you'll love the final result, or we'll make it right.\nEvery ",
+      "text": "Here's our promise: you'll love the final result, or we'll make it right.\nEvery package includes one full round of revisions at no extra cost \u2014 just tell us what to adjust, and we'll get it right.\nReal team. Real strategy. Built around your brand.\nGot questions before you start? We just added an FAQ to the site \u2014 DM us anytime.\n#DharmasEmporium #ShopifyStore #SmallBusinessMarketing #EcommerceMarketing #ContentStrategy",
       "assetType": "image",
       "source": "https://www.dharmasestheticdesign.com/ded-post-guarantee.jpg",
       "metrics": {
@@ -2151,7 +2561,7 @@
       "id": "6a748d37be3538462cb9ad03",
       "platform": "instagram",
       "sentAt": "2026-08-06T13:33:53.405Z",
-      "text": "Three packages. One goal: your store grows.\n\ud83d\udd39 Starter Launch \u2014 $650 \u2014 get visibl",
+      "text": "Three packages. One goal: your store grows.\n\ud83d\udd39 Starter Launch \u2014 $650 \u2014 get visible fast\n\ud83d\udd39 Growth Bundle \u2014 $1,450 \u2014 content + store optimization (most popular)\n\ud83d\udd39 Full Agency \u2014 $2,200 \u2014 done for you, completely\nEvery package includes a real revision round \u2014 you'll love the final result, or we'll make it right.\nLink in bio to see which one fits your store.\n#DharmasEmporium #ShopifyStore #EcommerceMarketing #ShopifyTips #SmallBusinessMarketing #ContentStrategy",
       "assetType": "image",
       "source": "https://www.dharmasestheticdesign.com/ded-post-offer.jpg",
       "metrics": {
@@ -2209,7 +2619,7 @@
       "id": "6a748d31be4ad0b566a9a7e0",
       "platform": "facebook",
       "sentAt": "2026-08-06T13:33:42.272Z",
-      "text": "Three packages. One goal: your store grows.\n\ud83d\udd39 Starter Launch \u2014 $650 \u2014 get visibl",
+      "text": "Three packages. One goal: your store grows.\n\ud83d\udd39 Starter Launch \u2014 $650 \u2014 get visible fast\n\ud83d\udd39 Growth Bundle \u2014 $1,450 \u2014 content + store optimization (most popular)\n\ud83d\udd39 Full Agency \u2014 $2,200 \u2014 done for you, completely\nEvery package includes a real revision round \u2014 you'll love the final result, or we'll make it right.\nLink in bio to see which one fits your store.\n#DharmasEmporium #ShopifyStore #EcommerceMarketing #ShopifyTips #SmallBusinessMarketing #ContentStrategy",
       "assetType": "image",
       "source": "https://www.dharmasestheticdesign.com/ded-post-offer.jpg",
       "metrics": {
@@ -2260,7 +2670,7 @@
       "id": "6a73d7644236a08702523575",
       "platform": "instagram",
       "sentAt": "2026-08-06T00:51:11.973Z",
-      "text": "Stop guessing what AI business to build. Built a free 2-minute quiz that tells y",
+      "text": "Stop guessing what AI business to build. Built a free 2-minute quiz that tells you exactly which one fits you \u2014 link in bio. \ud83d\udd17\n\n#AIbusiness #sidehustle #entrepreneurship #AIbusinessideas #solopreneur",
       "assetType": "image",
       "source": "https://www.dharmasestheticdesign.com/instagram-10-lines-to-freedom.png",
       "metrics": {},
@@ -2273,7 +2683,7 @@
       "id": "6a73d75f626c06990ead1bdb",
       "platform": "tiktok",
       "sentAt": "2026-08-06T00:51:06.054Z",
-      "text": "Stop guessing what AI business to build. Built a free 2-minute quiz that tells y",
+      "text": "Stop guessing what AI business to build. Built a free 2-minute quiz that tells you exactly which one fits you \u2014 link in bio. \ud83d\udd17\n\n#AIbusiness #buildinpublic #sidehustle #AItools #entrepreneurship #AIbusinessideas #solopreneur",
       "assetType": "image",
       "source": "https://www.dharmasestheticdesign.com/tiktok-10-lines-to-freedom.png",
       "metrics": {},
@@ -2286,7 +2696,7 @@
       "id": "6a737d69408d6586f765e233",
       "platform": "facebook",
       "sentAt": "2026-08-06T00:42:53.873Z",
-      "text": "It's live. \ud83d\ude80\n\nCheckout for the AI Business Empire Map is officially open \u2014 grab ",
+      "text": "It's live. \ud83d\ude80\n\nCheckout for the AI Business Empire Map is officially open \u2014 grab your copy and start building today.\n\n\ud83d\udc49 [https://www.paypal.com/ncp/payment/4R7WTXJRREEC2 ]\n\n#AIBusinessEmpire #DigitalProducts #LaunchDay",
       "assetType": null,
       "source": null,
       "metrics": {
@@ -2337,7 +2747,7 @@
       "id": "6a7281b41d7ba3a9a38a8919",
       "platform": "instagram",
       "sentAt": "2026-07-25T13:54:20.000Z",
-      "text": "#AIBusiness, #Entrepreneurship, #AIEntrepreneur, #BusinessFramework, #StartupGui",
+      "text": "#AIBusiness, #Entrepreneurship, #AIEntrepreneur, #BusinessFramework, #StartupGuide, #DigitalProduct, #BusinessStrategy, #OnlineBusiness, #Founder, #BuildInPublic, #PassiveIncome, #SideHustle",
       "assetType": "image",
       "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281b299afb44349030723/6a7281b41d7ba3a9a38a8919_thumbnail.jpg",
       "metrics": {
@@ -2497,7 +2907,7 @@
       "id": "6a7281b41d7ba3a9a38a891b",
       "platform": "instagram",
       "sentAt": "2026-07-02T02:16:52.000Z",
-      "text": "#shopifyowner #ecommerce #digitalmarketing #smallbusiness #contentcreation #dhar",
+      "text": "#shopifyowner #ecommerce #digitalmarketing #smallbusiness #contentcreation #dharmasesthetic #shopifytips #socialmediamanager #brandbuilding #onlinestore",
       "assetType": "video",
       "source": "https://scontent-iad6-1.cdninstagram.com/o1/v/t2/f2/m86/AQPTEUym22PZDH16lqysc2p4PCm3WaH7wqzUqhKhh6HbcQC5xTv5X-2lqcwa3UMK6wWhHhmh8eZokAtKa_i6gfGuqdR-6Ui-ZWc4eQA.mp4?_nc_cat=109&_nc_sid=5e9851&_nc_ht=scontent-iad6-1.cdninstagram.com&_nc_ohc=3p9Of4FPtZcQ7kNvwFZ-Wjt&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MTE5NDU2NDkzOTQ2OTQ1NSwiYXNzZXRfYWdlX2RheXMiOjMzLCJ2aV91c2VjYXNlX2lkIjoxMDA5OSwiZHVyYXRpb25fcyI6MTAsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=4c3cadfa0f041054&_nc_vs=HBkcFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC85RDQ2MTJDRThBRkNDMDY1QkFFREM1RkU5QzNDRDlBNV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAKAAYABsCiAd1c2Vfb2lsATEScHJvZ3Jlc3NpdmVfcmVjaXBlATEVAAAmnsqGruqcnwQVAigCQzMsF0AkAAAAAAAAGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX-B2XmnQEA&_nc_gid=O1mSm_RRkWYlJmN9k6EgcQ&edm=ANo9K5cEAAAA&_nc_zt=28&_nc_tpa=Q5bMBQFnK9U5W1CMFODhB-nunazGYRIvbFT1oZVFAV3SnWx5xUupbiS6MDof_jzBTNmvnzrZjfavbI8E4g&oh=00_AQFOS7XaGviXE9rruTE5Y6aYo3ERkRgritQRnFK0Zh5qIw&oe=6A745EA2",
       "metrics": {
@@ -2614,7 +3024,7 @@
       "id": "6a7281b41d7ba3a9a38a8917",
       "platform": "instagram",
       "sentAt": "2026-06-30T19:49:32.000Z",
-      "text": "Most Shopify stores don't have a sales problem \u2014 they have a visibility problem.",
+      "text": "Most Shopify stores don't have a sales problem \u2014 they have a visibility problem.\nWe built Dharma's Esthetic Design Center to fix exactly that. Boutique content + store optimization, built around your brand.\nThree packages. One goal: your store grows.\n\ud83d\udd17 Link in bio\n#DharmasEmporium #ShopifyStore #EcommerceMarketing #ShopifyTips #SmallBusinessMarketing #ContentStrategy",
       "assetType": "image",
       "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281b299afb44349030723/6a7281b41d7ba3a9a38a8917_thumbnail.jpg",
       "metrics": {
@@ -2668,5 +3078,156 @@
         }
       ]
     }
-  ]
+  ],
+  "siteTraffic": {
+    "propertyId": "526322619",
+    "dateRangeDays": 30,
+    "avgSessionsPerActiveHour": 9.08,
+    "hourly": [
+      {
+        "hour": 0,
+        "sessions": 9,
+        "pageviews": 52,
+        "deltaVsAvg": -0.08
+      },
+      {
+        "hour": 1,
+        "sessions": 21,
+        "pageviews": 69,
+        "deltaVsAvg": 11.92
+      },
+      {
+        "hour": 2,
+        "sessions": 9,
+        "pageviews": 58,
+        "deltaVsAvg": -0.08
+      },
+      {
+        "hour": 3,
+        "sessions": 8,
+        "pageviews": 52,
+        "deltaVsAvg": -1.08
+      },
+      {
+        "hour": 4,
+        "sessions": 13,
+        "pageviews": 28,
+        "deltaVsAvg": 3.92
+      },
+      {
+        "hour": 5,
+        "sessions": 17,
+        "pageviews": 39,
+        "deltaVsAvg": 7.92
+      },
+      {
+        "hour": 6,
+        "sessions": 9,
+        "pageviews": 145,
+        "deltaVsAvg": -0.08
+      },
+      {
+        "hour": 7,
+        "sessions": 10,
+        "pageviews": 43,
+        "deltaVsAvg": 0.92
+      },
+      {
+        "hour": 8,
+        "sessions": 11,
+        "pageviews": 37,
+        "deltaVsAvg": 1.92
+      },
+      {
+        "hour": 9,
+        "sessions": 4,
+        "pageviews": 15,
+        "deltaVsAvg": -5.08
+      },
+      {
+        "hour": 10,
+        "sessions": 7,
+        "pageviews": 42,
+        "deltaVsAvg": -2.08
+      },
+      {
+        "hour": 11,
+        "sessions": 5,
+        "pageviews": 36,
+        "deltaVsAvg": -4.08
+      },
+      {
+        "hour": 12,
+        "sessions": 4,
+        "pageviews": 32,
+        "deltaVsAvg": -5.08
+      },
+      {
+        "hour": 13,
+        "sessions": 3,
+        "pageviews": 22,
+        "deltaVsAvg": -6.08
+      },
+      {
+        "hour": 14,
+        "sessions": 9,
+        "pageviews": 13,
+        "deltaVsAvg": -0.08
+      },
+      {
+        "hour": 15,
+        "sessions": 4,
+        "pageviews": 8,
+        "deltaVsAvg": -5.08
+      },
+      {
+        "hour": 16,
+        "sessions": 12,
+        "pageviews": 78,
+        "deltaVsAvg": 2.92
+      },
+      {
+        "hour": 17,
+        "sessions": 5,
+        "pageviews": 8,
+        "deltaVsAvg": -4.08
+      },
+      {
+        "hour": 18,
+        "sessions": 4,
+        "pageviews": 9,
+        "deltaVsAvg": -5.08
+      },
+      {
+        "hour": 19,
+        "sessions": 8,
+        "pageviews": 49,
+        "deltaVsAvg": -1.08
+      },
+      {
+        "hour": 20,
+        "sessions": 13,
+        "pageviews": 56,
+        "deltaVsAvg": 3.92
+      },
+      {
+        "hour": 21,
+        "sessions": 5,
+        "pageviews": 7,
+        "deltaVsAvg": -4.08
+      },
+      {
+        "hour": 22,
+        "sessions": 16,
+        "pageviews": 38,
+        "deltaVsAvg": 6.92
+      },
+      {
+        "hour": 23,
+        "sessions": 12,
+        "pageviews": 26,
+        "deltaVsAvg": 2.92
+      }
+    ]
+  }
 }
