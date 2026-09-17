@@ -22,16 +22,7 @@ export default function Packages() {
 
         <Reveal className={styles.sectionHead}>
           <div className={`${styles.sectionEyebrow} ${styles.eyebrowScale}`}>Our Packages</div>
-          <h2>
-            <a
-              href="https://www.ecombuildshub.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.pkgLink}
-            >
-              Three tiers. One goal — your store grows.
-            </a>
-          </h2>
+          <h2>Three tiers. One goal — your store grows.</h2>
         </Reveal>
 
         <div className={styles.pkgGrid}>

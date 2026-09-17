@@ -636,7 +636,6 @@ export const TEAM = [
     role: 'Store Designer',
     roleAccent: true,
     bio: '',
-    contact: { label: 'EcomBuildsHub.com', href: 'https://ecombuildshub.com' },
   },
   {
     name: 'Yusuf',

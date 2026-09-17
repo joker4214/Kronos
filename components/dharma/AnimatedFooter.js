@@ -77,6 +77,7 @@ export default function AnimatedFooter() {
     { label: 'About', href: '#about' },
     { label: 'Services', href: '#packages' },
     { label: 'Contact', href: '#contact' },
+    { label: 'Our Story', href: '/our-story' },
     { label: 'Privacy', href: '/privacy' },
     { label: 'Terms', href: '/terms' },
   ];
@@ -139,7 +140,7 @@ export default function AnimatedFooter() {
 
           {/* Additional Links */}
           <div className={styles.footerLinksGrid}>
-            {footerLinks.slice(2, 5).map((link) => (
+            {footerLinks.slice(2, 6).map((link) => (
               <AnimatedLink key={link.label} href={link.href}>
                 {link.label}
               </AnimatedLink>
