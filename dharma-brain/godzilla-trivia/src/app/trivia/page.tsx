@@ -42,11 +42,17 @@ function rankFor(score: number): { title: string; blurb: string } {
   };
 }
 
-// Godzilla-only questions get the close-up head shot; every other kaiju
-// reuses its existing "Meet the Kaiju" portrait as the question backdrop.
+// Godzilla-only questions get the "burning" meltdown backdrop (video, with
+// the still as its poster/fallback); every other kaiju reuses its existing
+// "Meet the Kaiju" portrait as the question backdrop.
 function backgroundFor(kaiju: string) {
-  if (kaiju === "godzilla") return "/kaiju/godzilla-closeup.jpg";
+  if (kaiju === "godzilla") return "/kaiju/godzilla-burning.jpg";
   return `/kaiju/${kaiju}.jpg`;
+}
+
+function videoFor(kaiju: string): string | null {
+  if (kaiju === "godzilla") return "/kaiju/godzilla-burning.mp4";
+  return null;
 }
 
 const BREATH_EXIT_MS = 350;
@@ -137,11 +143,24 @@ export default function TriviaPage() {
       {/* Full-viewport kaiju backdrop, one per question, matched to whichever
           monster the question is about. Keyed on `current` so each question
           mounts a fresh element and fades in rather than hard-cutting. */}
-      <div
-        key={current}
-        className="fixed inset-0 -z-10 bg-cover bg-center animate-bg-fadein"
-        style={{ backgroundImage: `url(${backgroundFor(question.kaiju)})` }}
-      />
+      {videoFor(question.kaiju) ? (
+        <video
+          key={current}
+          className="fixed inset-0 -z-10 w-full h-full object-cover animate-bg-fadein"
+          src={videoFor(question.kaiju)!}
+          poster={backgroundFor(question.kaiju)}
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
+      ) : (
+        <div
+          key={current}
+          className="fixed inset-0 -z-10 bg-cover bg-center animate-bg-fadein"
+          style={{ backgroundImage: `url(${backgroundFor(question.kaiju)})` }}
+        />
+      )}
       <div className="fixed inset-0 -z-10 bg-gradient-to-b from-black/75 via-black/65 to-black/90" />
 
       {/* Answer-reveal flourish: Godzilla lunges in from the left breathing
