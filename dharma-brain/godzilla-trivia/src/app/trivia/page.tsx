@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { QUESTIONS, type Question } from "@/data/quiz";
 
@@ -43,14 +43,33 @@ function rankFor(score: number): { title: string; blurb: string } {
 }
 
 export default function TriviaPage() {
-  const [pool] = useState<Question[]>(() => shuffle(QUESTIONS).slice(0, QUIZ_LENGTH));
+  // Shuffling uses Math.random(), which must never run during server render --
+  // the server and client would pick different orders and React would throw a
+  // hydration mismatch (error #418), which can force a full remount mid-quiz
+  // and silently reset progress back to a fresh Question 1. Generating the
+  // pool in an effect (client-only, post-mount) instead of a useState
+  // initializer (which also runs during SSR) avoids that entirely.
+  const [pool, setPool] = useState<Question[] | null>(null);
   const [current, setCurrent] = useState(0);
   const [score, setScore] = useState(0);
   const [selected, setSelected] = useState<number | null>(null);
   const [finished, setFinished] = useState(false);
 
-  const question = pool[current];
+  useEffect(() => {
+    setPool(shuffle(QUESTIONS).slice(0, QUIZ_LENGTH));
+  }, []);
+
   const rank = useMemo(() => rankFor(score), [score]);
+
+  if (pool === null) {
+    return (
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center text-[#eafbee]/50">
+        Loading quiz…
+      </div>
+    );
+  }
+
+  const question = pool[current];
 
   function choose(i: number) {
     if (selected !== null) return;
@@ -59,15 +78,13 @@ export default function TriviaPage() {
   }
 
   function next() {
-    if (current + 1 >= pool.length) {
+    if (current + 1 >= pool!.length) {
       setFinished(true);
       return;
     }
     setCurrent((c) => c + 1);
     setSelected(null);
   }
-
-  if (pool.length === 0) return null;
 
   if (finished) {
     return (
