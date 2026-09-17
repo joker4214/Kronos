@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoreScale - E-Commerce Design & Strategy</title>
+    <style>
+        :root {
+            --navy: #1a2332;
+            --amber: #d97706;
+            --white: #ffffff;
+            --light-bg: #f8fafc;
+            --gray-light: #e2e8f0;
+            --gray-mid: #64748b;
+            --text-dark: #0f1419;
+
+            --font-serif: Georgia, serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+            --spacing-unit: 1rem;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --white: #0f1419;
+                --light-bg: #1e293b;
+                --gray-light: #334155;
+                --gray-mid: #cbd5e1;
+                --text-dark: #f1f5f9;
+            }
+        }
+
+        :root[data-theme="dark"] {
+            --white: #0f1419;
+            --light-bg: #1e293b;
+            --gray-light: #334155;
+            --gray-mid: #cbd5e1;
+            --text-dark: #f1f5f9;
+        }
+
+        :root[data-theme="light"] {
+            --white: #ffffff;
+            --light-bg: #f8fafc;
+            --gray-light: #e2e8f0;
+            --gray-mid: #64748b;
+            --text-dark: #0f1419;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--text-dark);
+            background: var(--white);
+            line-height: 1.6;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-serif);
+            font-weight: 700;
+            text-wrap: balance;
+            color: var(--amber);
+        }
+
+        h1 { font-size: clamp(2.4rem, 5vw, 3.6rem); line-height: 1.2; }
+        h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.3; }
+        h3 { font-size: 1.3rem; }
+
+        p { max-width: 65ch; line-height: 1.8; color: var(--gray-mid); }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem clamp(1.5rem, 5vw, 4rem);
+            background: var(--navy);
+            color: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin-left: 2.5rem;
+            font-size: 0.95rem;
+            opacity: 0.9;
+            transition: opacity 0.2s;
+        }
+
+        nav a:hover {
+            opacity: 1;
+            color: var(--amber);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 clamp(1.5rem, 5vw, 4rem);
+        }
+
+        /* Sections */
+        section {
+            padding: clamp(4rem, 8vh, 7rem) clamp(1.5rem, 5vw, 4rem);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--navy) 0%, #2d3e50 100%);
+            color: var(--white);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: rgba(217, 119, 6, 0.1);
+            border-radius: 50%;
+            filter: blur(60px);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            margin-bottom: 1.5rem;
+            font-size: clamp(2.8rem, 7vw, 4rem);
+        }
+
+        .hero-subheading {
+            font-size: 1.4rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--amber);
+            color: var(--navy);
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+            border: 2px solid var(--amber);
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(217, 119, 6, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(217, 119, 6, 0.4);
+        }
+
+        .cta-button-secondary {
+            background: transparent;
+            color: var(--amber);
+            border: 2px solid var(--amber);
+            margin-left: 1rem;
+        }
+
+        .cta-button-secondary:hover {
+            background: var(--amber);
+            color: var(--navy);
+        }
+
+        /* Problem Section */
+        .problem {
+            background: var(--light-bg);
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .problem-card {
+            padding: 2rem;
+            background: var(--white);
+            border-radius: 0.75rem;
+            border-left: 4px solid var(--amber);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .problem-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .problem-card h3 {
+            color: var(--amber) !important;
+            margin-bottom: 1rem;
+        }
+
+        .problem-card p {
+            font-size: 0.95rem;
+        }
+
+        /* Solution Section */
+        .solution {
+            background: var(--white);
+        }
+
+        .solution-intro {
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            text-align: center;
+        }
+
+        .pillars {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .pillar {
+            text-align: center;
+            padding: 2.5rem 2rem;
+        }
+
+        .pillar-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--amber), #f59e0b);
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        .pillar h3 {
+            color: var(--amber) !important;
+            margin-bottom: 1rem;
+        }
+
+        /* Case Studies */
+        .case-studies {
+            background: var(--light-bg);
+        }
+
+        .case-studies > .container > h2 {
+            color: var(--amber) !important;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .studies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .study-card {
+            background: var(--white);
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .study-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+        }
+
+        .study-header {
+            height: 200px;
+            background: linear-gradient(135deg, var(--navy), #2d3e50);
+            display: flex;
+            align-items: flex-end;
+            padding: 2rem;
+            color: var(--white);
+        }
+
+        .study-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .study-category {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+
+        .study-body {
+            padding: 2rem;
+        }
+
+        .study-metrics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .metric {
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .metric-value {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            color: var(--amber);
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-label {
+            font-size: 0.85rem;
+            color: var(--gray-mid);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .study-description {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--gray-mid);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Process Section */
+        .process {
+            background: var(--white);
+        }
+
+        .process h2 {
+            color: var(--amber) !important;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .step {
+            position: relative;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--amber);
+            color: var(--navy);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 0 auto 1.5rem;
+        }
+
+        .step h3 {
+            color: var(--amber) !important;
+            margin-bottom: 1rem;
+        }
+
+        .step p {
+            font-size: 0.95rem;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: var(--light-bg);
+        }
+
+        .testimonials h2 {
+            color: var(--amber) !important;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+        }
+
+        .testimonial:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .stars {
+            color: var(--amber);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: var(--gray-mid);
+            font-size: 0.95rem;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--navy);
+            font-size: 0.95rem;
+        }
+
+        .testimonial-role {
+            font-size: 0.85rem;
+            color: var(--gray-mid);
+        }
+
+        /* FAQ */
+        .faq {
+            background: var(--white);
+        }
+
+        .faq h2 {
+            color: var(--amber) !important;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .faq-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--gray-light);
+            padding-bottom: 1.5rem;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: var(--navy);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color 0.2s;
+        }
+
+        .faq-question:hover {
+            color: var(--amber);
+        }
+
+        .faq-toggle {
+            font-size: 1.3rem;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.open .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: var(--gray-mid);
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: none;
+            overflow: visible;
+            margin-top: 1rem;
+        }
+
+        /* Pricing */
+        .pricing {
+            background: var(--light-bg);
+        }
+
+        .pricing h2 {
+            color: var(--amber) !important;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--gray-mid);
+            margin-bottom: 3rem;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 1rem;
+            border: 2px solid var(--gray-light);
+            text-align: center;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .pricing-card.featured {
+            border-color: var(--amber);
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(217, 119, 6, 0.2);
+        }
+
+        .pricing-card:hover {
+            border-color: var(--amber);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--amber);
+            color: var(--navy);
+            padding: 0.5rem 1.5rem;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .pricing-name {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+        }
+
+        .pricing-price {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            color: var(--navy);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-duration {
+            font-size: 0.9rem;
+            color: var(--gray-mid);
+            margin-bottom: 2rem;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .pricing-features li {
+            padding: 0.75rem 0;
+            color: var(--gray-mid);
+            font-size: 0.95rem;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-features li:before {
+            content: '✓ ';
+            color: var(--amber);
+            font-weight: 700;
+            margin-right: 0.5rem;
+        }
+
+        /* CTA Section */
+        .final-cta {
+            background: linear-gradient(135deg, var(--navy) 0%, #2d3e50 100%);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+        }
+
+        .final-cta p {
+            color: rgba(255, 255, 255, 0.95);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--navy);
+            color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+
+        /* Utilities */
+        .text-center { text-align: center; }
+        .text-amber { color: var(--amber); }
+        .text-navy { color: var(--navy); }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            nav {
+                display: flex;
+                gap: 1.5rem;
+                justify-content: center;
+            }
+
+            nav a {
+                margin-left: 0;
+            }
+
+            .hero h1 {
+                margin-bottom: 1rem;
+            }
+
+            .cta-button-secondary {
+                display: block;
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+
+            .study-metrics {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+
+            .problem-grid,
+            .pillars,
+            .studies-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+
+        /* Focus styles */
+        button:focus,
+        a:focus {
+            outline: 2px solid var(--amber);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">StoreScale</div>
+        <nav>
+            <a href="#problem">The Problem</a>
+            <a href="#solution">Our Solution</a>
+            <a href="#case-studies">Case Studies</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#faq">FAQ</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Your E-Commerce Store is Leaving Money on the Table</h1>
+            <p class="hero-subheading">We help underperforming stores and new businesses turn visitors into loyal customers with design, strategy, and conversions that actually work.</p>
+            <div>
+                <a href="#final-cta" class="cta-button">Book Your Free Consultation</a>
+                <a href="https://yourdomain.com/demo" class="cta-button-secondary">Watch How We Work</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="problem" id="problem">
+        <div class="container">
+            <h2>Most E-Commerce Owners Are Stuck</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">If any of this sounds familiar, we've helped businesses just like yours.</p>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <h3>📊 High Traffic, Low Sales</h3>
+                    <p>You're getting visitors, but they leave without buying. Your conversion rate is stuck at 0.5-1%.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>🎯 Outdated Design</h3>
+                    <p>Your site looks like it's from 2015. Competitors are sleek and modern. You look unprofessional.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>❓ No Clear Strategy</h3>
+                    <p>You built it yourself or hired someone cheap. There's no real strategy—just hope and guesswork.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>💰 Shrinking Margins</h3>
+                    <p>You're spending more on ads but making less. Your CAC is too high because your site doesn't convert.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>🔧 Technical Mess</h3>
+                    <p>Site is slow, doesn't work on mobile, or checkout is broken. You lose sales just from bad UX.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>🚀 Founder's Dilemma</h3>
+                    <p>You're stuck building products when you should be building a business. You need someone to own the digital presence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="solution" id="solution">
+        <div class="container">
+            <div class="solution-intro">
+                <h2>How We Fix It</h2>
+                <p>We don't just make pretty websites. We build conversion machines that understand your customers and remove friction from every step of their journey.</p>
+            </div>
+            <div class="pillars">
+                <div class="pillar">
+                    <div class="pillar-icon">🎨</div>
+                    <h3>Conversion-First Design</h3>
+                    <p>Every pixel is intentional. We use psychology, UX best practices, and A/B testing to guide visitors toward purchase.</p>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-icon">📱</div>
+                    <h3>Mobile-Obsessed</h3>
+                    <p>60%+ of your traffic is mobile. We design mobile-first. Fast, responsive, and optimized for thumbs, not mice.</p>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-icon">⚡</div>
+                    <h3>Speed & Performance</h3>
+                    <p>Every 1-second delay costs you 7% in conversions. We build fast sites. Sub-3-second load times, guaranteed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="case-studies" id="case-studies">
+        <div class="container">
+            <h2>Results From Real Businesses</h2>
+            <div class="studies-grid">
+                <div class="study-card">
+                    <div class="study-header">
+                        <div>
+                            <h3>Artisan Coffee Roaster</h3>
+                            <div class="study-category">Direct-to-Consumer</div>
+                        </div>
+                    </div>
+                    <div class="study-body">
+                        <div class="study-metrics">
+                            <div class="metric">
+                                <div class="metric-value">247%</div>
+                                <div class="metric-label">Revenue Increase</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">3.2%</div>
+                                <div class="metric-label">Conversion Rate</div>
+                            </div>
+                        </div>
+                        <p class="study-description">Local roaster was selling wholesale only. We built a DTC site with a subscription model. In 6 months: $400K in new annual revenue from direct sales.</p>
+                    </div>
+                </div>
+
+                <div class="study-card">
+                    <div class="study-header">
+                        <div>
+                            <h3>Sustainable Fashion Startup</h3>
+                            <div class="study-category">Fashion & Apparel</div>
+                        </div>
+                    </div>
+                    <div class="study-body">
+                        <div class="study-metrics">
+                            <div class="metric">
+                                <div class="metric-value">$284K</div>
+                                <div class="metric-label">First Year Revenue</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">4.8%</div>
+                                <div class="metric-label">AOV Increase</div>
+                            </div>
+                        </div>
+                        <p class="study-description">New brand, zero customers. We designed their flagship site and checkout. Launch + 12 months of optimization = 647 orders, avg order value jumped from $62 to $65.</p>
+                    </div>
+                </div>
+
+                <div class="study-card">
+                    <div class="study-header">
+                        <div>
+                            <h3>Digital Product Company</h3>
+                            <div class="study-category">SaaS & Digital Goods</div>
+                        </div>
+                    </div>
+                    <div class="study-body">
+                        <div class="study-metrics">
+                            <div class="metric">
+                                <div class="metric-value">89%</div>
+                                <div class="metric-label">Faster Load Time</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">156%</div>
+                                <div class="metric-label">More Free Trials</div>
+                            </div>
+                        </div>
+                        <p class="study-description">Slow, bloated site. We rebuilt from scratch. New design + speed optimization resulted in 2x trial signups and 34% conversion to paid.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="process">
+        <div class="container">
+            <h2>Our Process (No Surprises)</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Audit & Strategy</h3>
+                    <p>We analyze your current site, traffic, competitors, and customers. We identify exactly where you're losing money.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Design & Testing</h3>
+                    <p>We design mockups, get your feedback, then build a conversion-optimized version. We A/B test key elements.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Build & Launch</h3>
+                    <p>We develop your site using the latest tools and best practices. Fast, secure, and fully optimized for conversion.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Optimize & Scale</h3>
+                    <p>We monitor performance, fix issues, and optimize for higher conversion. We own the results with you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"I was skeptical about spending $15K on a website redesign, but in the first 3 months, we made back the investment 10 times over. They knew exactly what to fix."</p>
+                    <div class="testimonial-author">Sarah Chen</div>
+                    <div class="testimonial-role">Founder, Wellness Supplements</div>
+                </div>
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"The checkout redesign alone reduced cart abandonment from 78% to 52%. These guys understand conversion psychology better than anyone I've worked with."</p>
+                    <div class="testimonial-author">Mike Rodriguez</div>
+                    <div class="testimonial-role">Operations Manager, Fashion Brand</div>
+                </div>
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"They didn't just build a website—they built a revenue engine. Now we can focus on product instead of worrying if our site is holding us back."</p>
+                    <div class="testimonial-author">James Park</div>
+                    <div class="testimonial-role">CEO, Tech Gadgets Retailer</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2>Simple, Transparent Pricing</h2>
+            <p class="pricing-subtitle">No hidden fees. No surprises. Choose the package that fits where you are.</p>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-name">Starter</div>
+                    <div class="pricing-price">$8K</div>
+                    <div class="pricing-duration">One-time investment</div>
+                    <ul class="pricing-features">
+                        <li>Website redesign (5-7 pages)</li>
+                        <li>Mobile-optimized design</li>
+                        <li>Basic conversion optimization</li>
+                        <li>Hosting & SSL setup</li>
+                        <li>30 days of post-launch support</li>
+                    </ul>
+                    <a href="#final-cta" class="cta-button">Get Started</a>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-name">Scale</div>
+                    <div class="pricing-price">$15K</div>
+                    <div class="pricing-duration">One-time investment</div>
+                    <ul class="pricing-features">
+                        <li>Complete site build (unlimited pages)</li>
+                        <li>Advanced conversion optimization</li>
+                        <li>A/B testing strategy</li>
+                        <li>Checkout flow optimization</li>
+                        <li>90 days of optimization & support</li>
+                        <li>Analytics dashboard setup</li>
+                    </ul>
+                    <a href="#final-cta" class="cta-button">Book Consultation</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-name">Enterprise</div>
+                    <div class="pricing-price">Custom</div>
+                    <div class="pricing-duration">Let's talk</div>
+                    <ul class="pricing-features">
+                        <li>Everything in Scale +</li>
+                        <li>Custom integrations (CRM, inventory)</li>
+                        <li>Advanced automations</li>
+                        <li>Ongoing optimization retainer</li>
+                        <li>Quarterly strategy sessions</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <a href="#final-cta" class="cta-button">Schedule Call</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How long does a typical project take?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">Most projects take 6-10 weeks from kickoff to launch. The Starter package is usually 4-6 weeks. We build in phases so you can see progress every 2 weeks.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you work with platforms like Shopify, WooCommerce, or custom code?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">We work with all platforms. Most e-commerce clients use Shopify (it's faster and cheaper). We also build on WooCommerce, BigCommerce, or custom stacks. We recommend based on your specific needs.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What if I'm not happy with the design?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">We include 2 rounds of revisions during the design phase. We also do discovery calls upfront so we're aligned on direction before we build. Mismatches are rare.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you provide ongoing support after launch?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">Yes. Every package includes post-launch support (30-90 days). After that, we offer optional retainers for ongoing optimization, new features, and support.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can you help us migrate from our current site?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">Yes. We handle migrations carefully—redirects, data transfer, SEO preservation, all of it. No downtime, no lost revenue.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What's your process for conversion optimization?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">We analyze heatmaps, user recordings, and your data. We identify friction points and test improvements. Small changes (copy, button color, form fields) often drive 10-25% improvement in conversions.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta" id="final-cta">
+        <div class="container">
+            <h2>Your E-Commerce Store Deserves Better</h2>
+            <p>Stop leaving money on the table. Let's talk about how we can fix your site and get your business growing again.</p>
+            <a href="https://calendly.com/yourdomain" class="cta-button">Book Your Free Consultation</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 StoreScale. E-Commerce Design & Strategy. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+
+        // Smooth scroll helper
+        function scrollToElement(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        // Fade in and animate elements on scroll
+        function animateValue(element, start, end, suffix, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                const current = Math.floor(progress * (end - start) + start);
+                element.textContent = current + suffix;
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -80px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    if (entry.target.classList.contains('study-card')) {
+                        const metricValue = entry.target.querySelector('.metric-value');
+                        if (metricValue && !metricValue.dataset.animated) {
+                            metricValue.dataset.animated = 'true';
+                            const text = metricValue.textContent.trim();
+                            const number = parseInt(text.replace(/\D/g, ''));
+                            const suffix = text.replace(/\d+/g, '').trim();
+                            animateValue(metricValue, 0, number, suffix, 800);
+                        }
+                    }
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.problem-card, .study-card, .testimonial, .pillar, .step').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Theme toggle (optional - if user prefers)
+        function getPreferredTheme() {
+            return localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        }
+
+        document.documentElement.setAttribute('data-theme', getPreferredTheme());
+    </script>
+</body>
+</html>
