@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import fs from 'fs/promises';
 import path from 'path';
 import { recordClient } from '@/app/lib/crm';
+import { sendOrderEmail } from '@/app/lib/email';
 
 // Same append-only JSONL pattern as quiz-lead and gumroad-ping. This trusts
 // client-reported capture details (no server-side re-verification against
@@ -39,6 +40,20 @@ export async function POST(request) {
       }
     } catch (crmError) {
       console.error('CRM sync failed for a la carte order (JSONL log still succeeded):', crmError);
+    }
+
+    // Order notification email -- best-effort, never blocks the response.
+    try {
+      await sendOrderEmail({
+        kind: 'a la carte',
+        orderId,
+        itemLabel: items.join(', '),
+        total,
+        payerName,
+        payerEmail,
+      });
+    } catch (emailError) {
+      console.error('Order email failed for a la carte order (JSONL log still succeeded):', emailError);
     }
 
     return NextResponse.json({ ok: true });
