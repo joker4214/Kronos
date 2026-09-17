@@ -1,31 +1,31 @@
 {
-  "generatedAt": "2026-09-16T10:09:50.811875+00:00",
-  "postCount": 49,
-  "avgEngagementPerActiveHour": 0.83,
+  "generatedAt": "2026-09-17T10:06:33.816278+00:00",
+  "postCount": 59,
+  "avgEngagementPerActiveHour": 2.06,
   "platformSummary": {
-    "tiktok": {
-      "postCount": 10,
-      "engagement": 10,
-      "byContentType": {
-        "video": 3,
-        "still": 7
-      }
-    },
     "instagram": {
-      "postCount": 21,
+      "postCount": 26,
       "engagement": 0,
       "byContentType": {
+        "poster": 9,
         "video": 4,
-        "still": 13,
-        "poster": 4
+        "still": 13
       }
     },
     "facebook": {
-      "postCount": 18,
+      "postCount": 23,
       "engagement": 0,
       "byContentType": {
-        "still": 12,
-        "poster": 6
+        "poster": 11,
+        "still": 12
+      }
+    },
+    "tiktok": {
+      "postCount": 10,
+      "engagement": 33,
+      "byContentType": {
+        "video": 3,
+        "still": 7
       }
     }
   },
@@ -34,13 +34,13 @@
       "hour": 0,
       "postCount": 1,
       "engagement": 0,
-      "deltaVsAvg": -0.83
+      "deltaVsAvg": -2.06
     },
     {
       "hour": 1,
       "postCount": 2,
       "engagement": 0,
-      "deltaVsAvg": -0.83
+      "deltaVsAvg": -2.06
     },
     {
       "hour": 2,
@@ -64,7 +64,7 @@
       "hour": 5,
       "postCount": 2,
       "engagement": 0,
-      "deltaVsAvg": -0.83
+      "deltaVsAvg": -2.06
     },
     {
       "hour": 6,
@@ -76,7 +76,7 @@
       "hour": 7,
       "postCount": 1,
       "engagement": 0,
-      "deltaVsAvg": -0.83
+      "deltaVsAvg": -2.06
     },
     {
       "hour": 8,
@@ -86,33 +86,33 @@
     },
     {
       "hour": 9,
-      "postCount": 6,
+      "postCount": 8,
       "engagement": 0,
-      "deltaVsAvg": -0.83
+      "deltaVsAvg": -2.06
     },
     {
       "hour": 10,
-      "postCount": 0,
+      "postCount": 2,
       "engagement": 0,
-      "deltaVsAvg": null
+      "deltaVsAvg": -2.06
     },
     {
       "hour": 11,
-      "postCount": 0,
+      "postCount": 2,
       "engagement": 0,
-      "deltaVsAvg": null
+      "deltaVsAvg": -2.06
     },
     {
       "hour": 12,
-      "postCount": 0,
+      "postCount": 2,
       "engagement": 0,
-      "deltaVsAvg": null
+      "deltaVsAvg": -2.06
     },
     {
       "hour": 13,
-      "postCount": 0,
+      "postCount": 2,
       "engagement": 0,
-      "deltaVsAvg": null
+      "deltaVsAvg": -2.06
     },
     {
       "hour": 14,
@@ -124,37 +124,37 @@
       "hour": 15,
       "postCount": 8,
       "engagement": 0,
-      "deltaVsAvg": -0.83
+      "deltaVsAvg": -2.06
     },
     {
       "hour": 16,
       "postCount": 8,
       "engagement": 0,
-      "deltaVsAvg": -0.83
+      "deltaVsAvg": -2.06
     },
     {
       "hour": 17,
       "postCount": 4,
       "engagement": 1,
-      "deltaVsAvg": 0.17
+      "deltaVsAvg": -1.06
     },
     {
       "hour": 18,
       "postCount": 2,
       "engagement": 1,
-      "deltaVsAvg": 0.17
+      "deltaVsAvg": -1.06
     },
     {
       "hour": 19,
       "postCount": 6,
       "engagement": 0,
-      "deltaVsAvg": -0.83
+      "deltaVsAvg": -2.06
     },
     {
       "hour": 20,
       "postCount": 6,
-      "engagement": 8,
-      "deltaVsAvg": 7.17
+      "engagement": 31,
+      "deltaVsAvg": 28.94
     },
     {
       "hour": 21,
@@ -166,7 +166,7 @@
       "hour": 22,
       "postCount": 3,
       "engagement": 0,
-      "deltaVsAvg": -0.83
+      "deltaVsAvg": -2.06
     },
     {
       "hour": 23,
@@ -176,6 +176,551 @@
     }
   ],
   "posts": [
+    {
+      "id": "6aa9f95981d74a10250a8684",
+      "platform": "instagram",
+      "sentAt": "2026-09-16T17:02:22.573Z",
+      "text": "Traffic is easy. Converting it is the job.\n\nGetting people to your store isn't t",
+      "assetType": "image",
+      "source": "https://dharma-marketing-assets.vercel.app/store-growth.png",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 0,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "reach": 0
+      },
+      "contentType": "poster",
+      "hourLocal": 13,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 0
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 0
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6aa9f9568df35c613718d785",
+      "platform": "facebook",
+      "sentAt": "2026-09-16T17:01:40.540Z",
+      "text": "Traffic is easy. Converting it is the job.\n\nGetting people to your store isn't t",
+      "assetType": "image",
+      "source": "https://dharma-marketing-assets.vercel.app/store-growth.png",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 0,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "poster",
+      "hourLocal": 13,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 0
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6aa9f94cc9dce8b453160c1a",
+      "platform": "instagram",
+      "sentAt": "2026-09-16T16:05:33.699Z",
+      "text": "Your product deserves more than a photo.\n\nA static image only tells half the sto",
+      "assetType": "image",
+      "source": "https://dharma-marketing-assets.vercel.app/ai-video.png",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 1,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "reach": 1
+      },
+      "contentType": "poster",
+      "hourLocal": 12,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 1
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 1
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6aa9f949501861120db3d04e",
+      "platform": "facebook",
+      "sentAt": "2026-09-16T16:01:41.798Z",
+      "text": "Your product deserves more than a photo.\n\nA static image only tells half the sto",
+      "assetType": "image",
+      "source": "https://dharma-marketing-assets.vercel.app/ai-video.png",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 0,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "poster",
+      "hourLocal": 12,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 0
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6aa9f93fbcef7237b5a9738c",
+      "platform": "instagram",
+      "sentAt": "2026-09-16T15:03:37.513Z",
+      "text": "53% of visitors leave a store that takes more than 3 seconds to load.\n\nIf you do",
+      "assetType": "image",
+      "source": "https://dharma-marketing-assets.vercel.app/store-audit.png",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 1,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "reach": 1
+      },
+      "contentType": "poster",
+      "hourLocal": 11,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 1
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 1
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6aa9f93dbcef7237b5a9731a",
+      "platform": "facebook",
+      "sentAt": "2026-09-16T15:01:50.462Z",
+      "text": "53% of visitors leave a store that takes more than 3 seconds to load.\n\nIf you do",
+      "assetType": "image",
+      "source": "https://dharma-marketing-assets.vercel.app/store-audit.png",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 0,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "poster",
+      "hourLocal": 11,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 0
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6aa9f93381d74a10250a7d15",
+      "platform": "instagram",
+      "sentAt": "2026-09-16T14:02:54.788Z",
+      "text": "Your store looks amazing. So why isn't anyone buying?\n\nSometimes it's not the pr",
+      "assetType": "image",
+      "source": "https://dharma-marketing-assets.vercel.app/web-design.png",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 0,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "reach": 0
+      },
+      "contentType": "poster",
+      "hourLocal": 10,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 0
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 0
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6aa9f930bcef7237b5a97181",
+      "platform": "facebook",
+      "sentAt": "2026-09-16T14:01:54.870Z",
+      "text": "Your store looks amazing. So why isn't anyone buying?\n\nSometimes it's not the pr",
+      "assetType": "image",
+      "source": "https://dharma-marketing-assets.vercel.app/web-design.png",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 0,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "poster",
+      "hourLocal": 10,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 0
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6aa9f925501861120db3cc66",
+      "platform": "instagram",
+      "sentAt": "2026-09-16T13:01:29.244Z",
+      "text": "You built the store. We build the audience.\n\nMost Shopify store owners are invis",
+      "assetType": "image",
+      "source": "https://dharma-marketing-assets.vercel.app/content-growth.png",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 0,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "reach": 0
+      },
+      "contentType": "poster",
+      "hourLocal": 9,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 0
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 0
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6aa9f9228df35c613718ce00",
+      "platform": "facebook",
+      "sentAt": "2026-09-16T13:01:13.854Z",
+      "text": "You built the store. We build the audience.\n\nMost Shopify store owners are invis",
+      "assetType": "image",
+      "source": "https://dharma-marketing-assets.vercel.app/content-growth.png",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 0,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "poster",
+      "hourLocal": 9,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 0
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
     {
       "id": "6aa8b2cb7a172fa74f8614ff",
       "platform": "instagram",
@@ -245,11 +790,11 @@
         "reactions": 0,
         "comments": 0,
         "engagementRate": 0,
-        "views": 31,
+        "views": 67,
         "shares": 0,
-        "reach": 0,
-        "totalTimeWatched": 0.95,
-        "averageTimeWatched": 1.91
+        "reach": 6,
+        "totalTimeWatched": 2.1,
+        "averageTimeWatched": 1.81
       },
       "contentType": "video",
       "hourLocal": 19,
@@ -258,12 +803,12 @@
         {
           "key": "reach",
           "label": "Reach",
-          "value": 0
+          "value": 6
         },
         {
           "key": "views",
           "label": "Views",
-          "value": 31
+          "value": 67
         },
         {
           "key": "reactions",
@@ -288,7 +833,7 @@
         {
           "key": "averageTimeWatched",
           "label": "Avg Watch (s)",
-          "value": 1.91
+          "value": 1.81
         }
       ]
     },
@@ -358,33 +903,33 @@
       "assetType": "image",
       "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6a7cb5bf7a5ea251d8dff321_photo.jpg",
       "metrics": {
-        "reactions": 0,
+        "reactions": 21,
         "comments": 0,
-        "engagementRate": 0,
-        "views": 75,
+        "engagementRate": 1.22,
+        "views": 1718,
         "shares": 0,
-        "reach": 0,
-        "totalTimeWatched": 1.3,
-        "averageTimeWatched": 1.04
+        "reach": 70,
+        "totalTimeWatched": 42.78,
+        "averageTimeWatched": 1.66
       },
       "contentType": "still",
       "hourLocal": 20,
-      "engagement": 0,
+      "engagement": 21,
       "displayMetrics": [
         {
           "key": "reach",
           "label": "Reach",
-          "value": 0
+          "value": 70
         },
         {
           "key": "views",
           "label": "Views",
-          "value": 75
+          "value": 1718
         },
         {
           "key": "reactions",
           "label": "Likes",
-          "value": 0
+          "value": 21
         },
         {
           "key": "comments",
@@ -399,12 +944,12 @@
         {
           "key": "engagementRate",
           "label": "Eng. Rate",
-          "value": 0
+          "value": 1.22
         },
         {
           "key": "averageTimeWatched",
           "label": "Avg Watch (s)",
-          "value": 1.04
+          "value": 1.66
         }
       ]
     },
@@ -474,38 +1019,38 @@
       "assetType": "video",
       "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6aa88cd2ac4a884f436b5cf1_video.mp4",
       "metrics": {
-        "reactions": 8,
-        "comments": 0,
-        "engagementRate": 5.3,
-        "views": 151,
+        "reactions": 9,
+        "comments": 1,
+        "engagementRate": 6.37,
+        "views": 157,
         "shares": 0,
-        "reach": 0,
-        "totalTimeWatched": 11.4,
-        "averageTimeWatched": 4.41
+        "reach": 135,
+        "totalTimeWatched": 12.38,
+        "averageTimeWatched": 4.59
       },
       "contentType": "video",
       "hourLocal": 20,
-      "engagement": 8,
+      "engagement": 10,
       "displayMetrics": [
         {
           "key": "reach",
           "label": "Reach",
-          "value": 0
+          "value": 135
         },
         {
           "key": "views",
           "label": "Views",
-          "value": 151
+          "value": 157
         },
         {
           "key": "reactions",
           "label": "Likes",
-          "value": 8
+          "value": 9
         },
         {
           "key": "comments",
           "label": "Comments",
-          "value": 0
+          "value": 1
         },
         {
           "key": "shares",
@@ -515,12 +1060,12 @@
         {
           "key": "engagementRate",
           "label": "Eng. Rate",
-          "value": 5.3
+          "value": 6.37
         },
         {
           "key": "averageTimeWatched",
           "label": "Avg Watch (s)",
-          "value": 4.41
+          "value": 4.59
         }
       ]
     },
@@ -759,8 +1304,8 @@
       "metrics": {
         "reactions": 1,
         "comments": 0,
-        "engagementRate": 0.6,
-        "views": 168,
+        "engagementRate": 0.59,
+        "views": 169,
         "shares": 0,
         "reach": 153,
         "totalTimeWatched": 4.58,
@@ -778,7 +1323,7 @@
         {
           "key": "views",
           "label": "Views",
-          "value": 168
+          "value": 169
         },
         {
           "key": "reactions",
@@ -798,7 +1343,7 @@
         {
           "key": "engagementRate",
           "label": "Eng. Rate",
-          "value": 0.6
+          "value": 0.59
         },
         {
           "key": "averageTimeWatched",
