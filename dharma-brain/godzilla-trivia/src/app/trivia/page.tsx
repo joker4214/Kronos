@@ -42,6 +42,15 @@ function rankFor(score: number): { title: string; blurb: string } {
   };
 }
 
+// Godzilla-only questions get the close-up head shot; every other kaiju
+// reuses its existing "Meet the Kaiju" portrait as the question backdrop.
+function backgroundFor(kaiju: string) {
+  if (kaiju === "godzilla") return "/kaiju/godzilla-closeup.jpg";
+  return `/kaiju/${kaiju}.jpg`;
+}
+
+const BREATH_EXIT_MS = 350;
+
 export default function TriviaPage() {
   // Shuffling uses Math.random(), which must never run during server render --
   // the server and client would pick different orders and React would throw a
@@ -54,6 +63,7 @@ export default function TriviaPage() {
   const [score, setScore] = useState(0);
   const [selected, setSelected] = useState<number | null>(null);
   const [finished, setFinished] = useState(false);
+  const [breathLeaving, setBreathLeaving] = useState(false);
 
   useEffect(() => {
     setPool(shuffle(QUESTIONS).slice(0, QUIZ_LENGTH));
@@ -70,6 +80,7 @@ export default function TriviaPage() {
   }
 
   const question = pool[current];
+  const showBreath = selected !== null;
 
   function choose(i: number) {
     if (selected !== null) return;
@@ -78,12 +89,16 @@ export default function TriviaPage() {
   }
 
   function next() {
-    if (current + 1 >= pool!.length) {
-      setFinished(true);
-      return;
-    }
-    setCurrent((c) => c + 1);
-    setSelected(null);
+    setBreathLeaving(true);
+    window.setTimeout(() => {
+      setBreathLeaving(false);
+      if (current + 1 >= pool!.length) {
+        setFinished(true);
+      } else {
+        setCurrent((c) => c + 1);
+        setSelected(null);
+      }
+    }, BREATH_EXIT_MS);
   }
 
   if (finished) {
@@ -118,54 +133,95 @@ export default function TriviaPage() {
   }
 
   return (
-    <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <div className="flex items-center justify-between mb-8 text-sm text-[#eafbee]/60">
-        <span>
-          Question {current + 1} / {pool.length}
-        </span>
-        <span>Score: {score}</span>
-      </div>
+    <div className="relative min-h-[calc(100vh-4rem)] overflow-hidden">
+      {/* Full-viewport kaiju backdrop, one per question, matched to whichever
+          monster the question is about. Keyed on `current` so each question
+          mounts a fresh element and fades in rather than hard-cutting. */}
+      <div
+        key={current}
+        className="fixed inset-0 -z-10 bg-cover bg-center animate-bg-fadein"
+        style={{ backgroundImage: `url(${backgroundFor(question.kaiju)})` }}
+      />
+      <div className="fixed inset-0 -z-10 bg-gradient-to-b from-black/75 via-black/65 to-black/90" />
 
-      <div className="w-full h-1.5 bg-white/10 rounded-full mb-10 overflow-hidden">
-        <div
-          className="h-full bg-kaiju-500 transition-all duration-300"
-          style={{ width: `${(current / pool.length) * 100}%` }}
-        />
-      </div>
-
-      <h1 className="text-2xl sm:text-3xl font-bold mb-8 text-glow">{question.question}</h1>
-
-      <div className="space-y-3">
-        {question.options.map((opt, i) => {
-          const isCorrect = i === question.correct;
-          const isSelected = i === selected;
-          let cls =
-            "w-full text-left px-5 py-4 rounded-lg border transition-colors font-medium";
-          if (selected === null) {
-            cls += " border-kaiju-900/60 bg-white/[0.03] hover:border-kaiju-500/60";
-          } else if (isCorrect) {
-            cls += " border-kaiju-500 bg-kaiju-500/15 text-kaiju-300";
-          } else if (isSelected) {
-            cls += " border-red-500/60 bg-red-500/10 text-red-300";
-          } else {
-            cls += " border-kaiju-900/40 bg-white/[0.02] text-[#eafbee]/50";
-          }
-          return (
-            <button key={i} onClick={() => choose(i)} className={cls} disabled={selected !== null}>
-              {opt}
-            </button>
-          );
-        })}
-      </div>
-
-      {selected !== null && (
-        <button
-          onClick={next}
-          className="mt-10 w-full bg-kaiju-500 hover:bg-kaiju-600 text-[#06120a] font-bold uppercase tracking-wide px-8 py-3 rounded-md transition-colors"
-        >
-          {current + 1 >= pool.length ? "See Results" : "Next Question"}
-        </button>
+      {/* Answer-reveal flourish: Godzilla lunges in from the left breathing
+          atomic fire the instant an answer is chosen, whether it was right
+          or wrong -- the beam always points at the actually-correct option,
+          so a wrong guess still shows you the right one. */}
+      {showBreath && (
+        <>
+          <div
+            className={`fixed inset-0 z-30 pointer-events-none bg-radial-gradient ${
+              breathLeaving ? "" : "animate-impact-flash"
+            }`}
+            style={{
+              background:
+                "radial-gradient(circle at 15% 50%, rgba(120,210,255,0.55), transparent 55%)",
+            }}
+          />
+          <img
+            src="/effects/godzilla-firebreath.jpg"
+            alt=""
+            className={`fixed left-0 bottom-0 z-30 pointer-events-none w-[46vw] max-w-[420px] min-w-[220px] drop-shadow-[0_0_40px_rgba(56,189,248,0.5)] ${
+              breathLeaving ? "animate-breath-out" : "animate-breath-in"
+            }`}
+          />
+        </>
       )}
+
+      <div className="relative z-10 max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="flex items-center justify-between mb-8 text-sm text-[#eafbee]/60">
+          <span>
+            Question {current + 1} / {pool.length}
+          </span>
+          <span>Score: {score}</span>
+        </div>
+
+        <div className="w-full h-1.5 bg-white/10 rounded-full mb-10 overflow-hidden">
+          <div
+            className="h-full bg-kaiju-500 transition-all duration-300"
+            style={{ width: `${(current / pool.length) * 100}%` }}
+          />
+        </div>
+
+        <h1 className="text-2xl sm:text-3xl font-bold mb-8 text-glow bg-black/40 rounded-lg px-4 py-3 backdrop-blur-sm">
+          {question.question}
+        </h1>
+
+        <div className="space-y-3">
+          {question.options.map((opt, i) => {
+            const isCorrect = i === question.correct;
+            const isSelected = i === selected;
+            const isWrongPick = selected !== null && isSelected && !isCorrect;
+            let cls =
+              "w-full text-left px-5 py-4 rounded-lg border transition-colors font-medium backdrop-blur-sm";
+            if (selected === null) {
+              cls += " border-kaiju-900/60 bg-black/40 hover:border-kaiju-500/60";
+            } else if (isCorrect) {
+              cls += " border-sky-400 bg-sky-400/15 text-sky-200 animate-correct-pulse";
+            } else if (isSelected) {
+              cls += " border-red-500/60 bg-red-500/10 text-red-300";
+            } else {
+              cls += " border-kaiju-900/40 bg-black/30 text-[#eafbee]/50";
+            }
+            if (isWrongPick) cls += " animate-wrong-shake";
+            return (
+              <button key={i} onClick={() => choose(i)} className={cls} disabled={selected !== null}>
+                {opt}
+              </button>
+            );
+          })}
+        </div>
+
+        {selected !== null && (
+          <button
+            onClick={next}
+            className="mt-10 w-full bg-kaiju-500 hover:bg-kaiju-600 text-[#06120a] font-bold uppercase tracking-wide px-8 py-3 rounded-md transition-colors"
+          >
+            {current + 1 >= pool.length ? "See Results" : "Next Question"}
+          </button>
+        )}
+      </div>
     </div>
   );
 }

@@ -30,3 +30,107 @@ body {
 .text-glow {
   text-shadow: 0 0 24px rgba(20, 184, 86, 0.55);
 }
+
+@keyframes breath-slide-in {
+  0% {
+    transform: translateX(-60%) scale(0.85);
+    opacity: 0;
+  }
+  60% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes breath-slide-out {
+  0% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-60%) scale(0.85);
+    opacity: 0;
+  }
+}
+
+@keyframes impact-flash {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes wrong-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-6px);
+  }
+  40% {
+    transform: translateX(6px);
+  }
+  60% {
+    transform: translateX(-4px);
+  }
+  80% {
+    transform: translateX(4px);
+  }
+}
+
+@keyframes correct-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 32px 6px rgba(56, 189, 248, 0.6);
+  }
+}
+
+.animate-breath-in {
+  animation: breath-slide-in 0.5s cubic-bezier(0.2, 0.8, 0.3, 1) forwards;
+}
+
+.animate-breath-out {
+  animation: breath-slide-out 0.35s ease-in forwards;
+}
+
+.animate-impact-flash {
+  animation: impact-flash 0.6s ease-out forwards;
+}
+
+.animate-wrong-shake {
+  animation: wrong-shake 0.4s ease-in-out;
+}
+
+.animate-correct-pulse {
+  animation: correct-pulse 1.1s ease-in-out 2;
+}
+
+.bg-crossfade {
+  transition: opacity 0.6s ease-in-out;
+}
+
+@keyframes bg-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-bg-fadein {
+  animation: bg-fade-in 0.6s ease-out forwards;
+}
