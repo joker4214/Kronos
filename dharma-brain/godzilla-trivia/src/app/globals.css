@@ -12,6 +12,25 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Tailwind v4 reads colors from this CSS @theme block, not from
+     tailwind.config.ts's theme.extend.colors -- that classic config-file
+     approach silently no-ops in v4 unless referenced via @config, which
+     this project never did. Every bg-kaiju and text-kaiju utility used
+     across the site (buttons, progress bar, badges) was compiling to
+     transparent/no-op the whole time; it only became visually obvious
+     once a busy background image sat behind those buttons. */
+  --color-kaiju-50: #effef3;
+  --color-kaiju-100: #d9fee3;
+  --color-kaiju-200: #a6f7c1;
+  --color-kaiju-300: #6be99a;
+  --color-kaiju-400: #33d271;
+  --color-kaiju-500: #14b856;
+  --color-kaiju-600: #0a9445;
+  --color-kaiju-700: #0a7439;
+  --color-kaiju-800: #0c5c31;
+  --color-kaiju-900: #0b4c2a;
+  --color-atomic-orange: #ff6a1a;
 }
 
 html {
