@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FOUND. — 3-Day Pop-Up · Nov 6–8</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#111111; --surface:#1a1a1a; --ink:#f5f3ee; --ink-soft:#a8a29b;
+    --accent:#e8ff5b; --line:#2c2c2c; --radius:4px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:'Inter',sans-serif; background:var(--bg); color:var(--ink); line-height:1.55; font-size:16px;}
+  img{max-width:100%; display:block;}
+  h1,h2{font-family:'Space Grotesk',sans-serif; font-weight:700;}
+  .wrap{max-width:760px; margin:0 auto; padding:0 24px;}
+  .bar{background:var(--accent); color:#111; text-align:center; padding:10px; font-weight:500; font-size:14px; letter-spacing:.02em;}
+  header.hero{padding:56px 0 32px;}
+  .eyebrow{letter-spacing:.16em; text-transform:uppercase; font-size:12px; color:var(--accent); font-weight:500; margin-bottom:16px;}
+  h1{font-size:clamp(40px,9vw,68px); line-height:1.02; margin-bottom:18px; text-transform:uppercase;}
+  .sub{font-size:17px; color:var(--ink-soft); max-width:46ch; margin-bottom:28px;}
+  .hero-img{aspect-ratio:16/9; overflow:hidden; border-radius:var(--radius);}
+  .hero-img img{width:100%; height:100%; object-fit:cover;}
+  section{padding:40px 0; border-top:1px solid var(--line);}
+  h2{font-size:22px; margin-bottom:20px; text-transform:uppercase;}
+  .details{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  .card{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:20px;}
+  .card .label{font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:8px;}
+  .gallery{display:grid; grid-template-columns:repeat(3,1fr); gap:8px;}
+  .gallery img{aspect-ratio:3/4; object-fit:cover; border-radius:var(--radius);}
+  .cta{text-align:center; padding:48px 0;}
+  .cta p{color:var(--ink-soft); max-width:42ch; margin:0 auto 24px;}
+  .btn{display:inline-block; background:var(--accent); color:#111; padding:14px 32px; border-radius:999px; text-decoration:none; font-weight:700; font-size:15px; min-height:44px; line-height:16px;}
+  footer{text-align:center; padding:28px 0 48px; color:var(--ink-soft); font-size:13px;}
+  @media (max-width:520px){ .details{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+  <div class="bar">3 DAYS ONLY — NOV 6–8 — 118 GREENE ST</div>
+  <div class="wrap">
+    <header class="hero">
+      <div class="eyebrow">Pop-up shop</div>
+      <h1>FOUND.<br>the sample sale</h1>
+      <p class="sub">One weekend, one location, everything up to 60% off. Once it's gone, it's gone — and so is this site.</p>
+      <div class="hero-img"><img src="https://picsum.photos/seed/popup-hero/1200/675" alt="Placeholder — storefront/product photo"></div>
+    </header>
+
+    <section>
+      <h2>Details</h2>
+      <div class="details">
+        <div class="card"><div class="label">When</div>Fri–Sun, 11am–7pm</div>
+        <div class="card"><div class="label">Where</div>118 Greene St, SoHo</div>
+        <div class="card"><div class="label">Payment</div>Card &amp; contactless only</div>
+        <div class="card"><div class="label">Parking</div>Street + garage on Mercer</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>What's inside</h2>
+      <div class="gallery">
+        <img src="https://picsum.photos/seed/pop1/300/400" alt="Placeholder product photo">
+        <img src="https://picsum.photos/seed/pop2/300/400" alt="Placeholder product photo">
+        <img src="https://picsum.photos/seed/pop3/300/400" alt="Placeholder product photo">
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>Get on the list</h2>
+      <p>First hour is list-holders only. Drop your email, we'll text you when the doors open.</p>
+      <a class="btn" href="#">Join the list</a>
+    </section>
+  </div>
+  <footer>This site and this shop both disappear November 9th.</footer>
+</body>
+</html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools & Tech Stack - AI Business Empire Map</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1A3A52 0%, #0f2a3a 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        h2 {
+            color: #1A3A52;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 22px;
+            border-bottom: 2px solid #2563EB;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #2563EB;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .tool-card {
+            background: #f9f9f9;
+            border-left: 4px solid #2563EB;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 10px 0;
+        }
+
+        .tool-card strong {
+            color: #1A3A52;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .tool-card .price {
+            color: #666;
+            font-size: 12px;
+            font-style: italic;
+            margin-top: 8px;
+        }
+
+        .highlight {
+            background: #f0f7ff;
+            border-left: 4px solid #2563EB;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+
+        .highlight strong {
+            color: #2563EB;
+        }
+
+        .free-badge {
+            background: #10B981;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .footer {
+            background: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            border-top: 1px solid #eee;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #2563EB;
+            color: white;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            display: none;
+        }
+
+        .close-btn.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="close-btn show" onclick="window.close()">×</button>
+
+        <div class="header">
+            <h1>Tools & Tech Stack</h1>
+            <p>Curated tools for building your AI business (without overwhelming you)</p>
+        </div>
+
+        <div class="content">
+            <h2>The Philosophy</h2>
+
+            <p>You don't need every tool. You need the RIGHT tools at the RIGHT time.</p>
+
+            <p>Too many options paralyze you. This guide gives you ONE recommended tool per category, plus FREE alternatives that act like paid software.</p>
+
+            <p><strong>Start with what's free. Upgrade only when you hit a real limit.</strong></p>
+
+            <h2>Essential Tools You Should Know About</h2>
+
+            <h3>🤖 AI & Writing Tools</h3>
+
+            <div class="tool-card">
+                <strong>Claude <span class="free-badge">RECOMMENDED</span></strong>
+                $20/month for Claude Pro (free version available)
+                <p style="margin-top: 8px;">Use it for everything: writing, coding, thinking through problems, generating ideas. Weekly updates mean it keeps getting better.</p>
+            </div>
+
+            <div class="tool-card">
+                <strong>ChatGPT</strong>
+                Free or $20/month
+                <p style="margin-top: 8px;">Solid alternative to Claude. Both are excellent.</p>
+            </div>
+
+            <div class="tool-card">
+                <strong>Gemini <span class="free-badge">FREE</span></strong>
+                Completely free
+                <p style="margin-top: 8px;">Google's AI. Free and surprisingly good. Helpful for setting up GA4.</p>
+            </div>
+
+            <h3>💻 Coding & Building</h3>
+
+            <div class="tool-card">
+                <strong>GitHub <span class="free-badge">FREE</span></strong>
+                Completely free
+                <p style="margin-top: 8px;">Store your code. Not just for programmers — useful for anyone building anything.</p>
+            </div>
+
+            <div class="tool-card">
+                <strong>Replit <span class="free-badge">FREE TIER</span></strong>
+                Free to start
+                <p style="margin-top: 8px;">Write code in your browser. No installation needed. Great for beginners.</p>
+            </div>
+
+            <div class="tool-card">
+                <strong>Claude Code <span class="free-badge">FREE (Claude Pro)</span></strong>
+                Included with Claude Pro
+                <p style="margin-top: 8px;">Write and run code with Claude. Game-changer for building things fast.</p>
+            </div>
+
+            <h3>🎨 Design & Visuals</h3>
+
+            <div class="tool-card">
+                <strong>Canva <span class="free-badge">FREE TIER</span></strong>
+                Free or $13/month
+                <p style="margin-top: 8px;">Design tool. You already know this one. Free version does 80% of what you need.</p>
+            </div>
+
+            <div class="tool-card">
+                <strong>Figma <span class="free-badge">FREE TIER</span></strong>
+                Free to start
+                <p style="margin-top: 8px;">Design tool. More powerful than Canva but steeper learning curve. Free version is solid.</p>
+            </div>
+
+            <h3>📧 Email & Marketing</h3>
+
+            <div class="tool-card">
+                <strong>Klaviyo</strong>
+                Free to start ($20+ per month)
+                <p style="margin-top: 8px;">Powerful email automation. Used by successful businesses. Free tier covers small businesses.</p>
+            </div>
+
+            <div class="tool-card">
+                <strong>Mailchimp <span class="free-badge">FREE TIER</span></strong>
+                Free up to 500 contacts
+                <p style="margin-top: 8px;">Simpler than Klaviyo. Great for beginners.</p>
+            </div>
+
+            <h3>🔄 Automation</h3>
+
+            <div class="tool-card">
+                <strong>Make <span class="free-badge">FREE TIER</span></strong>
+                Free to start
+                <p style="margin-top: 8px;">Automate workflows. Connect tools together. "If this, then that" but much more powerful.</p>
+            </div>
+
+            <div class="tool-card">
+                <strong>Zapier <span class="free-badge">FREE TIER</span></strong>
+                Free to start
+                <p style="margin-top: 8px;">Same as Make. Simpler interface. Pick one.</p>
+            </div>
+
+            <h3>💳 Payment Processing</h3>
+
+            <div class="tool-card">
+                <strong>Stripe <span class="free-badge">RECOMMENDED</span></strong>
+                2.9% + $0.30 per transaction
+                <p style="margin-top: 8px;">Accept credit cards on your website. Industry standard.</p>
+            </div>
+
+            <div class="tool-card">
+                <strong>PayPal</strong>
+                2.2% + $0.30 per transaction
+                <p style="margin-top: 8px;">Everyone knows PayPal. Reliable alternative to Stripe.</p>
+            </div>
+
+            <div class="tool-card">
+                <strong>Gumroad</strong>
+                10% commission
+                <p style="margin-top: 8px;">If selling digital products, handles everything (payment + delivery).</p>
+            </div>
+
+            <div class="tool-card">
+                <strong>Lemon Squeezy</strong>
+                8% + payment processing
+                <p style="margin-top: 8px;">Better Gumroad alternative. Handles taxes automatically.</p>
+            </div>
+
+            <h3>🌐 Hosting & Deployment</h3>
+
+            <div class="tool-card">
+                <strong>Vercel <span class="free-badge">FREE TIER</span></strong>
+                Free tier very generous
+                <p style="margin-top: 8px;">Host websites. Incredibly simple. Great for Next.js/React sites.</p>
+            </div>
+
+            <div class="tool-card">
+                <strong>Netlify <span class="free-badge">FREE TIER</span></strong>
+                Free tier very generous
+                <p style="margin-top: 8px;">Similar to Vercel. Also great for static sites.</p>
+            </div>
+
+            <div class="tool-card">
+                <strong>Supabase <span class="free-badge">FREE TIER</span></strong>
+                Free tier available
+                <p style="margin-top: 8px;">Database + backend. You build the website, Supabase handles data storage.</p>
+            </div>
+
+            <div class="tool-card">
+                <strong>GoDaddy VPS</strong>
+                $3.99-12/month
+                <p style="margin-top: 8px;">Full control. More freedom than drag-and-drop sites. Requires technical knowledge.</p>
+            </div>
+
+            <h3>📊 Analytics</h3>
+
+            <div class="tool-card">
+                <strong>GA4 <span class="free-badge">FREE</span></strong>
+                Completely free
+                <p style="margin-top: 8px;">Google Analytics 4. Hard to set up alone, but use Claude or Gemini to help. Incredibly powerful once set up.</p>
+            </div>
+
+            <h2>The 10 Free Tools That Act Like Paid Software</h2>
+
+            <p>These are powerful and free. Really.</p>
+
+            <ol>
+                <li><strong>Obsidian</strong> — Note-taking like Notion but better for organizing complex ideas</li>
+                <li><strong>Figma</strong> — Design tool like Adobe but free and online</li>
+                <li><strong>GitHub</strong> — Version control like Bitbucket but with free private repos</li>
+                <li><strong>Replit</strong> — Code editor like Codepen with more power</li>
+                <li><strong>GA4</strong> — Analytics like Mixpanel but Google's (harder to set up)</li>
+                <li><strong>Mailchimp</strong> — Email marketing like Klaviyo but simpler and free</li>
+                <li><strong>Canva</strong> — Design like Adobe but 1% of the price</li>
+                <li><strong>Make</strong> — Automation like Zapier with more power</li>
+                <li><strong>Supabase</strong> — Database like Firebase but easier to use</li>
+                <li><strong>Vercel</strong> — Web hosting that's faster than traditional hosting</li>
+            </ol>
+
+            <h2>Start Here (8 Tools Maximum)</h2>
+
+            <div class="highlight">
+                <strong>1. Claude</strong> (or ChatGPT) — For thinking, writing, coding<br>
+                <strong>2. Mailchimp</strong> (Free) — For email list<br>
+                <strong>3. Gumroad or Lemon Squeezy</strong> — For selling digital products<br>
+                <strong>4. Canva</strong> (Free) — For graphics<br>
+                <strong>5. Vercel or Netlify</strong> — For hosting your site<br>
+                <strong>6. Stripe</strong> — For payments<br>
+                <strong>7. Obsidian</strong> (Free) — For note-taking<br>
+                <strong>8. GA4</strong> (Free, with Claude's help) — For analytics<br><br>
+                <strong>You can build a six-figure business with just these 8 tools.</strong>
+            </div>
+
+            <h2>The Tool Nobody Knows About</h2>
+
+            <p><strong>Claude Code</strong> (Free for Claude Pro subscribers, $20/month)</p>
+
+            <p>This is a game-changer. It's Claude + a code editor + the ability to run code.</p>
+
+            <p>You tell Claude what you want to build. It writes the code. You can run it immediately. No setup needed.</p>
+
+            <p>Examples:</p>
+            <ul>
+                <li>"Build me a landing page that converts"</li>
+                <li>"Create a database schema for my business"</li>
+                <li>"Write a script to automate my email list"</li>
+                <li>"Generate 100 product descriptions from a CSV"</li>
+            </ul>
+
+            <p>Takes 5 minutes instead of 5 hours. This tool alone is worth the Claude Pro subscription.</p>
+
+            <h2>How to Stay Updated</h2>
+
+            <p>Tools change fast. New AI tools launch weekly.</p>
+
+            <p>Where to find new tools:</p>
+            <ul>
+                <li><strong>Product Hunt</strong> (producthunt.com) — New tools every day. Free.</li>
+                <li><strong>Twitter/X</strong> — Follow AI and startup accounts. New tools announced here first.</li>
+                <li><strong>YouTube</strong> — Search "[tool name] tutorial". See if it saves you time.</li>
+                <li><strong>Ask Claude</strong> — "What new tools should I know about for [my use case]?" Claude will tell you.</li>
+            </ul>
+
+            <h2>Final Word</h2>
+
+            <p>You don't need to know every tool. You need to know <strong>where to find</strong> the right tool when you need it.</p>
+
+            <p>Start with the 8 core tools above. Use them until they break. Then upgrade.</p>
+
+            <p>Build first. Optimize tools later.</p>
+        </div>
+
+        <div class="footer">
+            <p>The AI Business Empire Map © 2026 | Tools & Tech Stack Guide</p>
+        </div>
+    </div>
+</body>
+</html>

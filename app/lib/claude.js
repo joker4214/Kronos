@@ -6,7 +6,7 @@ export const claude = new Anthropic({
 
 export async function generateContentIdeas(agencyId, brandVoice) {
   const response = await claude.messages.create({
-    model: "claude-opus-4-8",
+    model: "claude-sonnet-5",
     max_tokens: 1024,
     messages: [
       {
@@ -17,7 +17,7 @@ Brand Voice: ${brandVoice}
 
 Generate 5-7 content ideas for this week. Mix of:
 - 2-3 portfolio/case study posts
-- 1-2 relatable/humor posts  
+- 1-2 relatable/humor posts
 - 1 educational/tips post
 - 1 testimonial/result post
 
@@ -33,7 +33,7 @@ Format as JSON array with objects containing: { idea: string, type: string, desc
 
 export async function generateCaption(idea, brandVoice) {
   const response = await claude.messages.create({
-    model: "claude-opus-4-8",
+    model: "claude-sonnet-5",
     max_tokens: 500,
     messages: [
       {

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Groundwork '26 — Oct 9–11</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0f1420; --surface:#171d2c; --ink:#eef1f6; --ink-soft:#9aa4b8;
+    --accent:#5b8cff; --accent-2:#3ee6a8; --line:#242c3f; --radius:14px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:'Inter',sans-serif; background:var(--bg); color:var(--ink); line-height:1.6; font-size:16px;}
+  img{max-width:100%; display:block; border-radius:var(--radius);}
+  .wrap{max-width:800px; margin:0 auto; padding:0 24px;}
+  header.hero{padding:60px 0 36px;}
+  .eyebrow{letter-spacing:.14em; text-transform:uppercase; font-size:12px; color:var(--accent-2); font-weight:700; margin-bottom:16px;}
+  h1{font-size:clamp(34px,7vw,54px); font-weight:800; line-height:1.08; margin-bottom:16px;}
+  .sub{font-size:17px; color:var(--ink-soft); max-width:50ch; margin-bottom:28px;}
+  .cta-row{display:flex; gap:12px; flex-wrap:wrap; margin-bottom:32px;}
+  .btn{display:inline-block; background:var(--accent); color:#fff; padding:14px 28px; border-radius:10px; text-decoration:none; font-weight:700; font-size:15px; min-height:44px; line-height:16px;}
+  .btn.ghost{background:transparent; border:1px solid var(--line); color:var(--ink);}
+  .hero-img{aspect-ratio:16/8; overflow:hidden;}
+  .hero-img img{width:100%; height:100%; object-fit:cover;}
+  section{padding:40px 0; border-top:1px solid var(--line);}
+  h2{font-size:22px; font-weight:700; margin-bottom:20px;}
+  .schedule{display:grid; gap:12px;}
+  .item{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:18px 20px; display:flex; justify-content:space-between; gap:12px; align-items:baseline;}
+  .item .day{font-weight:700; color:var(--accent-2); font-size:13px; letter-spacing:.06em; white-space:nowrap;}
+  .speakers{display:grid; grid-template-columns:repeat(3,1fr); gap:14px;}
+  .sp{text-align:center;}
+  .sp img{aspect-ratio:1/1; object-fit:cover; margin-bottom:10px;}
+  .sp .name{font-weight:700; font-size:14px;}
+  .sp .role{color:var(--ink-soft); font-size:12px;}
+  .pricing{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  .tier{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:22px;}
+  .tier .price{font-size:28px; font-weight:800; margin:6px 0 12px;}
+  footer{text-align:center; padding:32px 0 56px; color:var(--ink-soft); font-size:13px;}
+  @media (max-width:520px){ .speakers,.pricing{grid-template-columns:1fr;} .item{flex-direction:column;} }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="eyebrow">3-day summit · Austin, TX</div>
+      <h1>Groundwork '26</h1>
+      <p class="sub">A weekend for people building small, independent businesses — talks, workshops, and a room full of people who get it.</p>
+      <div class="cta-row">
+        <a class="btn" href="#">Get tickets</a>
+        <a class="btn ghost" href="#">See the schedule</a>
+      </div>
+      <div class="hero-img"><img src="https://picsum.photos/seed/conf-hero/1200/600" alt="Placeholder — venue/crowd photo"></div>
+    </header>
+
+    <section>
+      <h2>Schedule</h2>
+      <div class="schedule">
+        <div class="item"><span class="day">FRI</span><span>Doors open + welcome reception</span></div>
+        <div class="item"><span class="day">SAT</span><span>Main stage talks + breakout workshops</span></div>
+        <div class="item"><span class="day">SUN</span><span>Half-day, closing panel + brunch</span></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Speakers</h2>
+      <div class="speakers">
+        <div class="sp"><img src="https://picsum.photos/seed/sp1/300/300" alt="Placeholder headshot"><div class="name">Speaker Name</div><div class="role">Title, Company</div></div>
+        <div class="sp"><img src="https://picsum.photos/seed/sp2/300/300" alt="Placeholder headshot"><div class="name">Speaker Name</div><div class="role">Title, Company</div></div>
+        <div class="sp"><img src="https://picsum.photos/seed/sp3/300/300" alt="Placeholder headshot"><div class="name">Speaker Name</div><div class="role">Title, Company</div></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Tickets</h2>
+      <div class="pricing">
+        <div class="tier"><div>General</div><div class="price">$249</div><div style="color:var(--ink-soft); font-size:14px;">All 3 days, main stage + workshops</div></div>
+        <div class="tier"><div>VIP</div><div class="price">$449</div><div style="color:var(--ink-soft); font-size:14px;">General + front row, speaker dinner</div></div>
+      </div>
+    </section>
+  </div>
+  <footer>This site comes down October 12th — ticket confirmations go to your email.</footer>
+</body>
+</html>

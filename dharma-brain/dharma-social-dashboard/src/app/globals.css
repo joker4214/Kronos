@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+:root {
+  --page: #16181C;
+  --surface: #22252B;
+  --accent: #2F5FFF;
+  --accent-light: #5C82FF;
+  --accent-orange: #d95926;
+  --white: #FFFFFF;
+  --gray-100: #F5F5F6;
+  --gray-400: #8A8F98;
+  --gray-700: #3F434B;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--page);
+  color: var(--white);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.font-display {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+}
