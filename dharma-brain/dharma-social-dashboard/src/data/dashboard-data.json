@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-09-18T10:07:17.796451+00:00",
-  "postCount": 65,
-  "avgEngagementPerActiveHour": 3.78,
+  "generatedAt": "2026-09-19T10:06:26.878726+00:00",
+  "postCount": 66,
+  "avgEngagementPerActiveHour": 4.28,
   "platformSummary": {
     "facebook": {
-      "postCount": 27,
+      "postCount": 28,
       "engagement": 0,
       "byContentType": {
-        "video": 4,
+        "video": 5,
         "poster": 11,
         "still": 12
       }
@@ -23,7 +23,7 @@
     },
     "tiktok": {
       "postCount": 11,
-      "engagement": 68,
+      "engagement": 77,
       "byContentType": {
         "video": 4,
         "still": 7
@@ -35,13 +35,13 @@
       "hour": 0,
       "postCount": 1,
       "engagement": 0,
-      "deltaVsAvg": -3.78
+      "deltaVsAvg": -4.28
     },
     {
       "hour": 1,
       "postCount": 2,
       "engagement": 0,
-      "deltaVsAvg": -3.78
+      "deltaVsAvg": -4.28
     },
     {
       "hour": 2,
@@ -65,7 +65,7 @@
       "hour": 5,
       "postCount": 2,
       "engagement": 0,
-      "deltaVsAvg": -3.78
+      "deltaVsAvg": -4.28
     },
     {
       "hour": 6,
@@ -77,85 +77,85 @@
       "hour": 7,
       "postCount": 1,
       "engagement": 0,
-      "deltaVsAvg": -3.78
+      "deltaVsAvg": -4.28
     },
     {
       "hour": 8,
-      "postCount": 1,
+      "postCount": 2,
       "engagement": 0,
-      "deltaVsAvg": -3.78
+      "deltaVsAvg": -4.28
     },
     {
       "hour": 9,
       "postCount": 10,
       "engagement": 0,
-      "deltaVsAvg": -3.78
+      "deltaVsAvg": -4.28
     },
     {
       "hour": 10,
       "postCount": 2,
       "engagement": 0,
-      "deltaVsAvg": -3.78
+      "deltaVsAvg": -4.28
     },
     {
       "hour": 11,
       "postCount": 2,
       "engagement": 0,
-      "deltaVsAvg": -3.78
+      "deltaVsAvg": -4.28
     },
     {
       "hour": 12,
       "postCount": 2,
       "engagement": 0,
-      "deltaVsAvg": -3.78
+      "deltaVsAvg": -4.28
     },
     {
       "hour": 13,
       "postCount": 2,
       "engagement": 0,
-      "deltaVsAvg": -3.78
+      "deltaVsAvg": -4.28
     },
     {
       "hour": 14,
       "postCount": 3,
       "engagement": 0,
-      "deltaVsAvg": -3.78
+      "deltaVsAvg": -4.28
     },
     {
       "hour": 15,
       "postCount": 8,
       "engagement": 0,
-      "deltaVsAvg": -3.78
+      "deltaVsAvg": -4.28
     },
     {
       "hour": 16,
       "postCount": 8,
       "engagement": 0,
-      "deltaVsAvg": -3.78
+      "deltaVsAvg": -4.28
     },
     {
       "hour": 17,
       "postCount": 4,
       "engagement": 1,
-      "deltaVsAvg": -2.78
+      "deltaVsAvg": -3.28
     },
     {
       "hour": 18,
       "postCount": 2,
       "engagement": 1,
-      "deltaVsAvg": -2.78
+      "deltaVsAvg": -3.28
     },
     {
       "hour": 19,
       "postCount": 6,
       "engagement": 2,
-      "deltaVsAvg": -1.78
+      "deltaVsAvg": -2.28
     },
     {
       "hour": 20,
       "postCount": 6,
-      "engagement": 64,
-      "deltaVsAvg": 60.22
+      "engagement": 73,
+      "deltaVsAvg": 68.72
     },
     {
       "hour": 21,
@@ -167,7 +167,7 @@
       "hour": 22,
       "postCount": 3,
       "engagement": 0,
-      "deltaVsAvg": -3.78
+      "deltaVsAvg": -4.28
     },
     {
       "hour": 23,
@@ -177,6 +177,57 @@
     }
   ],
   "posts": [
+    {
+      "id": "6aaab7a60165c0c5424d11e1",
+      "platform": "facebook",
+      "sentAt": "2026-09-18T12:03:42.965Z",
+      "text": "Store not selling? We sent a ship to go find out why. \ud83d\ude80 Get a real Shopify Store",
+      "assetType": "video",
+      "source": "https://dharma-marketing-assets.vercel.app/scifi-store-quest.mp4",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 0,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "video",
+      "hourLocal": 8,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 0
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
     {
       "id": "6aac3107044720d6ed02ad8b",
       "platform": "instagram",
@@ -297,10 +348,10 @@
         "reactions": 0,
         "comments": 0,
         "engagementRate": 0,
-        "views": 89,
+        "views": 90,
         "shares": 0,
-        "reach": 0,
-        "totalTimeWatched": 2.13,
+        "reach": 85,
+        "totalTimeWatched": 2.15,
         "averageTimeWatched": 1.42
       },
       "contentType": "video",
@@ -310,12 +361,12 @@
         {
           "key": "reach",
           "label": "Reach",
-          "value": 0
+          "value": 85
         },
         {
           "key": "views",
           "label": "Views",
-          "value": 89
+          "value": 90
         },
         {
           "key": "reactions",
@@ -508,11 +559,11 @@
         "reactions": 0,
         "comments": 0,
         "engagementRate": 0,
-        "views": 0,
+        "views": 1,
         "shares": 0,
         "saves": 0,
         "follows": 0,
-        "reach": 0
+        "reach": 1
       },
       "contentType": "poster",
       "hourLocal": 13,
@@ -521,12 +572,12 @@
         {
           "key": "reach",
           "label": "Reach",
-          "value": 0
+          "value": 1
         },
         {
           "key": "views",
           "label": "Views",
-          "value": 0
+          "value": 1
         },
         {
           "key": "saves",
@@ -1104,18 +1155,18 @@
       "id": "6aa8b2cda8c36ff9777720b9",
       "platform": "tiktok",
       "sentAt": "2026-09-15T23:01:47.959Z",
-      "text": "Every store owner's climbing the same hill. We help you win it.\n\nDharmasEsthetic",
+      "text": "Every store owner's climbing the same hill. We help you win it. DharmasEstheticD",
       "assetType": "video",
       "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6aa8b2cda8c36ff9777720b9_video.mp4",
       "metrics": {
         "reactions": 2,
         "comments": 0,
         "engagementRate": 0.12,
-        "views": 1698,
+        "views": 1705,
         "shares": 0,
-        "reach": 64,
-        "totalTimeWatched": 96.75,
-        "averageTimeWatched": 3.1
+        "reach": 1674,
+        "totalTimeWatched": 98.43,
+        "averageTimeWatched": 3.13
       },
       "contentType": "video",
       "hourLocal": 19,
@@ -1124,12 +1175,12 @@
         {
           "key": "reach",
           "label": "Reach",
-          "value": 64
+          "value": 1674
         },
         {
           "key": "views",
           "label": "Views",
-          "value": 1698
+          "value": 1705
         },
         {
           "key": "reactions",
@@ -1154,7 +1205,7 @@
         {
           "key": "averageTimeWatched",
           "label": "Avg Watch (s)",
-          "value": 3.1
+          "value": 3.13
         }
       ]
     },
@@ -1220,17 +1271,17 @@
       "id": "6a7cb5bf7a5ea251d8dff321",
       "platform": "tiktok",
       "sentAt": "2026-09-15T00:23:41.512Z",
-      "text": "POV: you spent $0 on marketing and expected customers to just show up.\n\nDharma g",
+      "text": "POV: you spent $0 on marketing and expected customers to just show up. Dharma ge",
       "assetType": "image",
       "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6a7cb5bf7a5ea251d8dff321_photo.jpg",
       "metrics": {
         "reactions": 21,
         "comments": 0,
         "engagementRate": 1.22,
-        "views": 1718,
+        "views": 1719,
         "shares": 0,
-        "reach": 1346,
-        "totalTimeWatched": 43.28,
+        "reach": 1362,
+        "totalTimeWatched": 43.3,
         "averageTimeWatched": 1.66
       },
       "contentType": "still",
@@ -1240,12 +1291,12 @@
         {
           "key": "reach",
           "label": "Reach",
-          "value": 1346
+          "value": 1362
         },
         {
           "key": "views",
           "label": "Views",
-          "value": 1718
+          "value": 1719
         },
         {
           "key": "reactions",
@@ -1340,33 +1391,33 @@
       "assetType": "video",
       "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6aa88cd2ac4a884f436b5cf1_video.mp4",
       "metrics": {
-        "reactions": 41,
+        "reactions": 50,
         "comments": 2,
-        "engagementRate": 0.35,
-        "views": 12148,
+        "engagementRate": 0.37,
+        "views": 14166,
         "shares": 0,
-        "reach": 148,
-        "totalTimeWatched": 864.2,
-        "averageTimeWatched": 3.72
+        "reach": 7539,
+        "totalTimeWatched": 1045.62,
+        "averageTimeWatched": 3.79
       },
       "contentType": "video",
       "hourLocal": 20,
-      "engagement": 43,
+      "engagement": 52,
       "displayMetrics": [
         {
           "key": "reach",
           "label": "Reach",
-          "value": 148
+          "value": 7539
         },
         {
           "key": "views",
           "label": "Views",
-          "value": 12148
+          "value": 14166
         },
         {
           "key": "reactions",
           "label": "Likes",
-          "value": 41
+          "value": 50
         },
         {
           "key": "comments",
@@ -1381,12 +1432,12 @@
         {
           "key": "engagementRate",
           "label": "Eng. Rate",
-          "value": 0.35
+          "value": 0.37
         },
         {
           "key": "averageTimeWatched",
           "label": "Avg Watch (s)",
-          "value": 3.72
+          "value": 3.79
         }
       ]
     },
@@ -1517,7 +1568,7 @@
         "reactions": 0,
         "comments": 0,
         "engagementRate": 0,
-        "views": 112,
+        "views": 113,
         "shares": 0,
         "reach": 101,
         "totalTimeWatched": 5.47,
@@ -1535,7 +1586,7 @@
         {
           "key": "views",
           "label": "Views",
-          "value": 112
+          "value": 113
         },
         {
           "key": "reactions",
@@ -1739,7 +1790,7 @@
         "shares": 0,
         "reach": 169,
         "totalTimeWatched": 4.65,
-        "averageTimeWatched": 1.51
+        "averageTimeWatched": 1.5
       },
       "contentType": "still",
       "hourLocal": 17,
@@ -1778,7 +1829,7 @@
         {
           "key": "averageTimeWatched",
           "label": "Avg Watch (s)",
-          "value": 1.51
+          "value": 1.5
         }
       ]
     },
@@ -1960,10 +2011,10 @@
         "reactions": 0,
         "comments": 0,
         "engagementRate": 0,
-        "views": 253,
+        "views": 254,
         "shares": 0,
         "reach": 228,
-        "totalTimeWatched": 8.37,
+        "totalTimeWatched": 8.42,
         "averageTimeWatched": 1.99
       },
       "contentType": "still",
@@ -1978,7 +2029,7 @@
         {
           "key": "views",
           "label": "Views",
-          "value": 253
+          "value": 254
         },
         {
           "key": "reactions",
@@ -2021,8 +2072,8 @@
         "views": 99,
         "shares": 0,
         "reach": 84,
-        "totalTimeWatched": 1.87,
-        "averageTimeWatched": 1.13
+        "totalTimeWatched": 1.95,
+        "averageTimeWatched": 1.17
       },
       "contentType": "still",
       "hourLocal": 16,
@@ -2061,7 +2112,7 @@
         {
           "key": "averageTimeWatched",
           "label": "Avg Watch (s)",
-          "value": 1.13
+          "value": 1.17
         }
       ]
     },
