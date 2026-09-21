@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-20T10:20:08.528505+00:00",
+  "generatedAt": "2026-09-21T10:20:35.279050+00:00",
   "postCount": 66,
   "avgEngagementPerActiveHour": 4.33,
   "platformSummary": {
@@ -348,11 +348,11 @@
         "reactions": 0,
         "comments": 0,
         "engagementRate": 0,
-        "views": 91,
+        "views": 93,
         "shares": 0,
         "reach": 85,
-        "totalTimeWatched": 2.17,
-        "averageTimeWatched": 1.42
+        "totalTimeWatched": 2.18,
+        "averageTimeWatched": 1.4
       },
       "contentType": "video",
       "hourLocal": 14,
@@ -366,7 +366,7 @@
         {
           "key": "views",
           "label": "Views",
-          "value": 91
+          "value": 93
         },
         {
           "key": "reactions",
@@ -391,7 +391,7 @@
         {
           "key": "averageTimeWatched",
           "label": "Avg Watch (s)",
-          "value": 1.42
+          "value": 1.4
         }
       ]
     },
@@ -1165,7 +1165,7 @@
         "views": 1707,
         "shares": 0,
         "reach": 1699,
-        "totalTimeWatched": 98.6,
+        "totalTimeWatched": 98.65,
         "averageTimeWatched": 3.12
       },
       "contentType": "video",
@@ -1281,7 +1281,7 @@
         "views": 1720,
         "shares": 0,
         "reach": 1362,
-        "totalTimeWatched": 43.33,
+        "totalTimeWatched": 43.37,
         "averageTimeWatched": 1.66
       },
       "contentType": "still",
@@ -1394,10 +1394,10 @@
         "reactions": 51,
         "comments": 2,
         "engagementRate": 0.37,
-        "views": 14170,
+        "views": 14171,
         "shares": 0,
-        "reach": 13527,
-        "totalTimeWatched": 1051.53,
+        "reach": 13551,
+        "totalTimeWatched": 1052.85,
         "averageTimeWatched": 3.79
       },
       "contentType": "video",
@@ -1407,12 +1407,12 @@
         {
           "key": "reach",
           "label": "Reach",
-          "value": 13527
+          "value": 13551
         },
         {
           "key": "views",
           "label": "Views",
-          "value": 14170
+          "value": 14171
         },
         {
           "key": "reactions",
