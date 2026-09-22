@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import fs from 'fs/promises';
 import path from 'path';
 import { recordLead } from '@/app/lib/crm';
+import { sendSeoReportEmail } from '@/app/lib/email';
 
 // Same append-only JSONL pattern as alacarte-order/quiz-lead. This is the
 // SEO Analyzer's lead capture: gates the full fix-it list behind an email,
@@ -18,6 +19,7 @@ export async function POST(request) {
     const email = typeof body.email === 'string' ? body.email.trim().slice(0, 200) : '';
     const scannedUrl = typeof body.scannedUrl === 'string' ? body.scannedUrl.slice(0, 500) : '';
     const score = typeof body.score === 'number' ? body.score : null;
+    const issues = Array.isArray(body.issues) ? body.issues.slice(0, 50) : [];
 
     if (!EMAIL_RE.test(email) || !scannedUrl) {
       return NextResponse.json({ error: 'A valid email and scanned URL are required.' }, { status: 400 });
@@ -36,6 +38,16 @@ export async function POST(request) {
       });
     } catch (crmError) {
       console.error('CRM sync failed for SEO analyzer lead (JSONL log still succeeded):', crmError);
+    }
+
+    // Deliver the actual report by email -- best-effort, same non-blocking
+    // pattern as the CRM sync above. Will fail until the Resend sending
+    // domain is verified (added 2026-09-22, DNS not yet set -- see email.js);
+    // that failure must never break the on-screen unlock the user is waiting on.
+    try {
+      await sendSeoReportEmail({ email, scannedUrl, score, issues });
+    } catch (emailError) {
+      console.error('SEO report email failed to send (lead still logged):', emailError);
     }
 
     return NextResponse.json({ ok: true });

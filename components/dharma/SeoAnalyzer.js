@@ -76,12 +76,26 @@ export default function SeoAnalyzer() {
       const res = await fetch('/api/seo-lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, scannedUrl: report?.url, score: report?.score }),
+        body: JSON.stringify({
+          email,
+          scannedUrl: report?.url,
+          score: report?.score,
+          issues: report?.issues || [],
+        }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Could not save that.');
       setLeadStatus('saved');
       setUnlocked(true);
+      // GA4 conversion event -- scan -> unlock was previously invisible in
+      // analytics (only raw /tools pageviews showed up). Found 2026-09-22.
+      if (typeof window !== 'undefined' && Array.isArray(window.dataLayer)) {
+        window.dataLayer.push({
+          event: 'seo_report_unlocked',
+          scanned_url: report?.url,
+          score: report?.score,
+        });
+      }
     } catch (err) {
       setLeadStatus('error');
     }
@@ -146,7 +160,7 @@ export default function SeoAnalyzer() {
                 </button>
               </form>
               {leadStatus === 'error' && <p className={styles.errorText}>Could not save that — try again.</p>}
-              <p className={styles.gateNote}>No spam. Just your results, and occasionally something worth reading.</p>
+              <p className={styles.gateNote}>No spam. Just your results emailed to you, and occasionally something worth reading.</p>
             </div>
           )}
 
@@ -156,7 +170,7 @@ export default function SeoAnalyzer() {
 
           {unlocked && (
             <div className={styles.ctaRow}>
-              <p>That is the full list. Want us to just do the fixes for you?</p>
+              <p>That is the full list — we also emailed you a copy. Want us to just do the fixes for you?</p>
               <Link href="/shopify-audit" className={styles.ctaBtn}>See Shopify Store Audits</Link>
             </div>
           )}
