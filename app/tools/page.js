@@ -12,6 +12,21 @@ export const metadata = {
   alternates: {
     canonical: '/tools',
   },
+  openGraph: {
+    title: "Free Shopify SEO Analyzer | Dharma's Esthetic Design",
+    description:
+      'Paste in your store URL and get an instant SEO scan — title tags, meta descriptions, mobile-friendliness, alt text, and more, each with a plain-English fix.',
+    url: 'https://dharmasestheticdesign.com/tools',
+    type: 'website',
+    images: [{ url: '/ded-post-offer.jpg', width: 1064, height: 895, alt: 'Free Shopify SEO Analyzer by Dharma\'s Esthetic Design' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Free Shopify SEO Analyzer | Dharma's Esthetic Design",
+    description:
+      'Paste in your store URL and get an instant SEO scan — title tags, meta descriptions, mobile-friendliness, alt text, and more, each with a plain-English fix.',
+    images: ['/ded-post-offer.jpg'],
+  },
 };
 
 export default function ToolsPage() {

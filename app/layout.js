@@ -52,10 +52,38 @@ export const metadata = {
 // they're outside Next.js's render tree.
 const GTM_CONTAINER_ID = 'GTM-5LB46RDG';
 
+// Organization structured data -- site had zero JSON-LD anywhere (found
+// 2026-09-22), so nothing tells Google/AI Overviews who's actually behind
+// this site. Kept to the one schema type that's true today (an online
+// agency, no storefront address) rather than guessing at fields that don't
+// apply.
+const ORGANIZATION_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: "Dharma's Esthetic Design",
+  url: 'https://dharmasestheticdesign.com',
+  logo: 'https://dharmasestheticdesign.com/ded-post-offer.jpg',
+  email: 'jason@dharmasestheticdesign.com',
+  description:
+    'Shopify store design, SEO & social media marketing for ecommerce stores.',
+  sameAs: [
+    'https://instagram.com/dharmasestheticdesign',
+    'https://tiktok.com/@dharmasestheticde',
+    'https://facebook.com/dharmasestheticdesign',
+  ],
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable}`}>
       <body>
+        {/* Plain <script>, not next/script -- next/script's load strategies inject
+            after hydration, so a crawler reading raw HTML would never see it. This
+            needs to be in the initial server-rendered markup. */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(ORGANIZATION_SCHEMA) }}
+        />
         <Script id="gtm-init" strategy="afterInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
