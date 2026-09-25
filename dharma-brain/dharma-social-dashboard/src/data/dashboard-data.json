@@ -1,19 +1,20 @@
 {
-  "generatedAt": "2026-09-24T10:16:29.215830+00:00",
-  "postCount": 76,
-  "avgEngagementPerActiveHour": 4.0,
+  "generatedAt": "2026-09-25T10:20:21.917512+00:00",
+  "postCount": 77,
+  "avgEngagementPerActiveHour": 4.7,
   "platformSummary": {
     "facebook": {
-      "postCount": 32,
+      "postCount": 33,
       "engagement": 0,
       "byContentType": {
-        "still": 25,
-        "video": 7
+        "still": 15,
+        "video": 7,
+        "poster": 11
       }
     },
     "tiktok": {
       "postCount": 14,
-      "engagement": 80,
+      "engagement": 94,
       "byContentType": {
         "video": 7,
         "still": 7
@@ -24,7 +25,8 @@
       "engagement": 0,
       "byContentType": {
         "video": 8,
-        "still": 22
+        "poster": 9,
+        "still": 13
       }
     }
   },
@@ -33,13 +35,13 @@
       "hour": 0,
       "postCount": 1,
       "engagement": 0,
-      "deltaVsAvg": -4.0
+      "deltaVsAvg": -4.7
     },
     {
       "hour": 1,
       "postCount": 2,
       "engagement": 0,
-      "deltaVsAvg": -4.0
+      "deltaVsAvg": -4.7
     },
     {
       "hour": 2,
@@ -63,109 +65,109 @@
       "hour": 5,
       "postCount": 2,
       "engagement": 0,
-      "deltaVsAvg": -4.0
+      "deltaVsAvg": -4.7
     },
     {
       "hour": 6,
       "postCount": 1,
-      "engagement": 0,
-      "deltaVsAvg": -4.0
+      "engagement": 3,
+      "deltaVsAvg": -1.7
     },
     {
       "hour": 7,
       "postCount": 1,
       "engagement": 0,
-      "deltaVsAvg": -4.0
+      "deltaVsAvg": -4.7
     },
     {
       "hour": 8,
-      "postCount": 3,
+      "postCount": 4,
       "engagement": 0,
-      "deltaVsAvg": -4.0
+      "deltaVsAvg": -4.7
     },
     {
       "hour": 9,
       "postCount": 11,
       "engagement": 0,
-      "deltaVsAvg": -4.0
+      "deltaVsAvg": -4.7
     },
     {
       "hour": 10,
       "postCount": 2,
       "engagement": 0,
-      "deltaVsAvg": -4.0
+      "deltaVsAvg": -4.7
     },
     {
       "hour": 11,
       "postCount": 2,
       "engagement": 0,
-      "deltaVsAvg": -4.0
+      "deltaVsAvg": -4.7
     },
     {
       "hour": 12,
       "postCount": 2,
       "engagement": 0,
-      "deltaVsAvg": -4.0
+      "deltaVsAvg": -4.7
     },
     {
       "hour": 13,
       "postCount": 2,
       "engagement": 0,
-      "deltaVsAvg": -4.0
+      "deltaVsAvg": -4.7
     },
     {
       "hour": 14,
       "postCount": 3,
-      "engagement": 0,
-      "deltaVsAvg": -4.0
+      "engagement": 1,
+      "deltaVsAvg": -3.7
     },
     {
       "hour": 15,
       "postCount": 8,
       "engagement": 0,
-      "deltaVsAvg": -4.0
+      "deltaVsAvg": -4.7
     },
     {
       "hour": 16,
       "postCount": 8,
       "engagement": 0,
-      "deltaVsAvg": -4.0
+      "deltaVsAvg": -4.7
     },
     {
       "hour": 17,
       "postCount": 4,
       "engagement": 1,
-      "deltaVsAvg": -3.0
+      "deltaVsAvg": -3.7
     },
     {
       "hour": 18,
       "postCount": 2,
       "engagement": 1,
-      "deltaVsAvg": -3.0
+      "deltaVsAvg": -3.7
     },
     {
       "hour": 19,
       "postCount": 7,
       "engagement": 2,
-      "deltaVsAvg": -2.0
+      "deltaVsAvg": -2.7
     },
     {
       "hour": 20,
       "postCount": 6,
-      "engagement": 74,
-      "deltaVsAvg": 70.0
+      "engagement": 76,
+      "deltaVsAvg": 71.3
     },
     {
       "hour": 21,
       "postCount": 3,
       "engagement": 1,
-      "deltaVsAvg": -3.0
+      "deltaVsAvg": -3.7
     },
     {
       "hour": 22,
       "postCount": 6,
-      "engagement": 1,
-      "deltaVsAvg": -3.0
+      "engagement": 9,
+      "deltaVsAvg": 4.3
     },
     {
       "hour": 23,
@@ -175,6 +177,57 @@
     }
   ],
   "posts": [
+    {
+      "id": "6ab2f500340f92dcbe1641d3",
+      "platform": "facebook",
+      "sentAt": "2026-09-24T12:37:10.202Z",
+      "text": "Every Shopify store we audit has the same blind spot. Want to know if yours is o",
+      "assetType": null,
+      "source": null,
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 0,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "still",
+      "hourLocal": 8,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 0
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
     {
       "id": "6ab2f4ff98ae6feaa61acdd4",
       "platform": "facebook",
@@ -283,35 +336,35 @@
       "sentAt": "2026-09-23T10:50:43.813Z",
       "text": "Your store looks amazing. So why isn't anyone buying? Watch us scan a real Shopi",
       "assetType": "video",
-      "source": null,
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6ab2f67d557b1c68e6ba965c_video.mp4",
       "metrics": {
-        "reactions": 0,
+        "reactions": 3,
         "comments": 0,
-        "engagementRate": 0,
-        "views": 91,
+        "engagementRate": 2.86,
+        "views": 105,
         "shares": 0,
-        "reach": 0,
-        "totalTimeWatched": 2.82,
-        "averageTimeWatched": 1.85
+        "reach": 82,
+        "totalTimeWatched": 4.53,
+        "averageTimeWatched": 2.55
       },
       "contentType": "video",
       "hourLocal": 6,
-      "engagement": 0,
+      "engagement": 3,
       "displayMetrics": [
         {
           "key": "reach",
           "label": "Reach",
-          "value": 0
+          "value": 82
         },
         {
           "key": "views",
           "label": "Views",
-          "value": 91
+          "value": 105
         },
         {
           "key": "reactions",
           "label": "Likes",
-          "value": 0
+          "value": 3
         },
         {
           "key": "comments",
@@ -326,12 +379,12 @@
         {
           "key": "engagementRate",
           "label": "Eng. Rate",
-          "value": 0
+          "value": 2.86
         },
         {
           "key": "averageTimeWatched",
           "label": "Avg Watch (s)",
-          "value": 1.85
+          "value": 2.55
         }
       ]
     },
@@ -341,40 +394,40 @@
       "sentAt": "2026-09-23T02:17:23.258Z",
       "text": "Store's set up but nothing's selling? We sent a dog to go find out why. \ud83d\udc3e Get a ",
       "assetType": "video",
-      "source": null,
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6ab3364d2aa0e20bb46fcb6b_video.mp4",
       "metrics": {
-        "reactions": 1,
-        "comments": 0,
-        "engagementRate": 1.92,
-        "views": 52,
+        "reactions": 7,
+        "comments": 2,
+        "engagementRate": 12.68,
+        "views": 71,
         "shares": 0,
-        "reach": 0,
-        "totalTimeWatched": 8.87,
-        "averageTimeWatched": 9.03
+        "reach": 39,
+        "totalTimeWatched": 12.23,
+        "averageTimeWatched": 9.19
       },
       "contentType": "video",
       "hourLocal": 22,
-      "engagement": 1,
+      "engagement": 9,
       "displayMetrics": [
         {
           "key": "reach",
           "label": "Reach",
-          "value": 0
+          "value": 39
         },
         {
           "key": "views",
           "label": "Views",
-          "value": 52
+          "value": 71
         },
         {
           "key": "reactions",
           "label": "Likes",
-          "value": 1
+          "value": 7
         },
         {
           "key": "comments",
           "label": "Comments",
-          "value": 0
+          "value": 2
         },
         {
           "key": "shares",
@@ -384,12 +437,12 @@
         {
           "key": "engagementRate",
           "label": "Eng. Rate",
-          "value": 1.92
+          "value": 12.68
         },
         {
           "key": "averageTimeWatched",
           "label": "Avg Watch (s)",
-          "value": 9.03
+          "value": 9.19
         }
       ]
     },
@@ -399,7 +452,7 @@
       "sentAt": "2026-09-23T02:16:28.562Z",
       "text": "Store's set up but nothing's selling? We sent a dog to go find out why. \ud83d\udc3e Get a ",
       "assetType": "video",
-      "source": null,
+      "source": "https://media.flora.ai/mcp-uploads/2026/9/23/user_3JHZddJIXygmDpwSJfV0K7ESq5g/4424e154-32f3-4a4d-8c56-86994046a305.mp4",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -457,7 +510,7 @@
       "sentAt": "2026-09-23T02:15:56.828Z",
       "text": "Store's set up but nothing's selling? We sent a dog to go find out why. \ud83d\udc3e Get a ",
       "assetType": "video",
-      "source": null,
+      "source": "https://media.flora.ai/mcp-uploads/2026/9/23/user_3JHZddJIXygmDpwSJfV0K7ESq5g/4424e154-32f3-4a4d-8c56-86994046a305.mp4",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -508,7 +561,7 @@
       "sentAt": "2026-09-22T23:03:52.408Z",
       "text": "Your store looks amazing. So why isn't anyone buying? Watch us scan a real Shopi",
       "assetType": "video",
-      "source": null,
+      "source": "https://media.flora.ai/mcp-uploads/2026/9/22/user_3JHZddJIXygmDpwSJfV0K7ESq5g/73176a0c-70a8-479a-b880-52aeddf86711.mp4",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -566,16 +619,16 @@
       "sentAt": "2026-09-22T01:05:24.499Z",
       "text": "Store's set up but nothing's selling? We sent a dog to go find out why. \ud83d\udc3e Get a ",
       "assetType": "video",
-      "source": null,
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6ab1d3ed40d6d6c92618abce_video.mp4",
       "metrics": {
         "reactions": 1,
         "comments": 0,
-        "engagementRate": 2.63,
-        "views": 38,
+        "engagementRate": 2.56,
+        "views": 39,
         "shares": 0,
-        "reach": 31,
-        "totalTimeWatched": 2.02,
-        "averageTimeWatched": 3.13
+        "reach": 34,
+        "totalTimeWatched": 2.03,
+        "averageTimeWatched": 3.07
       },
       "contentType": "video",
       "hourLocal": 21,
@@ -584,12 +637,12 @@
         {
           "key": "reach",
           "label": "Reach",
-          "value": 31
+          "value": 34
         },
         {
           "key": "views",
           "label": "Views",
-          "value": 38
+          "value": 39
         },
         {
           "key": "reactions",
@@ -609,12 +662,12 @@
         {
           "key": "engagementRate",
           "label": "Eng. Rate",
-          "value": 2.63
+          "value": 2.56
         },
         {
           "key": "averageTimeWatched",
           "label": "Avg Watch (s)",
-          "value": 3.13
+          "value": 3.07
         }
       ]
     },
@@ -624,7 +677,7 @@
       "sentAt": "2026-09-22T01:04:31.819Z",
       "text": "Store's set up but nothing's selling? We sent a dog to go find out why. \ud83d\udc3e Get a ",
       "assetType": "video",
-      "source": null,
+      "source": "https://dharmasestheticdesign.com/seo-cat-ep1.mp4",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -682,7 +735,7 @@
       "sentAt": "2026-09-22T01:04:19.109Z",
       "text": "Store's set up but nothing's selling? We sent a dog to go find out why. \ud83d\udc3e Get a ",
       "assetType": "video",
-      "source": null,
+      "source": "https://dharmasestheticdesign.com/seo-cat-ep1.mp4",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -733,7 +786,7 @@
       "sentAt": "2026-09-18T12:03:42.965Z",
       "text": "Store not selling? We sent a ship to go find out why. \ud83d\ude80 Get a real Shopify Store",
       "assetType": "video",
-      "source": null,
+      "source": "https://dharma-marketing-assets.vercel.app/scifi-store-quest.mp4",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -784,7 +837,7 @@
       "sentAt": "2026-09-17T18:27:46.045Z",
       "text": "Your store looks amazing. So why isn't anyone buying? Three tiers, one goal: you",
       "assetType": "video",
-      "source": null,
+      "source": "https://dharma-marketing-assets.vercel.app/packages-motion.mp4",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -842,7 +895,7 @@
       "sentAt": "2026-09-17T18:27:40.940Z",
       "text": "Three tiers. One goal \u2014 your store grows. Take a look at our packages and see wh",
       "assetType": "video",
-      "source": null,
+      "source": "https://dharma-marketing-assets.vercel.app/packages-motion.mp4",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -893,12 +946,12 @@
       "sentAt": "2026-09-17T18:27:27.205Z",
       "text": "Your store looks amazing... so why isn't anyone buying? \ud83d\udc40 Comment GROWTH and we'",
       "assetType": "video",
-      "source": null,
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6aac30e55de9b79c96ed4be4_video.mp4",
       "metrics": {
-        "reactions": 0,
+        "reactions": 1,
         "comments": 0,
-        "engagementRate": 0,
-        "views": 94,
+        "engagementRate": 1.05,
+        "views": 95,
         "shares": 0,
         "reach": 85,
         "totalTimeWatched": 2.2,
@@ -906,7 +959,7 @@
       },
       "contentType": "video",
       "hourLocal": 14,
-      "engagement": 0,
+      "engagement": 1,
       "displayMetrics": [
         {
           "key": "reach",
@@ -916,12 +969,12 @@
         {
           "key": "views",
           "label": "Views",
-          "value": 94
+          "value": 95
         },
         {
           "key": "reactions",
           "label": "Likes",
-          "value": 0
+          "value": 1
         },
         {
           "key": "comments",
@@ -936,7 +989,7 @@
         {
           "key": "engagementRate",
           "label": "Eng. Rate",
-          "value": 0
+          "value": 1.05
         },
         {
           "key": "averageTimeWatched",
@@ -951,7 +1004,7 @@
       "sentAt": "2026-09-17T13:21:04.076Z",
       "text": "Store's set up but nothing's selling? We sent a dog to go find out why. \ud83d\udc3e Get a ",
       "assetType": "video",
-      "source": null,
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6aa88cd2ac4a884f436b5cf1_video.mp4",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -1002,7 +1055,7 @@
       "sentAt": "2026-09-17T13:21:00.000Z",
       "text": "Store's set up but nothing's selling? We sent a dog to go find out why. \ud83d\udc3e Get a ",
       "assetType": "video",
-      "source": null,
+      "source": "https://video-iad3-2.xx.fbcdn.net/o1/v/t2/f2/m366/AQNfMws5nB_3ckG9kCScWQ4n93NLfYNjIBA2mQqaHbk6Wut0mSTOgQ26SVnG0VKBXpmQksvU_8YLSuySLLe1VzX0FgdZ9-gsBfsDvvM6dklVjg.mp4?_nc_cat=111&_nc_sid=5e9851&_nc_ht=video-iad3-2.xx.fbcdn.net&_nc_ohc=H4DGecAEkNQQ7kNvwERAHlT&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjE3OTU4MjYzOTQ5NDcwMDYsImFzc2V0X2FnZV9kYXlzIjowLCJ2aV91c2VjYXNlX2lkIjoxMDEyMiwiZHVyYXRpb25fcyI6MTAsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=d06a53d4012addc1&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC8wQTRBMjZDREY0MzY2NThBNkI3QUU3MTUyQ0VGN0ZCRl9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50LzkxNDQ1OTY1M0UzQUJCMDM3QjBDM0YyQjM1N0REREE1X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACb89sql7dKwBhUCKAJDMywXQCQAAAAAAAAYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUCZZSeAQA&_nc_gid=25qZ1LSyQkvqcZ25NU9urQ&edm=APCh5TUEAAAA&_nc_zt=28&_nc_tpa=Q5bMBQIVIAIUA-wRQpgz-4isK3wfVtwKVe0X0ZXZxMUkTD69NRwSFCtkqQhWefoOyMzw0Vci6bK8IGAl&oh=00_AQK5NkK6B7ShIJaNzygpkVx1pyZKslCOBg8D1WNe90ywmg&oe=6AB1B085&bitrate=1233655&tag=dash_h264-basic-gen2_720p",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -1053,7 +1106,7 @@
       "sentAt": "2026-09-17T12:37:07.086Z",
       "text": "Every store owner's climbing the same hill. We help you win it.\n\nDharmasEsthetic",
       "assetType": "video",
-      "source": null,
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6aa8b2cda8c36ff9777720b9_video.mp4",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -1104,7 +1157,7 @@
       "sentAt": "2026-09-16T17:02:22.573Z",
       "text": "Traffic is easy. Converting it is the job.\n\nGetting people to your store isn't t",
       "assetType": "image",
-      "source": null,
+      "source": "https://dharma-marketing-assets.vercel.app/store-growth.png",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -1115,7 +1168,7 @@
         "follows": 0,
         "reach": 1
       },
-      "contentType": "still",
+      "contentType": "poster",
       "hourLocal": 13,
       "engagement": 0,
       "displayMetrics": [
@@ -1162,7 +1215,7 @@
       "sentAt": "2026-09-16T17:01:40.540Z",
       "text": "Traffic is easy. Converting it is the job.\n\nGetting people to your store isn't t",
       "assetType": "image",
-      "source": null,
+      "source": "https://dharma-marketing-assets.vercel.app/store-growth.png",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -1171,7 +1224,7 @@
         "shares": 0,
         "clicks": 0
       },
-      "contentType": "still",
+      "contentType": "poster",
       "hourLocal": 13,
       "engagement": 0,
       "displayMetrics": [
@@ -1213,7 +1266,7 @@
       "sentAt": "2026-09-16T16:05:33.699Z",
       "text": "Your product deserves more than a photo.\n\nA static image only tells half the sto",
       "assetType": "image",
-      "source": null,
+      "source": "https://dharma-marketing-assets.vercel.app/ai-video.png",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -1224,7 +1277,7 @@
         "follows": 0,
         "reach": 1
       },
-      "contentType": "still",
+      "contentType": "poster",
       "hourLocal": 12,
       "engagement": 0,
       "displayMetrics": [
@@ -1271,7 +1324,7 @@
       "sentAt": "2026-09-16T16:01:41.798Z",
       "text": "Your product deserves more than a photo.\n\nA static image only tells half the sto",
       "assetType": "image",
-      "source": null,
+      "source": "https://dharma-marketing-assets.vercel.app/ai-video.png",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -1280,7 +1333,7 @@
         "shares": 0,
         "clicks": 0
       },
-      "contentType": "still",
+      "contentType": "poster",
       "hourLocal": 12,
       "engagement": 0,
       "displayMetrics": [
@@ -1322,7 +1375,7 @@
       "sentAt": "2026-09-16T15:03:37.513Z",
       "text": "53% of visitors leave a store that takes more than 3 seconds to load.\n\nIf you do",
       "assetType": "image",
-      "source": null,
+      "source": "https://dharma-marketing-assets.vercel.app/store-audit.png",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -1333,7 +1386,7 @@
         "follows": 0,
         "reach": 1
       },
-      "contentType": "still",
+      "contentType": "poster",
       "hourLocal": 11,
       "engagement": 0,
       "displayMetrics": [
@@ -1380,7 +1433,7 @@
       "sentAt": "2026-09-16T15:01:50.462Z",
       "text": "53% of visitors leave a store that takes more than 3 seconds to load.\n\nIf you do",
       "assetType": "image",
-      "source": null,
+      "source": "https://dharma-marketing-assets.vercel.app/store-audit.png",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -1389,7 +1442,7 @@
         "shares": 0,
         "clicks": 0
       },
-      "contentType": "still",
+      "contentType": "poster",
       "hourLocal": 11,
       "engagement": 0,
       "displayMetrics": [
@@ -1431,7 +1484,7 @@
       "sentAt": "2026-09-16T14:02:54.788Z",
       "text": "Your store looks amazing. So why isn't anyone buying?\n\nSometimes it's not the pr",
       "assetType": "image",
-      "source": null,
+      "source": "https://dharma-marketing-assets.vercel.app/web-design.png",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -1442,7 +1495,7 @@
         "follows": 0,
         "reach": 1
       },
-      "contentType": "still",
+      "contentType": "poster",
       "hourLocal": 10,
       "engagement": 0,
       "displayMetrics": [
@@ -1489,7 +1542,7 @@
       "sentAt": "2026-09-16T14:01:54.870Z",
       "text": "Your store looks amazing. So why isn't anyone buying?\n\nSometimes it's not the pr",
       "assetType": "image",
-      "source": null,
+      "source": "https://dharma-marketing-assets.vercel.app/web-design.png",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -1498,7 +1551,7 @@
         "shares": 0,
         "clicks": 0
       },
-      "contentType": "still",
+      "contentType": "poster",
       "hourLocal": 10,
       "engagement": 0,
       "displayMetrics": [
@@ -1540,7 +1593,7 @@
       "sentAt": "2026-09-16T13:01:29.244Z",
       "text": "You built the store. We build the audience.\n\nMost Shopify store owners are invis",
       "assetType": "image",
-      "source": null,
+      "source": "https://dharma-marketing-assets.vercel.app/content-growth.png",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -1551,7 +1604,7 @@
         "follows": 0,
         "reach": 1
       },
-      "contentType": "still",
+      "contentType": "poster",
       "hourLocal": 9,
       "engagement": 0,
       "displayMetrics": [
@@ -1598,7 +1651,7 @@
       "sentAt": "2026-09-16T13:01:13.854Z",
       "text": "You built the store. We build the audience.\n\nMost Shopify store owners are invis",
       "assetType": "image",
-      "source": null,
+      "source": "https://dharma-marketing-assets.vercel.app/content-growth.png",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -1607,7 +1660,7 @@
         "shares": 0,
         "clicks": 0
       },
-      "contentType": "still",
+      "contentType": "poster",
       "hourLocal": 9,
       "engagement": 0,
       "displayMetrics": [
@@ -1649,7 +1702,7 @@
       "sentAt": "2026-09-15T23:03:34.651Z",
       "text": "Every store owner's climbing the same hill. We help you win it.\n\nDharmasEsthetic",
       "assetType": "video",
-      "source": null,
+      "source": "https://tempfile.redpandaai.co/kieai/11641115/videos/dharma_hill_fight_final.mp4",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -1707,16 +1760,16 @@
       "sentAt": "2026-09-15T23:01:47.959Z",
       "text": "Every store owner's climbing the same hill. We help you win it. DharmasEstheticD",
       "assetType": "video",
-      "source": null,
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6aa8b2cda8c36ff9777720b9_video.mp4",
       "metrics": {
         "reactions": 2,
         "comments": 0,
         "engagementRate": 0.12,
-        "views": 1709,
+        "views": 1711,
         "shares": 0,
         "reach": 1705,
-        "totalTimeWatched": 98.65,
-        "averageTimeWatched": 3.12
+        "totalTimeWatched": 93.45,
+        "averageTimeWatched": 2.93
       },
       "contentType": "video",
       "hourLocal": 19,
@@ -1730,7 +1783,7 @@
         {
           "key": "views",
           "label": "Views",
-          "value": 1709
+          "value": 1711
         },
         {
           "key": "reactions",
@@ -1755,7 +1808,7 @@
         {
           "key": "averageTimeWatched",
           "label": "Avg Watch (s)",
-          "value": 3.12
+          "value": 2.93
         }
       ]
     },
@@ -1765,7 +1818,7 @@
       "sentAt": "2026-09-15T13:02:15.897Z",
       "text": "Store not selling? We sent a ship to go find out why. \ud83d\ude80 Get a real Shopify Store",
       "assetType": "video",
-      "source": null,
+      "source": "https://tempfile.redpandaai.co/kieai/11641115/videos/scifi-store-quest-with-overlay.mp4",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -1823,20 +1876,20 @@
       "sentAt": "2026-09-15T00:23:41.512Z",
       "text": "POV: you spent $0 on marketing and expected customers to just show up. Dharma ge",
       "assetType": "image",
-      "source": null,
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6a7cb5bf7a5ea251d8dff321_photo.jpg",
       "metrics": {
-        "reactions": 21,
+        "reactions": 22,
         "comments": 0,
-        "engagementRate": 1.22,
-        "views": 1724,
+        "engagementRate": 1.27,
+        "views": 1728,
         "shares": 0,
         "reach": 1362,
-        "totalTimeWatched": 43.4,
-        "averageTimeWatched": 1.66
+        "totalTimeWatched": 47.1,
+        "averageTimeWatched": 1.8
       },
       "contentType": "still",
       "hourLocal": 20,
-      "engagement": 21,
+      "engagement": 22,
       "displayMetrics": [
         {
           "key": "reach",
@@ -1846,12 +1899,12 @@
         {
           "key": "views",
           "label": "Views",
-          "value": 1724
+          "value": 1728
         },
         {
           "key": "reactions",
           "label": "Likes",
-          "value": 21
+          "value": 22
         },
         {
           "key": "comments",
@@ -1866,12 +1919,12 @@
         {
           "key": "engagementRate",
           "label": "Eng. Rate",
-          "value": 1.22
+          "value": 1.27
         },
         {
           "key": "averageTimeWatched",
           "label": "Avg Watch (s)",
-          "value": 1.66
+          "value": 1.8
         }
       ]
     },
@@ -1881,7 +1934,7 @@
       "sentAt": "2026-09-15T00:19:59.223Z",
       "text": "Store's set up but nothing's selling? We sent a dog to go find out why. \ud83d\udc3e Get a ",
       "assetType": "video",
-      "source": null,
+      "source": "https://tempfile.redpandaai.co/kieai/11641115/videos/dog-detective-final.mp4",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -1939,20 +1992,20 @@
       "sentAt": "2026-09-15T00:18:18.803Z",
       "text": "Store's set up but nothing's selling? We sent a dog to go find out why. \ud83d\udc3e Get a ",
       "assetType": "video",
-      "source": null,
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6aa88cd2ac4a884f436b5cf1_video.mp4",
       "metrics": {
-        "reactions": 51,
+        "reactions": 52,
         "comments": 2,
-        "engagementRate": 0.37,
-        "views": 14176,
+        "engagementRate": 0.38,
+        "views": 14178,
         "shares": 0,
         "reach": 13581,
-        "totalTimeWatched": 1054.65,
-        "averageTimeWatched": 3.8
+        "totalTimeWatched": 892.75,
+        "averageTimeWatched": 3.21
       },
       "contentType": "video",
       "hourLocal": 20,
-      "engagement": 53,
+      "engagement": 54,
       "displayMetrics": [
         {
           "key": "reach",
@@ -1962,12 +2015,12 @@
         {
           "key": "views",
           "label": "Views",
-          "value": 14176
+          "value": 14178
         },
         {
           "key": "reactions",
           "label": "Likes",
-          "value": 51
+          "value": 52
         },
         {
           "key": "comments",
@@ -1982,12 +2035,12 @@
         {
           "key": "engagementRate",
           "label": "Eng. Rate",
-          "value": 0.37
+          "value": 0.38
         },
         {
           "key": "averageTimeWatched",
           "label": "Avg Watch (s)",
-          "value": 3.8
+          "value": 3.21
         }
       ]
     },
@@ -1997,7 +2050,7 @@
       "sentAt": "2026-08-21T23:51:41.690Z",
       "text": "The little feature that makes a shop site actually useful: a live repair status ",
       "assetType": "image",
-      "source": null,
+      "source": "https://files.catbox.moe/p8q470.jpg",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -2055,7 +2108,7 @@
       "sentAt": "2026-08-21T23:51:32.586Z",
       "text": "Plymouth, MI meet your new favorite auto &amp; tire shop's website. Built for Ni",
       "assetType": "image",
-      "source": null,
+      "source": "https://files.catbox.moe/ojg1sq.jpg",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -2113,7 +2166,7 @@
       "sentAt": "2026-08-21T23:01:30.383Z",
       "text": "another local shop, another site that doesn't look like a template from 2015 \ud83d\udd27 #",
       "assetType": "image",
-      "source": null,
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6a88b8e73869cf665896cf9f_photo.jpg",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -2171,7 +2224,7 @@
       "sentAt": "2026-08-21T23:00:15.460Z",
       "text": "New site live for Nick's Auto Service &amp; Tire in Plymouth! Full-service auto ",
       "assetType": "image",
-      "source": null,
+      "source": "https://files.catbox.moe/eiodoi.jpeg",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -2222,7 +2275,7 @@
       "sentAt": "2026-08-21T22:01:54.988Z",
       "text": "we built a live car repair tracker for a client and now their customers never ha",
       "assetType": "image",
-      "source": null,
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6a88b8e03869cf665896cef2_photo.jpg",
       "metrics": {
         "reactions": 1,
         "comments": 0,
@@ -2280,7 +2333,7 @@
       "sentAt": "2026-08-21T22:00:14.732Z",
       "text": "Ever wonder why your mechanic never calls back with an update? We built Icon Aut",
       "assetType": "image",
-      "source": null,
+      "source": "https://files.catbox.moe/x7ajzn.jpeg",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -2331,7 +2384,7 @@
       "sentAt": "2026-08-21T21:01:26.315Z",
       "text": "POV: your auto shop finally has a website that doesn't look like it's from 2010 ",
       "assetType": "image",
-      "source": null,
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6a88b8dab1e0795f7f637d21_photo.jpg",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -2389,7 +2442,7 @@
       "sentAt": "2026-08-21T21:00:25.128Z",
       "text": "Built this for Icon Auto Repair &amp; Collision in Madison Heights, MI \u2014 live si",
       "assetType": "image",
-      "source": null,
+      "source": "https://files.catbox.moe/ah38vs.jpeg",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -2447,7 +2500,7 @@
       "sentAt": "2026-08-21T21:00:07.871Z",
       "text": "Just wrapped a new website for Icon Auto Repair &amp; Collision here in Madison ",
       "assetType": "image",
-      "source": null,
+      "source": "https://files.catbox.moe/ah38vs.jpeg",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -2498,7 +2551,7 @@
       "sentAt": "2026-08-21T20:59:19.289Z",
       "text": "Running a weekend conference? Here's what a real event site looks like: schedule",
       "assetType": "image",
-      "source": null,
+      "source": "https://files.catbox.moe/cgewub.jpg",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -2556,7 +2609,7 @@
       "sentAt": "2026-08-21T20:49:21.916Z",
       "text": "a whole website for one wedding weekend, gone as soon as the last dance ends \ud83d\udc8d #",
       "assetType": "image",
-      "source": null,
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6a88b96a3869cf665896d6e9_photo.jpg",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -2614,7 +2667,7 @@
       "sentAt": "2026-08-21T20:48:37.459Z",
       "text": "a whole website for a 3-day pop-up shop, live in 48 hours, gone when the weekend",
       "assetType": "image",
-      "source": null,
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6a88b93ddc319146a283b03f_photo.jpg",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -2672,7 +2725,7 @@
       "sentAt": "2026-08-21T20:48:06.582Z",
       "text": "Running a weekend conference? Here's what a real event site looks like: schedule",
       "assetType": "image",
-      "source": null,
+      "source": "https://files.catbox.moe/cgewub.jpg",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -2730,7 +2783,7 @@
       "sentAt": "2026-08-21T20:47:37.279Z",
       "text": "Wedding weekend, meet your own website. Schedule, details, and RSVP \u2014 all in one",
       "assetType": "image",
-      "source": null,
+      "source": "https://files.catbox.moe/zvwx24.jpg",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -2788,7 +2841,7 @@
       "sentAt": "2026-08-21T20:47:21.609Z",
       "text": "Wedding weekend, meet your own website. Schedule, details, and RSVP \u2014 all in one",
       "assetType": "image",
-      "source": null,
+      "source": "https://files.catbox.moe/zvwx24.jpg",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -2846,7 +2899,7 @@
       "sentAt": "2026-08-21T20:46:53.208Z",
       "text": "Pop-up shop, meet your 3-day website. Built for a weekend event, live in 48 hour",
       "assetType": "image",
-      "source": null,
+      "source": "https://files.catbox.moe/om5t21.jpg",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -2904,7 +2957,7 @@
       "sentAt": "2026-08-21T20:46:14.853Z",
       "text": "Pop-up shop, meet your 3-day website. Built for a weekend event, live in 48 hour",
       "assetType": "image",
-      "source": null,
+      "source": "https://files.catbox.moe/om5t21.jpg",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -2962,7 +3015,7 @@
       "sentAt": "2026-08-21T19:22:06.215Z",
       "text": "Pop-up shops need a site that's live in 48 hours, not 48 days. Here's a mockup f",
       "assetType": "image",
-      "source": null,
+      "source": "https://files.catbox.moe/om5t21.jpg",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -3013,7 +3066,7 @@
       "sentAt": "2026-08-21T19:21:57.156Z",
       "text": "You built the store. We build the audience.\n\nMost Shopify store owners are invis",
       "assetType": "image",
-      "source": null,
+      "source": "https://www.dharmasestheticdesign.com/ded-post-offer.jpg",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -3022,7 +3075,7 @@
         "shares": 0,
         "clicks": 0
       },
-      "contentType": "still",
+      "contentType": "poster",
       "hourLocal": 15,
       "engagement": 0,
       "displayMetrics": [
@@ -3064,7 +3117,7 @@
       "sentAt": "2026-08-21T19:21:50.657Z",
       "text": "If you're still posting product photos with no strategy, this is your sign.\n\nA p",
       "assetType": "image",
-      "source": null,
+      "source": "https://www.dharmasestheticdesign.com/dharma-dog.jpg",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -3115,7 +3168,7 @@
       "sentAt": "2026-08-21T19:21:45.799Z",
       "text": "Wedding weekend, meet your own website. A mockup for a short-term event site bui",
       "assetType": "image",
-      "source": null,
+      "source": "https://files.catbox.moe/zvwx24.jpg",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -3166,7 +3219,7 @@
       "sentAt": "2026-08-21T19:21:43.229Z",
       "text": "Running a weekend conference? Here's a mockup built for exactly that \u2014 schedule,",
       "assetType": "image",
-      "source": null,
+      "source": "https://files.catbox.moe/cgewub.jpg",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -3217,7 +3270,7 @@
       "sentAt": "2026-08-18T02:16:51.105Z",
       "text": "3 signs your Shopify store needs a content strategy: you're posting inconsistent",
       "assetType": "image",
-      "source": null,
+      "source": "https://dharmasestheticdesign.com/ded-post-content-strategy.jpg",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -3226,7 +3279,7 @@
         "shares": 0,
         "clicks": 0
       },
-      "contentType": "still",
+      "contentType": "poster",
       "hourLocal": 22,
       "engagement": 0,
       "displayMetrics": [
@@ -3268,7 +3321,7 @@
       "sentAt": "2026-08-18T02:16:40.192Z",
       "text": "3 signs your Shopify store needs a content strategy: you're posting inconsistent",
       "assetType": "image",
-      "source": null,
+      "source": "https://dharmasestheticdesign.com/ded-post-content-strategy.jpg",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -3279,7 +3332,7 @@
         "follows": 0,
         "reach": 2
       },
-      "contentType": "still",
+      "contentType": "poster",
       "hourLocal": 22,
       "engagement": 0,
       "displayMetrics": [
@@ -3326,7 +3379,7 @@
       "sentAt": "2026-08-16T09:07:16.615Z",
       "text": "You don't need a $5k/month agency to grow your Shopify store.\n\nWe started Dharma",
       "assetType": "image",
-      "source": null,
+      "source": "https://www.dharmasestheticdesign.com/founder.jpg",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -3335,7 +3388,7 @@
         "shares": 0,
         "clicks": 0
       },
-      "contentType": "still",
+      "contentType": "poster",
       "hourLocal": 5,
       "engagement": 0,
       "displayMetrics": [
@@ -3377,7 +3430,7 @@
       "sentAt": "2026-08-16T09:06:47.205Z",
       "text": "POV: you spent $0 on marketing and expected customers to just show up.\n\nDharma g",
       "assetType": "image",
-      "source": null,
+      "source": "https://www.dharmasestheticdesign.com/dharma-dog.jpg",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -3428,7 +3481,7 @@
       "sentAt": "2026-08-08T05:23:32.609Z",
       "text": "Everything you need to show up consistently online \u2014 starting this week. \ud83d\udc47\n\nStar",
       "assetType": "image",
-      "source": null,
+      "source": "https://www.dharmasestheticdesign.com/ded-post-starter-included.png",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -3437,7 +3490,7 @@
         "shares": 0,
         "clicks": 0
       },
-      "contentType": "still",
+      "contentType": "poster",
       "hourLocal": 1,
       "engagement": 0,
       "displayMetrics": [
@@ -3479,9 +3532,9 @@
       "sentAt": "2026-08-08T05:23:15.136Z",
       "text": "Everything you need to show up consistently online \u2014 starting this week. \ud83d\udc47\n\nStar",
       "assetType": "image",
-      "source": null,
+      "source": "https://www.dharmasestheticdesign.com/ded-post-starter-included.png",
       "metrics": {},
-      "contentType": "still",
+      "contentType": "poster",
       "hourLocal": 1,
       "engagement": 0,
       "displayMetrics": []
@@ -3543,7 +3596,7 @@
       "sentAt": "2026-08-06T19:11:15.449Z",
       "text": "Stop guessing what AI business to build. I built a free 2-minute quiz that tells",
       "assetType": "image",
-      "source": null,
+      "source": "https://www.dharmasestheticdesign.com/abe-post-quiz-hook.jpg",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -3601,7 +3654,7 @@
       "sentAt": "2026-08-06T13:34:08.856Z",
       "text": "Here's our promise: you'll love the final result, or we'll make it right.\nEvery ",
       "assetType": "image",
-      "source": null,
+      "source": "https://www.dharmasestheticdesign.com/ded-post-guarantee.jpg",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -3612,7 +3665,7 @@
         "follows": 0,
         "reach": 1
       },
-      "contentType": "still",
+      "contentType": "poster",
       "hourLocal": 9,
       "engagement": 0,
       "displayMetrics": [
@@ -3659,7 +3712,7 @@
       "sentAt": "2026-08-06T13:33:59.063Z",
       "text": "Here's our promise: you'll love the final result, or we'll make it right.\nEvery ",
       "assetType": "image",
-      "source": null,
+      "source": "https://www.dharmasestheticdesign.com/ded-post-guarantee.jpg",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -3668,7 +3721,7 @@
         "shares": 0,
         "clicks": 0
       },
-      "contentType": "still",
+      "contentType": "poster",
       "hourLocal": 9,
       "engagement": 0,
       "displayMetrics": [
@@ -3710,7 +3763,7 @@
       "sentAt": "2026-08-06T13:33:53.405Z",
       "text": "Three packages. One goal: your store grows.\n\ud83d\udd39 Starter Launch \u2014 $650 \u2014 get visibl",
       "assetType": "image",
-      "source": null,
+      "source": "https://www.dharmasestheticdesign.com/ded-post-offer.jpg",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -3721,7 +3774,7 @@
         "follows": 0,
         "reach": 1
       },
-      "contentType": "still",
+      "contentType": "poster",
       "hourLocal": 9,
       "engagement": 0,
       "displayMetrics": [
@@ -3768,7 +3821,7 @@
       "sentAt": "2026-08-06T13:33:42.272Z",
       "text": "Three packages. One goal: your store grows.\n\ud83d\udd39 Starter Launch \u2014 $650 \u2014 get visibl",
       "assetType": "image",
-      "source": null,
+      "source": "https://www.dharmasestheticdesign.com/ded-post-offer.jpg",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -3777,7 +3830,7 @@
         "shares": 0,
         "clicks": 0
       },
-      "contentType": "still",
+      "contentType": "poster",
       "hourLocal": 9,
       "engagement": 0,
       "displayMetrics": [
@@ -3819,7 +3872,7 @@
       "sentAt": "2026-08-06T00:51:11.973Z",
       "text": "Stop guessing what AI business to build. Built a free 2-minute quiz that tells y",
       "assetType": "image",
-      "source": null,
+      "source": "https://www.dharmasestheticdesign.com/instagram-10-lines-to-freedom.png",
       "metrics": {},
       "contentType": "still",
       "hourLocal": 20,
@@ -3832,7 +3885,7 @@
       "sentAt": "2026-08-06T00:51:06.054Z",
       "text": "Stop guessing what AI business to build. Built a free 2-minute quiz that tells y",
       "assetType": "image",
-      "source": null,
+      "source": "https://www.dharmasestheticdesign.com/tiktok-10-lines-to-freedom.png",
       "metrics": {},
       "contentType": "still",
       "hourLocal": 20,
@@ -3896,7 +3949,7 @@
       "sentAt": "2026-07-25T13:54:20.000Z",
       "text": "#AIBusiness, #Entrepreneurship, #AIEntrepreneur, #BusinessFramework, #StartupGui",
       "assetType": "image",
-      "source": null,
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281b299afb44349030723/6a7281b41d7ba3a9a38a8919_thumbnail.jpg",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -3954,7 +4007,7 @@
       "sentAt": "2026-07-19T04:19:25.000Z",
       "text": "",
       "assetType": "image",
-      "source": null,
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281d299afb443490307bf/6a7281d4067027040df9e782_thumbnail.png",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -4005,7 +4058,7 @@
       "sentAt": "2026-07-02T11:53:05.000Z",
       "text": "",
       "assetType": "image",
-      "source": null,
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281d299afb443490307bf/6a7281d4067027040df9e780_thumbnail.jpg",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -4056,7 +4109,7 @@
       "sentAt": "2026-07-02T02:16:52.000Z",
       "text": "#shopifyowner #ecommerce #digitalmarketing #smallbusiness #contentcreation #dhar",
       "assetType": "video",
-      "source": null,
+      "source": "https://scontent-iad6-1.cdninstagram.com/o1/v/t2/f2/m86/AQPTEUym22PZDH16lqysc2p4PCm3WaH7wqzUqhKhh6HbcQC5xTv5X-2lqcwa3UMK6wWhHhmh8eZokAtKa_i6gfGuqdR-6Ui-ZWc4eQA.mp4?_nc_cat=109&_nc_sid=5e9851&_nc_ht=scontent-iad6-1.cdninstagram.com&_nc_ohc=3p9Of4FPtZcQ7kNvwFZ-Wjt&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MTE5NDU2NDkzOTQ2OTQ1NSwiYXNzZXRfYWdlX2RheXMiOjMzLCJ2aV91c2VjYXNlX2lkIjoxMDA5OSwiZHVyYXRpb25fcyI6MTAsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=4c3cadfa0f041054&_nc_vs=HBkcFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC85RDQ2MTJDRThBRkNDMDY1QkFFREM1RkU5QzNDRDlBNV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAKAAYABsCiAd1c2Vfb2lsATEScHJvZ3Jlc3NpdmVfcmVjaXBlATEVAAAmnsqGruqcnwQVAigCQzMsF0AkAAAAAAAAGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX-B2XmnQEA&_nc_gid=O1mSm_RRkWYlJmN9k6EgcQ&edm=ANo9K5cEAAAA&_nc_zt=28&_nc_tpa=Q5bMBQFnK9U5W1CMFODhB-nunazGYRIvbFT1oZVFAV3SnWx5xUupbiS6MDof_jzBTNmvnzrZjfavbI8E4g&oh=00_AQFOS7XaGviXE9rruTE5Y6aYo3ERkRgritQRnFK0Zh5qIw&oe=6A745EA2",
       "metrics": {
         "reactions": 0,
         "comments": 0,
@@ -4115,7 +4168,7 @@
       "sentAt": "2026-06-30T21:39:47.000Z",
       "text": "Visibility Reel",
       "assetType": "video",
-      "source": null,
+      "source": "https://www.tiktok.com/@dharmasestheticde/video/7657306396244970783?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "metrics": {
         "reactions": 1,
         "comments": 0,
@@ -4173,7 +4226,7 @@
       "sentAt": "2026-06-30T19:49:32.000Z",
       "text": "Most Shopify stores don't have a sales problem \u2014 they have a visibility problem.",
       "assetType": "image",
-      "source": null,
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281b299afb44349030723/6a7281b41d7ba3a9a38a8917_thumbnail.jpg",
       "metrics": {
         "reactions": 0,
         "comments": 0,
