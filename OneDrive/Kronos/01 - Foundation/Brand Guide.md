@@ -1,4 +1,4 @@
-# Dharma's Esthetic Design Center — Brand Guide
+# Dharma's Esthetic Design — Brand Guide
 
 > The single source of truth for anything produced under this brand — commercials, social posts, ad copy, decks, the site. If a piece of content contradicts this document, the content is wrong, not the guide.
 
@@ -121,7 +121,7 @@ From the live Instagram calendar — this is what "on-brand and already worked" 
 
 > You built the store. We build the audience.
 > Most Shopify store owners are invisible online — not because their products aren't good, but because consistent, professional content takes time they don't have.
-> That's exactly what we do at Dharma's Esthetic Design Center.
+> That's exactly what we do at Dharma's Esthetic Design.
 > ✅ 7-day TikTok and Facebook ad campaigns ✅ Branded still photo placements ✅ AI video commercials ✅ Store optimization and GA4 setup
 > All done for you. Fast. Professional. Built around your brand.
 > Tap the link in bio to see our packages — starting at $650.

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BuildLocal - Vetted Contractors & Quotes</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+  <style>
+    :root {
+      --color-accent: #2563eb;
+      --color-success: #16a34a;
+      --color-dark: #1e293b;
+      --color-light: #f8fafc;
+      --color-white: #ffffff;
+      --space-12: 12px;
+      --space-16: 16px;
+      --space-24: 24px;
+      --space-32: 32px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --color-light: #0f172a;
+        --color-white: #1e293b;
+        --color-dark: #f1f5f9;
+      }
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--color-light); color: var(--color-dark); }
+
+    header {
+      background: var(--color-white);
+      border-bottom: 1px solid #e2e8f0;
+      padding: var(--space-16) var(--space-24);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--color-accent);
+      letter-spacing: 1px;
+    }
+
+    nav {
+      display: flex;
+      gap: var(--space-32);
+    }
+
+    nav a {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--color-dark);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--color-accent);
+    }
+
+    .hero-quote {
+      background: var(--color-white);
+      padding: var(--space-32) var(--space-24);
+      border-bottom: 2px solid var(--color-accent);
+    }
+
+    .hero-quote-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-32);
+      align-items: center;
+    }
+
+    .quote-form h1 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: var(--space-16);
+      line-height: 1.2;
+    }
+
+    .quote-form p {
+      font-size: 14px;
+      color: #64748b;
+      margin-bottom: var(--space-24);
+    }
+
+    .form-group {
+      margin-bottom: var(--space-16);
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: var(--space-8);
+      color: var(--color-dark);
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: var(--space-12);
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font-size: 13px;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--color-accent);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+
+    .quote-button {
+      width: 100%;
+      padding: var(--space-16);
+      background: var(--color-accent);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .quote-button:hover {
+      background: #1d4ed8;
+    }
+
+    .quote-visual {
+      background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+      border-radius: 12px;
+      padding: var(--space-32);
+      text-align: center;
+      font-size: 64px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: var(--space-32) var(--space-24);
+    }
+
+    .section-title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: var(--space-24);
+      display: flex;
+      align-items: center;
+      gap: var(--space-12);
+    }
+
+    .services-tab {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: var(--space-12);
+      margin-bottom: var(--space-32);
+    }
+
+    .service-tab {
+      padding: var(--space-16);
+      background: var(--color-light);
+      border: 2px solid transparent;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 13px;
+      transition: all 0.2s;
+      text-align: center;
+    }
+
+    .service-tab:hover,
+    .service-tab.active {
+      border-color: var(--color-accent);
+      background: var(--color-white);
+    }
+
+    .quote-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: var(--space-32);
+      font-size: 13px;
+    }
+
+    .quote-table th {
+      background: var(--color-light);
+      padding: var(--space-16);
+      text-align: left;
+      font-weight: 700;
+      border-bottom: 2px solid var(--color-accent);
+    }
+
+    .quote-table td {
+      padding: var(--space-16);
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .quote-table tr:hover {
+      background: var(--color-light);
+    }
+
+    .contractor-badge {
+      display: inline-block;
+      background: #dcfce7;
+      color: #166534;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 11px;
+    }
+
+    .contractor-name {
+      font-weight: 600;
+      margin-bottom: var(--space-4);
+    }
+
+    .contractor-license {
+      font-size: 11px;
+      color: #64748b;
+      font-family: 'IBM Plex Mono', monospace;
+    }
+
+    .price-badge {
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--color-accent);
+    }
+
+    .rating-inline {
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .rating-stars {
+      color: #fbbf24;
+    }
+
+    .action-buttons {
+      display: flex;
+      gap: var(--space-8);
+    }
+
+    .btn {
+      padding: var(--space-12);
+      border: none;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 11px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--color-accent);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #1d4ed8;
+    }
+
+    .btn-secondary {
+      background: var(--color-light);
+      color: var(--color-dark);
+      border: 1px solid #cbd5e1;
+    }
+
+    .btn-secondary:hover {
+      background: white;
+    }
+
+    .trust-badges {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--space-24);
+      margin-bottom: var(--space-32);
+      padding: var(--space-24);
+      background: var(--color-light);
+      border-radius: 12px;
+    }
+
+    .trust-badge {
+      text-align: center;
+    }
+
+    .trust-badge-icon {
+      font-size: 32px;
+      margin-bottom: var(--space-8);
+    }
+
+    .trust-badge-title {
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: var(--space-4);
+    }
+
+    .trust-badge-desc {
+      font-size: 12px;
+      color: #64748b;
+    }
+
+    footer {
+      background: var(--color-white);
+      border-top: 1px solid #e2e8f0;
+      padding: var(--space-24);
+      text-align: center;
+      font-size: 12px;
+      color: #64748b;
+    }
+
+    @media (max-width: 768px) {
+      .hero-quote-content {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-wrapper">
+      <div class="logo">buildlocal</div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#contractors">Contractors</a>
+        <a href="#quotes">Quotes</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-quote">
+    <div class="hero-quote-content">
+      <div class="quote-form">
+        <h1>Get Quotes from Local Contractors</h1>
+        <p>Compare vetted, licensed contractors. No surprises. Transparent pricing.</p>
+        <form>
+          <div class="form-group">
+            <label>What do you need?</label>
+            <select>
+              <option>Select a service...</option>
+              <option>Plumbing</option>
+              <option>Electrical</option>
+              <option>Roofing</option>
+              <option>HVAC</option>
+              <option>Carpentry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Your zip code</label>
+            <input type="text" placeholder="e.g., 90210">
+          </div>
+          <div class="form-group">
+            <label>Scope of work (optional)</label>
+            <input type="text" placeholder="Brief description...">
+          </div>
+          <button type="submit" class="quote-button">Get Instant Quotes</button>
+        </form>
+      </div>
+      <div class="quote-visual">🔨</div>
+    </div>
+  </section>
+
+  <div class="container">
+    <section id="services">
+      <h2 class="section-title">📋 Browse by Service</h2>
+      <div class="services-tab">
+        <div class="service-tab active">Plumbing</div>
+        <div class="service-tab">Electrical</div>
+        <div class="service-tab">Roofing</div>
+        <div class="service-tab">HVAC</div>
+        <div class="service-tab">Carpentry</div>
+        <div class="service-tab">Painting</div>
+      </div>
+
+      <div class="trust-badges">
+        <div class="trust-badge">
+          <div class="trust-badge-icon">✓</div>
+          <div class="trust-badge-title">Verified License</div>
+          <div class="trust-badge-desc">All contractors verified</div>
+        </div>
+        <div class="trust-badge">
+          <div class="trust-badge-icon">🛡️</div>
+          <div class="trust-badge-title">Insured</div>
+          <div class="trust-badge-desc">Liability & workers comp</div>
+        </div>
+        <div class="trust-badge">
+          <div class="trust-badge-icon">⭐</div>
+          <div class="trust-badge-title">Rated</div>
+          <div class="trust-badge-desc">Reviews from real customers</div>
+        </div>
+        <div class="trust-badge">
+          <div class="trust-badge-icon">💰</div>
+          <div class="trust-badge-title">Transparent</div>
+          <div class="trust-badge-desc">No hidden fees</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contractors">
+      <h2 class="section-title">🏆 Plumbing Contractors</h2>
+      <table class="quote-table">
+        <thead>
+          <tr>
+            <th>Contractor</th>
+            <th>License</th>
+            <th>Rating</th>
+            <th>Est. Quote</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="contractor-badge">Verified</div>
+              <div class="contractor-name">Thompson Plumbing Co.</div>
+              <div class="contractor-license">LIC #PLM-94582</div>
+            </td>
+            <td>25+ years • Bonded & Insured</td>
+            <td>
+              <div class="rating-inline">
+                <span class="rating-stars">★★★★★</span> 4.9
+              </div>
+              <div style="font-size: 11px; color: #64748b;">284 reviews</div>
+            </td>
+            <td><div class="price-badge">$350-$650</div></td>
+            <td>
+              <div class="action-buttons">
+                <button class="btn btn-primary">Request Quote</button>
+                <button class="btn btn-secondary">Profile</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="contractor-badge">Verified</div>
+              <div class="contractor-name">Rodriguez Plumbing Services</div>
+              <div class="contractor-license">LIC #PLM-82016</div>
+            </td>
+            <td>18+ years • Bonded & Insured</td>
+            <td>
+              <div class="rating-inline">
+                <span class="rating-stars">★★★★☆</span> 4.7
+              </div>
+              <div style="font-size: 11px; color: #64748b;">156 reviews</div>
+            </td>
+            <td><div class="price-badge">$300-$550</div></td>
+            <td>
+              <div class="action-buttons">
+                <button class="btn btn-primary">Request Quote</button>
+                <button class="btn btn-secondary">Profile</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="contractor-badge">Verified</div>
+              <div class="contractor-name">Murphy Emergency Plumbing</div>
+              <div class="contractor-license">LIC #PLM-91203</div>
+            </td>
+            <td>12+ years • Bonded & Insured</td>
+            <td>
+              <div class="rating-inline">
+                <span class="rating-stars">★★★★★</span> 4.8
+              </div>
+              <div style="font-size: 11px; color: #64748b;">98 reviews</div>
+            </td>
+            <td><div class="price-badge">$400-$750</div></td>
+            <td>
+              <div class="action-buttons">
+                <button class="btn btn-primary">Request Quote</button>
+                <button class="btn btn-secondary">Profile</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 BuildLocal | Licensed • Insured • Verified</p>
+  </footer>
+</body>
+</html>

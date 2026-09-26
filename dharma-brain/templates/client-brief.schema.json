@@ -1,0 +1,157 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Client Site Brief",
+  "description": "Template for rebranding the Icon Auto Repair website for a new client",
+  "type": "object",
+  "required": [
+    "businessName",
+    "city",
+    "state",
+    "phone",
+    "email",
+    "domain",
+    "logoUrl",
+    "primaryColor",
+    "secondaryColor"
+  ],
+  "properties": {
+    "businessName": {
+      "type": "string",
+      "description": "Full business name (e.g., 'Nick’s Auto Service & Tire'). Used in titles, headers, footer.",
+      "minLength": 3
+    },
+    "city": {
+      "type": "string",
+      "description": "City name. MUST be specific to avoid shipping the wrong site. (e.g., 'Plymouth')",
+      "minLength": 2
+    },
+    "state": {
+      "type": "string",
+      "description": "State abbreviation (e.g., 'MI', 'OH', 'PA'). REQUIRED to prevent duplication errors.",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "zipCode": {
+      "type": "string",
+      "description": "ZIP/postal code (e.g., '48170')",
+      "minLength": 5
+    },
+    "address": {
+      "type": "string",
+      "description": "Full street address (e.g., '123 Main St, Plymouth, MI 48170')"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Phone number in (XXX) XXX-XXXX format (e.g., '(734) 555-0123')",
+      "pattern": "^\\(\\d{3}\\) \\d{3}-\\d{4}$"
+    },
+    "email": {
+      "type": "string",
+      "description": "Contact email address",
+      "format": "email"
+    },
+    "domain": {
+      "type": "string",
+      "description": "Vercel domain or subdomain (e.g., 'nicks-auto-service.vercel.app'). Must be unique.",
+      "minLength": 5
+    },
+    "logoUrl": {
+      "type": "string",
+      "description": "Public URL to the business logo image (e.g., via imgbb or postimg). 200x200px or larger.",
+      "format": "uri"
+    },
+    "services": {
+      "type": "array",
+      "description": "List of services THIS business offers. Per-client only — not shared across sites. This client's service list is stored in vault, not reused elsewhere.",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "Brake Repair",
+        "Engine Repair",
+        "Transmission Repair",
+        "Electrical System",
+        "Exhaust System",
+        "Car Maintenance",
+        "Collision Repair"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "description": "Short meta description (60–160 chars) for SEO. Used in <meta name=\"description\">",
+      "minLength": 30,
+      "maxLength": 160
+    },
+    "primaryColor": {
+      "type": "string",
+      "description": "Primary brand color for THIS business only, as hex code (e.g., '#c8202f'). Each site has its own fixed colors. Dharma Esthetic Design's colors stay until you explicitly change them; same for AI Business Empire. This color applies to this client's site only.",
+      "pattern": "^#[0-9a-fA-F]{6}$"
+    },
+    "secondaryColor": {
+      "type": "string",
+      "description": "Secondary brand color for THIS business only, as hex code (e.g., '#97121e'). Per-client, not shared.",
+      "pattern": "^#[0-9a-fA-F]{6}$"
+    },
+    "hours": {
+      "type": "object",
+      "description": "Business hours for THIS client only. Per-client, stored in vault. Each business has its own hours; they do not carry to other sites.",
+      "properties": {
+        "weekday": {
+          "type": "string",
+          "description": "Monday–Friday hours (e.g., '8:00 AM – 6:00 PM')"
+        },
+        "saturday": {
+          "type": "string",
+          "description": "Saturday hours (e.g., '9:00 AM – 2:00 PM')"
+        },
+        "sunday": {
+          "type": "string",
+          "description": "Sunday hours (e.g., 'Closed')"
+        }
+      }
+    },
+    "rating": {
+      "type": "number",
+      "description": "Google rating (e.g., 4.8). Defaults to 4.8.",
+      "minimum": 1,
+      "maximum": 5,
+      "default": 4.8
+    },
+    "reviewCount": {
+      "type": "number",
+      "description": "Number of Google reviews. Defaults to 38.",
+      "minimum": 0,
+      "default": 38
+    },
+    "templateUrl": {
+      "type": "string",
+      "description": "URL to the Vercel-deployed template site (e.g., 'https://icon-auto-repair.vercel.app'). Defaults to Icon Auto.",
+      "default": "https://icon-auto-repair.vercel.app"
+    }
+  },
+  "example": {
+    "businessName": "Nick's Auto Service & Tire",
+    "city": "Plymouth",
+    "state": "MI",
+    "zipCode": "48170",
+    "address": "123 Main St, Plymouth, MI 48170",
+    "phone": "(734) 555-0123",
+    "email": "contact@nicksauto.com",
+    "domain": "nicks-auto-service.vercel.app",
+    "logoUrl": "https://example.com/logo.png",
+    "services": [
+      "Tire Sales & Installation",
+      "Oil Changes",
+      "Brake Service",
+      "Battery Replacement",
+      "Alignment"
+    ],
+    "description": "Full-service tire shop and auto repair in Plymouth, MI. Tire sales, brakes, batteries, oil changes, and more.",
+    "primaryColor": "#0066cc",
+    "secondaryColor": "#004499",
+    "hours": {
+      "weekday": "7:00 AM – 7:00 PM",
+      "saturday": "8:00 AM – 5:00 PM",
+      "sunday": "10:00 AM – 4:00 PM"
+    }
+  }
+}

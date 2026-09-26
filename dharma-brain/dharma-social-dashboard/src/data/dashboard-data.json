@@ -1,0 +1,4282 @@
+{
+  "generatedAt": "2026-09-26T10:21:04.272122+00:00",
+  "postCount": 77,
+  "avgEngagementPerActiveHour": 5.0,
+  "platformSummary": {
+    "facebook": {
+      "postCount": 33,
+      "engagement": 0,
+      "byContentType": {
+        "still": 15,
+        "video": 7,
+        "poster": 11
+      }
+    },
+    "tiktok": {
+      "postCount": 14,
+      "engagement": 100,
+      "byContentType": {
+        "video": 7,
+        "still": 7
+      }
+    },
+    "instagram": {
+      "postCount": 30,
+      "engagement": 0,
+      "byContentType": {
+        "video": 8,
+        "poster": 9,
+        "still": 13
+      }
+    }
+  },
+  "hourlyTotals": [
+    {
+      "hour": 0,
+      "postCount": 1,
+      "engagement": 0,
+      "deltaVsAvg": -5.0
+    },
+    {
+      "hour": 1,
+      "postCount": 2,
+      "engagement": 0,
+      "deltaVsAvg": -5.0
+    },
+    {
+      "hour": 2,
+      "postCount": 0,
+      "engagement": 0,
+      "deltaVsAvg": null
+    },
+    {
+      "hour": 3,
+      "postCount": 0,
+      "engagement": 0,
+      "deltaVsAvg": null
+    },
+    {
+      "hour": 4,
+      "postCount": 0,
+      "engagement": 0,
+      "deltaVsAvg": null
+    },
+    {
+      "hour": 5,
+      "postCount": 2,
+      "engagement": 0,
+      "deltaVsAvg": -5.0
+    },
+    {
+      "hour": 6,
+      "postCount": 1,
+      "engagement": 7,
+      "deltaVsAvg": 2.0
+    },
+    {
+      "hour": 7,
+      "postCount": 1,
+      "engagement": 0,
+      "deltaVsAvg": -5.0
+    },
+    {
+      "hour": 8,
+      "postCount": 4,
+      "engagement": 0,
+      "deltaVsAvg": -5.0
+    },
+    {
+      "hour": 9,
+      "postCount": 11,
+      "engagement": 0,
+      "deltaVsAvg": -5.0
+    },
+    {
+      "hour": 10,
+      "postCount": 2,
+      "engagement": 0,
+      "deltaVsAvg": -5.0
+    },
+    {
+      "hour": 11,
+      "postCount": 2,
+      "engagement": 0,
+      "deltaVsAvg": -5.0
+    },
+    {
+      "hour": 12,
+      "postCount": 2,
+      "engagement": 0,
+      "deltaVsAvg": -5.0
+    },
+    {
+      "hour": 13,
+      "postCount": 2,
+      "engagement": 0,
+      "deltaVsAvg": -5.0
+    },
+    {
+      "hour": 14,
+      "postCount": 3,
+      "engagement": 1,
+      "deltaVsAvg": -4.0
+    },
+    {
+      "hour": 15,
+      "postCount": 8,
+      "engagement": 0,
+      "deltaVsAvg": -5.0
+    },
+    {
+      "hour": 16,
+      "postCount": 8,
+      "engagement": 0,
+      "deltaVsAvg": -5.0
+    },
+    {
+      "hour": 17,
+      "postCount": 4,
+      "engagement": 1,
+      "deltaVsAvg": -4.0
+    },
+    {
+      "hour": 18,
+      "postCount": 2,
+      "engagement": 1,
+      "deltaVsAvg": -4.0
+    },
+    {
+      "hour": 19,
+      "postCount": 7,
+      "engagement": 2,
+      "deltaVsAvg": -3.0
+    },
+    {
+      "hour": 20,
+      "postCount": 6,
+      "engagement": 77,
+      "deltaVsAvg": 72.0
+    },
+    {
+      "hour": 21,
+      "postCount": 3,
+      "engagement": 1,
+      "deltaVsAvg": -4.0
+    },
+    {
+      "hour": 22,
+      "postCount": 6,
+      "engagement": 10,
+      "deltaVsAvg": 5.0
+    },
+    {
+      "hour": 23,
+      "postCount": 0,
+      "engagement": 0,
+      "deltaVsAvg": null
+    }
+  ],
+  "posts": [
+    {
+      "id": "6ab2f500340f92dcbe1641d3",
+      "platform": "facebook",
+      "sentAt": "2026-09-24T12:37:10.202Z",
+      "text": "Every Shopify store we audit has the same blind spot. Want to know if yours is o",
+      "assetType": null,
+      "source": null,
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 0,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "still",
+      "hourLocal": 8,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 0
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6ab2f4ff98ae6feaa61acdd4",
+      "platform": "facebook",
+      "sentAt": "2026-09-23T13:47:04.090Z",
+      "text": "Store's done, but sales aren't there. Find out why in 10 seconds \u2014 free Shopify ",
+      "assetType": null,
+      "source": null,
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 0,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "still",
+      "hourLocal": 9,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 0
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6ab2f4fe64b56fca2b9bfb7a",
+      "platform": "facebook",
+      "sentAt": "2026-09-23T12:31:05.618Z",
+      "text": "2 episodes in, and SEO's still dodging Dharma. Don't wait for the finale \u2014 catch",
+      "assetType": null,
+      "source": null,
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 0,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "still",
+      "hourLocal": 8,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 0
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6ab2f67d557b1c68e6ba965c",
+      "platform": "tiktok",
+      "sentAt": "2026-09-23T10:50:43.813Z",
+      "text": "Your store looks amazing. So why isn't anyone buying? Watch us scan a real Shopi",
+      "assetType": "video",
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6ab2f67d557b1c68e6ba965c_video.mp4",
+      "metrics": {
+        "reactions": 7,
+        "comments": 0,
+        "engagementRate": 5.6,
+        "views": 125,
+        "shares": 0,
+        "reach": 92,
+        "totalTimeWatched": 6.6,
+        "averageTimeWatched": 3.05
+      },
+      "contentType": "video",
+      "hourLocal": 6,
+      "engagement": 7,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 92
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 125
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 7
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 5.6
+        },
+        {
+          "key": "averageTimeWatched",
+          "label": "Avg Watch (s)",
+          "value": 3.05
+        }
+      ]
+    },
+    {
+      "id": "6ab3364d2aa0e20bb46fcb6b",
+      "platform": "tiktok",
+      "sentAt": "2026-09-23T02:17:23.258Z",
+      "text": "Store's set up but nothing's selling? We sent a dog to go find out why. \ud83d\udc3e Get a ",
+      "assetType": "video",
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6ab3364d2aa0e20bb46fcb6b_video.mp4",
+      "metrics": {
+        "reactions": 8,
+        "comments": 2,
+        "engagementRate": 12.82,
+        "views": 78,
+        "shares": 0,
+        "reach": 56,
+        "totalTimeWatched": 12.97,
+        "averageTimeWatched": 8.85
+      },
+      "contentType": "video",
+      "hourLocal": 22,
+      "engagement": 10,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 56
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 78
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 8
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 2
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 12.82
+        },
+        {
+          "key": "averageTimeWatched",
+          "label": "Avg Watch (s)",
+          "value": 8.85
+        }
+      ]
+    },
+    {
+      "id": "6ab3364248b82bc366475401",
+      "platform": "instagram",
+      "sentAt": "2026-09-23T02:16:28.562Z",
+      "text": "Store's set up but nothing's selling? We sent a dog to go find out why. \ud83d\udc3e Get a ",
+      "assetType": "video",
+      "source": "https://media.flora.ai/mcp-uploads/2026/9/23/user_3JHZddJIXygmDpwSJfV0K7ESq5g/4424e154-32f3-4a4d-8c56-86994046a305.mp4",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 8,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "reach": 6
+      },
+      "contentType": "video",
+      "hourLocal": 22,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 6
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 8
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6ab336582aa0e20bb46fcd7d",
+      "platform": "facebook",
+      "sentAt": "2026-09-23T02:15:56.828Z",
+      "text": "Store's set up but nothing's selling? We sent a dog to go find out why. \ud83d\udc3e Get a ",
+      "assetType": "video",
+      "source": "https://media.flora.ai/mcp-uploads/2026/9/23/user_3JHZddJIXygmDpwSJfV0K7ESq5g/4424e154-32f3-4a4d-8c56-86994046a305.mp4",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 0,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "video",
+      "hourLocal": 22,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 0
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6ab2f67c557b1c68e6ba962f",
+      "platform": "instagram",
+      "sentAt": "2026-09-22T23:03:52.408Z",
+      "text": "Your store looks amazing. So why isn't anyone buying? Watch us scan a real Shopi",
+      "assetType": "video",
+      "source": "https://media.flora.ai/mcp-uploads/2026/9/22/user_3JHZddJIXygmDpwSJfV0K7ESq5g/73176a0c-70a8-479a-b880-52aeddf86711.mp4",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 1,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "reach": 1
+      },
+      "contentType": "video",
+      "hourLocal": 19,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 1
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 1
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6ab1d3ed40d6d6c92618abce",
+      "platform": "tiktok",
+      "sentAt": "2026-09-22T01:05:24.499Z",
+      "text": "Store's set up but nothing's selling? We sent a dog to go find out why. \ud83d\udc3e Get a ",
+      "assetType": "video",
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6ab1d3ed40d6d6c92618abce_video.mp4",
+      "metrics": {
+        "reactions": 1,
+        "comments": 0,
+        "engagementRate": 2.5,
+        "views": 40,
+        "shares": 0,
+        "reach": 34,
+        "totalTimeWatched": 2.05,
+        "averageTimeWatched": 3.01
+      },
+      "contentType": "video",
+      "hourLocal": 21,
+      "engagement": 1,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 34
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 40
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 1
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 2.5
+        },
+        {
+          "key": "averageTimeWatched",
+          "label": "Avg Watch (s)",
+          "value": 3.01
+        }
+      ]
+    },
+    {
+      "id": "6ab1d3de826cfc54b86168e1",
+      "platform": "instagram",
+      "sentAt": "2026-09-22T01:04:31.819Z",
+      "text": "Store's set up but nothing's selling? We sent a dog to go find out why. \ud83d\udc3e Get a ",
+      "assetType": "video",
+      "source": "https://dharmasestheticdesign.com/seo-cat-ep1.mp4",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 15,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "reach": 13
+      },
+      "contentType": "video",
+      "hourLocal": 21,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 13
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 15
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6ab1d40ea7ddea1d2b47e688",
+      "platform": "facebook",
+      "sentAt": "2026-09-22T01:04:19.109Z",
+      "text": "Store's set up but nothing's selling? We sent a dog to go find out why. \ud83d\udc3e Get a ",
+      "assetType": "video",
+      "source": "https://dharmasestheticdesign.com/seo-cat-ep1.mp4",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 0,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "video",
+      "hourLocal": 21,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 0
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6aaab7a60165c0c5424d11e1",
+      "platform": "facebook",
+      "sentAt": "2026-09-18T12:03:42.965Z",
+      "text": "Store not selling? We sent a ship to go find out why. \ud83d\ude80 Get a real Shopify Store",
+      "assetType": "video",
+      "source": "https://dharma-marketing-assets.vercel.app/scifi-store-quest.mp4",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 0,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "video",
+      "hourLocal": 8,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 0
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6aac3107044720d6ed02ad8b",
+      "platform": "instagram",
+      "sentAt": "2026-09-17T18:27:46.045Z",
+      "text": "Your store looks amazing. So why isn't anyone buying? Three tiers, one goal: you",
+      "assetType": "video",
+      "source": "https://dharma-marketing-assets.vercel.app/packages-motion.mp4",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 8,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "reach": 7
+      },
+      "contentType": "video",
+      "hourLocal": 14,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 7
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 8
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6aac3117044720d6ed02ae5d",
+      "platform": "facebook",
+      "sentAt": "2026-09-17T18:27:40.940Z",
+      "text": "Three tiers. One goal \u2014 your store grows. Take a look at our packages and see wh",
+      "assetType": "video",
+      "source": "https://dharma-marketing-assets.vercel.app/packages-motion.mp4",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 0,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "video",
+      "hourLocal": 14,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 0
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6aac30e55de9b79c96ed4be4",
+      "platform": "tiktok",
+      "sentAt": "2026-09-17T18:27:27.205Z",
+      "text": "Your store looks amazing... so why isn't anyone buying? \ud83d\udc40 Comment GROWTH and we'",
+      "assetType": "video",
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6aac30e55de9b79c96ed4be4_video.mp4",
+      "metrics": {
+        "reactions": 1,
+        "comments": 0,
+        "engagementRate": 1.04,
+        "views": 96,
+        "shares": 0,
+        "reach": 85,
+        "totalTimeWatched": 2.2,
+        "averageTimeWatched": 1.4
+      },
+      "contentType": "video",
+      "hourLocal": 14,
+      "engagement": 1,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 85
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 96
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 1
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 1.04
+        },
+        {
+          "key": "averageTimeWatched",
+          "label": "Avg Watch (s)",
+          "value": 1.4
+        }
+      ]
+    },
+    {
+      "id": "6aaab6448e184bbb60f038c1",
+      "platform": "facebook",
+      "sentAt": "2026-09-17T13:21:04.076Z",
+      "text": "Store's set up but nothing's selling? We sent a dog to go find out why. \ud83d\udc3e Get a ",
+      "assetType": "video",
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6aa88cd2ac4a884f436b5cf1_video.mp4",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 0,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "video",
+      "hourLocal": 9,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 0
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6aabe9924f096ddff605e2a2",
+      "platform": "facebook",
+      "sentAt": "2026-09-17T13:21:00.000Z",
+      "text": "Store's set up but nothing's selling? We sent a dog to go find out why. \ud83d\udc3e Get a ",
+      "assetType": "video",
+      "source": "https://video-iad3-2.xx.fbcdn.net/o1/v/t2/f2/m366/AQNfMws5nB_3ckG9kCScWQ4n93NLfYNjIBA2mQqaHbk6Wut0mSTOgQ26SVnG0VKBXpmQksvU_8YLSuySLLe1VzX0FgdZ9-gsBfsDvvM6dklVjg.mp4?_nc_cat=111&_nc_sid=5e9851&_nc_ht=video-iad3-2.xx.fbcdn.net&_nc_ohc=H4DGecAEkNQQ7kNvwERAHlT&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjE3OTU4MjYzOTQ5NDcwMDYsImFzc2V0X2FnZV9kYXlzIjowLCJ2aV91c2VjYXNlX2lkIjoxMDEyMiwiZHVyYXRpb25fcyI6MTAsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=d06a53d4012addc1&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC8wQTRBMjZDREY0MzY2NThBNkI3QUU3MTUyQ0VGN0ZCRl9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50LzkxNDQ1OTY1M0UzQUJCMDM3QjBDM0YyQjM1N0REREE1X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACb89sql7dKwBhUCKAJDMywXQCQAAAAAAAAYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUCZZSeAQA&_nc_gid=25qZ1LSyQkvqcZ25NU9urQ&edm=APCh5TUEAAAA&_nc_zt=28&_nc_tpa=Q5bMBQIVIAIUA-wRQpgz-4isK3wfVtwKVe0X0ZXZxMUkTD69NRwSFCtkqQhWefoOyMzw0Vci6bK8IGAl&oh=00_AQK5NkK6B7ShIJaNzygpkVx1pyZKslCOBg8D1WNe90ywmg&oe=6AB1B085&bitrate=1233655&tag=dash_h264-basic-gen2_720p",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 0,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "video",
+      "hourLocal": 9,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 0
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6aaab6428e184bbb60f03858",
+      "platform": "facebook",
+      "sentAt": "2026-09-17T12:37:07.086Z",
+      "text": "Every store owner's climbing the same hill. We help you win it.\n\nDharmasEsthetic",
+      "assetType": "video",
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6aa8b2cda8c36ff9777720b9_video.mp4",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 0,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "video",
+      "hourLocal": 8,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 0
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6aa9f95981d74a10250a8684",
+      "platform": "instagram",
+      "sentAt": "2026-09-16T17:02:22.573Z",
+      "text": "Traffic is easy. Converting it is the job.\n\nGetting people to your store isn't t",
+      "assetType": "image",
+      "source": "https://dharma-marketing-assets.vercel.app/store-growth.png",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 1,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "reach": 1
+      },
+      "contentType": "poster",
+      "hourLocal": 13,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 1
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 1
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6aa9f9568df35c613718d785",
+      "platform": "facebook",
+      "sentAt": "2026-09-16T17:01:40.540Z",
+      "text": "Traffic is easy. Converting it is the job.\n\nGetting people to your store isn't t",
+      "assetType": "image",
+      "source": "https://dharma-marketing-assets.vercel.app/store-growth.png",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 1,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "poster",
+      "hourLocal": 13,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 1
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6aa9f94cc9dce8b453160c1a",
+      "platform": "instagram",
+      "sentAt": "2026-09-16T16:05:33.699Z",
+      "text": "Your product deserves more than a photo.\n\nA static image only tells half the sto",
+      "assetType": "image",
+      "source": "https://dharma-marketing-assets.vercel.app/ai-video.png",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 1,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "reach": 1
+      },
+      "contentType": "poster",
+      "hourLocal": 12,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 1
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 1
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6aa9f949501861120db3d04e",
+      "platform": "facebook",
+      "sentAt": "2026-09-16T16:01:41.798Z",
+      "text": "Your product deserves more than a photo.\n\nA static image only tells half the sto",
+      "assetType": "image",
+      "source": "https://dharma-marketing-assets.vercel.app/ai-video.png",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 0,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "poster",
+      "hourLocal": 12,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 0
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6aa9f93fbcef7237b5a9738c",
+      "platform": "instagram",
+      "sentAt": "2026-09-16T15:03:37.513Z",
+      "text": "53% of visitors leave a store that takes more than 3 seconds to load.\n\nIf you do",
+      "assetType": "image",
+      "source": "https://dharma-marketing-assets.vercel.app/store-audit.png",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 1,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "reach": 1
+      },
+      "contentType": "poster",
+      "hourLocal": 11,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 1
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 1
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6aa9f93dbcef7237b5a9731a",
+      "platform": "facebook",
+      "sentAt": "2026-09-16T15:01:50.462Z",
+      "text": "53% of visitors leave a store that takes more than 3 seconds to load.\n\nIf you do",
+      "assetType": "image",
+      "source": "https://dharma-marketing-assets.vercel.app/store-audit.png",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 0,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "poster",
+      "hourLocal": 11,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 0
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6aa9f93381d74a10250a7d15",
+      "platform": "instagram",
+      "sentAt": "2026-09-16T14:02:54.788Z",
+      "text": "Your store looks amazing. So why isn't anyone buying?\n\nSometimes it's not the pr",
+      "assetType": "image",
+      "source": "https://dharma-marketing-assets.vercel.app/web-design.png",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 1,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "reach": 1
+      },
+      "contentType": "poster",
+      "hourLocal": 10,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 1
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 1
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6aa9f930bcef7237b5a97181",
+      "platform": "facebook",
+      "sentAt": "2026-09-16T14:01:54.870Z",
+      "text": "Your store looks amazing. So why isn't anyone buying?\n\nSometimes it's not the pr",
+      "assetType": "image",
+      "source": "https://dharma-marketing-assets.vercel.app/web-design.png",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 1,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "poster",
+      "hourLocal": 10,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 1
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6aa9f925501861120db3cc66",
+      "platform": "instagram",
+      "sentAt": "2026-09-16T13:01:29.244Z",
+      "text": "You built the store. We build the audience.\n\nMost Shopify store owners are invis",
+      "assetType": "image",
+      "source": "https://dharma-marketing-assets.vercel.app/content-growth.png",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 1,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "reach": 1
+      },
+      "contentType": "poster",
+      "hourLocal": 9,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 1
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 1
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6aa9f9228df35c613718ce00",
+      "platform": "facebook",
+      "sentAt": "2026-09-16T13:01:13.854Z",
+      "text": "You built the store. We build the audience.\n\nMost Shopify store owners are invis",
+      "assetType": "image",
+      "source": "https://dharma-marketing-assets.vercel.app/content-growth.png",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 0,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "poster",
+      "hourLocal": 9,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 0
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6aa8b2cb7a172fa74f8614ff",
+      "platform": "instagram",
+      "sentAt": "2026-09-15T23:03:34.651Z",
+      "text": "Every store owner's climbing the same hill. We help you win it.\n\nDharmasEsthetic",
+      "assetType": "video",
+      "source": "https://tempfile.redpandaai.co/kieai/11641115/videos/dharma_hill_fight_final.mp4",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 0,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "reach": 0
+      },
+      "contentType": "video",
+      "hourLocal": 19,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 0
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 0
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6aa8b2cda8c36ff9777720b9",
+      "platform": "tiktok",
+      "sentAt": "2026-09-15T23:01:47.959Z",
+      "text": "Every store owner's climbing the same hill. We help you win it. DharmasEstheticD",
+      "assetType": "video",
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6aa8b2cda8c36ff9777720b9_video.mp4",
+      "metrics": {
+        "reactions": 2,
+        "comments": 0,
+        "engagementRate": 0.12,
+        "views": 1711,
+        "shares": 0,
+        "reach": 1705,
+        "totalTimeWatched": 93.65,
+        "averageTimeWatched": 2.93
+      },
+      "contentType": "video",
+      "hourLocal": 19,
+      "engagement": 2,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 1705
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 1711
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 2
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0.12
+        },
+        {
+          "key": "averageTimeWatched",
+          "label": "Avg Watch (s)",
+          "value": 2.93
+        }
+      ]
+    },
+    {
+      "id": "6aa89ecabb9b8eb9659c014b",
+      "platform": "instagram",
+      "sentAt": "2026-09-15T13:02:15.897Z",
+      "text": "Store not selling? We sent a ship to go find out why. \ud83d\ude80 Get a real Shopify Store",
+      "assetType": "video",
+      "source": "https://tempfile.redpandaai.co/kieai/11641115/videos/scifi-store-quest-with-overlay.mp4",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 0,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "reach": 0
+      },
+      "contentType": "video",
+      "hourLocal": 9,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 0
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 0
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6a7cb5bf7a5ea251d8dff321",
+      "platform": "tiktok",
+      "sentAt": "2026-09-15T00:23:41.512Z",
+      "text": "POV: you spent $0 on marketing and expected customers to just show up. Dharma ge",
+      "assetType": "image",
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6a7cb5bf7a5ea251d8dff321_photo.jpg",
+      "metrics": {
+        "reactions": 22,
+        "comments": 1,
+        "engagementRate": 1.33,
+        "views": 1730,
+        "shares": 0,
+        "reach": 1372,
+        "totalTimeWatched": 47.93,
+        "averageTimeWatched": 1.83
+      },
+      "contentType": "still",
+      "hourLocal": 20,
+      "engagement": 23,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 1372
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 1730
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 22
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 1
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 1.33
+        },
+        {
+          "key": "averageTimeWatched",
+          "label": "Avg Watch (s)",
+          "value": 1.83
+        }
+      ]
+    },
+    {
+      "id": "6aa88cd1a56f2b823c93b39d",
+      "platform": "instagram",
+      "sentAt": "2026-09-15T00:19:59.223Z",
+      "text": "Store's set up but nothing's selling? We sent a dog to go find out why. \ud83d\udc3e Get a ",
+      "assetType": "video",
+      "source": "https://tempfile.redpandaai.co/kieai/11641115/videos/dog-detective-final.mp4",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 2,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "reach": 2
+      },
+      "contentType": "video",
+      "hourLocal": 20,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 2
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 2
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6aa88cd2ac4a884f436b5cf1",
+      "platform": "tiktok",
+      "sentAt": "2026-09-15T00:18:18.803Z",
+      "text": "Store's set up but nothing's selling? We sent a dog to go find out why. \ud83d\udc3e Get a ",
+      "assetType": "video",
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6aa88cd2ac4a884f436b5cf1_video.mp4",
+      "metrics": {
+        "reactions": 52,
+        "comments": 2,
+        "engagementRate": 0.38,
+        "views": 14179,
+        "shares": 0,
+        "reach": 13597,
+        "totalTimeWatched": 892.9,
+        "averageTimeWatched": 3.21
+      },
+      "contentType": "video",
+      "hourLocal": 20,
+      "engagement": 54,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 13597
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 14179
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 52
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 2
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0.38
+        },
+        {
+          "key": "averageTimeWatched",
+          "label": "Avg Watch (s)",
+          "value": 3.21
+        }
+      ]
+    },
+    {
+      "id": "6a88b8dd24833b288b24698e",
+      "platform": "instagram",
+      "sentAt": "2026-08-21T23:51:41.690Z",
+      "text": "The little feature that makes a shop site actually useful: a live repair status ",
+      "assetType": "image",
+      "source": "https://files.catbox.moe/p8q470.jpg",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 2,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "reach": 2
+      },
+      "contentType": "still",
+      "hourLocal": 19,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 2
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 2
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6a88b8e33869cf665896cf7b",
+      "platform": "instagram",
+      "sentAt": "2026-08-21T23:51:32.586Z",
+      "text": "Plymouth, MI meet your new favorite auto &amp; tire shop's website. Built for Ni",
+      "assetType": "image",
+      "source": "https://files.catbox.moe/ojg1sq.jpg",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 1,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "reach": 3
+      },
+      "contentType": "still",
+      "hourLocal": 19,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 3
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 1
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6a88b8e73869cf665896cf9f",
+      "platform": "tiktok",
+      "sentAt": "2026-08-21T23:01:30.383Z",
+      "text": "another local shop, another site that doesn't look like a template from 2015 \ud83d\udd27 #",
+      "assetType": "image",
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6a88b8e73869cf665896cf9f_photo.jpg",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 118,
+        "shares": 0,
+        "reach": 102,
+        "totalTimeWatched": 5.52,
+        "averageTimeWatched": 2.78
+      },
+      "contentType": "still",
+      "hourLocal": 19,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 102
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 118
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        },
+        {
+          "key": "averageTimeWatched",
+          "label": "Avg Watch (s)",
+          "value": 2.78
+        }
+      ]
+    },
+    {
+      "id": "6a88b8e5dc319146a283ab9a",
+      "platform": "facebook",
+      "sentAt": "2026-08-21T23:00:15.460Z",
+      "text": "New site live for Nick's Auto Service &amp; Tire in Plymouth! Full-service auto ",
+      "assetType": "image",
+      "source": "https://files.catbox.moe/eiodoi.jpeg",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 4,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "still",
+      "hourLocal": 19,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 4
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6a88b8e03869cf665896cef2",
+      "platform": "tiktok",
+      "sentAt": "2026-08-21T22:01:54.988Z",
+      "text": "we built a live car repair tracker for a client and now their customers never ha",
+      "assetType": "image",
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6a88b8e03869cf665896cef2_photo.jpg",
+      "metrics": {
+        "reactions": 1,
+        "comments": 0,
+        "engagementRate": 0.56,
+        "views": 179,
+        "shares": 0,
+        "reach": 154,
+        "totalTimeWatched": 4.67,
+        "averageTimeWatched": 1.58
+      },
+      "contentType": "still",
+      "hourLocal": 18,
+      "engagement": 1,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 154
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 179
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 1
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0.56
+        },
+        {
+          "key": "averageTimeWatched",
+          "label": "Avg Watch (s)",
+          "value": 1.58
+        }
+      ]
+    },
+    {
+      "id": "6a88b8dfb1e0795f7f637ddb",
+      "platform": "facebook",
+      "sentAt": "2026-08-21T22:00:14.732Z",
+      "text": "Ever wonder why your mechanic never calls back with an update? We built Icon Aut",
+      "assetType": "image",
+      "source": "https://files.catbox.moe/x7ajzn.jpeg",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 6,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "still",
+      "hourLocal": 18,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 6
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6a88b8dab1e0795f7f637d21",
+      "platform": "tiktok",
+      "sentAt": "2026-08-21T21:01:26.315Z",
+      "text": "POV: your auto shop finally has a website that doesn't look like it's from 2010 ",
+      "assetType": "image",
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6a88b8dab1e0795f7f637d21_photo.jpg",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 187,
+        "shares": 0,
+        "reach": 170,
+        "totalTimeWatched": 4.72,
+        "averageTimeWatched": 1.48
+      },
+      "contentType": "still",
+      "hourLocal": 17,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 170
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 187
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        },
+        {
+          "key": "averageTimeWatched",
+          "label": "Avg Watch (s)",
+          "value": 1.48
+        }
+      ]
+    },
+    {
+      "id": "6a88b8d6dc319146a283aaa0",
+      "platform": "instagram",
+      "sentAt": "2026-08-21T21:00:25.128Z",
+      "text": "Built this for Icon Auto Repair &amp; Collision in Madison Heights, MI \u2014 live si",
+      "assetType": "image",
+      "source": "https://files.catbox.moe/ah38vs.jpeg",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 4,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "reach": 3
+      },
+      "contentType": "still",
+      "hourLocal": 17,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 3
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 4
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6a88b8d85b4a6e681b30fd94",
+      "platform": "facebook",
+      "sentAt": "2026-08-21T21:00:07.871Z",
+      "text": "Just wrapped a new website for Icon Auto Repair &amp; Collision here in Madison ",
+      "assetType": "image",
+      "source": "https://files.catbox.moe/ah38vs.jpeg",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 5,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "still",
+      "hourLocal": 17,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 5
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6a88bc1c5b4a6e681b312045",
+      "platform": "instagram",
+      "sentAt": "2026-08-21T20:59:19.289Z",
+      "text": "Running a weekend conference? Here's what a real event site looks like: schedule",
+      "assetType": "image",
+      "source": "https://files.catbox.moe/cgewub.jpg",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 3,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "reach": 2
+      },
+      "contentType": "still",
+      "hourLocal": 16,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 2
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 3
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6a88b96a3869cf665896d6e9",
+      "platform": "tiktok",
+      "sentAt": "2026-08-21T20:49:21.916Z",
+      "text": "a whole website for one wedding weekend, gone as soon as the last dance ends \ud83d\udc8d #",
+      "assetType": "image",
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6a88b96a3869cf665896d6e9_photo.jpg",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 259,
+        "shares": 0,
+        "reach": 228,
+        "totalTimeWatched": 8.5,
+        "averageTimeWatched": 1.97
+      },
+      "contentType": "still",
+      "hourLocal": 16,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 228
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 259
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        },
+        {
+          "key": "averageTimeWatched",
+          "label": "Avg Watch (s)",
+          "value": 1.97
+        }
+      ]
+    },
+    {
+      "id": "6a88b93ddc319146a283b03f",
+      "platform": "tiktok",
+      "sentAt": "2026-08-21T20:48:37.459Z",
+      "text": "a whole website for a 3-day pop-up shop, live in 48 hours, gone when the weekend",
+      "assetType": "image",
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6a88b93ddc319146a283b03f_photo.jpg",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 101,
+        "shares": 0,
+        "reach": 85,
+        "totalTimeWatched": 1.95,
+        "averageTimeWatched": 1.16
+      },
+      "contentType": "still",
+      "hourLocal": 16,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 85
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 101
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        },
+        {
+          "key": "averageTimeWatched",
+          "label": "Avg Watch (s)",
+          "value": 1.16
+        }
+      ]
+    },
+    {
+      "id": "6a88b97d24833b288b24710c",
+      "platform": "instagram",
+      "sentAt": "2026-08-21T20:48:06.582Z",
+      "text": "Running a weekend conference? Here's what a real event site looks like: schedule",
+      "assetType": "image",
+      "source": "https://files.catbox.moe/cgewub.jpg",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 1,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "reach": 1
+      },
+      "contentType": "still",
+      "hourLocal": 16,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 1
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 1
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6a88b9615b4a6e681b31071f",
+      "platform": "instagram",
+      "sentAt": "2026-08-21T20:47:37.279Z",
+      "text": "Wedding weekend, meet your own website. Schedule, details, and RSVP \u2014 all in one",
+      "assetType": "image",
+      "source": "https://files.catbox.moe/zvwx24.jpg",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 1,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "reach": 1
+      },
+      "contentType": "still",
+      "hourLocal": 16,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 1
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 1
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6a88b9503869cf665896d608",
+      "platform": "instagram",
+      "sentAt": "2026-08-21T20:47:21.609Z",
+      "text": "Wedding weekend, meet your own website. Schedule, details, and RSVP \u2014 all in one",
+      "assetType": "image",
+      "source": "https://files.catbox.moe/zvwx24.jpg",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 2,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "reach": 2
+      },
+      "contentType": "still",
+      "hourLocal": 16,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 2
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 2
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6a88b932b1e0795f7f638246",
+      "platform": "instagram",
+      "sentAt": "2026-08-21T20:46:53.208Z",
+      "text": "Pop-up shop, meet your 3-day website. Built for a weekend event, live in 48 hour",
+      "assetType": "image",
+      "source": "https://files.catbox.moe/om5t21.jpg",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 1,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "reach": 1
+      },
+      "contentType": "still",
+      "hourLocal": 16,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 1
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 1
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6a88b90c3869cf665896d370",
+      "platform": "instagram",
+      "sentAt": "2026-08-21T20:46:14.853Z",
+      "text": "Pop-up shop, meet your 3-day website. Built for a weekend event, live in 48 hour",
+      "assetType": "image",
+      "source": "https://files.catbox.moe/om5t21.jpg",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 1,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "reach": 1
+      },
+      "contentType": "still",
+      "hourLocal": 16,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 1
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 1
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6a88a4c024833b288b233cbc",
+      "platform": "facebook",
+      "sentAt": "2026-08-21T19:22:06.215Z",
+      "text": "Pop-up shops need a site that's live in 48 hours, not 48 days. Here's a mockup f",
+      "assetType": "image",
+      "source": "https://files.catbox.moe/om5t21.jpg",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 4,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "still",
+      "hourLocal": 15,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 4
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6a7cb51ef9e3951c4019d226",
+      "platform": "facebook",
+      "sentAt": "2026-08-21T19:21:57.156Z",
+      "text": "You built the store. We build the audience.\n\nMost Shopify store owners are invis",
+      "assetType": "image",
+      "source": "https://www.dharmasestheticdesign.com/ded-post-offer.jpg",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 4,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "poster",
+      "hourLocal": 15,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 4
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6a7cb5b5f9e3951c4019dc5d",
+      "platform": "facebook",
+      "sentAt": "2026-08-21T19:21:50.657Z",
+      "text": "If you're still posting product photos with no strategy, this is your sign.\n\nA p",
+      "assetType": "image",
+      "source": "https://www.dharmasestheticdesign.com/dharma-dog.jpg",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 6,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "still",
+      "hourLocal": 15,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 6
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6a88a4c23869cf665895bc30",
+      "platform": "facebook",
+      "sentAt": "2026-08-21T19:21:45.799Z",
+      "text": "Wedding weekend, meet your own website. A mockup for a short-term event site bui",
+      "assetType": "image",
+      "source": "https://files.catbox.moe/zvwx24.jpg",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 6,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "still",
+      "hourLocal": 15,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 6
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6a88a4c3b1e0795f7f62596c",
+      "platform": "facebook",
+      "sentAt": "2026-08-21T19:21:43.229Z",
+      "text": "Running a weekend conference? Here's a mockup built for exactly that \u2014 schedule,",
+      "assetType": "image",
+      "source": "https://files.catbox.moe/cgewub.jpg",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 3,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "still",
+      "hourLocal": 15,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 3
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6a83c0892485bd5f3fffb8a7",
+      "platform": "facebook",
+      "sentAt": "2026-08-18T02:16:51.105Z",
+      "text": "3 signs your Shopify store needs a content strategy: you're posting inconsistent",
+      "assetType": "image",
+      "source": "https://dharmasestheticdesign.com/ded-post-content-strategy.jpg",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 3,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "poster",
+      "hourLocal": 22,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 3
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6a83c07fa6afcff0dbc14d93",
+      "platform": "instagram",
+      "sentAt": "2026-08-18T02:16:40.192Z",
+      "text": "3 signs your Shopify store needs a content strategy: you're posting inconsistent",
+      "assetType": "image",
+      "source": "https://dharmasestheticdesign.com/ded-post-content-strategy.jpg",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 2,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "reach": 2
+      },
+      "contentType": "poster",
+      "hourLocal": 22,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 2
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 2
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6a7cb5bad8a816a32d1155e3",
+      "platform": "facebook",
+      "sentAt": "2026-08-16T09:07:16.615Z",
+      "text": "You don't need a $5k/month agency to grow your Shopify store.\n\nWe started Dharma",
+      "assetType": "image",
+      "source": "https://www.dharmasestheticdesign.com/founder.jpg",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 4,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "poster",
+      "hourLocal": 5,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 4
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6a7cb5c0a5805ff3f58b0ce0",
+      "platform": "facebook",
+      "sentAt": "2026-08-16T09:06:47.205Z",
+      "text": "POV: you spent $0 on marketing and expected customers to just show up.\n\nDharma g",
+      "assetType": "image",
+      "source": "https://www.dharmasestheticdesign.com/dharma-dog.jpg",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 2,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "still",
+      "hourLocal": 5,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 2
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6a76bd4f8aa5e1393fae4b25",
+      "platform": "facebook",
+      "sentAt": "2026-08-08T05:23:32.609Z",
+      "text": "Everything you need to show up consistently online \u2014 starting this week. \ud83d\udc47\n\nStar",
+      "assetType": "image",
+      "source": "https://www.dharmasestheticdesign.com/ded-post-starter-included.png",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 2,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "poster",
+      "hourLocal": 1,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 2
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6a76bd3deb086b1202d1d04b",
+      "platform": "instagram",
+      "sentAt": "2026-08-08T05:23:15.136Z",
+      "text": "Everything you need to show up consistently online \u2014 starting this week. \ud83d\udc47\n\nStar",
+      "assetType": "image",
+      "source": "https://www.dharmasestheticdesign.com/ded-post-starter-included.png",
+      "metrics": {},
+      "contentType": "poster",
+      "hourLocal": 1,
+      "engagement": 0,
+      "displayMetrics": []
+    },
+    {
+      "id": "6a74dc5af6ddee415dd3f3f1",
+      "platform": "facebook",
+      "sentAt": "2026-08-06T19:11:26.437Z",
+      "text": "Most people don't need more hustle. They need a map.\n\nThe AI Business Empire Map",
+      "assetType": null,
+      "source": null,
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 2,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "still",
+      "hourLocal": 15,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 2
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6a74dc4a9aa78dffa28f43b6",
+      "platform": "instagram",
+      "sentAt": "2026-08-06T19:11:15.449Z",
+      "text": "Stop guessing what AI business to build. I built a free 2-minute quiz that tells",
+      "assetType": "image",
+      "source": "https://www.dharmasestheticdesign.com/abe-post-quiz-hook.jpg",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 0,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "reach": 0
+      },
+      "contentType": "still",
+      "hourLocal": 15,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 0
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 0
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6a748d48be3538462cb9ad7e",
+      "platform": "instagram",
+      "sentAt": "2026-08-06T13:34:08.856Z",
+      "text": "Here's our promise: you'll love the final result, or we'll make it right.\nEvery ",
+      "assetType": "image",
+      "source": "https://www.dharmasestheticdesign.com/ded-post-guarantee.jpg",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 1,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "reach": 1
+      },
+      "contentType": "poster",
+      "hourLocal": 9,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 1
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 1
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6a748d43be4ad0b566a9a8e9",
+      "platform": "facebook",
+      "sentAt": "2026-08-06T13:33:59.063Z",
+      "text": "Here's our promise: you'll love the final result, or we'll make it right.\nEvery ",
+      "assetType": "image",
+      "source": "https://www.dharmasestheticdesign.com/ded-post-guarantee.jpg",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 2,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "poster",
+      "hourLocal": 9,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 2
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6a748d37be3538462cb9ad03",
+      "platform": "instagram",
+      "sentAt": "2026-08-06T13:33:53.405Z",
+      "text": "Three packages. One goal: your store grows.\n\ud83d\udd39 Starter Launch \u2014 $650 \u2014 get visibl",
+      "assetType": "image",
+      "source": "https://www.dharmasestheticdesign.com/ded-post-offer.jpg",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 1,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "reach": 1
+      },
+      "contentType": "poster",
+      "hourLocal": 9,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 1
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 1
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6a748d31be4ad0b566a9a7e0",
+      "platform": "facebook",
+      "sentAt": "2026-08-06T13:33:42.272Z",
+      "text": "Three packages. One goal: your store grows.\n\ud83d\udd39 Starter Launch \u2014 $650 \u2014 get visibl",
+      "assetType": "image",
+      "source": "https://www.dharmasestheticdesign.com/ded-post-offer.jpg",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 2,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "poster",
+      "hourLocal": 9,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 2
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6a73d7644236a08702523575",
+      "platform": "instagram",
+      "sentAt": "2026-08-06T00:51:11.973Z",
+      "text": "Stop guessing what AI business to build. Built a free 2-minute quiz that tells y",
+      "assetType": "image",
+      "source": "https://www.dharmasestheticdesign.com/instagram-10-lines-to-freedom.png",
+      "metrics": {},
+      "contentType": "still",
+      "hourLocal": 20,
+      "engagement": 0,
+      "displayMetrics": []
+    },
+    {
+      "id": "6a73d75f626c06990ead1bdb",
+      "platform": "tiktok",
+      "sentAt": "2026-08-06T00:51:06.054Z",
+      "text": "Stop guessing what AI business to build. Built a free 2-minute quiz that tells y",
+      "assetType": "image",
+      "source": "https://www.dharmasestheticdesign.com/tiktok-10-lines-to-freedom.png",
+      "metrics": {},
+      "contentType": "still",
+      "hourLocal": 20,
+      "engagement": 0,
+      "displayMetrics": []
+    },
+    {
+      "id": "6a737d69408d6586f765e233",
+      "platform": "facebook",
+      "sentAt": "2026-08-06T00:42:53.873Z",
+      "text": "It's live. \ud83d\ude80\n\nCheckout for the AI Business Empire Map is officially open \u2014 grab ",
+      "assetType": null,
+      "source": null,
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 0,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "still",
+      "hourLocal": 20,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 0
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6a7281b41d7ba3a9a38a8919",
+      "platform": "instagram",
+      "sentAt": "2026-07-25T13:54:20.000Z",
+      "text": "#AIBusiness, #Entrepreneurship, #AIEntrepreneur, #BusinessFramework, #StartupGui",
+      "assetType": "image",
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281b299afb44349030723/6a7281b41d7ba3a9a38a8919_thumbnail.jpg",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 4,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "reach": 3
+      },
+      "contentType": "still",
+      "hourLocal": 9,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 3
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 4
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6a7281d4067027040df9e782",
+      "platform": "facebook",
+      "sentAt": "2026-07-19T04:19:25.000Z",
+      "text": "",
+      "assetType": "image",
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281d299afb443490307bf/6a7281d4067027040df9e782_thumbnail.png",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 3,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "still",
+      "hourLocal": 0,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 3
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6a7281d4067027040df9e780",
+      "platform": "facebook",
+      "sentAt": "2026-07-02T11:53:05.000Z",
+      "text": "",
+      "assetType": "image",
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281d299afb443490307bf/6a7281d4067027040df9e780_thumbnail.jpg",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "impressions": 7,
+        "shares": 0,
+        "clicks": 0
+      },
+      "contentType": "still",
+      "hourLocal": 7,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "impressions",
+          "label": "Impressions",
+          "value": 7
+        },
+        {
+          "key": "clicks",
+          "label": "Clicks",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6a7281b41d7ba3a9a38a891b",
+      "platform": "instagram",
+      "sentAt": "2026-07-02T02:16:52.000Z",
+      "text": "#shopifyowner #ecommerce #digitalmarketing #smallbusiness #contentcreation #dhar",
+      "assetType": "video",
+      "source": "https://scontent-iad6-1.cdninstagram.com/o1/v/t2/f2/m86/AQPTEUym22PZDH16lqysc2p4PCm3WaH7wqzUqhKhh6HbcQC5xTv5X-2lqcwa3UMK6wWhHhmh8eZokAtKa_i6gfGuqdR-6Ui-ZWc4eQA.mp4?_nc_cat=109&_nc_sid=5e9851&_nc_ht=scontent-iad6-1.cdninstagram.com&_nc_ohc=3p9Of4FPtZcQ7kNvwFZ-Wjt&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MTE5NDU2NDkzOTQ2OTQ1NSwiYXNzZXRfYWdlX2RheXMiOjMzLCJ2aV91c2VjYXNlX2lkIjoxMDA5OSwiZHVyYXRpb25fcyI6MTAsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=4c3cadfa0f041054&_nc_vs=HBkcFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC85RDQ2MTJDRThBRkNDMDY1QkFFREM1RkU5QzNDRDlBNV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAKAAYABsCiAd1c2Vfb2lsATEScHJvZ3Jlc3NpdmVfcmVjaXBlATEVAAAmnsqGruqcnwQVAigCQzMsF0AkAAAAAAAAGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX-B2XmnQEA&_nc_gid=O1mSm_RRkWYlJmN9k6EgcQ&edm=ANo9K5cEAAAA&_nc_zt=28&_nc_tpa=Q5bMBQFnK9U5W1CMFODhB-nunazGYRIvbFT1oZVFAV3SnWx5xUupbiS6MDof_jzBTNmvnzrZjfavbI8E4g&oh=00_AQFOS7XaGviXE9rruTE5Y6aYo3ERkRgritQRnFK0Zh5qIw&oe=6A745EA2",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 5,
+        "shares": 0,
+        "saves": 0,
+        "totalTimeWatched": 0.54,
+        "averageTimeWatched": 6.5,
+        "reach": 4
+      },
+      "contentType": "video",
+      "hourLocal": 22,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 4
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 5
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "6a7281eb8966b1d118c9604c",
+      "platform": "tiktok",
+      "sentAt": "2026-06-30T21:39:47.000Z",
+      "text": "Visibility Reel",
+      "assetType": "video",
+      "source": "https://www.tiktok.com/@dharmasestheticde/video/7657306396244970783?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "metrics": {
+        "reactions": 1,
+        "comments": 0,
+        "engagementRate": 0.99,
+        "views": 101,
+        "shares": 0,
+        "reach": 85,
+        "totalTimeWatched": 2.7,
+        "averageTimeWatched": 1.6
+      },
+      "contentType": "video",
+      "hourLocal": 17,
+      "engagement": 1,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 85
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 101
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 1
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0.99
+        },
+        {
+          "key": "averageTimeWatched",
+          "label": "Avg Watch (s)",
+          "value": 1.6
+        }
+      ]
+    },
+    {
+      "id": "6a7281b41d7ba3a9a38a8917",
+      "platform": "instagram",
+      "sentAt": "2026-06-30T19:49:32.000Z",
+      "text": "Most Shopify stores don't have a sales problem \u2014 they have a visibility problem.",
+      "assetType": "image",
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281b299afb44349030723/6a7281b41d7ba3a9a38a8917_thumbnail.jpg",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 0,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "reach": 0
+      },
+      "contentType": "still",
+      "hourLocal": 15,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 0
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 0
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "value": 0
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        }
+      ]
+    }
+  ]
+}

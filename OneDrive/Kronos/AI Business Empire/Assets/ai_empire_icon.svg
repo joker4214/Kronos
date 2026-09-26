@@ -1,0 +1,30 @@
+<svg viewBox="10 10 220 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI Business Empire icon">
+  <title>AI Business Empire icon</title>
+  <desc>A path of connected nodes from foundation to freedom, representing the business journey</desc>
+
+  <circle cx="120" cy="120" r="100" fill="none" stroke="#E8E8E8" stroke-width="1" opacity="0.3"/>
+
+  <path d="M 40 120 L 80 80 L 120 40 L 160 60 L 200 30 L 200 120 L 160 160 L 120 200 L 80 160 L 40 120" fill="none" stroke="#00BFA5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+
+  <g id="nodes">
+    <circle cx="40" cy="120" r="8" fill="#1A3A52" stroke="#00BFA5" stroke-width="2"/>
+    <circle cx="40" cy="120" r="4" fill="#00BFA5"/>
+
+    <circle cx="80" cy="80" r="7" fill="#1A3A52" stroke="#00BFA5" stroke-width="1.5" opacity="0.8"/>
+    <circle cx="120" cy="40" r="7" fill="#1A3A52" stroke="#00BFA5" stroke-width="1.5" opacity="0.8"/>
+    <circle cx="160" cy="60" r="7" fill="#1A3A52" stroke="#00BFA5" stroke-width="1.5" opacity="0.8"/>
+    <circle cx="200" cy="30" r="7" fill="#1A3A52" stroke="#00BFA5" stroke-width="1.5" opacity="0.8"/>
+    <circle cx="200" cy="120" r="7" fill="#1A3A52" stroke="#00BFA5" stroke-width="1.5" opacity="0.8"/>
+    <circle cx="160" cy="160" r="7" fill="#1A3A52" stroke="#00BFA5" stroke-width="1.5" opacity="0.8"/>
+    <circle cx="120" cy="200" r="7" fill="#1A3A52" stroke="#00BFA5" stroke-width="1.5" opacity="0.8"/>
+    <circle cx="80" cy="160" r="7" fill="#1A3A52" stroke="#00BFA5" stroke-width="1.5" opacity="0.8"/>
+
+    <circle cx="40" cy="120" r="12" fill="none" stroke="#00BFA5" stroke-width="2" opacity="0.5"/>
+  </g>
+
+  <g opacity="0.3" stroke="#00BFA5" stroke-width="1" fill="none">
+    <line x1="30" y1="110" x2="50" y2="110"/>
+    <line x1="120" y1="25" x2="120" y2="45"/>
+    <line x1="210" y1="35" x2="220" y2="25"/>
+  </g>
+</svg>
