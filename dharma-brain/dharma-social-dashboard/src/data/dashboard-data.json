@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T10:20:29.208947+00:00",
+  "generatedAt": "2026-10-02T10:28:54.057679+00:00",
   "postCount": 77,
   "avgEngagementPerActiveHour": 5.4,
   "platformSummary": {
@@ -338,8 +338,8 @@
       "metrics": {
         "reactions": 9,
         "comments": 0,
-        "engagementRate": 6.16,
-        "views": 146,
+        "engagementRate": 6.12,
+        "views": 147,
         "shares": 0,
         "reach": 102,
         "totalTimeWatched": 7.42,
@@ -357,7 +357,7 @@
         {
           "key": "views",
           "label": "Views",
-          "value": 146
+          "value": 147
         },
         {
           "key": "reactions",
@@ -377,7 +377,7 @@
         {
           "key": "engagementRate",
           "label": "Eng. Rate",
-          "value": 6.16
+          "value": 6.12
         },
         {
           "key": "averageTimeWatched",
@@ -625,8 +625,8 @@
         "views": 46,
         "shares": 0,
         "reach": 34,
-        "totalTimeWatched": 2.72,
-        "averageTimeWatched": 3.81
+        "totalTimeWatched": 2.63,
+        "averageTimeWatched": 3.51
       },
       "contentType": "video",
       "hourLocal": 21,
@@ -665,7 +665,7 @@
         {
           "key": "averageTimeWatched",
           "label": "Avg Watch (s)",
-          "value": 3.81
+          "value": 3.51
         }
       ]
     },
