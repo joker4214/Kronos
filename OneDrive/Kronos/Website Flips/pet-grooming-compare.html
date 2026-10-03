@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PawCompare - Pet Grooming Reviews & Bookings</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=DM+Sans:wght@400;500&display=swap">
+  <style>
+    :root {
+      --color-primary: #ff6b5b;
+      --color-secondary: #ffd662;
+      --color-dark: #2d2d2d;
+      --color-light: #faf7f2;
+      --color-white: #ffffff;
+      --space-8: 8px;
+      --space-16: 16px;
+      --space-24: 24px;
+      --space-32: 32px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --color-light: #1a1a1a;
+        --color-white: #2a2a2a;
+        --color-dark: #f5f5f5;
+      }
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--color-light); color: var(--color-dark); }
+
+    header {
+      background: var(--color-white);
+      padding: var(--space-16) var(--space-24);
+      border-bottom: 1px solid #e8e8e8;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Outfit', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--color-primary);
+    }
+
+    nav a {
+      color: var(--color-dark);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      margin-left: var(--space-32);
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--color-primary);
+    }
+
+    .hero-mini {
+      background: linear-gradient(135deg, var(--color-primary) 0%, #ff8a7d 100%);
+      padding: var(--space-32) var(--space-24);
+      color: white;
+    }
+
+    .hero-mini-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-32);
+      align-items: center;
+    }
+
+    .hero-mini h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: var(--space-16);
+      line-height: 1.2;
+    }
+
+    .hero-mini p {
+      font-size: 14px;
+      opacity: 0.9;
+      margin-bottom: var(--space-24);
+    }
+
+    .search-horizontal {
+      display: flex;
+      gap: var(--space-8);
+      background: white;
+      border-radius: 8px;
+      padding: 8px;
+      max-width: 100%;
+    }
+
+    .search-horizontal input {
+      flex: 1;
+      border: none;
+      outline: none;
+      padding: var(--space-12);
+      font-size: 13px;
+    }
+
+    .search-horizontal button {
+      background: var(--color-primary);
+      color: white;
+      border: none;
+      padding: var(--space-12) var(--space-24);
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    .hero-visual {
+      font-size: 80px;
+      text-align: center;
+      opacity: 0.9;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: var(--space-32) var(--space-24);
+    }
+
+    .section-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: var(--space-24);
+    }
+
+    .reviews-list {
+      display: grid;
+      gap: var(--space-16);
+      margin-bottom: var(--space-32);
+    }
+
+    .review-card {
+      background: var(--color-white);
+      border-left: 4px solid var(--color-primary);
+      padding: var(--space-24);
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .review-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      margin-bottom: var(--space-12);
+    }
+
+    .reviewer-info {
+      display: flex;
+      gap: var(--space-12);
+      align-items: center;
+    }
+
+    .reviewer-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--color-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+
+    .reviewer-name {
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .reviewer-pet {
+      font-size: 12px;
+      color: #999;
+    }
+
+    .review-rating {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-primary);
+    }
+
+    .review-title {
+      font-weight: 600;
+      font-size: 14px;
+      margin-bottom: var(--space-8);
+    }
+
+    .review-text {
+      font-size: 13px;
+      line-height: 1.6;
+      color: #555;
+      margin-bottom: var(--space-12);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .review-text {
+        color: #aaa;
+      }
+    }
+
+    .review-meta {
+      display: flex;
+      gap: var(--space-16);
+      font-size: 12px;
+      color: #999;
+    }
+
+    .provider-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: var(--space-24);
+      margin-bottom: var(--space-32);
+    }
+
+    .provider-card {
+      background: var(--color-white);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      transition: all 0.2s;
+    }
+
+    .provider-card:hover {
+      box-shadow: 0 8px 24px rgba(255, 107, 91, 0.15);
+      transform: translateY(-4px);
+    }
+
+    .provider-header {
+      background: linear-gradient(135deg, var(--color-primary) 0%, #ff8a7d 100%);
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 48px;
+    }
+
+    .provider-info {
+      padding: var(--space-16);
+    }
+
+    .provider-name {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      margin-bottom: var(--space-8);
+    }
+
+    .provider-rating {
+      display: flex;
+      align-items: center;
+      gap: var(--space-8);
+      margin-bottom: var(--space-12);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .rating-stars {
+      color: #ffc107;
+    }
+
+    .provider-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-8);
+      margin-bottom: var(--space-12);
+    }
+
+    .tag {
+      background: #f0f0f0;
+      color: #333;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .tag {
+        background: #333;
+        color: #f0f0f0;
+      }
+    }
+
+    .provider-cta {
+      display: flex;
+      gap: var(--space-8);
+    }
+
+    .btn {
+      flex: 1;
+      padding: var(--space-12);
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--color-primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #ff5449;
+    }
+
+    .btn-secondary {
+      background: var(--color-secondary);
+      color: var(--color-dark);
+      border: 1px solid #ffe8d6;
+    }
+
+    .btn-secondary:hover {
+      background: #ffc94d;
+    }
+
+    .cta-banner {
+      background: var(--color-secondary);
+      padding: var(--space-32);
+      border-radius: 12px;
+      text-align: center;
+      margin-bottom: var(--space-32);
+    }
+
+    .cta-banner h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: var(--space-12);
+    }
+
+    .cta-banner p {
+      font-size: 14px;
+      margin-bottom: var(--space-16);
+    }
+
+    .cta-banner button {
+      background: var(--color-primary);
+      color: white;
+      border: none;
+      padding: var(--space-12) var(--space-32);
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    footer {
+      background: var(--color-white);
+      border-top: 1px solid #e8e8e8;
+      padding: var(--space-24);
+      text-align: center;
+      font-size: 12px;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-wrapper">
+      <div class="logo">🐾 PawCompare</div>
+      <nav>
+        <a href="#trending">Trending</a>
+        <a href="#near-you">Near You</a>
+        <a href="#reviews">Reviews</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-mini">
+    <div class="hero-mini-content">
+      <div>
+        <h1>Where Pet Owners Find Their Perfect Groomer</h1>
+        <p>Real reviews from real pet owners. Book with confidence.</p>
+        <div class="search-horizontal">
+          <input type="text" placeholder="Service or provider...">
+          <input type="text" placeholder="Your location...">
+          <button>Search</button>
+        </div>
+      </div>
+      <div class="hero-visual">🛁</div>
+    </div>
+  </section>
+
+  <div class="container">
+    <section id="reviews">
+      <h2 class="section-title">⭐ Trending This Week</h2>
+      <div class="reviews-list">
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-info">
+              <div class="reviewer-avatar">👩</div>
+              <div>
+                <div class="reviewer-name">Jessica M.</div>
+                <div class="reviewer-pet">Golden Retriever • Memphis, TN</div>
+              </div>
+            </div>
+            <div class="review-rating">★★★★★ 5.0</div>
+          </div>
+          <div class="review-title">Best groomer in town. Max has never looked better.</div>
+          <div class="review-text">Took my Golden Retriever Max to Posh Paws for the first time last week. The staff was incredibly patient and professional. Max came back looking and smelling amazing. He's usually anxious at the groomer but they made him feel so comfortable. Already booked his next appointment!</div>
+          <div class="review-meta">
+            <span>Posh Paws Grooming</span>
+            <span>2 days ago</span>
+            <span>👍 47 helpful</span>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-info">
+              <div class="reviewer-avatar">👨</div>
+              <div>
+                <div class="reviewer-name">David K.</div>
+                <div class="reviewer-pet">French Bulldog • Austin, TX</div>
+              </div>
+            </div>
+            <div class="review-rating">★★★★☆ 4.5</div>
+          </div>
+          <div class="review-title">Great boarding experience. Will use again.</div>
+          <div class="review-text">Left Biscuit (our Frenchie) for a 4-day boarding stay. Staff provided daily photos and updates. He came back happy and well-cared for. Pricing is fair and they have great communication via text.</div>
+          <div class="review-meta">
+            <span>Cozy Paws Boarding</span>
+            <span>5 days ago</span>
+            <span>👍 23 helpful</span>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-info">
+              <div class="reviewer-avatar">👩‍🦱</div>
+              <div>
+                <div class="reviewer-name">Sarah L.</div>
+                <div class="reviewer-pet">Labrador Mix • Denver, CO</div>
+              </div>
+            </div>
+            <div class="review-rating">★★★★★ 5.0</div>
+          </div>
+          <div class="review-title">Daycare is amazing. My dog loves going.</div>
+          <div class="review-text">Luna literally gets excited when we pull up to Tail & Whisker. The play reports and photos make me feel like she's at camp with friends. Staff clearly loves what they do.</div>
+          <div class="review-meta">
+            <span>Tail & Whisker Daycare</span>
+            <span>1 week ago</span>
+            <span>👍 156 helpful</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="near-you">
+      <h2 class="section-title">🏆 Top Rated Near You</h2>
+      <div class="provider-grid">
+        <div class="provider-card">
+          <div class="provider-header">🛁</div>
+          <div class="provider-info">
+            <div class="provider-name">Posh Paws Grooming</div>
+            <div class="provider-rating">
+              <span class="rating-stars">★★★★★</span>
+              <span>4.9 (287 reviews)</span>
+            </div>
+            <div class="provider-tags">
+              <span class="tag">Full Groom</span>
+              <span class="tag">Same-day</span>
+              <span class="tag">Certified</span>
+            </div>
+            <div class="provider-cta">
+              <button class="btn btn-primary">Book Now</button>
+              <button class="btn btn-secondary">Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="provider-card">
+          <div class="provider-header">🏡</div>
+          <div class="provider-info">
+            <div class="provider-name">Cozy Paws Boarding</div>
+            <div class="provider-rating">
+              <span class="rating-stars">★★★★☆</span>
+              <span>4.8 (156 reviews)</span>
+            </div>
+            <div class="provider-tags">
+              <span class="tag">Boarding</span>
+              <span class="tag">Playtime</span>
+              <span class="tag">24/7 Care</span>
+            </div>
+            <div class="provider-cta">
+              <button class="btn btn-primary">Book Now</button>
+              <button class="btn btn-secondary">Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="provider-card">
+          <div class="provider-header">🐶</div>
+          <div class="provider-info">
+            <div class="provider-name">Tail & Whisker Daycare</div>
+            <div class="provider-rating">
+              <span class="rating-stars">★★★★★</span>
+              <span>4.9 (203 reviews)</span>
+            </div>
+            <div class="provider-tags">
+              <span class="tag">Daycare</span>
+              <span class="tag">Training</span>
+              <span class="tag">Photos</span>
+            </div>
+            <div class="provider-cta">
+              <button class="btn btn-primary">Book Now</button>
+              <button class="btn btn-secondary">Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner">
+      <h2>Share Your Experience</h2>
+      <p>Help other pet owners find great care. Leave a review of your groomer or boarding facility.</p>
+      <button>Write a Review</button>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 PawCompare | Real reviews from pet owners</p>
+  </footer>
+</body>
+</html>

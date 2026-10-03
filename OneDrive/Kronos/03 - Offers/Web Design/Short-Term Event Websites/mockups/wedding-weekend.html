@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sam & Riley — August 22–24</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#faf6f0; --surface:#ffffff; --ink:#2b2521; --ink-soft:#6b5f54;
+    --accent:#a8724f; --line:#e8ddd0; --radius:18px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    font-family:'Inter',sans-serif; background:var(--bg); color:var(--ink);
+    line-height:1.6; font-size:16px;
+  }
+  img{max-width:100%; display:block; border-radius:var(--radius);}
+  h1,h2{font-family:'Playfair Display',serif; font-weight:600;}
+  .wrap{max-width:720px; margin:0 auto; padding:0 24px;}
+  header.hero{padding:64px 0 40px; text-align:center;}
+  .eyebrow{letter-spacing:.14em; text-transform:uppercase; font-size:13px; color:var(--accent); font-weight:500; margin-bottom:14px;}
+  h1{font-size:clamp(32px,7vw,52px); line-height:1.15; margin-bottom:16px;}
+  .dates{font-size:18px; color:var(--ink-soft); margin-bottom:28px;}
+  .hero-img{margin:0 auto 8px; aspect-ratio:16/10; overflow:hidden;}
+  .hero-img img{width:100%; height:100%; object-fit:cover;}
+  section{padding:40px 0; border-top:1px solid var(--line);}
+  h2{font-size:24px; margin-bottom:20px;}
+  .schedule{display:grid; gap:16px;}
+  .item{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:20px 22px; display:flex; justify-content:space-between; align-items:baseline; gap:12px;}
+  .item .time{font-weight:500; color:var(--accent); white-space:nowrap; font-size:14px; letter-spacing:.04em;}
+  .gallery{display:grid; grid-template-columns:repeat(3,1fr); gap:10px;}
+  .gallery img{aspect-ratio:1/1; object-fit:cover;}
+  .rsvp{text-align:center; padding:48px 0;}
+  .rsvp p{color:var(--ink-soft); max-width:44ch; margin:0 auto 24px;}
+  .btn{display:inline-block; background:var(--accent); color:#fff; padding:14px 32px; border-radius:999px; text-decoration:none; font-weight:500; font-size:15px; min-height:44px; line-height:16px;}
+  footer{text-align:center; padding:32px 0 56px; color:var(--ink-soft); font-size:13px;}
+  @media (max-width:520px){ .gallery{grid-template-columns:repeat(2,1fr);} .item{flex-direction:column; align-items:flex-start;} }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="eyebrow">We're getting married</div>
+      <h1>Sam &amp; Riley</h1>
+      <div class="dates">August 22–24, 2026 · Hudson Valley, NY</div>
+      <div class="hero-img"><img src="https://picsum.photos/seed/wedding-hero/1200/750" alt="Placeholder — couple photo"></div>
+    </header>
+
+    <section>
+      <h2>The weekend</h2>
+      <div class="schedule">
+        <div class="item"><span>Welcome dinner</span><span class="time">FRI · 6:30 PM</span></div>
+        <div class="item"><span>Ceremony &amp; reception</span><span class="time">SAT · 4:00 PM</span></div>
+        <div class="item"><span>Farewell brunch</span><span class="time">SUN · 10:00 AM</span></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>A few photos</h2>
+      <div class="gallery">
+        <img src="https://picsum.photos/seed/wed1/400/400" alt="Placeholder photo">
+        <img src="https://picsum.photos/seed/wed2/400/400" alt="Placeholder photo">
+        <img src="https://picsum.photos/seed/wed3/400/400" alt="Placeholder photo">
+      </div>
+    </section>
+
+    <section class="rsvp">
+      <h2>RSVP</h2>
+      <p>Let us know you're coming by July 1st — one less thing on your plate, and ours.</p>
+      <a class="btn" href="#">RSVP now</a>
+    </section>
+  </div>
+  <footer>This site goes quiet after the weekend — save the photos, not the link.</footer>
+</body>
+</html>
