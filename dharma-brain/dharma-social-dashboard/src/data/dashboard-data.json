@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T10:20:16.221742+00:00",
+  "generatedAt": "2026-10-04T10:21:35.166758+00:00",
   "postCount": 77,
   "avgEngagementPerActiveHour": 5.4,
   "platformSummary": {
@@ -344,8 +344,8 @@
         "views": 148,
         "shares": 0,
         "reach": 102,
-        "totalTimeWatched": 6.92,
-        "averageTimeWatched": 2.73
+        "totalTimeWatched": 6.93,
+        "averageTimeWatched": 2.72
       },
       "contentType": "video",
       "hourLocal": 6,
@@ -384,7 +384,7 @@
         {
           "key": "averageTimeWatched",
           "label": "Avg Watch (s)",
-          "value": 2.73
+          "value": 2.72
         }
       ]
     },
@@ -1997,7 +1997,7 @@
         "reactions": 52,
         "comments": 2,
         "engagementRate": 0.38,
-        "views": 14179,
+        "views": 14180,
         "shares": 0,
         "reach": 13597,
         "totalTimeWatched": 893,
@@ -2015,7 +2015,7 @@
         {
           "key": "views",
           "label": "Views",
-          "value": 14179
+          "value": 14180
         },
         {
           "key": "reactions",
@@ -2283,8 +2283,8 @@
         "views": 181,
         "shares": 0,
         "reach": 163,
-        "totalTimeWatched": 6.03,
-        "averageTimeWatched": 1.99
+        "totalTimeWatched": 6.1,
+        "averageTimeWatched": 2
       },
       "contentType": "still",
       "hourLocal": 18,
@@ -2323,7 +2323,7 @@
         {
           "key": "averageTimeWatched",
           "label": "Avg Watch (s)",
-          "value": 1.99
+          "value": 2
         }
       ]
     },
@@ -2389,7 +2389,7 @@
         "reactions": 0,
         "comments": 0,
         "engagementRate": 0,
-        "views": 189,
+        "views": 190,
         "shares": 0,
         "reach": 177,
         "totalTimeWatched": 4.83,
@@ -2407,7 +2407,7 @@
         {
           "key": "views",
           "label": "Views",
-          "value": 189
+          "value": 190
         },
         {
           "key": "reactions",
@@ -2617,8 +2617,8 @@
         "views": 262,
         "shares": 0,
         "reach": 228,
-        "totalTimeWatched": 8.55,
-        "averageTimeWatched": 1.96
+        "totalTimeWatched": 8.65,
+        "averageTimeWatched": 1.97
       },
       "contentType": "still",
       "hourLocal": 16,
@@ -2657,7 +2657,7 @@
         {
           "key": "averageTimeWatched",
           "label": "Avg Watch (s)",
-          "value": 1.96
+          "value": 1.97
         }
       ]
     },
