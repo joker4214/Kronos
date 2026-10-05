@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T10:21:35.166758+00:00",
+  "generatedAt": "2026-10-05T10:20:49.277917+00:00",
   "postCount": 77,
   "avgEngagementPerActiveHour": 5.4,
   "platformSummary": {
@@ -344,8 +344,8 @@
         "views": 148,
         "shares": 0,
         "reach": 102,
-        "totalTimeWatched": 6.93,
-        "averageTimeWatched": 2.72
+        "totalTimeWatched": 6.95,
+        "averageTimeWatched": 2.71
       },
       "contentType": "video",
       "hourLocal": 6,
@@ -384,7 +384,7 @@
         {
           "key": "averageTimeWatched",
           "label": "Avg Watch (s)",
-          "value": 2.72
+          "value": 2.71
         }
       ]
     },
@@ -2000,7 +2000,7 @@
         "views": 14180,
         "shares": 0,
         "reach": 13597,
-        "totalTimeWatched": 893,
+        "totalTimeWatched": 893.12,
         "averageTimeWatched": 3.2
       },
       "contentType": "video",
