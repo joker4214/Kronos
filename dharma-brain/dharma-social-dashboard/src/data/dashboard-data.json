@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T10:20:49.277917+00:00",
+  "generatedAt": "2026-10-06T10:23:44.074637+00:00",
   "postCount": 77,
   "avgEngagementPerActiveHour": 5.4,
   "platformSummary": {
@@ -1881,7 +1881,7 @@
         "reactions": 22,
         "comments": 1,
         "engagementRate": 1.33,
-        "views": 1730,
+        "views": 1731,
         "shares": 0,
         "reach": 1372,
         "totalTimeWatched": 49.07,
@@ -1899,7 +1899,7 @@
         {
           "key": "views",
           "label": "Views",
-          "value": 1730
+          "value": 1731
         },
         {
           "key": "reactions",
