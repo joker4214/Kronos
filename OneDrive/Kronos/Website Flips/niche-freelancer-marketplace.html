@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SpecialtyMatch - Curated Freelance Talent</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Sora:wght@400;500;600&display=swap">
+  <style>
+    :root {
+      --color-premium: #6d28d9;
+      --color-gold: #f59e0b;
+      --color-dark: #1f2937;
+      --color-light: #fafafa;
+      --color-white: #ffffff;
+      --space-12: 12px;
+      --space-16: 16px;
+      --space-24: 24px;
+      --space-32: 32px;
+      --space-48: 48px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --color-light: #111827;
+        --color-white: #1f2937;
+        --color-dark: #f3f4f6;
+      }
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Sora', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--color-light); color: var(--color-dark); }
+
+    header {
+      background: var(--color-white);
+      padding: var(--space-24);
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--color-premium);
+      letter-spacing: -0.5px;
+    }
+
+    nav {
+      display: flex;
+      gap: var(--space-32);
+    }
+
+    nav a {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--color-dark);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--color-premium);
+    }
+
+    .hero-curated {
+      background: linear-gradient(135deg, var(--color-premium) 0%, #7c3aed 100%);
+      color: white;
+      padding: var(--space-48) var(--space-24);
+      text-align: center;
+    }
+
+    .hero-curated h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: var(--space-16);
+      letter-spacing: -1px;
+    }
+
+    .hero-curated p {
+      font-size: 16px;
+      margin-bottom: var(--space-32);
+      opacity: 0.95;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: var(--space-16);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: var(--space-16) var(--space-32);
+      border: none;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-primary {
+      background: white;
+      color: var(--color-premium);
+    }
+
+    .btn-primary:hover {
+      transform: scale(1.03);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: var(--space-48) var(--space-24);
+    }
+
+    .section-label {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--color-premium);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: var(--space-8);
+    }
+
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: var(--space-32);
+      letter-spacing: -0.5px;
+    }
+
+    .filter-tags {
+      display: flex;
+      gap: var(--space-12);
+      margin-bottom: var(--space-32);
+      flex-wrap: wrap;
+    }
+
+    .filter-tag {
+      padding: var(--space-12) var(--space-16);
+      background: var(--color-white);
+      border: 2px solid #e5e7eb;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .filter-tag:hover,
+    .filter-tag.active {
+      border-color: var(--color-premium);
+      background: var(--color-light);
+    }
+
+    .freelancer-showcase {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: var(--space-32);
+      margin-bottom: var(--space-48);
+    }
+
+    .freelancer-profile {
+      background: var(--color-white);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 2px solid #e5e7eb;
+      transition: all 0.3s;
+    }
+
+    .freelancer-profile:hover {
+      border-color: var(--color-premium);
+      box-shadow: 0 16px 40px rgba(109, 40, 217, 0.15);
+      transform: translateY(-8px);
+    }
+
+    .freelancer-header {
+      background: linear-gradient(135deg, var(--color-premium) 0%, #7c3aed 100%);
+      height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 64px;
+      position: relative;
+    }
+
+    .freelancer-badge {
+      position: absolute;
+      top: var(--space-12);
+      right: var(--space-12);
+      background: var(--color-gold);
+      color: #78350f;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .freelancer-body {
+      padding: var(--space-24);
+    }
+
+    .freelancer-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: var(--space-4);
+    }
+
+    .freelancer-title {
+      font-size: 12px;
+      color: var(--color-premium);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: var(--space-16);
+    }
+
+    .freelancer-bio {
+      font-size: 13px;
+      line-height: 1.6;
+      color: #6b7280;
+      margin-bottom: var(--space-16);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .freelancer-bio {
+        color: #d1d5db;
+      }
+    }
+
+    .freelancer-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-16);
+      margin-bottom: var(--space-16);
+      padding-bottom: var(--space-16);
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .stat {
+      font-size: 12px;
+    }
+
+    .stat-value {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--color-premium);
+    }
+
+    .stat-label {
+      font-size: 11px;
+      color: #6b7280;
+      margin-top: var(--space-4);
+    }
+
+    .freelancer-skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-8);
+      margin-bottom: var(--space-16);
+    }
+
+    .skill {
+      background: var(--color-light);
+      color: var(--color-dark);
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .freelancer-cta {
+      display: flex;
+      gap: var(--space-8);
+    }
+
+    .btn-small {
+      flex: 1;
+      padding: var(--space-12);
+      border: none;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 11px;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-hire {
+      background: var(--color-premium);
+      color: white;
+    }
+
+    .btn-hire:hover {
+      background: #5b21b6;
+    }
+
+    .btn-view {
+      background: var(--color-light);
+      color: var(--color-dark);
+      border: 1px solid #e5e7eb;
+    }
+
+    .btn-view:hover {
+      background: white;
+    }
+
+    .process-section {
+      background: var(--color-white);
+      padding: var(--space-32);
+      border-radius: 12px;
+      margin-bottom: var(--space-48);
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--space-32);
+    }
+
+    .process-step {
+      text-align: center;
+    }
+
+    .step-number {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--color-premium);
+      margin-bottom: var(--space-12);
+    }
+
+    .step-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: var(--space-8);
+    }
+
+    .step-desc {
+      font-size: 12px;
+      color: #6b7280;
+      line-height: 1.6;
+    }
+
+    footer {
+      background: var(--color-white);
+      border-top: 1px solid #e5e7eb;
+      padding: var(--space-24);
+      text-align: center;
+      font-size: 11px;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-wrapper">
+      <div class="logo">SpecialtyMatch</div>
+      <nav>
+        <a href="#talent">Talent</a>
+        <a href="#how">How It Works</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-curated">
+    <h1>Curated Freelance Talent</h1>
+    <p>We don't compete on price. We deliver on expertise. Access to the top 5% of specialists in your field.</p>
+    <div class="cta-row">
+      <button class="btn btn-primary">Post a Project</button>
+      <button class="btn btn-secondary">Browse Talent</button>
+    </div>
+  </section>
+
+  <div class="container">
+    <section id="talent">
+      <div class="section-label">Featured Specialists</div>
+      <h2 class="section-title">Top Tier Talent</h2>
+
+      <div class="filter-tags">
+        <div class="filter-tag active">All Categories</div>
+        <div class="filter-tag">Video Production</div>
+        <div class="filter-tag">Copywriting</div>
+        <div class="filter-tag">UI/UX Design</div>
+        <div class="filter-tag">Data Science</div>
+      </div>
+
+      <div class="freelancer-showcase">
+        <div class="freelancer-profile">
+          <div class="freelancer-header">
+            🎬
+            <div class="freelancer-badge">Top Rated</div>
+          </div>
+          <div class="freelancer-body">
+            <div class="freelancer-name">Sarah Chen</div>
+            <div class="freelancer-title">Senior Video Editor</div>
+            <div class="freelancer-bio">Specializes in YouTube thumbnails, cut-editing, and color grading for tech/startup content.</div>
+            <div class="freelancer-stats">
+              <div class="stat">
+                <div class="stat-value">4.98/5</div>
+                <div class="stat-label">Avg Rating</div>
+              </div>
+              <div class="stat">
+                <div class="stat-value">$120/hr</div>
+                <div class="stat-label">Rate</div>
+              </div>
+            </div>
+            <div class="freelancer-skills">
+              <span class="skill">DaVinci Resolve</span>
+              <span class="skill">Motion Design</span>
+              <span class="skill">Color Grade</span>
+            </div>
+            <div class="freelancer-cta">
+              <button class="btn-small btn-hire">Hire</button>
+              <button class="btn-small btn-view">Portfolio</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="freelancer-profile">
+          <div class="freelancer-header">
+            ✍️
+            <div class="freelancer-badge">Vetted</div>
+          </div>
+          <div class="freelancer-body">
+            <div class="freelancer-name">Marcus Webb</div>
+            <div class="freelancer-title">SaaS Copywriter</div>
+            <div class="freelancer-bio">Expert in B2B copy, email sequences, and landing pages that convert. 12+ years in tech.</div>
+            <div class="freelancer-stats">
+              <div class="stat">
+                <div class="stat-value">4.96/5</div>
+                <div class="stat-label">Avg Rating</div>
+              </div>
+              <div class="stat">
+                <div class="stat-value">$150/hr</div>
+                <div class="stat-label">Rate</div>
+              </div>
+            </div>
+            <div class="freelancer-skills">
+              <span class="skill">B2B Copy</span>
+              <span class="skill">Email Funnels</span>
+              <span class="skill">Landing Pages</span>
+            </div>
+            <div class="freelancer-cta">
+              <button class="btn-small btn-hire">Hire</button>
+              <button class="btn-small btn-view">Portfolio</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="freelancer-profile">
+          <div class="freelancer-header">
+            🎨
+            <div class="freelancer-badge">Top Rated</div>
+          </div>
+          <div class="freelancer-body">
+            <div class="freelancer-name">Ava Rossi</div>
+            <div class="freelancer-title">Product Designer</div>
+            <div class="freelancer-bio">Full-stack design: research, prototyping, user testing, and handoff. Figma expert.</div>
+            <div class="freelancer-stats">
+              <div class="stat">
+                <div class="stat-value">5.0/5</div>
+                <div class="stat-label">Avg Rating</div>
+              </div>
+              <div class="stat">
+                <div class="stat-value">$140/hr</div>
+                <div class="stat-label">Rate</div>
+              </div>
+            </div>
+            <div class="freelancer-skills">
+              <span class="skill">Figma Design</span>
+              <span class="skill">User Testing</span>
+              <span class="skill">Prototyping</span>
+            </div>
+            <div class="freelancer-cta">
+              <button class="btn-small btn-hire">Hire</button>
+              <button class="btn-small btn-view">Portfolio</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="process-section">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-title">Simple Process</h2>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <div class="step-title">Describe Your Project</div>
+          <div class="step-desc">Tell us what you need. Scope, timeline, budget.</div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <div class="step-title">We Match</div>
+          <div class="step-desc">We recommend 2-3 top specialists for your exact need.</div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <div class="step-title">Collaborate</div>
+          <div class="step-desc">Work directly. Payment held until you're satisfied.</div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <div class="step-title">Review & Pay</div>
+          <div class="step-desc">Approve work. Release payment. Leave feedback.</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 SpecialtyMatch | Premium Freelance Network</p>
+  </footer>
+</body>
+</html>
