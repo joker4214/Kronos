@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T10:21:27.277955+00:00",
+  "generatedAt": "2026-10-08T10:21:24.550737+00:00",
   "postCount": 77,
   "avgEngagementPerActiveHour": 5.4,
   "platformSummary": {
@@ -2171,11 +2171,11 @@
         "reactions": 0,
         "comments": 0,
         "engagementRate": 0,
-        "views": 118,
+        "views": 120,
         "shares": 0,
-        "reach": 102,
-        "totalTimeWatched": 5.55,
-        "averageTimeWatched": 2.75
+        "reach": 103,
+        "totalTimeWatched": 14.27,
+        "averageTimeWatched": 7.02
       },
       "contentType": "still",
       "hourLocal": 19,
@@ -2184,12 +2184,12 @@
         {
           "key": "reach",
           "label": "Reach",
-          "value": 102
+          "value": 103
         },
         {
           "key": "views",
           "label": "Views",
-          "value": 118
+          "value": 120
         },
         {
           "key": "reactions",
@@ -2214,7 +2214,7 @@
         {
           "key": "averageTimeWatched",
           "label": "Avg Watch (s)",
-          "value": 2.75
+          "value": 7.02
         }
       ]
     },
@@ -2280,7 +2280,7 @@
         "reactions": 1,
         "comments": 1,
         "engagementRate": 1.1,
-        "views": 181,
+        "views": 182,
         "shares": 0,
         "reach": 163,
         "totalTimeWatched": 6.1,
@@ -2298,7 +2298,7 @@
         {
           "key": "views",
           "label": "Views",
-          "value": 181
+          "value": 182
         },
         {
           "key": "reactions",
@@ -2389,7 +2389,7 @@
         "reactions": 0,
         "comments": 0,
         "engagementRate": 0,
-        "views": 190,
+        "views": 191,
         "shares": 0,
         "reach": 177,
         "totalTimeWatched": 4.83,
@@ -2407,7 +2407,7 @@
         {
           "key": "views",
           "label": "Views",
-          "value": 190
+          "value": 191
         },
         {
           "key": "reactions",
@@ -2614,7 +2614,7 @@
         "reactions": 0,
         "comments": 0,
         "engagementRate": 0,
-        "views": 262,
+        "views": 263,
         "shares": 0,
         "reach": 228,
         "totalTimeWatched": 8.65,
@@ -2632,7 +2632,7 @@
         {
           "key": "views",
           "label": "Views",
-          "value": 262
+          "value": 263
         },
         {
           "key": "reactions",
@@ -2672,7 +2672,7 @@
         "reactions": 0,
         "comments": 0,
         "engagementRate": 0,
-        "views": 101,
+        "views": 103,
         "shares": 0,
         "reach": 85,
         "totalTimeWatched": 1.95,
@@ -2690,7 +2690,7 @@
         {
           "key": "views",
           "label": "Views",
-          "value": 101
+          "value": 103
         },
         {
           "key": "reactions",
@@ -4172,8 +4172,8 @@
       "metrics": {
         "reactions": 1,
         "comments": 0,
-        "engagementRate": 0.99,
-        "views": 101,
+        "engagementRate": 0.97,
+        "views": 103,
         "shares": 0,
         "reach": 85,
         "totalTimeWatched": 2.7,
@@ -4191,7 +4191,7 @@
         {
           "key": "views",
           "label": "Views",
-          "value": 101
+          "value": 103
         },
         {
           "key": "reactions",
@@ -4211,7 +4211,7 @@
         {
           "key": "engagementRate",
           "label": "Eng. Rate",
-          "value": 0.99
+          "value": 0.97
         },
         {
           "key": "averageTimeWatched",
