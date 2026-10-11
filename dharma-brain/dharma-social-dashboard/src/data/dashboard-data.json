@@ -1,8 +1,16 @@
 {
-  "generatedAt": "2026-10-10T10:21:34.158443+00:00",
-  "postCount": 77,
+  "generatedAt": "2026-10-11T10:21:13.220774+00:00",
+  "postCount": 78,
   "avgEngagementPerActiveHour": 5.4,
   "platformSummary": {
+    "tiktok": {
+      "postCount": 15,
+      "engagement": 108,
+      "byContentType": {
+        "video": 8,
+        "still": 7
+      }
+    },
     "facebook": {
       "postCount": 33,
       "engagement": 0,
@@ -10,14 +18,6 @@
         "still": 15,
         "video": 7,
         "poster": 11
-      }
-    },
-    "tiktok": {
-      "postCount": 14,
-      "engagement": 108,
-      "byContentType": {
-        "video": 7,
-        "still": 7
       }
     },
     "instagram": {
@@ -81,7 +81,7 @@
     },
     {
       "hour": 8,
-      "postCount": 4,
+      "postCount": 5,
       "engagement": 0,
       "deltaVsAvg": -5.4
     },
@@ -177,6 +177,64 @@
     }
   ],
   "posts": [
+    {
+      "id": "6acb5799356899b8303d01c5",
+      "platform": "tiktok",
+      "sentAt": "2026-10-10T12:40:40.000Z",
+      "text": "FINAL - kitten-judge",
+      "assetType": "video",
+      "source": "https://www.tiktok.com/@dharmasestheticdesign/video/7695018024822181150?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "metrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "views": 90,
+        "shares": 0,
+        "reach": 0,
+        "totalTimeWatched": 2.47,
+        "averageTimeWatched": 1.63
+      },
+      "contentType": "video",
+      "hourLocal": 8,
+      "engagement": 0,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 0
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 90
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 0
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 0
+        },
+        {
+          "key": "averageTimeWatched",
+          "label": "Avg Watch (s)",
+          "value": 1.63
+        }
+      ]
+    },
     {
       "id": "6ab2f500340f92dcbe1641d3",
       "platform": "facebook",
@@ -2174,8 +2232,8 @@
         "views": 120,
         "shares": 0,
         "reach": 103,
-        "totalTimeWatched": 14.27,
-        "averageTimeWatched": 7.02
+        "totalTimeWatched": 14.37,
+        "averageTimeWatched": 7.01
       },
       "contentType": "still",
       "hourLocal": 19,
@@ -2214,7 +2272,7 @@
         {
           "key": "averageTimeWatched",
           "label": "Avg Watch (s)",
-          "value": 7.02
+          "value": 7.01
         }
       ]
     },
@@ -2283,8 +2341,8 @@
         "views": 182,
         "shares": 0,
         "reach": 163,
-        "totalTimeWatched": 6.1,
-        "averageTimeWatched": 2
+        "totalTimeWatched": 6.17,
+        "averageTimeWatched": 2.01
       },
       "contentType": "still",
       "hourLocal": 18,
@@ -2323,7 +2381,7 @@
         {
           "key": "averageTimeWatched",
           "label": "Avg Watch (s)",
-          "value": 2
+          "value": 2.01
         }
       ]
     },
@@ -2392,8 +2450,8 @@
         "views": 191,
         "shares": 0,
         "reach": 177,
-        "totalTimeWatched": 4.83,
-        "averageTimeWatched": 1.49
+        "totalTimeWatched": 4.9,
+        "averageTimeWatched": 1.5
       },
       "contentType": "still",
       "hourLocal": 17,
@@ -2432,7 +2490,7 @@
         {
           "key": "averageTimeWatched",
           "label": "Avg Watch (s)",
-          "value": 1.49
+          "value": 1.5
         }
       ]
     },
@@ -2617,8 +2675,8 @@
         "views": 263,
         "shares": 0,
         "reach": 228,
-        "totalTimeWatched": 8.65,
-        "averageTimeWatched": 1.97
+        "totalTimeWatched": 8.73,
+        "averageTimeWatched": 1.98
       },
       "contentType": "still",
       "hourLocal": 16,
@@ -2657,7 +2715,7 @@
         {
           "key": "averageTimeWatched",
           "label": "Avg Watch (s)",
-          "value": 1.97
+          "value": 1.98
         }
       ]
     },
@@ -2675,8 +2733,8 @@
         "views": 103,
         "shares": 0,
         "reach": 85,
-        "totalTimeWatched": 1.95,
-        "averageTimeWatched": 1.15
+        "totalTimeWatched": 1.97,
+        "averageTimeWatched": 1.13
       },
       "contentType": "still",
       "hourLocal": 16,
@@ -2715,7 +2773,7 @@
         {
           "key": "averageTimeWatched",
           "label": "Avg Watch (s)",
-          "value": 1.15
+          "value": 1.13
         }
       ]
     },
@@ -4176,8 +4234,8 @@
         "views": 103,
         "shares": 0,
         "reach": 85,
-        "totalTimeWatched": 2.7,
-        "averageTimeWatched": 1.6
+        "totalTimeWatched": 2.83,
+        "averageTimeWatched": 1.65
       },
       "contentType": "video",
       "hourLocal": 17,
@@ -4216,7 +4274,7 @@
         {
           "key": "averageTimeWatched",
           "label": "Avg Watch (s)",
-          "value": 1.6
+          "value": 1.65
         }
       ]
     },
