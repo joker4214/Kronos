@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-10-11T10:21:13.220774+00:00",
-  "postCount": 78,
-  "avgEngagementPerActiveHour": 5.4,
+  "generatedAt": "2026-10-12T10:21:16.608409+00:00",
+  "postCount": 79,
+  "avgEngagementPerActiveHour": 5.45,
   "platformSummary": {
     "tiktok": {
-      "postCount": 15,
-      "engagement": 108,
+      "postCount": 16,
+      "engagement": 109,
       "byContentType": {
-        "video": 8,
+        "video": 9,
         "still": 7
       }
     },
@@ -35,13 +35,13 @@
       "hour": 0,
       "postCount": 1,
       "engagement": 0,
-      "deltaVsAvg": -5.4
+      "deltaVsAvg": -5.45
     },
     {
       "hour": 1,
       "postCount": 2,
       "engagement": 0,
-      "deltaVsAvg": -5.4
+      "deltaVsAvg": -5.45
     },
     {
       "hour": 2,
@@ -65,109 +65,109 @@
       "hour": 5,
       "postCount": 2,
       "engagement": 0,
-      "deltaVsAvg": -5.4
+      "deltaVsAvg": -5.45
     },
     {
       "hour": 6,
-      "postCount": 1,
-      "engagement": 9,
-      "deltaVsAvg": 3.6
+      "postCount": 2,
+      "engagement": 10,
+      "deltaVsAvg": 4.55
     },
     {
       "hour": 7,
       "postCount": 1,
       "engagement": 0,
-      "deltaVsAvg": -5.4
+      "deltaVsAvg": -5.45
     },
     {
       "hour": 8,
       "postCount": 5,
       "engagement": 0,
-      "deltaVsAvg": -5.4
+      "deltaVsAvg": -5.45
     },
     {
       "hour": 9,
       "postCount": 11,
       "engagement": 0,
-      "deltaVsAvg": -5.4
+      "deltaVsAvg": -5.45
     },
     {
       "hour": 10,
       "postCount": 2,
       "engagement": 0,
-      "deltaVsAvg": -5.4
+      "deltaVsAvg": -5.45
     },
     {
       "hour": 11,
       "postCount": 2,
       "engagement": 0,
-      "deltaVsAvg": -5.4
+      "deltaVsAvg": -5.45
     },
     {
       "hour": 12,
       "postCount": 2,
       "engagement": 0,
-      "deltaVsAvg": -5.4
+      "deltaVsAvg": -5.45
     },
     {
       "hour": 13,
       "postCount": 2,
       "engagement": 0,
-      "deltaVsAvg": -5.4
+      "deltaVsAvg": -5.45
     },
     {
       "hour": 14,
       "postCount": 3,
       "engagement": 1,
-      "deltaVsAvg": -4.4
+      "deltaVsAvg": -4.45
     },
     {
       "hour": 15,
       "postCount": 8,
       "engagement": 0,
-      "deltaVsAvg": -5.4
+      "deltaVsAvg": -5.45
     },
     {
       "hour": 16,
       "postCount": 8,
       "engagement": 0,
-      "deltaVsAvg": -5.4
+      "deltaVsAvg": -5.45
     },
     {
       "hour": 17,
       "postCount": 4,
       "engagement": 1,
-      "deltaVsAvg": -4.4
+      "deltaVsAvg": -4.45
     },
     {
       "hour": 18,
       "postCount": 2,
       "engagement": 2,
-      "deltaVsAvg": -3.4
+      "deltaVsAvg": -3.45
     },
     {
       "hour": 19,
       "postCount": 7,
       "engagement": 2,
-      "deltaVsAvg": -3.4
+      "deltaVsAvg": -3.45
     },
     {
       "hour": 20,
       "postCount": 6,
       "engagement": 77,
-      "deltaVsAvg": 71.6
+      "deltaVsAvg": 71.55
     },
     {
       "hour": 21,
       "postCount": 3,
       "engagement": 3,
-      "deltaVsAvg": -2.4
+      "deltaVsAvg": -2.45
     },
     {
       "hour": 22,
       "postCount": 6,
       "engagement": 13,
-      "deltaVsAvg": 7.6
+      "deltaVsAvg": 7.55
     },
     {
       "hour": 23,
@@ -177,6 +177,64 @@
     }
   ],
   "posts": [
+    {
+      "id": "6aa89ecba283eff81a534f3d",
+      "platform": "tiktok",
+      "sentAt": "2026-10-11T10:45:08.307Z",
+      "text": "Store not selling? We sent a ship to go find out why. \ud83d\ude80 Get a real Shopify Store",
+      "assetType": "video",
+      "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6aa89ecba283eff81a534f3d_video.mp4",
+      "metrics": {
+        "reactions": 1,
+        "comments": 0,
+        "engagementRate": 4.17,
+        "views": 24,
+        "shares": 0,
+        "reach": 0,
+        "totalTimeWatched": 0.78,
+        "averageTimeWatched": 2.06
+      },
+      "contentType": "video",
+      "hourLocal": 6,
+      "engagement": 1,
+      "displayMetrics": [
+        {
+          "key": "reach",
+          "label": "Reach",
+          "value": 0
+        },
+        {
+          "key": "views",
+          "label": "Views",
+          "value": 24
+        },
+        {
+          "key": "reactions",
+          "label": "Likes",
+          "value": 1
+        },
+        {
+          "key": "comments",
+          "label": "Comments",
+          "value": 0
+        },
+        {
+          "key": "shares",
+          "label": "Shares",
+          "value": 0
+        },
+        {
+          "key": "engagementRate",
+          "label": "Eng. Rate",
+          "value": 4.17
+        },
+        {
+          "key": "averageTimeWatched",
+          "label": "Avg Watch (s)",
+          "value": 2.06
+        }
+      ]
+    },
     {
       "id": "6acb5799356899b8303d01c5",
       "platform": "tiktok",
@@ -188,11 +246,11 @@
         "reactions": 0,
         "comments": 0,
         "engagementRate": 0,
-        "views": 90,
+        "views": 94,
         "shares": 0,
-        "reach": 0,
-        "totalTimeWatched": 2.47,
-        "averageTimeWatched": 1.63
+        "reach": 49,
+        "totalTimeWatched": 2.75,
+        "averageTimeWatched": 1.71
       },
       "contentType": "video",
       "hourLocal": 8,
@@ -201,12 +259,12 @@
         {
           "key": "reach",
           "label": "Reach",
-          "value": 0
+          "value": 49
         },
         {
           "key": "views",
           "label": "Views",
-          "value": 90
+          "value": 94
         },
         {
           "key": "reactions",
@@ -231,7 +289,7 @@
         {
           "key": "averageTimeWatched",
           "label": "Avg Watch (s)",
-          "value": 1.63
+          "value": 1.71
         }
       ]
     },
@@ -573,7 +631,7 @@
         "reactions": 0,
         "comments": 0,
         "engagementRate": 0,
-        "impressions": 0,
+        "impressions": 1,
         "shares": 0,
         "clicks": 0
       },
@@ -584,7 +642,7 @@
         {
           "key": "impressions",
           "label": "Impressions",
-          "value": 0
+          "value": 1
         },
         {
           "key": "clicks",
@@ -798,7 +856,7 @@
         "reactions": 0,
         "comments": 0,
         "engagementRate": 0,
-        "impressions": 0,
+        "impressions": 18,
         "shares": 0,
         "clicks": 0
       },
@@ -809,7 +867,7 @@
         {
           "key": "impressions",
           "label": "Impressions",
-          "value": 0
+          "value": 18
         },
         {
           "key": "clicks",
@@ -1118,7 +1176,7 @@
         "reactions": 0,
         "comments": 0,
         "engagementRate": 0,
-        "impressions": 0,
+        "impressions": 8,
         "shares": 0,
         "clicks": 0
       },
@@ -1129,7 +1187,7 @@
         {
           "key": "impressions",
           "label": "Impressions",
-          "value": 0
+          "value": 8
         },
         {
           "key": "clicks",
@@ -2280,7 +2338,7 @@
       "id": "6a88b8e5dc319146a283ab9a",
       "platform": "facebook",
       "sentAt": "2026-08-21T23:00:15.460Z",
-      "text": "New site live for Nick's Auto Service &amp; Tire in Plymouth! Full-service auto ",
+      "text": "New site live for Nick's Auto Service & Tire in Plymouth! Full-service auto and ",
       "assetType": "image",
       "source": "https://files.catbox.moe/eiodoi.jpeg",
       "metrics": {
