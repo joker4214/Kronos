@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-12T10:21:16.608409+00:00",
+  "generatedAt": "2026-10-13T10:21:32.562492+00:00",
   "postCount": 79,
-  "avgEngagementPerActiveHour": 5.45,
+  "avgEngagementPerActiveHour": 5.5,
   "platformSummary": {
     "tiktok": {
       "postCount": 16,
-      "engagement": 109,
+      "engagement": 110,
       "byContentType": {
         "video": 9,
         "still": 7
@@ -35,13 +35,13 @@
       "hour": 0,
       "postCount": 1,
       "engagement": 0,
-      "deltaVsAvg": -5.45
+      "deltaVsAvg": -5.5
     },
     {
       "hour": 1,
       "postCount": 2,
       "engagement": 0,
-      "deltaVsAvg": -5.45
+      "deltaVsAvg": -5.5
     },
     {
       "hour": 2,
@@ -65,109 +65,109 @@
       "hour": 5,
       "postCount": 2,
       "engagement": 0,
-      "deltaVsAvg": -5.45
+      "deltaVsAvg": -5.5
     },
     {
       "hour": 6,
       "postCount": 2,
-      "engagement": 10,
-      "deltaVsAvg": 4.55
+      "engagement": 11,
+      "deltaVsAvg": 5.5
     },
     {
       "hour": 7,
       "postCount": 1,
       "engagement": 0,
-      "deltaVsAvg": -5.45
+      "deltaVsAvg": -5.5
     },
     {
       "hour": 8,
       "postCount": 5,
       "engagement": 0,
-      "deltaVsAvg": -5.45
+      "deltaVsAvg": -5.5
     },
     {
       "hour": 9,
       "postCount": 11,
       "engagement": 0,
-      "deltaVsAvg": -5.45
+      "deltaVsAvg": -5.5
     },
     {
       "hour": 10,
       "postCount": 2,
       "engagement": 0,
-      "deltaVsAvg": -5.45
+      "deltaVsAvg": -5.5
     },
     {
       "hour": 11,
       "postCount": 2,
       "engagement": 0,
-      "deltaVsAvg": -5.45
+      "deltaVsAvg": -5.5
     },
     {
       "hour": 12,
       "postCount": 2,
       "engagement": 0,
-      "deltaVsAvg": -5.45
+      "deltaVsAvg": -5.5
     },
     {
       "hour": 13,
       "postCount": 2,
       "engagement": 0,
-      "deltaVsAvg": -5.45
+      "deltaVsAvg": -5.5
     },
     {
       "hour": 14,
       "postCount": 3,
       "engagement": 1,
-      "deltaVsAvg": -4.45
+      "deltaVsAvg": -4.5
     },
     {
       "hour": 15,
       "postCount": 8,
       "engagement": 0,
-      "deltaVsAvg": -5.45
+      "deltaVsAvg": -5.5
     },
     {
       "hour": 16,
       "postCount": 8,
       "engagement": 0,
-      "deltaVsAvg": -5.45
+      "deltaVsAvg": -5.5
     },
     {
       "hour": 17,
       "postCount": 4,
       "engagement": 1,
-      "deltaVsAvg": -4.45
+      "deltaVsAvg": -4.5
     },
     {
       "hour": 18,
       "postCount": 2,
       "engagement": 2,
-      "deltaVsAvg": -3.45
+      "deltaVsAvg": -3.5
     },
     {
       "hour": 19,
       "postCount": 7,
       "engagement": 2,
-      "deltaVsAvg": -3.45
+      "deltaVsAvg": -3.5
     },
     {
       "hour": 20,
       "postCount": 6,
       "engagement": 77,
-      "deltaVsAvg": 71.55
+      "deltaVsAvg": 71.5
     },
     {
       "hour": 21,
       "postCount": 3,
       "engagement": 3,
-      "deltaVsAvg": -2.45
+      "deltaVsAvg": -2.5
     },
     {
       "hour": 22,
       "postCount": 6,
       "engagement": 13,
-      "deltaVsAvg": 7.55
+      "deltaVsAvg": 7.5
     },
     {
       "hour": 23,
@@ -185,33 +185,33 @@
       "assetType": "video",
       "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6a7280d68bd10af9ece878e7/6a7281ea99afb4434903081f/6aa89ecba283eff81a534f3d_video.mp4",
       "metrics": {
-        "reactions": 1,
+        "reactions": 2,
         "comments": 0,
-        "engagementRate": 4.17,
-        "views": 24,
+        "engagementRate": 6.9,
+        "views": 29,
         "shares": 0,
-        "reach": 0,
-        "totalTimeWatched": 0.78,
-        "averageTimeWatched": 2.06
+        "reach": 14,
+        "totalTimeWatched": 0.97,
+        "averageTimeWatched": 1.73
       },
       "contentType": "video",
       "hourLocal": 6,
-      "engagement": 1,
+      "engagement": 2,
       "displayMetrics": [
         {
           "key": "reach",
           "label": "Reach",
-          "value": 0
+          "value": 14
         },
         {
           "key": "views",
           "label": "Views",
-          "value": 24
+          "value": 29
         },
         {
           "key": "reactions",
           "label": "Likes",
-          "value": 1
+          "value": 2
         },
         {
           "key": "comments",
@@ -226,12 +226,12 @@
         {
           "key": "engagementRate",
           "label": "Eng. Rate",
-          "value": 4.17
+          "value": 6.9
         },
         {
           "key": "averageTimeWatched",
           "label": "Avg Watch (s)",
-          "value": 2.06
+          "value": 1.73
         }
       ]
     },
@@ -248,7 +248,7 @@
         "engagementRate": 0,
         "views": 94,
         "shares": 0,
-        "reach": 49,
+        "reach": 86,
         "totalTimeWatched": 2.75,
         "averageTimeWatched": 1.71
       },
@@ -259,7 +259,7 @@
         {
           "key": "reach",
           "label": "Reach",
-          "value": 49
+          "value": 86
         },
         {
           "key": "views",
