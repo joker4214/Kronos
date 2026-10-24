@@ -13,6 +13,7 @@
 !/package.json
 !/vercel.json
 !/.gitignore
+!/.env.example
 
 !/dharma-brain/
 /dharma-brain/*
